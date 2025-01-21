@@ -159,6 +159,7 @@
     polkit
     nixfmt-rfc-style
     gh
+    bitwarden
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
