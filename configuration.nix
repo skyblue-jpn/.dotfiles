@@ -56,6 +56,7 @@
         fcitx5-mozc-ut
         fcitx5-gtk
         fcitx5-lua
+        kdePackages.fcitx5-qt
       ];
       waylandFrontend = true;
     };
