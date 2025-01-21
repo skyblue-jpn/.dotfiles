@@ -206,9 +206,6 @@
     noisetorch = {
       enable = true;
     };
-    firefox = {
-      enable = true;
-    };
     yazi = {
       enable = true;
     };
@@ -237,6 +234,12 @@
       keybindings = true;
       fuzzyCompletion = true;
     };
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+      localNetworkGameTransfers.openFirewall = true;
+    };
   };
 
   # List packages installed in system profile. To search, run:
@@ -264,6 +267,7 @@
     fzf
     gimp
     gparted
+    heroic
     imagemagick
     inkscape
     jq
