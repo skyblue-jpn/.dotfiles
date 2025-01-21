@@ -241,49 +241,4 @@
       localNetworkGameTransfers.openFirewall = true;
     };
   };
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    stix-two
-    sddm-astronaut
-    vscode
-    ghostty
-    polkit
-    nixfmt-rfc-style
-    gh
-    baobab
-    bitwarden
-    p7zip
-    bottom
-    bottles
-    cava
-    cbonsai
-    efibootmgr
-    fastfetch
-    fd
-    ffmpeg
-    floorp
-    fzf
-    gimp
-    gparted
-    heroic
-    imagemagick
-    inkscape
-    jq
-    libreoffice-fresh
-    mise
-    peaclock
-    pingu
-    pipes-rs
-    poppler
-    rclone
-    ripgrep
-    sl
-    tabby
-    topgrade
-    ventoy
-    zoom-us
-    zoxide
-  ];
 }
