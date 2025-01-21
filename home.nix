@@ -1,6 +1,6 @@
 {
   home = rec {
-    username = "ユーザー名";
+    username = "celeste";
     homeDirectory = "/home/${username}";
     stateVersion = "24.11";
   };
