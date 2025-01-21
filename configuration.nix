@@ -143,25 +143,8 @@
     shell = pkgs.fish;
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #  wget
-    sddm-astronaut
-    vscode
-    ghostty
-    polkit
-    nixfmt-rfc-style
-    gh
-    bitwarden
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -223,5 +206,80 @@
     noisetorch = {
       enable = true;
     };
+    firefox = {
+      enable = true;
+    };
+    yazi = {
+      enable = true;
+    };
+    xonsh = {
+      enable = true;
+    };
+    thefuck = {
+      enable = true;
+    };
+    kdeconnect = {
+      enable = true;
+    };
+    gnome-disks = {
+      enable = true;
+    };
+    file-roller = {
+      enable = true;
+    };
+    dconf = {
+      enable = true;
+    };
+    chromium = {
+      enable = true;
+    };
+    fzf = {
+      keybindings = true;
+      fuzzyCompletion = true;
+    };
   };
+
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
+  environment.systemPackages = with pkgs; [
+    stix-two
+    sddm-astronaut
+    vscode
+    ghostty
+    polkit
+    nixfmt-rfc-style
+    gh
+    baobab
+    bitwarden
+    p7zip
+    bottom
+    bottles
+    cava
+    cbonsai
+    efibootmgr
+    fastfetch
+    fd
+    ffmpeg
+    floorp
+    fzf
+    gimp
+    gparted
+    imagemagick
+    inkscape
+    jq
+    libreoffice-fresh
+    mise
+    peaclock
+    pingu
+    pipes-rs
+    poppler
+    rclone
+    ripgrep
+    sl
+    tabby
+    topgrade
+    ventoy
+    zoom-us
+    zoxide
+  ];
 }
