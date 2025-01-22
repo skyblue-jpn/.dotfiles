@@ -117,7 +117,7 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.celeste = {
@@ -170,6 +170,8 @@
   system.stateVersion = "24.11";
   environment.systemPackages = with pkgs; [
     sddm-astronaut
+    floorp
+    ghostty
   ];
   programs = {
     git = {
@@ -224,5 +226,12 @@
       dedicatedServer.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
     };
+  };
+
+  # System environment variables
+  environment.sessionVariables = {
+    EDITOR = "nvim";
+    BROWSER = "floorp";
+    TERMINAL = "ghostty";
   };
 }
