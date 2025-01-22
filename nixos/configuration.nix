@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   lib,
   ...
 }:
@@ -8,7 +9,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../hosts/desktop
+    #    ../hosts/desktop
   ];
 
   # Bootloader.
@@ -153,17 +154,17 @@
   };
 
   # Automatic system upgrades
-  system.autoUpgrade = {
-    enable = true;
-    flake = inputs.self.outPath;
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L" # print build logs
-    ];
-    dates = "02:00";
-    randomizedDelaySec = "45min";
-  };
+  #  system.autoUpgrade = {
+  #    enable = true;
+  #    flake = inputs.self.outPath;
+  #    flags = [
+  #      "--update-input"
+  #      "nixpkgs"
+  #      "-L" # print build logs
+  #    ];
+  #    dates = "02:00";
+  #    randomizedDelaySec = "45min";
+  #  };
 
   # System packages
   system.stateVersion = "24.11";

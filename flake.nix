@@ -1,4 +1,6 @@
 {
+  description = "My flake";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     home-manager = {
@@ -13,7 +15,7 @@
       myNixOS = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          ./nixos/configuration.nix
         ];
       };
     };
@@ -28,7 +30,7 @@
           inherit inputs;
         };
         modules = [
-          ./home.nix
+          ./home/home.nix
         ];
       };
     };
