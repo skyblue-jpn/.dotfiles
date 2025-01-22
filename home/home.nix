@@ -5,9 +5,9 @@
   imports = [
     ./environment
     ./packages
-    #    ./programs
-    #    ./scripts
-    #    ./themes
+    ./programs
+    ./scripts
+    ./themes
   ];
 
   home = rec {

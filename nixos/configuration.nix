@@ -181,10 +181,10 @@
       viAlias = true;
       vimAlias = true;
     };
-    starship = {
+    fish = {
       enable = true;
     };
-    fish = {
+    zsh = {
       enable = true;
     };
     noisetorch = {
