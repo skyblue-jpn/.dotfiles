@@ -184,10 +184,13 @@
     git = {
       enable = true;
     };
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-    };
+    #    neovim = {
+    #      enable = true;
+    #      defaultEditor = true;
+    #      viAlias = true;
+    #      vimAlias = true;
+    #      plugins = with pkgs.vimPlugins; [ LazyVim ];
+    #    };
     noisetorch = {
       enable = true;
     };
