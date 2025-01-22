@@ -130,7 +130,6 @@
     packages = with pkgs; [
       #  thunderbird
     ];
-    shell = pkgs.fish;
   };
 
   # Allow unfree packages
@@ -172,9 +171,6 @@
     sddm-astronaut
   ];
   programs = {
-    fish = {
-      enable = true;
-    };
     git = {
       enable = true;
     };
@@ -225,5 +221,6 @@
     EDITOR = "nvim";
     BROWSER = "floorp";
     TERMINAL = "ghostty";
+    SHELL = "fish";
   };
 }
