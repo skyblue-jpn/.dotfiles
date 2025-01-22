@@ -173,6 +173,10 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
 
+  environment.systemPackages = with pkgs; [
+    sddm-astronaut
+  ];
+
   nix = {
     settings = {
       auto-optimise-store = true;
