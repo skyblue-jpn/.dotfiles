@@ -5,7 +5,7 @@
     ./fish
     #./ghostty
     #./mise
-    #./neovim
+    ./neovim
     #./peaclock
     ./starship
     ./zsh
