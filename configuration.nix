@@ -206,10 +206,6 @@
     noisetorch = {
       enable = true;
     };
-    yazi = {
-      enable = true;
-      package = yazi.packages.${pkgs.system}.default;
-    };
     xonsh = {
       enable = true;
     };
