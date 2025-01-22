@@ -1,0 +1,9 @@
+[tools]
+    node  = "latest"
+    ruby  = "latest"
+    usage = "latest"
+    uv    = "latest"
+
+[settings]
+    experimental = true
+    pipx_uvx     = true

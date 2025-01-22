@@ -187,8 +187,6 @@
     neovim = {
       enable = true;
       defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
     };
     noisetorch = {
       enable = true;
@@ -228,7 +226,6 @@
 
   # System environment variables
   environment.sessionVariables = {
-    EDITOR = "nvim";
     BROWSER = "floorp";
     TERMINAL = "ghostty";
   };
