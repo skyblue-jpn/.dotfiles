@@ -2,6 +2,6 @@
 
 {
   programs.bash = {
-    enable = true;
+
   };
 }
