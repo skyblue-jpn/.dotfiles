@@ -172,6 +172,9 @@
     sddm-astronaut
   ];
   programs = {
+    fish = {
+      enable = true;
+    };
     git = {
       enable = true;
     };
