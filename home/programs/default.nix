@@ -1,13 +1,13 @@
 {
   imports = [
-    #./bash
+    ./bash
     #./fastfetch
-    #./fish
+    ./fish
     #./ghostty
     #./mise
     #./neovim
     #./peaclock
     ./starship
-    #./zsh
+    ./zsh
   ];
 }
