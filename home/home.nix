@@ -1,12 +1,21 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
+
+  imports = [
+    ./programs
+    ./scripts
+    ./themes
+  ];
+
   home = rec {
     username = "celeste";
     homeDirectory = "/home/${username}";
     stateVersion = "24.11";
   };
+
   programs.home-manager.enable = true;
+
   home.packages = with pkgs; [
     stix-two
     sddm-astronaut
