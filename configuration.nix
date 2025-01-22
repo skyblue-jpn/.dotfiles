@@ -235,6 +235,9 @@
       keybindings = true;
       fuzzyCompletion = true;
     };
+    yazi = {
+      enable = true;
+    };
     steam = {
       enable = true;
       remotePlay.openFirewall = true;

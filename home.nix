@@ -50,5 +50,4 @@
     zoom-us
     zoxide
   ];
-
 }
