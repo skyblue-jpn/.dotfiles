@@ -181,12 +181,6 @@
       viAlias = true;
       vimAlias = true;
     };
-    fish = {
-      enable = true;
-    };
-    zsh = {
-      enable = true;
-    };
     noisetorch = {
       enable = true;
     };
