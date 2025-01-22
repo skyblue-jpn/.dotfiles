@@ -170,8 +170,6 @@
   system.stateVersion = "24.11";
   environment.systemPackages = with pkgs; [
     sddm-astronaut
-    floorp
-    ghostty
   ];
   programs = {
     git = {
@@ -208,9 +206,6 @@
       enable = true;
     };
     dconf = {
-      enable = true;
-    };
-    chromium = {
       enable = true;
     };
     fzf = {
