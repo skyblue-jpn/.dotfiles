@@ -15,7 +15,7 @@
     ffmpeg
     floorp
     fzf
-    gh
+    #    gh
     ghostty
     gimp
     gparted
