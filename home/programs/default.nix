@@ -1,9 +1,9 @@
 {
   imports = [
     ./bash
-    ./dconf
+    #    ./dconf
     ./fastfetch
-    ./file-roller
+    #    ./file-roller
     ./fish
     ./fzf
     ./ghostty
@@ -17,7 +17,7 @@
     ./starship
     ./steam
     ./thefuck
-    ./xonsh
+    #    ./xonsh
     ./yazi
     ./zsh
   ];
