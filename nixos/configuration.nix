@@ -175,40 +175,40 @@
     fish = {
       enable = true;
     };
-    git = {
-      enable = true;
-    };
-    noisetorch = {
-      enable = true;
-    };
-    thefuck = {
-      enable = true;
-    };
-    kdeconnect = {
-      enable = true;
-    };
-    gnome-disks = {
-      enable = true;
-    };
-    file-roller = {
-      enable = true;
-    };
-    dconf = {
-      enable = true;
-    };
-    fzf = {
-      keybindings = true;
-      fuzzyCompletion = true;
-    };
-    yazi = {
-      enable = true;
-    };
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
-    };
+    #    git = {
+    #      enable = true;
+    #    };
+    #    noisetorch = {
+    #      enable = true;
+    #    };
+    #    thefuck = {
+    #      enable = true;
+    #    };
+    #    kdeconnect = {
+    #      enable = true;
+    #    };
+    #    gnome-disks = {
+    #      enable = true;
+    #    };
+    #    file-roller = {
+    #      enable = true;
+    #    };
+    #    dconf = {
+    #      enable = true;
+    #    };
+    #    fzf = {
+    #      keybindings = true;
+    #      fuzzyCompletion = true;
+    #    };
+    #    yazi = {
+    #      enable = true;
+    #    };
+    #    steam = {
+    #      enable = true;
+    #      remotePlay.openFirewall = true;
+    #      dedicatedServer.openFirewall = true;
+    #      localNetworkGameTransfers.openFirewall = true;
+    #    };
   };
 
   # System environment variables
