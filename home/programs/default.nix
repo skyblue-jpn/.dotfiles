@@ -4,6 +4,7 @@
     ./fastfetch
     ./fish
     ./ghostty
+    ./git
     ./mise
     ./neovim
     ./peaclock
