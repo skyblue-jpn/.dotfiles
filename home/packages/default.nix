@@ -23,7 +23,6 @@
     imagemagick
     inkscape
     jq
-    kdeconnect
     libreoffice-fresh
     #    mise
     nixfmt-rfc-style
