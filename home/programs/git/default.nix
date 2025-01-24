@@ -2,7 +2,7 @@
 {
   programs.git = {
     enable = true;
-    userName = "skyblue-jpn"";
+    userName = "skyblue-jpn";
     userEmail = "82032866+skyblue-jpn@users.noreply.github.com";
   };
 
