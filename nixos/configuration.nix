@@ -187,9 +187,9 @@
     #    kdeconnect = {
     #      enable = true;
     #    };
-    #    gnome-disks = {
-    #      enable = true;
-    #    };
+    gnome-disks = {
+      enable = true;
+    };
     file-roller = {
       enable = true;
     };

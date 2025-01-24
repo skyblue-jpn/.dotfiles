@@ -8,7 +8,7 @@
     ./fzf
     ./ghostty
     ./git-gh
-    ./gnome-disks
+    #    ./gnome-disks
     ./kdeconnect
     ./mise
     ./neovim
