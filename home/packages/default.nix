@@ -5,23 +5,15 @@
     baobab
     bitwarden
     bottles
-    bottom
-    cava
     cbonsai
     efibootmgr
-    eza
-    fastfetch
-    fd
     ffmpeg
-    floorp
-    fzf
     ghostty
     gimp
     gparted
     heroic
     imagemagick
     inkscape
-    jq
     libreoffice-fresh
     nixfmt-rfc-style
     p7zip
@@ -31,15 +23,9 @@
     polkit
     poppler
     rclone
-    ripgrep
-    sddm-astronaut
     sl
     stix-two
-    tabby
-    topgrade
-    ventoy
-    vscode
+    ventoy-full
     zoom-us
-    zoxide
   ];
 }
