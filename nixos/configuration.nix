@@ -178,9 +178,6 @@
     zsh = {
       enable = true;
     };
-    starship = {
-      enable = true;
-    };
     git = {
       enable = true;
     };
