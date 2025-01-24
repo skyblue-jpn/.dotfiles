@@ -172,19 +172,10 @@
     sddm-astronaut
   ];
   programs = {
-    fish = {
-      enable = true;
-    };
-    zsh = {
-      enable = true;
-    };
     git = {
       enable = true;
     };
     noisetorch = {
-      enable = true;
-    };
-    xonsh = {
       enable = true;
     };
     thefuck = {
