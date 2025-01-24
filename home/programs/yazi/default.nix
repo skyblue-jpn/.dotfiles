@@ -1,4 +1,4 @@
-{ config, pkgs, yazi, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   programs.yazi = {
