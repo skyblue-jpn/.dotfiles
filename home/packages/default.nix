@@ -14,8 +14,7 @@
     fd
     ffmpeg
     floorp
-    #    fzf
-    #    gh
+    fzf
     ghostty
     gimp
     gparted
@@ -24,7 +23,6 @@
     inkscape
     jq
     libreoffice-fresh
-    #    mise
     nixfmt-rfc-style
     p7zip
     peaclock

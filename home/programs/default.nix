@@ -1,14 +1,14 @@
 {
   imports = [
     ./bash
-    #    ./dconf
+    ./dconf
     ./fastfetch
-    #    ./file-roller
+    ./file-roller
     ./fish
     ./fzf
     ./ghostty
     ./git-gh
-    #    ./gnome-disks
+    ./gnome-disks
     ./kdeconnect
     ./mise
     ./neovim
@@ -17,7 +17,7 @@
     ./starship
     ./steam
     ./thefuck
-    #    ./xonsh
+    ./xonsh
     ./yazi
     ./zsh
   ];

@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  services..kdeconnect = {
+  services.kdeconnect = {
     enable = true;
   };
 }
