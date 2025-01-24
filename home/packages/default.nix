@@ -2,18 +2,10 @@
 
 {
   home.packages = with pkgs; [
-    stix-two
-    sddm-astronaut
-    vscode
-    ghostty
-    polkit
-    nixfmt-rfc-style
-    gh
     baobab
     bitwarden
-    p7zip
-    bottom
     bottles
+    bottom
     cava
     cbonsai
     efibootmgr
@@ -23,6 +15,8 @@
     ffmpeg
     floorp
     fzf
+    gh
+    ghostty
     gimp
     gparted
     heroic
@@ -31,16 +25,22 @@
     jq
     libreoffice-fresh
     mise
+    nixfmt-rfc-style
+    p7zip
     peaclock
     pingu
     pipes-rs
+    polkit
     poppler
     rclone
     ripgrep
+    sddm-astronaut
     sl
+    stix-two
     tabby
     topgrade
     ventoy
+    vscode
     zoom-us
     zoxide
   ];
