@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.xonsh = {
-    enable = true;
-  };
+  #  programs.xonsh = {
+  #    enable = true;
+  #  };
 }
