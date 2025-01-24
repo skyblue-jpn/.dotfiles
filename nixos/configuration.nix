@@ -193,9 +193,9 @@
     #    file-roller = {
     #      enable = true;
     #    };
-    #    dconf = {
-    #      enable = true;
-    #    };
+    dconf = {
+      enable = true;
+    };
     #    fzf = {
     #      keybindings = true;
     #      fuzzyCompletion = true;
