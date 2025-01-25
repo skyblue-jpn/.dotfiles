@@ -1,5 +1,5 @@
 {
   imports = [
-    ./grub.nix
+    ./grub
   ];
 }

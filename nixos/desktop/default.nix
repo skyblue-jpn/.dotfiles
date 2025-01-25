@@ -1,6 +1,6 @@
 {
   imports = [
-    ./cinnamon.nix
-    ./sddm.nix
+    ./cinnamon
+    ./sddm
   ];
 }

@@ -1,7 +1,8 @@
 {
   imports = [
-    ./fonts.nix
-    ./locale.nix
-    ./input-method.nix
+    ./fonts
+    ./locale
+    ./input-method
+    ./variables
   ];
 }

@@ -10,7 +10,6 @@
       "wheel"
     ];
     packages = with pkgs; [
-      #  thunderbird
     ];
     shell = pkgs.fish;
   };
