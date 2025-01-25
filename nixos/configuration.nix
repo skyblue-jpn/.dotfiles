@@ -9,19 +9,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./packages
-    ./programs
-    #    ../hosts/desktop
+    ../system
   ];
-
-  # Bootloader.
-  boot.loader.grub = {
-    enable = true;
-    device = "nodev"; # Use "nodev" for UEFI, or your specific device for BIOS
-    efiSupport = true; # true for UEFI, false for BIOS
-    useOSProber = true;
-  };
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
   # Networking.
   networking.hostName = "aquamarine";
@@ -32,73 +21,8 @@
   time.timeZone = "Asia/Tokyo";
   time.hardwareClockInLocalTime = true;
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "C.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "C.UTF-8";
-    LC_IDENTIFICATION = "C.UTF-8";
-    LC_MEASUREMENT = "C.UTF-8";
-    LC_MONETARY = "C.UTF-8";
-    LC_NAME = "C.UTF-8";
-    LC_NUMERIC = "C.UTF-8";
-    LC_PAPER = "C.UTF-8";
-    LC_TELEPHONE = "C.UTF-8";
-    LC_TIME = "C.UTF-8";
-  };
-  i18n.inputMethod = {
-    type = "fcitx5";
-    enable = true;
-    fcitx5 = {
-      addons = with pkgs; [
-        fcitx5-mozc-ut
-        fcitx5-gtk
-        fcitx5-lua
-        kdePackages.fcitx5-qt
-      ];
-      waylandFrontend = true;
-    };
-  };
-  fonts = {
-    packages = with pkgs; [
-      noto-fonts-cjk-serif
-      noto-fonts-cjk-sans
-      noto-fonts-emoji
-      hackgen-nf-font
-    ];
-    fontDir.enable = true;
-    fontconfig = {
-      defaultFonts = {
-        serif = [
-          "Noto Serif CJK JP"
-          "Noto Color Emoji"
-        ];
-        sansSerif = [
-          "Noto Sans CJK JP"
-          "Noto Color Emoji"
-        ];
-        monospace = [
-          "HackGen Console NF"
-          "Noto Color Emoji"
-        ];
-        emoji = [ "Noto Color Emoji" ];
-      };
-    };
-  };
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Enable the Cinnamon Desktop Environment.
-  services.xserver.desktopManager.cinnamon.enable = true;
-
-  # Display Manager.
-  services.displayManager.sddm = {
-    package = pkgs.kdePackages.sddm;
-    enable = true;
-    wayland.enable = true;
-    theme = "sddm-astronaut-theme";
-    extraPackages = [ pkgs.sddm-astronaut ];
-  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -170,10 +94,4 @@
   #  };
 
   system.stateVersion = "24.11";
-
-  # System environment variables
-  environment.sessionVariables = {
-    BROWSER = "floorp";
-    TERMINAL = "ghostty";
-  };
 }

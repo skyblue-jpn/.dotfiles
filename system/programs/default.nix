@@ -2,16 +2,15 @@
 
 {
   programs = {
+    # shell
     fish = {
       enable = true;
     };
     xonsh = {
       enable = true;
     };
-    kdeconnect = {
-      enable = true;
-    };
-    noisetorch = {
+    # tools
+    dconf = {
       enable = true;
     };
     gnome-disks = {
@@ -20,9 +19,13 @@
     file-roller = {
       enable = true;
     };
-    dconf = {
+    kdeconnect = {
       enable = true;
     };
+    noisetorch = {
+      enable = true;
+    };
+    # gaming
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
