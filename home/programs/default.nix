@@ -7,14 +7,12 @@
     ./eza
     ./fastfetch
     ./fd
-    ./file-roller
     ./fish
     ./floorp
     ./fzf
     ./gh
     ./ghostty
     ./git
-    ./gnome-disks
     ./jq
     ./mise
     ./neovim
