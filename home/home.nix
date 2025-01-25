@@ -3,6 +3,7 @@
 {
 
   imports = [
+    ./development
     ./environment
     ./packages
     ./programs

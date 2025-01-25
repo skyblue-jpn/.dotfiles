@@ -31,9 +31,7 @@
         pkgs = import inputs.nixpkgs {
           system = "x86_64-linux";
           config.allowUnfree = true;
-          config.packageOverrides = pkgs: {
-              rust-bin = inputs.rust-overlay.packages.x86_64-linux.rust-bin.stable.latest.default;
-            };
+          overlays = [(import inputs.rust-overlay)];
         };
         extraSpecialArgs = {
           inherit inputs;
