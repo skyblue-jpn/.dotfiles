@@ -10,6 +10,7 @@
   imports = [
     ./hardware-configuration.nix
     ./packages
+    ./programs
     #    ../hosts/desktop
   ];
 
@@ -168,7 +169,7 @@
   #    randomizedDelaySec = "45min";
   #  };
 
-
+  system.stateVersion = "24.11";
 
   # System environment variables
   environment.sessionVariables = {

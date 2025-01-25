@@ -7,6 +7,6 @@ set -e || exit
 cd "$(dirname "$0")"
 
 # コマンドを実行
-sudo nixos-rebuild switch --flake .#myNixOS
+sudo nixos-rebuild switch --flake .#myNixOS --install-bootloader
 nix run nixpkgs#home-manager -- switch --flake .#myHome
 sudo nix store gc
