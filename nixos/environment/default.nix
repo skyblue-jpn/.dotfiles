@@ -4,8 +4,4 @@
     ./locale.nix
     ./input-method.nix
   ];
-  environment.sessionVariables = {
-    BROWSER = "floorp";
-    TERMINAL = "ghostty";
-  };
 }

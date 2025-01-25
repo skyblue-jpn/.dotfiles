@@ -1,6 +1,11 @@
 {pkgs, ...}:
 
 {
+  imports = [
+    ./cups.nix
+    ./pipewire.nix
+    ./libinput.nix
+  ];
   programs = {
     # shell
     fish = {
