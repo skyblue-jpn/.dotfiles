@@ -8,16 +8,18 @@
     useOSProber = true;
   };
 
-  home.stateVersion = "23.05"; # Adjust to your Home Manager version
-  home.packages = [
-    pkgs.stdenv.mkDerivation {
-      name = "poly-dark-grub-theme";
-      src = poly-dark;
-      installPhase = ''
-        theme_dir=$out/boot/grub/themes/poly-dark
-        mkdir -p $theme_dir
-        cp -r $src/* $theme_dir/
-      '';
-    }
-  ];
+  packages.default = pkgs.stdenv.mkDerivation {
+    name = "poly-dark-grub-theme";
+    src = pkgs.fetchFromGitHub {
+      owner = "shvchk";
+      repo = "poly-dark";
+      rev = "a3143398a0f3c63b96a79858e10aa403f8fc5152";
+      sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    };
+    installPhase = ''
+      theme_dir=$out/boot/grub/themes/poly-dark
+      mkdir -p $theme_dir
+      cp -r $src/* $theme_dir/
+    '';
+  };
 }
