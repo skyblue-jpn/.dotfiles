@@ -9,7 +9,7 @@
     device = "nodev";
     efiSupport = true;
     useOSProber = true;
-    theme = "${pkgs.sleek-grub-theme}/grub/themes/sleek";
+    theme = "${pkgs.sleek-grub-theme}/share/grub/themes/sleek";
   };
 
 }
