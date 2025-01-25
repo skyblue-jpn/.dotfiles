@@ -1,3 +1,5 @@
+{pkgs, ...}:
+
 {
   # Bootloader.
   boot.loader.grub = {
