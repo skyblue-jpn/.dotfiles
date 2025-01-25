@@ -1,6 +1,4 @@
 [tools]
-    node  = "latest"
-    ruby  = "latest"
     usage = "latest"
     uv    = "latest"
 
