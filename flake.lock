@@ -74,7 +74,7 @@
         "type": "github"
       }
     },
-    "mise": {
+    "mise-flake": {
       "inputs": {
         "flake-utils": "flake-utils_2",
         "nixpkgs": "nixpkgs"
@@ -145,7 +145,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
-        "mise": "mise",
+        "mise-flake": "mise-flake",
         "nixpkgs": "nixpkgs_2",
         "rust-overlay": "rust-overlay",
         "yazi": "yazi"

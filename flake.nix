@@ -13,7 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     yazi.url = "github:sxyazi/yazi";
-    mise.url = "github:jdx/mise";
+    mise-flake.url = "github:jdx/mise";
   };
 
   outputs = inputs: {
