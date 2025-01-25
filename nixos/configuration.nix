@@ -17,6 +17,8 @@
     ./users
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+
   # Networking.
   networking.hostName = "aquamarine";
   networking.networkmanager.enable = true;
