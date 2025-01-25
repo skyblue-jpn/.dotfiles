@@ -9,7 +9,11 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../system
+    ./boot
+    ./desktop
+    ./environment
+    ./packages
+    ./programs
   ];
 
   # Networking.
