@@ -30,7 +30,10 @@
       myHome = inputs.home-manager.lib.homeManagerConfiguration {
         pkgs = import inputs.nixpkgs {
           system = "x86_64-linux";
-          config.allowUnfree = true; # プロプライエタリなパッケージを許可
+          config.allowUnfree = true;
+          config.packageOverrides = pkgs: {
+              rust-bin = inputs.rust-overlay.packages.x86_64-linux.rust-bin.stable.latest.default;
+            };
         };
         extraSpecialArgs = {
           inherit inputs;
