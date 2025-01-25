@@ -22,4 +22,8 @@ in
       RUSTDOC = "${rust182}/bin/rustdoc";
     });
   };
+
+  home.file.".config/mise/config.toml" = {
+    source = ./config.toml;
+  };
 }
