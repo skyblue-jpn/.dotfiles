@@ -16,7 +16,6 @@
     ./git
     ./gnome-disks
     ./jq
-    ./kdeconnect
     ./mise
     ./neovim
     ./noisetorch

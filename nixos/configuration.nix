@@ -25,10 +25,6 @@
   networking.hostName = "aquamarine";
   networking.networkmanager.enable = true;
   networking.nftables.enable = true;
-  networking.firewall = rec {
-    allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
-    allowedUDPPortRanges = allowedTCPPortRanges;
-  };
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
@@ -181,6 +177,9 @@
       enable = true;
     };
     xonsh = {
+      enable = true;
+    };
+    kdeconnect = {
       enable = true;
     };
     noisetorch = {
