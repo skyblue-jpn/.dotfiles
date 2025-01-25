@@ -14,6 +14,10 @@
     };
     yazi.url = "github:sxyazi/yazi";
     mise-flake.url = "github:jdx/mise";
+    poly-dark = {
+      url = "github:shvchk/poly-dark";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: {
