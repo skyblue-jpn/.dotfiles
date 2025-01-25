@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   boot.loader.grub = {
@@ -7,10 +7,9 @@
     efiSupport = true;
     useOSProber = true;
   };
-
-  environment.systemPackages = with pkgs; [
-    (pkgs.runCommand "install-poly-dark-grub-theme" {} ''
-      wget -O - https://github.com/shvchk/poly-dark/raw/master/install.sh | bash
-    '')
-  ];
+  inputs.distro-grub-themes.nixosModules.${system}.default
+  distro-grub-themes = {
+    enable = true;
+    theme = "NixOS";
+  };
 }
