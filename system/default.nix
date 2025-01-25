@@ -1,7 +1,7 @@
 {
   imports = [
     ./boot
-    ./desktops
+    ./desktop
     ./environment
     ./packages
     ./programs
