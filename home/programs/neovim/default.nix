@@ -15,12 +15,12 @@
       # LazyVim
       lua-language-server
       stylua
-      LazyVim
       # Telescope
       ripgrep
     ];
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
+      LazyVim
     ];
   };
 }
