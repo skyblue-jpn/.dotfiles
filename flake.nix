@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-        flake-utils.url = "github:numtide/flake-utils";
+    flake-utils.url = "github:numtide/flake-utils";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,6 +12,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     yazi.url = "github:sxyazi/yazi";
     mise-flake.url = "github:jdx/mise";
     distro-grub-themes.url = "github:AdisonCavani/distro-grub-themes";
@@ -32,7 +33,7 @@
         pkgs = import inputs.nixpkgs {
           system = "x86_64-linux";
           config.allowUnfree = true;
-          overlays = [(import inputs.rust-overlay)];
+          overlays = [ (import inputs.rust-overlay) ];
         };
         extraSpecialArgs = {
           inherit inputs;
