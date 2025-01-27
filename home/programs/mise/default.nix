@@ -12,19 +12,19 @@ let
     system = pkgs.system;
   };
 
-  # Use Rust 1.82.0
-  rust182 = rustOverlayPkgs.rust-bin.stable."1.82.0".default;
+  # Use Rust latest
+  rustlatest = rustOverlayPkgs.rust-bin.stable.latest.default;
 in
 {
   programs.mise = {
     enable = true;
     package = inputs.mise-flake.packages.${pkgs.system}.mise.overrideAttrs (old: {
-      buildInputs = (old.buildInputs or [ ]) ++ [ rust182 ];
+      buildInputs = (old.buildInputs or [ ]) ++ [ rustlatest ];
 
       # Ensure cargo uses the correct Rust version
-      CARGO_HOME = "${rust182}/.cargo";
-      RUSTC = "${rust182}/bin/rustc";
-      RUSTDOC = "${rust182}/bin/rustdoc";
+      CARGO_HOME = "${rustlatest}/.cargo";
+      RUSTC = "${rustlatest}/bin/rustc";
+      RUSTDOC = "${rustlatest}/bin/rustdoc";
     });
   };
 
