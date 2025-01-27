@@ -3,8 +3,19 @@
 {
   programs.neovim = {
     enable = true;
+    package = pkgs.neovim-nightly;
     viAlias = true;
     vimAlias = true;
-    plugins = with pkgs.vimPlugins; [ LazyVim ];
   };
+  extraPackages = with pkgs; [
+    # LazyVim
+    lua-language-server
+    stylua
+    # Telescope
+    ripgrep
+  ];
+
+  plugins = with pkgs.vimPlugins; [
+    lazy-nvim
+  ];
 }

@@ -1,6 +1,7 @@
 {
   imports = [
     ./bash
+    ./bat
     ./bottom
     ./cava
     ./dconf
