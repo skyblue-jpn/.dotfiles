@@ -12,10 +12,10 @@
       src = pkgs.fetchFromGitHub {
         owner = "AdisonCavani";
         repo = "distro-grub-themes";
-        rev = "v3.1";
+        rev = "v3.2";
         hash = "sha256-ZcoGbbOMDDwjLhsvs77C7G7vINQnprdfI37a9ccrmPs=";
       };
-      installPhase = "cp -r customize/nixos $out";
+      installPhase = "cp -r customize/dell $out";
     };
   };
 }
