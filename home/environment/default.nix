@@ -1,4 +1,5 @@
 {
-  home.sessionVariables = {
-  };
+  imports = [
+    ./variables
+  ];
 }
