@@ -6,6 +6,12 @@
   ...
 }:
 
+let
+  cloneLazyVim = pkgs.runCommand "clone-lazyvim" { } ''
+    git clone https://github.com/LazyVim/starter $out
+    rm -rf $out/.git
+  '';
+in
 {
   programs.neovim = {
     enable = true;
@@ -14,9 +20,5 @@
     vimAlias = true;
   };
 
-  # Run the git clone command and remove the .git folder
-  runCommand "clone-lazyvim" {} ''
-    git clone https://github.com/LazyVim/starter ~/.config/nvim
-    rm -rf ~/.config/nvim/.git
-  '';
+  home.file.".config/nvim".source = cloneLazyVim;
 }
