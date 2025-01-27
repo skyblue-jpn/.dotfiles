@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 let
   # Import the rust overlay and select the Rust version
@@ -14,7 +19,7 @@ in
   programs.mise = {
     enable = true;
     package = inputs.mise-flake.packages.${pkgs.system}.mise.overrideAttrs (old: {
-      buildInputs = (old.buildInputs or []) ++ [ rust182 ];
+      buildInputs = (old.buildInputs or [ ]) ++ [ rust182 ];
 
       # Ensure cargo uses the correct Rust version
       CARGO_HOME = "${rust182}/.cargo";
