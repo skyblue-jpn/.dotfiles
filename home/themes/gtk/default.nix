@@ -16,10 +16,10 @@
       };
     };
     iconTheme = {
-      name = "Catppuccin-Papirus-Folder-Macchiato-Mauve";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "macchiato";
-        accent = "mauve";
+      name = "Colloid-Catppuccin-Purple";
+      package = pkgs.colloid-icon-theme.override {
+        scheme = "catppuccin";
+        theme = "purple";
       };
     };
   };
