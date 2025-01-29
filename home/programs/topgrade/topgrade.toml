@@ -184,9 +184,9 @@
     # (default: false)
     # bootc = false
 
-    nix_arguments = "--flake ~/.dotfiles/flake.nix#myNixOS"
+    nix_arguments = "--flake $HOME/.dotfiles/flake.nix#myNixOS"
 
-    nix_env_arguments = "--flake ~/.dotfiles/flake.nix#myHome"
+    nix_env_arguments = "--flake $HOME/.dotfiles/flake.nix#myHome"
 
     # Extra Home Manager arguments
     # home_manager_arguments = ["--flake", "file"]
