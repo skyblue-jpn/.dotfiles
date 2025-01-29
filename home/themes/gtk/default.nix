@@ -21,18 +21,6 @@
     };
   };
 
-  gtk3.extraConfig = {
-    Settings = ''
-      gtk-application-prefer-dark-theme=1
-    '';
-  };
-
-  gtk4.extraConfig = {
-    Settings = ''
-      gtk-application-prefer-dark-theme=1
-    '';
-  };
-
   # Now symlink the `~/.config/gtk-4.0/` folder declaratively:
   xdg.configFile = {
     "gtk-4.0/assets".source =
