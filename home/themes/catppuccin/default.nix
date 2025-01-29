@@ -9,7 +9,7 @@
     bottom.flavor = "catppuccin.flavor";
     cava.flavor = "catppuccin.flavor";
     cava.transparent = true;
-    cursors.enable = "catppuccin.enable";
+    cursors.enable = true;
     cursors.accent = "catppuccin.accent";
     cursors.flavor = "catppuccin.flavor";
     delta.flavor = "catppuccin.flavor";
