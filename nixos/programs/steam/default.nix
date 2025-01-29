@@ -8,6 +8,9 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
   };
+
+  environment.systemPackages = [ pkgs.proton-ge-custom ];
+
   # Steamのフォントが文字化けするので、フォント設定を追加
   # SteamだけフォントをMigu 1Pにする
   fonts = {
