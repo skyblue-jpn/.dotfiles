@@ -8,21 +8,25 @@ cd "$(dirname "$0")"
 
 # Function to update the flake
 update_flake() {
+    echo "Running: update_flake"
     nix flake update
 }
 
 # Function to rebuild and switch to the new NixOS configuration, installing the bootloader
 rebuild_nixos() {
+    echo "Running: rebuild_nixos"
     sudo nixos-rebuild switch --flake .#myNixOS --install-bootloader
 }
 
 # Function to switch to the new Home Manager configuration
 switch_home_manager() {
+    echo "Running: switch_home_manager"
     nix run nixpkgs#home-manager -- switch --flake .#myHome
 }
 
 # Function to perform garbage collection on the Nix store
 garbage_collect() {
+    echo "Running: garbage_collect"
     sudo nix store gc
 }
 
