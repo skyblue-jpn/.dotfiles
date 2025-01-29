@@ -33,7 +33,7 @@
       "black"
     ];
     kvantum.enable = false;
-    kvantum.apply = faise;
+    kvantum.apply = false;
     kvantum.accent = "mauve";
     kvantum.flavor = "macchiato";
     nvim.flavor = "macchiato";
