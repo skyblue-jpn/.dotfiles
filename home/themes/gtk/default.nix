@@ -4,7 +4,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Macchiato-Compact-Pink-Dark";
+      name = "Catppuccin-Macchiato-Compact-Mauve-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "mauve" ];
         size = "compact";
@@ -14,6 +14,10 @@
         ];
         variant = "macchiato";
       };
+    };
+    iconTheme.package = pkgs.catppuccin-papirus-folders.override {
+      flavor = "macchiato";
+      accent = "mauve";
     };
   };
 

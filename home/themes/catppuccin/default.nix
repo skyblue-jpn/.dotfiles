@@ -32,7 +32,8 @@
       "rimless"
       "black"
     ];
-    kvantum.apply = true;
+    kvantum.enable = false;
+    kvantum.apply = faise;
     kvantum.accent = "mauve";
     kvantum.flavor = "macchiato";
     nvim.flavor = "macchiato";
@@ -43,4 +44,9 @@
     zathura.flavor = "macchiato";
     zsh-syntax-highlighting.flavor = "macchiato";
   };
+
+  home.packages = with pkgs; [
+    catppuccin-qt5ct
+    catppuccin-kvantum
+  ];
 }
