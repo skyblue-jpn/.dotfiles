@@ -20,6 +20,7 @@
     fish.flavor = "macchiato";
     fzf.accent = "mauve";
     fzf.flavor = "macchiato";
+    ghostty.enable = false;
     ghostty.flavor = "macchiato";
     gtk.enable = true;
     gtk.accent = "mauve";
@@ -32,6 +33,7 @@
     kvantum.accent = "mauve";
     kvantum.flavor = "macchiato";
     nvim.flavor = "macchiato";
+    starship.enable = false;
     starship.flavor = "macchiato";
     yazi.accent = "mauve";
     yazi.flavor = "macchiato";
