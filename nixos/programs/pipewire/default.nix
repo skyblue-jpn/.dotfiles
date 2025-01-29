@@ -10,4 +10,5 @@
     pulse.enable = true;
     jack.enable = true;
   };
+  environment.systemPackages = [ pkgs.pwvucontrol_git ];
 }
