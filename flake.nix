@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    catppuccin.url = "github:catppuccin/nix";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,6 +29,7 @@
         modules = [
           ./nixos/configuration.nix
           inputs.chaotic.nixosModules.default
+          inputs.catppuccin.nixosModules.catppuccin
         ];
       };
     };
@@ -45,6 +47,7 @@
         modules = [
           ./home/home.nix
           inputs.chaotic.homeManagerModules.default
+          inputs.catppuccin.homeManagerModules.catppuccin
         ];
       };
     };
