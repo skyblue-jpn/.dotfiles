@@ -16,12 +16,21 @@
       };
     };
     iconTheme = {
-      name = "Colloid-Catppuccin-Purple";
-      package = pkgs.colloid-icon-theme.override {
-        scheme = "catppuccin";
-        theme = "purple";
-      };
+      name = "colloid-icon-theme";
+      package = pkgs.colloid-icon-theme;
     };
+  };
+
+  gtk3.extraConfig = {
+    Settings = ''
+      gtk-application-prefer-dark-theme=1
+    '';
+  };
+
+  gtk4.extraConfig = {
+    Settings = ''
+      gtk-application-prefer-dark-theme=1
+    '';
   };
 
   # Now symlink the `~/.config/gtk-4.0/` folder declaratively:
