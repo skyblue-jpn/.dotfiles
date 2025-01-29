@@ -11,11 +11,7 @@
     clearDefaultKeybinds = false;
   };
 
-  home = {
-    file."config" = {
-      enable = true;
-      source = ./config;
-      target = ".config/ghostty/config";
-    };
+  home.file.".config/ghostty/config" = {
+    source = ./config;
   };
 }
