@@ -14,6 +14,7 @@
     ./environment
     ./packages
     ./programs
+    ./themes
     ./users
   ];
 
