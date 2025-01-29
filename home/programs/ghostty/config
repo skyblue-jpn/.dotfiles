@@ -1,12 +1,13 @@
 theme = Dracula
 font-family = "HackGen Console NF"
+font-size = 14pt
 
 cursor-opacity = 0.7
 cursor-style = bar
 cursor-style-blink = true
 
 window-padding-x = 20
-window-padding-y = 5
+window-padding-y = 10
 window-padding-balance = true
 window-theme = ghostty
 background-opacity = 0.85
