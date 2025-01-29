@@ -14,6 +14,7 @@
     imagemagick
     inkscape
     libreoffice-fresh
+    nixfmt-rfc-style
     p7zip
     peaclock
     pingu
