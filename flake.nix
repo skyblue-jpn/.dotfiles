@@ -44,7 +44,6 @@
           ./home/home.nix
           inputs.chaotic.homeManagerModules.default
         ];
-        nix.package = inputs.nixpkgs.nix;
       };
     };
   };
