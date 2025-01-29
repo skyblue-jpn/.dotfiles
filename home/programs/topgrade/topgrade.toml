@@ -188,7 +188,7 @@
 
     nix_env_arguments = ""
 
-home_manager_arguments = ["--flake""/home/celeste/.dotfiles/#myHome"]
+    home_manager_arguments = [ "--flake", "/home/celeste/.dotfiles/#myHome" ]
 
 
 # Extra Home Manager arguments
