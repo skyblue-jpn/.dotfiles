@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+  nix.package = pkgs.nix;
 
   imports = [
     ./development
