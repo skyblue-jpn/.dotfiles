@@ -27,6 +27,5 @@
     stix-two
     ventoy-full
     zoom-us
-    nyxUtils
   ];
 }
