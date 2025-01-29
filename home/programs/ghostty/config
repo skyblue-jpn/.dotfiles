@@ -1,6 +1,5 @@
 theme = Dracula
 font-family = "HackGen Console NF"
-font-size = 14pt
 
 cursor-opacity = 0.7
 cursor-style = bar
