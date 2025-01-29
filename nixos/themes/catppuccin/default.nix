@@ -5,7 +5,13 @@
     enable = true;
     accent = "mauve";
     flavor = "macchiato";
-    fcitx5.accent = "mauve";
-    fcitx5.flavor = "catppuccin.flavor";
+    grub.flavor = "catppuccin.flavor";
+    plymouth.flavor = "catppuccin.flavor";
+    sddm.assertQt6Sddm = true;
+    sddm.flavor = "catppuccin.flavor";
+    sddm.font = "Noto Sans CJK JP";
+    sddm.fontSize = "9";
+    sddm.loginBackground = true;
+    tty.flavor = "catppuccin.flavor";
   };
 }

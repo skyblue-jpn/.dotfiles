@@ -5,6 +5,8 @@
     ./bottom
     ./cava
     ./dconf
+    ./delta
+    ./dunst
     ./eza
     ./fastfetch
     ./fd
@@ -27,6 +29,7 @@
     ./vscode
     ./xonsh
     ./yazi
+    ./zathura
     ./zoxide
     ./zsh
   ];

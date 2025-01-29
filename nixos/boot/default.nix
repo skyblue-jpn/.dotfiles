@@ -1,5 +1,7 @@
 {
   imports = [
     ./grub
+    ./kernel
+    ./plymouth
   ];
 }

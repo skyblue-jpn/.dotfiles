@@ -18,8 +18,6 @@
     ./users
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_cachyos-rc;
-
   # Networking.
   networking.hostName = "aquamarine";
   networking.networkmanager.enable = true;
