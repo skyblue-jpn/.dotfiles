@@ -21,7 +21,6 @@
 
   outputs = inputs: {
     formatter.x86_64-linux = inputs.nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
-    };
 
     nixosConfigurations = {
       myNixOS = inputs.nixpkgs.lib.nixosSystem {
