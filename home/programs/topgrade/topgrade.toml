@@ -189,7 +189,7 @@
     nix_env_arguments = ""
 
     # Extra Home Manager arguments
-    home_manager_arguments = [ "--flake /home/celeste/.dotfiles/flake.nix#myHome" ]
+    home_manager_arguments = [ "--flake", "/home/celeste/.dotfiles/flake.nix#myHome" ]
 
 
 [git]
