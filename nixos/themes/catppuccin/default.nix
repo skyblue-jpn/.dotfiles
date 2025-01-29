@@ -1,5 +1,5 @@
+{ inputs, ... }:
+
 {
-  imports = [
-    ./catppuccin
-  ];
+  inputs.catppuccin.enable = true;
 }
