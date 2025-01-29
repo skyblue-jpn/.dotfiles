@@ -30,6 +30,12 @@ garbage_collect() {
     sudo nix store gc
 }
 
+# Function to delete lock files
+delete_lock_files() {
+    echo "Running: delete_lock_files"
+    find /home/celeste/.dotfiles -name "*.lock" -type f -delete
+}
+
 # Default behavior if no argument is provided
 default_behavior() {
     update_flake
@@ -55,6 +61,9 @@ else
             ;;
         g | gc)
             garbage_collect
+            ;;
+        d | delete-locks)
+            delete_lock_files
             ;;
         *)
             echo "Invalid argument: $arg"
