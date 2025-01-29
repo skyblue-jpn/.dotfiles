@@ -25,7 +25,7 @@
         system = "x86_64-linux";
         modules = [
           ./nixos/configuration.nix
-          chaotic.nixosModules.default
+          inputs.chaotic.nixosModules.default
         ];
       };
     };
@@ -42,7 +42,7 @@
         };
         modules = [
           ./home/home.nix
-          chaotic.homeManagerModules.default
+          inputs.chaotic.homeManagerModules.default
         ];
       };
     };
