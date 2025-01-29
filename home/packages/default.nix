@@ -6,6 +6,7 @@
     bitwarden
     bottles
     cbonsai
+    colloid-icon-theme
     efibootmgr
     ffmpeg
     gimp
