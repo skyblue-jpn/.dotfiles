@@ -9,7 +9,7 @@ cursor-style-blink = true
 window-padding-x = 20
 window-padding-y = 10
 window-padding-balance = true
-window-theme = ghostty
+window-theme = system
 background-opacity = 0.85
 background-blur-radius = 20
 
