@@ -17,9 +17,10 @@
     };
     iconTheme = {
       name = "Catppuccin-Papirus-Folder-Macchiato-Mauve";
-      package = pkgs.catppuccin-papirus-folders.override;
-      flavor = "macchiato";
-      accent = "mauve";
+      package = pkgs.catppuccin-papirus-folders.override {
+        flavor = "macchiato";
+        accent = "mauve";
+      };
     };
   };
 
