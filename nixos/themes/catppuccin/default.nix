@@ -6,6 +6,6 @@
     accent = "mauve";
     flavor = "macchiato";
     fcitx5.accent = "mauve";
-    fcitx5.flavor = "catppuccin.flavor"
+    fcitx5.flavor = "catppuccin.flavor";
   };
 }
