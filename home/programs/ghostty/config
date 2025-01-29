@@ -1,4 +1,4 @@
-theme = Dracula
+theme = catppuccin-macchiato
 font-family = "HackGen Console NF"
 
 cursor-opacity = 0.7
