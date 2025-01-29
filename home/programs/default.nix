@@ -16,6 +16,7 @@
     ./git
     ./jq
     ./mise
+    ./navi
     ./neovim
     ./noisetorch
     ./peaclock

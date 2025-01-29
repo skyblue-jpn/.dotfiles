@@ -8,7 +8,6 @@
     cbonsai
     efibootmgr
     ffmpeg
-    ghostty
     gimp
     gparted
     heroic
