@@ -17,7 +17,7 @@
     ./users
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_cachyos-rc;
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
   # Networking.
   networking.hostName = "aquamarine";
