@@ -26,25 +26,36 @@ garbage_collect() {
     sudo nix store gc
 }
 
-# Check the provided argument and call the corresponding function
-case "$1" in
-u | update)
-    update_flake
-    ;;
-r | rebuild)
-    rebuild_nixos
-    ;;
-s | switch)
-    switch_home_manager
-    ;;
-g | gc)
-    garbage_collect
-    ;;
-*)
-    # Default behavior if no argument is provided
+# Default behavior if no argument is provided
+default_behavior() {
     update_flake
     rebuild_nixos
     switch_home_manager
     garbage_collect
-    ;;
-esac
+}
+
+# Check the provided arguments and call the corresponding functions
+if [ $# -eq 0 ]; then
+    default_behavior
+else
+    for arg in "$@"; do
+        case "$arg" in
+        u | update)
+            update_flake
+            ;;
+        r | rebuild)
+            rebuild_nixos
+            ;;
+        s | switch)
+            switch_home_manager
+            ;;
+        g | gc)
+            garbage_collect
+            ;;
+        *)
+            echo "Invalid argument: $arg"
+            exit 1
+            ;;
+        esac
+    done
+fi
