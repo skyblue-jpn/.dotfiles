@@ -27,7 +27,6 @@
           ./nixos/configuration.nix
           inputs.chaotic.nixosModules.default
         ];
-        nix.packages = inputs.nixpkgs.pkgs.nix;
       };
     };
 
@@ -45,7 +44,7 @@
           ./home/home.nix
           inputs.chaotic.homeManagerModules.default
         ];
-        nix.packages = inputs.nixpkgs.pkgs.nix;
+        nix.package = inputs.nixpkgs.nix;
       };
     };
   };
