@@ -5,7 +5,11 @@
     enable = true;
   };
 
-  home.file.".config/starship.toml" = {
-    source = ./starship.toml;
+  home = {
+    file."starship.toml" = {
+      enable = true;
+      source = ./starship.toml;
+      target = ".config/starship.tom";
+    };
   };
 }
