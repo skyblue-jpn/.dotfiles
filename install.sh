@@ -21,7 +21,7 @@ rebuild_nixos() {
 # Function to switch to the new Home Manager configuration
 switch_home_manager() {
     echo "Running: switch_home_manager"
-    nix run nixpkgs#home-manager -- switch --flake .#myHome
+    nix run nixpkgs#home-manager switch --flake .#myHome
 }
 
 # Function to perform garbage collection on the Nix store
