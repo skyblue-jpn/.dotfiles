@@ -22,13 +22,16 @@
     fzf.flavor = "macchiato";
     ghostty.enable = false;
     ghostty.flavor = "macchiato";
-    gtk.enable = true;
+    gtk.enable = false;
     gtk.accent = "mauve";
     gtk.flavor = "macchiato";
     gtk.icon.accent = "mauve";
     gtk.icon.flavor = "macchiato";
     gtk.size = "compact";
-    gtk.tweaks = "rimless";
+    gtk.tweaks = [
+      "rimless"
+      "black"
+    ];
     kvantum.apply = true;
     kvantum.accent = "mauve";
     kvantum.flavor = "macchiato";
