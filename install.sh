@@ -6,8 +6,11 @@ set -euxo pipefail
 # Move to the directory where the script exists
 cd "$(dirname "$0")"
 
-# Update the flake
-nix flake update
+# Check for the subcommand 'update-flake'
+if [ "$1" = "update-flake" ]; then
+    # Update the flake
+    nix flake update
+fi
 
 # Rebuild and switch to the new NixOS configuration, installing the bootloader
 sudo nixos-rebuild switch --flake .#myNixOS --install-bootloader
