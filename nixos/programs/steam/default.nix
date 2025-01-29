@@ -11,7 +11,7 @@
   # Steamのフォントが文字化けするので、フォント設定を追加
   # SteamだけフォントをMigu 1Pにする
   fonts = {
-    fonts = with pkgs; [
+    packages = with pkgs; [
       # ...
       migu
     ];
