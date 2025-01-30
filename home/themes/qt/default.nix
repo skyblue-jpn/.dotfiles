@@ -22,7 +22,8 @@
   };
 
   xdg.configFile = {
-    "Kvantum/ArcDark".source = "${pkgs.catppuccin-kvantum}/share/themes/catppuccin-macchiato-mauve";
+    "Kvantum/catppuccin-macchiato-mauve".source =
+      "${pkgs.catppuccin-kvantum}/share/themes/catppuccin-macchiato-mauve";
     "Kvantum/kvantum.kvconfig".text = "[General]\ntheme=catppuccin-macchiato-mauve";
   };
 
