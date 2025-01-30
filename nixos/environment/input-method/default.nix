@@ -12,8 +12,44 @@
         kdePackages.fcitx5-qt
       ];
       settings = {
-        inputMethod = "./profile";
-        globalOptions = "./config";
+        inputMethod = {
+          Groups = {
+            "0" = {
+              Name = "US";
+              DefaultLayout = "us";
+              DefaultIM = "mozc";
+              Items = {
+                "0" = {
+                  Name = "keyboard-us";
+                  Layout = "";
+                };
+                "1" = {
+                  Name = "mozc";
+                  Layout = "";
+                };
+              };
+            };
+            "1" = {
+              Name = "JP";
+              DefaultLayout = "jp";
+              DefaultIM = "mozc";
+              Items = {
+                "0" = {
+                  Name = "keyboard-jp";
+                  Layout = "";
+                };
+                "1" = {
+                  Name = "mozc";
+                  Layout = "";
+                };
+              };
+            };
+          };
+          GroupOrder = {
+            "0" = "US";
+            "1" = "JP";
+          };
+        };
       };
       waylandFrontend = true;
     };
