@@ -2,7 +2,7 @@
 
 {
   services.xserver.desktopManager.cinnamon.enable = true;
-  environment.cinnamon.excludePackages = [
+  environment.cinnamon.excludePackages = with pkgs; [
     adwaita-icon-theme
     sound-theme-freedesktop
     nixos-artwork.wallpapers.simple-dark-gray
