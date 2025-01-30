@@ -33,11 +33,9 @@
     };
     cursorTheme = {
       name = "catppuccin-macchiato-dark-cursors";
-      size = 16;
     };
   };
 
-  # Now symlink the `~/.config/gtk-4.0/` folder declaratively:
   xdg.configFile = {
     "gtk-4.0/assets".source =
       "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";

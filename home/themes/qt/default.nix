@@ -1,8 +1,10 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
     kdePackages.qt6ct
+    libsForQt5.qt5ct
+    kdePackages.qtwayland
     kdePackages.qtstyleplugin-kvantum
     catppuccin-kvantum
   ];
@@ -18,4 +20,10 @@
       };
     };
   };
+
+  xdg.configFile = {
+    #"Kvantum/ArcDark".source = "${pkgs.arc-kde-theme}/share/Kvantum/ArcDark";
+    #"Kvantum/kvantum.kvconfig".text = "[General]\ntheme=ArcDark";
+  };
+
 }
