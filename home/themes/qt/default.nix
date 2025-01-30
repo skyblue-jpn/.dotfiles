@@ -10,12 +10,9 @@
     catppuccin-kvantum
   ];
 
-  home.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt6ct";
-  };
-
   qt = {
     enable = true;
+    platformTheme = "qtct";
     style = {
       name = "kvantum";
       package = pkgs.catppuccin-kvantum.override {
