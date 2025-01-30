@@ -12,7 +12,7 @@
     efibootmgr
     ffmpeg
     gimp
-    gnome-screenshot
+    gscreenshot
     gparted
     heroic
     imagemagick
