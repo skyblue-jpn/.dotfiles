@@ -1,6 +1,11 @@
 { pkgs, inputs, ... }:
 
 {
+
+  imports = [
+    ./gtk
+  ];
+
   catppuccin = {
     enable = true;
     accent = "mauve";

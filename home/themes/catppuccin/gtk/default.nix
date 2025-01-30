@@ -1,18 +1,26 @@
 { pkgs, config, ... }:
 
 {
+  home.packages = with pkgs; [
+    sassc
+    gtk-engine-murrine
+    gnome-themes-extra
+    magnetic-catppuccin-gtk
+  ];
+
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Macchiato-Compact-Mauve-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "mauve" ];
+      name = "Magnetic-Catppuccin-Macchiato-Compact-Mauve-Dark";
+      package = pkgs.magnetic-catppuccin-gtk.override {
+        accent = [ "mauve" ];
+        shade = "dark";
         size = "compact";
         tweaks = [
-          "rimless"
+          "macchiato"
           "black"
+          "outline"
         ];
-        variant = "macchiato";
       };
     };
     iconTheme = {
