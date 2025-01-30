@@ -20,4 +20,8 @@
       };
     };
   };
+
+  xdg.configFile = {
+    "Kvantum/kvantum.kvconfig".text = "[General]\ntheme=catppuccin-macchiato-mauve";
+  };
 }
