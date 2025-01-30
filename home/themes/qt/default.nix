@@ -14,7 +14,7 @@
     platformTheme.name = "qtct";
     style = {
       name = "kvantum";
-      package = pkgs.magnetic-catppuccin-gtk.override {
+      package = pkgs.catppuccin-kvantum.override {
         accent = [ "mauve" ];
         variant = [ "macchiato" ];
       };
