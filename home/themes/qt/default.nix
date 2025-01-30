@@ -16,7 +16,7 @@
       name = "kvantum";
       package = pkgs.magnetic-catppuccin-gtk.override {
         accent = [ "mauve" ];
-        varient = [ "macchiato" ];
+        variant = [ "macchiato" ];
       };
     };
   };
