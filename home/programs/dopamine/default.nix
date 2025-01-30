@@ -22,7 +22,7 @@ in
   home.packages = [ pkgs.dopamine ];
 
   xdg.configFile = {
-    "Dopamine/config.json".source = ./config.json;
-    #"Dopamine/Themes".source = dopamineTheme;
+    #"Dopamine/config.json".source = ./config.json;
+    "Dopamine/Themes".source = dopamineTheme;
   };
 }
