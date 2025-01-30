@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.file.".peaclock/config" = {
-    source = ./config;
+  home.file = {
+    ".peaclock/config".source = ./config;
   };
 }

@@ -11,7 +11,7 @@
     clearDefaultKeybinds = false;
   };
 
-  home.file.".config/ghostty/config" = {
-    source = ./config;
+  xdg.configFile = {
+    "ghostty/configc".source = ./config;
   };
 }

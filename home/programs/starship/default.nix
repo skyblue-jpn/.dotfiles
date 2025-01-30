@@ -5,7 +5,7 @@
     enable = true;
   };
 
-  home.file.".config/starship.toml" = {
-    source = ./starship.toml;
+  xdg.configFile = {
+    "starship.toml".source = ./starship.toml;
   };
 }
