@@ -22,6 +22,6 @@
   };
 
   xdg.configFile = {
-    "Kvantum/kvantum.kvconfig".text = "[General]\ntheme=catppuccin-macchiato-mauve";
+    "Kvantum/kvantum.kvconfig".source = ./kvantum.kvconfig;
   };
 }
