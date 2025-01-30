@@ -2,10 +2,11 @@
 
 {
   home.packages = with pkgs; [
+    kdePackages.qtwayland
     kdePackages.qt6ct
     libsForQt5.qt5ct
-    kdePackages.qtwayland
     kdePackages.qtstyleplugin-kvantum
+    libsForQt5.qtstyleplugin-kvantum
     catppuccin-kvantum
   ];
 
