@@ -15,6 +15,10 @@
     catppuccin-kvantum
   ];
 
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt6ct";
+  };
+
   qt = {
     enable = true;
     platformTheme.name = "qtct";
@@ -28,6 +32,8 @@
   };
 
   xdg.configFile = {
+    "qt5ct/qt5ct.conf".source = ./qt5ct.conf;
+    "qt6ct/qt6ct.conf".source = ./qt6ct.conf;
     "Kvantum/kvantum.kvconfig".source = ./kvantum.kvconfig;
   };
 }
