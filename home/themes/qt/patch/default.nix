@@ -1,13 +1,25 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
-# This is a patch to fix the broken Kvantum theming on qt5.
-# The theming file was already downloaded from the repository so it could not update automatically.
+let
+  kvantumTheme = pkgs.stdenv.mkDerivation {
+    pname = "catppuccin-macchiato-mauve";
+    version = "latest";
+    src = pkgs.fetchFromGitHub {
+      owner = "catppuccin";
+      repo = "Kvantum";
+      rev = "main";
+      sha256 = ""; # Replace with actual hash
+    };
+
+    installPhase = ''
+      mkdir -p $out
+      cp -r $src/themes/catppuccin-macchiato-mauve $out/
+    '';
+  };
+in
 
 {
   xdg.configFile = {
-    "Kvantum/catppuccin-macchiato-mauve/catppuccin-macchiato-mauve.kvconfig".source =
-      ./catppuccin-macchiato-mauve.kvconfig;
-    "Kvantum/catppuccin-macchiato-mauve/catppuccin-macchiato-mauve.svg".source =
-      ./catppuccin-macchiato-mauve.svg;
+    "Kvantum/catppuccin-macchiato-mauve".source = kvantumTheme;
   };
 }
