@@ -15,10 +15,6 @@
     catppuccin-kvantum
   ];
 
-  home.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = lib.mkForce "qt6ct";
-  };
-
   qt = {
     enable = true;
     platformTheme.name = "qtct";
