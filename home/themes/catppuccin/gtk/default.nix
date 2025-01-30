@@ -27,8 +27,8 @@
     iconTheme = {
       name = "Colloid-Dark";
       package = pkgs.colloid-icon-theme.override {
-        schemeVariants = catppuccin;
-        colorVariants = purple;
+        schemeVariants = "catppuccin";
+        colorVariants = "purple";
       };
     };
   };
