@@ -11,6 +11,10 @@
         fcitx5-lua
         kdePackages.fcitx5-qt
       ];
+      settings = {
+        inputMethod = "./profile";
+        globalOptions = "./config";
+      };
       waylandFrontend = true;
     };
   };
