@@ -13,7 +13,7 @@ let
 
     installPhase = ''
       mkdir -p $out
-      cp -r $src/themes/catppuccin-macchiato-mauve/ $out/
+      cp -r $src/themes/catppuccin-macchiato-mauve/* $out/
     '';
   };
 in
