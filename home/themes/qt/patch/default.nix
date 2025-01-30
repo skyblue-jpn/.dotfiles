@@ -20,6 +20,6 @@ in
 
 {
   xdg.configFile = {
-    "Kvantum/catppuccin-macchiato-mauve".source = kvantumTheme;
+    "Kvantum".source = kvantumTheme;
   };
 }
