@@ -14,11 +14,8 @@
     mint-x-icons
     mint-y-icons
     ubuntu-classic
-    xviewer
     xreader
     xed-editor
-    pix
-    celluloid
     gnome-calculator
     gnome-calendar
   ];

@@ -7,6 +7,8 @@
     bottles
     bulky
     cbonsai
+    celluloid
+    dopamin
     efibootmgr
     ffmpeg
     gimp
@@ -22,13 +24,16 @@
     peaclock
     pingu
     pipes-rs
+    pix
     polkit
     poppler
+    qalculate-gtk
     rclone
     sl
     stix-two
     ventoy-full
     warpinator
+    xviewer
     zoom-us
   ];
 }
