@@ -25,8 +25,11 @@
       };
     };
     iconTheme = {
-      name = "colloid-icon-theme";
-      package = pkgs.colloid-icon-theme;
+      name = "Colloid-Dark";
+      package = pkgs.colloid-icon-theme.override {
+        schemeVariants = catppuccin;
+        colorVariants = purple;
+      };
     };
   };
 
