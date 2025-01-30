@@ -30,9 +30,9 @@
         schemeVariants = [ "catppuccin" ];
         colorVariants = [ "purple" ];
       };
-      cursorTheme = {
-        name = "catppuccin-macchiato-dark-cursors";
-      };
+    };
+    cursorTheme = {
+      name = "catppuccin-macchiato-dark-cursors";
     };
   };
 
