@@ -12,6 +12,6 @@
   };
 
   xdg.configFile = {
-    "ghostty/configc".source = ./config;
+    "ghostty/config".source = ./config;
   };
 }
