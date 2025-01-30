@@ -31,9 +31,6 @@
         colorVariants = [ "purple" ];
       };
     };
-    cursorTheme = {
-      name = "catppuccin-macchiato-dark-cursors";
-    };
   };
 
   xdg.configFile = {
