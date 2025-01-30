@@ -8,7 +8,7 @@ let
       owner = "Fausto-Korpsvart";
       repo = "Catppuccin-GTK-Theme";
       rev = "main";
-      sha256 = ""; # Replace with actual hash
+      sha256 = "sha256-QItHmYZpe7BiPC+2CtFwiRXyMTG7+ex0sJTs63xmkAo="; # Replace with actual hash
     };
 
     installPhase = ''
@@ -20,6 +20,6 @@ in
 
 {
   home.file = {
-    ".local/share/icons/Catppuccin-Macchiato".source = iconTheme;
+    ".local/share/icons/magnetic-catppuccin-gtk-icons-macchiato".source = iconTheme;
   };
 }
