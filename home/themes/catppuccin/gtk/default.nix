@@ -11,9 +11,9 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Magnetic-Catppuccin-Macchiato-Compact-Mauve-Dark";
+      name = "Magnetic-Catppuccin-Macchiato-Compact-Purple-Dark";
       package = pkgs.magnetic-catppuccin-gtk.override {
-        accent = [ "mauve" ];
+        accent = [ "purple" ];
         shade = "dark";
         size = "compact";
         tweaks = [
