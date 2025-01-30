@@ -9,6 +9,7 @@
     ./dunst
     ./eza
     ./fastfetch
+    ./fcitx5
     ./fd
     ./fish
     ./floorp
