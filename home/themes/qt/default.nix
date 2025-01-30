@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   # Fallback conf.
@@ -16,7 +16,7 @@
   ];
 
   home.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt6ct";
+    QT_QPA_PLATFORMTHEME = lib.mkForce "qt6ct";
   };
 
   qt = {
@@ -29,11 +29,5 @@
         variant = "macchiato";
       };
     };
-  };
-
-  xdg.configFile = {
-    "qt5ct/qt5ct.conf".source = ./qt5ct.conf;
-    "qt6ct/qt6ct.conf".source = ./qt6ct.conf;
-    "Kvantum/kvantum.kvconfig".source = ./kvantum.kvconfig;
   };
 }
