@@ -14,13 +14,10 @@
     platformTheme.name = "qtct";
     style = {
       name = "kvantum";
+      package = pkgs.magnetic-catppuccin-gtk.override {
+        accent = [ "mauve" ];
+        varient = [ "macchiato" ];
+      };
     };
   };
-
-  xdg.configFile = {
-    "Kvantum/catppuccin-macchiato-mauve".source =
-      "${pkgs.catppuccin-kvantum}/share/themes/catppuccin-macchiato-mauve";
-    "Kvantum/kvantum.kvconfig".text = "[General]\ntheme=catppuccin-macchiato-mauve";
-  };
-
 }
