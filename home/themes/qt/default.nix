@@ -30,4 +30,10 @@
       };
     };
   };
+
+  xdg.configFile = {
+    "qt5ct/qt5ct.conf".source = ./qt5ct.conf;
+    "qt6ct/qt6ct.conf".source = ./qt6ct.conf;
+    "Kvantum/kvantum.kvconfig".source = ./kvantum.kvconfig;
+  };
 }
