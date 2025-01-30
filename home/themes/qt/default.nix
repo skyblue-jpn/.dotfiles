@@ -27,5 +27,5 @@
   };
 
   home.file.".config/Kvantum/catppuccin-macchiato-mauve".source =
-    "${pkgs.catppuccin-kvantum}/themes/catppuccin-macchiato-mauve";
+    "${pkgs.catppuccin-kvantum}/themes/catppuccin-macchiato-mauve.kvconfig";
 }
