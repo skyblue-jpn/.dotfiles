@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
 
-# The configuration file of fcitx5 is managed by home-manager
-
 {
   i18n.inputMethod = {
     type = "fcitx5";
