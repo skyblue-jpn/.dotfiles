@@ -8,7 +8,7 @@
     "checkForUpdates": true,
     "checkForUpdatesIncludesPreReleases": true,
     "fontSize": 13,
-    "theme": "Dopamine",
+    "theme": "Catppuccin Macchiato Mauve",
     "showWelcome": false,
     "followSystemTheme": true,
     "useLightBackgroundTheme": false,
