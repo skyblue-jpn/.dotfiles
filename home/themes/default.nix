@@ -3,6 +3,5 @@
     ./catppuccin
     ./gtk
     ./qt
-    ./icons
   ];
 }
