@@ -8,7 +8,7 @@ let
       owner = "catppuccin";
       repo = "dopamine";
       rev = "main";
-      sha256 = "";
+      sha256 = "sha256-ZIodQi+Qo/aBYCwCcjw2u77Q2YLn9vhodzLzfX1z2Yw=";
     };
 
     installPhase = ''
