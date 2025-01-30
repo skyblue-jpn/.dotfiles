@@ -50,6 +50,37 @@
             "1" = "JP";
           };
         };
+        globalOptions = {
+          Hotkey = {
+            EnumerateWithTriggerKeys = true;
+            EnumerateForwardKeys = "";
+            EnumerateBackwardKeys = "";
+            EnumerateSkipFirst = false;
+            TriggerKeys = {
+              "0" = "Control+space";
+              "1" = "Zenkaku_Hankaku";
+              "2" = "Hangul";
+            };
+            AltTriggerKeys = {
+              "0" = "Shift_L";
+            };
+            EnumerateGroupForwardKeys = {
+              "0" = "Super+space";
+            };
+            EnumerateGroupBackwardKeys = {
+              "0" = "Shift+Super+space";
+            };
+            ActivateKeys = {
+              "0" = "Hangul_Hanja";
+            };
+            DeactivateKeys = {
+              "0" = "Hangul_Romaja";
+            };
+            PrevPage = {
+              "0" = "Up";
+            };
+          };
+        };
       };
       waylandFrontend = true;
     };
