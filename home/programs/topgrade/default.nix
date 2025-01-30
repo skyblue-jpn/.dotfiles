@@ -6,6 +6,6 @@
   };
 
   xdg.configFile = {
-    "topgrade.tom".source = ./topgrade.toml;
+    "topgrade.toml".source = ./topgrade.toml;
   };
 }
