@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+# This patch resolves issues with Kvantum theming on qt5.
+# For more details, visit: https://github.com/NixOS/nixpkgs/issues/355277
+
 let
   kvantumTheme = pkgs.stdenv.mkDerivation {
     pname = "catppuccin-macchiato-mauve";

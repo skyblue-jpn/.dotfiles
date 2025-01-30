@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  # Fallback conf. See: https://github.com/NixOS/nixpkgs/issues/355277
+  # Fallback conf.
   imports = [
     ./patch
   ];
