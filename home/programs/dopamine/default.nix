@@ -19,7 +19,7 @@ let
 in
 
 {
-  home.packages = pkgs.dopamine;
+  home.packages = [ pkgs.dopamine ];
 
   xdg.configFile = {
     "Dopamine/config.json".source = ./config.json;
