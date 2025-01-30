@@ -30,5 +30,4 @@
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".source = ./kvantum.kvconfig;
   };
-
 }
