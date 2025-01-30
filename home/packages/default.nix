@@ -8,7 +8,6 @@
     bulky
     cbonsai
     celluloid
-    dopamine
     efibootmgr
     ffmpeg
     gimp

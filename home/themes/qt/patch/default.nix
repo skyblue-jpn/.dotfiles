@@ -11,7 +11,7 @@ let
       owner = "catppuccin";
       repo = "Kvantum";
       rev = "main";
-      sha256 = "sha256-eQmEeKC+L408ajlNg3oKMnDK6Syy2GV6FrR2TN5ZBCg="; # Replace with actual hash
+      sha256 = "sha256-eQmEeKC+L408ajlNg3oKMnDK6Syy2GV6FrR2TN5ZBCg=";
     };
 
     installPhase = ''

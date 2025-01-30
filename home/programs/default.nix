@@ -6,6 +6,7 @@
     ./cava
     ./dconf
     ./delta
+    ./dopamine
     ./dunst
     ./eza
     ./fastfetch
