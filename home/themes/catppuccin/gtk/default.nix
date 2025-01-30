@@ -33,6 +33,7 @@
     };
     cursorTheme = {
       name = "catppuccin-macchiato-dark-cursors";
+      size = 16;
     };
   };
 
