@@ -23,6 +23,6 @@ in
 
   xdg.configFile = {
     "Dopamine/config.json".source = ./config.json;
-    "Dopamine/Themes".source = dopamineTheme;
+    #"Dopamine/Themes".source = dopamineTheme;
   };
 }
