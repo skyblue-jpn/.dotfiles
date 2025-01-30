@@ -28,10 +28,6 @@
     #    });
   };
 
-  home.file.".config/mise/config.toml" = {
-    source = ./config.toml;
-  };
-
   xdg.configFile = {
     "mise/config.toml".source = ./config.toml;
   };
