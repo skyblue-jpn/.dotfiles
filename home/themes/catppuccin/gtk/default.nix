@@ -11,7 +11,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Magnetic-Catppuccin-Macchiato-Compact-Purple-Dark";
+      name = "Catppuccin-GTK-Purple-Dark-Compact-Macchiato";
       package = pkgs.magnetic-catppuccin-gtk.override {
         accent = [ "purple" ];
         shade = "dark";
@@ -20,6 +20,7 @@
           "macchiato"
           "black"
           "outline"
+          "macos"
         ];
       };
     };
