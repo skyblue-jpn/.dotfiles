@@ -25,4 +25,7 @@
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".source = ./kvantum.kvconfig;
   };
+
+  home.file.".config/Kvantum/catppuccin-macchiato-mauve".source =
+    "${pkgs.catppuccin-kvantum}/themes/catppuccin-macchiato-mauve";
 }
