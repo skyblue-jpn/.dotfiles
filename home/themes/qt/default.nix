@@ -12,7 +12,7 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "qt5ct";
+    platformTheme.name = "qtct";
     style = {
       name = "kvantum";
       package = pkgs.catppuccin-kvantum.override {
