@@ -5,6 +5,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     catppuccin.url = "github:catppuccin/nix";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
