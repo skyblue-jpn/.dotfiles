@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  # Fallback conf. See: https://github.com/NixOS/nixpkgs/issues/355277
+  imports = [
+    ./patch
+  ];
+
   home.packages = with pkgs; [
     kdePackages.qtwayland
     kdePackages.qt6ct
@@ -26,6 +31,4 @@
     "Kvantum/kvantum.kvconfig".source = ./kvantum.kvconfig;
   };
 
-  home.file.".config/Kvantum/catppuccin-macchiato-mauve".source =
-    "${pkgs.catppuccin-kvantum}/themes/catppuccin-macchiato-mauve/catppuccin-macchiato-mauve.kvconfig";
 }
