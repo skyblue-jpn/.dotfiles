@@ -7,7 +7,7 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "NixOS";
       repo = "nixos-artwork";
-      rev = "main";
+      rev = "master";
       sha256 = "";
     };
 
