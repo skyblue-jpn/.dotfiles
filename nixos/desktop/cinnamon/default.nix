@@ -21,6 +21,6 @@
     gnome-screenshot
   ];
   environment.systemPackages = with pkgs; [
-    nixos-artwork.wallpapers.simple-dark-gray
+    nixos-artwork.wallpapers.catppuccin-macchiato
   ];
 }
