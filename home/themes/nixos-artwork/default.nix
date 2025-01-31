@@ -13,7 +13,7 @@ let
 
     buildInputs = [
       pkgs.imagemagick
-      pkgs.grub
+      pkgs.grub2
     ];
 
     installPhase = ''
