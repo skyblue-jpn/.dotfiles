@@ -20,7 +20,7 @@
     gnome-calendar
     gnome-screenshot
   ];
-  #  environment.systemPackages = with pkgs; [
-  #    nixos-artwork.wallpapers.nineish-catppuccin-macchiato-alt
-  #  ];
+  environment.systemPackages = with pkgs; [
+    nixos-artwork.wallpapers.simple-dark-gray
+  ];
 }
