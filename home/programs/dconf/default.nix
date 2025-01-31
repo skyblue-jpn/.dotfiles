@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = pkgs.dconf-editor;
+  home.packages = with pkgs; [ dconf-editor ];
 
   dconf = {
     enable = true;
