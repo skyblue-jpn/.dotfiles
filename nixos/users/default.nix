@@ -13,4 +13,6 @@
     ];
     shell = pkgs.fish;
   };
+
+  nix.settings.allowed-users = [ celeste ];
 }
