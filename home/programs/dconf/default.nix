@@ -55,7 +55,6 @@
         ];
         next-applet-id = 13;
         panel-edit-mode = false;
-        panel-zone-symbolic-icon-sizes = "[{" panelId ": 1, " left ": 28, " center ": 28, " right ": 16}]";
         panels-height = [ "1:40" ];
       };
       "org/cinnamon/cinnamon-session".quit-time-delay = 60;
