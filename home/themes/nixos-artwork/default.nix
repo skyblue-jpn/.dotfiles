@@ -11,7 +11,10 @@ let
       sha256 = "sha256-VIrSOBCCNq6Fc0dS7XMtC1VebnjRvIUi0/kPal2gWcU=";
     };
 
-    buildInputs = [ pkgs.imagemagick ];
+    buildInputs = [
+      pkgs.imagemagick
+      pkgs.grub
+    ];
 
     installPhase = ''
       mkdir -p $out
