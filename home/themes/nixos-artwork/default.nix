@@ -8,7 +8,7 @@ let
       owner = "NixOS";
       repo = "nixos-artwork";
       rev = "master";
-      sha256 = "";
+      sha256 = "sha256-VIrSOBCCNq6Fc0dS7XMtC1VebnjRvIUi0/kPal2gWcU=";
     };
 
     installPhase = ''
