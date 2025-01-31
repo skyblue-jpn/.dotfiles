@@ -3,6 +3,6 @@
 {
   environment.systemPackages = with pkgs.nixos-artwork; [
     wallpapers.catppuccin-macchiato
-    nixos-icons
+    icons
   ];
 }
