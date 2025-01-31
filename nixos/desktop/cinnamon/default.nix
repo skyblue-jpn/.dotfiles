@@ -21,6 +21,6 @@
     gnome-screenshot
   ];
   environment.systemPackages = with pkgs; [
-    nixos-artwork.wallpapers.nix-wallpaper-nineish-catppuccin-macchiato-alt
+    nixos-artwork.wallpapers.nineish-catppuccin-macchiato-alt
   ];
 }
