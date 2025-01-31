@@ -1,8 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs.nixos-artwork; [
+  home.packages = with pkgs.nixos-artwork; [
     wallpapers.catppuccin-macchiato
-    #icons
   ];
 }
