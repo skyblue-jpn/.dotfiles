@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
 
+# Additional settings are managed by home-manager.
+
 {
   services.xserver.desktopManager.cinnamon.enable = true;
   environment.cinnamon.excludePackages = with pkgs; [
