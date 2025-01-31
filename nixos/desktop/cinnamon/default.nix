@@ -20,7 +20,4 @@
     gnome-calendar
     gnome-screenshot
   ];
-  environment.systemPackages = with pkgs; [
-    nixos-artwork.wallpapers.catppuccin-macchiato
-  ];
 }
