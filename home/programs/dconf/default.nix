@@ -79,7 +79,7 @@
         toolkit-accessibility = false;
       };
       "org/cinnamon/desktop/wm/preferences".theme = "Catppuccin-GTK-Purple-Dark-Compact-Macchiato";
-      "org/cinnamon/theme".name = "Catppuccin-GTK-Purple-Dark-Compact-Macchiat";
+      "org/cinnamon/theme".name = "Catppuccin-GTK-Purple-Dark-Compact-Macchiato";
 
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
