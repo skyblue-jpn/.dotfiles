@@ -17,7 +17,6 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     yazi.url = "github:sxyazi/yazi";
     mise-flake.url = "github:jdx/mise";
-    distro-grub-themes.url = "github:AdisonCavani/distro-grub-themes";
   };
 
   outputs = inputs: {
