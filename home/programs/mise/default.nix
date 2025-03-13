@@ -19,8 +19,13 @@ in
     package = inputs.mise-flake.packages.${pkgs.system}.mise.overrideAttrs (oldAttrs: rec {
       buildInputs = (oldAttrs.buildInputs or [ ]) ++ [
         nightlyRust.rustc
+      ];
+      nativeBuildInputs = (oldAttrs.nativeBuildInputs or [ ]) ++ [
         nightlyRust.cargo
       ];
+      preBuild = ''
+        export CARGO=${nightlyRust.cargo}/bin/cargo
+      '';
     });
   };
 
