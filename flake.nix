@@ -7,7 +7,7 @@
     flake-utils.url = "github:numtide/flake-utils";
     catppuccin.url = "github:catppuccin/nix";
     rust-overlay = {
-      url = "github:oxalica/rust-overlay?ref=main";
+      url = "github:oxalica/rust-overlay?ref=master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
