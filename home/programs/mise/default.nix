@@ -10,7 +10,7 @@
     enable = true;
     #    package = inputs.mise-flake.packages.${pkgs.system}.mise;
     enableBashIntegration = true;
-    enableFishIntegration = true;
+    enableZshIntegration = true;
     enableFishIntegration = true;
   };
 
