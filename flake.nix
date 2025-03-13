@@ -8,6 +8,7 @@
     catppuccin.url = "github:catppuccin/nix";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
+      rev = "main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -39,9 +40,7 @@
           system = "x86_64-linux";
           config.allowUnfree = true;
         };
-        extraSpecialArgs = {
-          inherit inputs;
-        };
+        extraSpecialArgs = { inherit inputs; };
         modules = [
           ./home/home.nix
           inputs.chaotic.homeManagerModules.default
