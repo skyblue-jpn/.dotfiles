@@ -16,8 +16,6 @@
 
   xdg.configFile = {
     "mise/config.toml".source = ./config.toml;
-    "fish/completions/mise.fish".source = builtins.toString ''
-      mise completion fish
-    '';
+    "fish/completions/mise.fish".source = ./mise.fish;
   };
 }
