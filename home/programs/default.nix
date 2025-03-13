@@ -17,7 +17,7 @@
     ./ghostty
     ./git
     ./jq
-    ./mise
+    #./mise
     ./navi
     ./neovim
     ./noisetorch
