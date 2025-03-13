@@ -23,3 +23,15 @@ end
 if status --is-interactive && type -q fastfetch
    fastfetch
 end
+
+abbr ei "eza --icons --git"
+abbr ea "eza -a --icons --git"
+abbr ee "eza -aahl --icons --git"
+abbr et "eza -T -L 3 -a -I 'node_modules|.git|.cache' --icons"
+abbr eta "eza -T -a -I 'node_modules|.git|.cache' --color=always --icons | less -r"
+abbr ls ei
+abbr la ea
+abbr ll ee
+abbr lt et
+abbr lta eta
+abbr l "clear && ls"
