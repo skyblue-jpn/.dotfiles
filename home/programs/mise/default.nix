@@ -6,7 +6,7 @@
 }:
 
 let
-  nightlyRust = pkgs.rust-overlay.latest.nightly.default;
+  nightlyRust = inputs.rust-overlay.latest.nightly.default;
 in
 {
   programs.mise = {
