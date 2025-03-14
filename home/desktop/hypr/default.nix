@@ -3,7 +3,6 @@
 {
   xdg.configFile = {
     "hypr/hyprland.conf".source = ./hyprland.conf;
-    "hypr/hyprpaper.conf".source = ./hyprpaper.conf;
     "hypr/hypridle.conf".source = ./hypridle.conf;
     "hypr/settings/monitor.conf".source = ./settings/monitor.conf;
     "hypr/settings/background.conf".source = ./settings/background.conf;
