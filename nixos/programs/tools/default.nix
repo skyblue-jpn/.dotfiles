@@ -19,6 +19,9 @@
     file-roller = {
       enable = true;
     };
+    kdeconnect = {
+      enable = true;
+    };
     noisetorch = {
       enable = true;
     };

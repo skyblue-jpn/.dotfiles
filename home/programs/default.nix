@@ -17,7 +17,6 @@
     ./ghostty
     ./git
     ./jq
-    ./kdeconnect
     ./mise
     ./navi
     ./neovim
