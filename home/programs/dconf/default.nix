@@ -73,7 +73,7 @@
       "org/cinnamon/desktop/sound".event-sounds = false;
       "org/cinnamon/desktop/interface" = {
         cursor-size = 19;
-        cursor-theme = "catppuccin-macchiato-dark-cursors";
+        cursor-theme = "catppuccin-macchiato-light-cursors";
         gtk-theme = "Catppuccin-GTK-Purple-Dark-Compact-Macchiato";
         icon-theme = "Colloid-Purple-Catppuccin-Dark";
         toolkit-accessibility = false;
@@ -83,7 +83,7 @@
 
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
-        cursor-theme = "catppuccin-macchiato-dark-cursors";
+        cursor-theme = "catppuccin-macchiato-light-cursors";
         gtk-theme = "Catppuccin-GTK-Purple-Dark-Compact-Macchiato";
         icon-theme = "Colloid-Purple-Catppuccin-Dark";
       };
