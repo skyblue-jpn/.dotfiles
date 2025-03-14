@@ -25,8 +25,5 @@
     noisetorch = {
       enable = true;
     };
-    gvfs = {
-      enable = true;
-    };
   };
 }
