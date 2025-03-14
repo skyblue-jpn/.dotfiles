@@ -64,7 +64,7 @@
         exec-arg = "--";
       };
       "org/cinnamon/desktop/background".picture-uri =
-        "file:///home/celeste/nixos-artwork/wallpapers/nix-wallpaper-nineish-catppuccin-macchiato-alt.svg";
+        "file:///home/celeste/nixos-artwork/wallpapers/nix-wallpaper-nineish-catppuccin-macchiato-alt.png";
       "org/cinnamon/desktop/screensaver" = {
         allow-keyboard-shortcuts = false;
         layout-group = 0;
