@@ -2,7 +2,7 @@
 
 {
   home.pointerCursor = {
-    name = lib.mkForce "catppuccin-macchiato-dark-cursors";
+    name = lib.mkForce "catppuccin-macchiato-light-cursors";
     size = 19;
     gtk.enable = true;
     x11.enable = true;
