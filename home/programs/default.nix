@@ -11,6 +11,7 @@
     ./fastfetch
     ./fd
     ./fish
+    ./flameshot
     ./floorp
     ./fzf
     ./gh

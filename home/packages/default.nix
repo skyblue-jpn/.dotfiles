@@ -7,12 +7,12 @@
     bitwarden
     bottles
     bulky
+    catfish
     cbonsai
     celluloid
     efibootmgr
     ffmpeg
     gimp
-    gscreenshot
     gparted
     heroic
     imagemagick
