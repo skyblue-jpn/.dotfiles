@@ -50,7 +50,7 @@
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [
-    pkgs.xdg-dekstop-portal-gtk
-    pkgs.xdg-dekstop-portal-kde
+    xdg-dekstop-portal-gtk
+    xdg-dekstop-portal-kde
   ];
 }
