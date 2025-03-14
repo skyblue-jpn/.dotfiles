@@ -4,6 +4,7 @@
   nix.package = pkgs.nix;
 
   imports = [
+    ./desktop
     ./development
     ./environment
     ./packages
