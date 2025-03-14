@@ -11,5 +11,6 @@
     "hypr/settings/blur_system.conf".source = ./settings/blur_system.conf;
     "hypr/settings/manual_settings.conf".source = ./settings/manual_settings.conf;
     "hypr/settings/animations.conf".source = ./settings/animations.conf;
+    "hypr/themes/macchiato.conf".source = ./themes/macchiato.conf;
   };
 }
