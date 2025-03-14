@@ -7,6 +7,9 @@
   services.hypridle = {
     enable = true;
   };
+  services.cliphist = {
+    enable = true;
+  };
   programs.waybar = {
     enable = true;
   };
