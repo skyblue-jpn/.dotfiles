@@ -12,6 +12,7 @@
     efibootmgr
     ffmpeg
     gimp
+    google-drive-ocamlfuse
     gscreenshot
     gparted
     heroic
