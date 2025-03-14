@@ -72,7 +72,7 @@
       };
       "org/cinnamon/desktop/sound".event-sounds = false;
       "org/cinnamon/desktop/interface" = {
-        cursor-size = 19;
+        cursor-size = 24;
         cursor-theme = "catppuccin-macchiato-light-cursors";
         gtk-theme = "Catppuccin-GTK-Purple-Dark-Compact-Macchiato";
         icon-theme = "Colloid-Purple-Catppuccin-Dark";

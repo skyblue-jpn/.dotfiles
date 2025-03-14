@@ -3,7 +3,7 @@
 {
   home.pointerCursor = {
     name = lib.mkForce "catppuccin-macchiato-light-cursors";
-    size = 19;
+    size = 24;
     gtk.enable = true;
     x11.enable = true;
   };
