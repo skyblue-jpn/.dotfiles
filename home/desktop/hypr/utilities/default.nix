@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  services.hyprlock = {
+  programs.hyprlock = {
     enable = true;
   };
   services.hypridle = {
