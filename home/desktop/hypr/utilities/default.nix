@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  services.hyprpaper = {
+  services.hyprlock = {
     enable = true;
   };
   services.hypridle = {
