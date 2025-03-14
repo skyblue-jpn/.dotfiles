@@ -1,7 +1,7 @@
 {
   imports = [
     ./cinnamon
-    ./hyprland
+    ./hypr
     ./sddm
     ./gvfs
   ];
