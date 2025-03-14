@@ -7,10 +7,10 @@
   services.hypridle = {
     enable = true;
   };
-  programs.waybar.enable = {
+  programs.waybar = {
     enable = true;
   };
-  programs.wofi.enable = {
+  programs.wofi = {
     enable = true;
   };
 }
