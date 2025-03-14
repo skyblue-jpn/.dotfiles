@@ -7,7 +7,6 @@
     bitwarden
     bottles
     bulky
-    catfish
     cbonsai
     celluloid
     efibootmgr
@@ -35,5 +34,6 @@
     warpinator
     xviewer
     zoom-us
+    xfce.catfish
   ];
 }
