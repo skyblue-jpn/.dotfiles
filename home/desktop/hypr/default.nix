@@ -5,7 +5,6 @@
     "hypr/hyprland.conf".source = ./hyprland.conf;
     "hypr/settings/monitor.conf".source = ./settings/monitor.conf;
     "hypr/settings/background.conf".source = ./settings/background.conf;
-    "hypr/settings/eye_protection.conf".source = ./settings/eye_protection.conf;
     "hypr/settings/status_bar.conf".source = ./settings/status_bar.conf;
     "hypr/settings/window_gaps.conf".source = ./settings/window_gaps.conf;
     "hypr/settings/corners.conf".source = ./settings/corners.conf;
