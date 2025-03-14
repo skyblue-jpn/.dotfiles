@@ -17,6 +17,7 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     yazi.url = "github:sxyazi/yazi";
     mise-flake.url = "github:jdx/mise";
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = inputs: {
@@ -25,6 +26,7 @@
     nixosConfigurations = {
       myNixOS = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./nixos/configuration.nix
           inputs.chaotic.nixosModules.default
