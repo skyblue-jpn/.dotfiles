@@ -3,6 +3,7 @@
 {
   xdg.configFile = {
     "hypr/hyprland.conf".source = ./hyprland.conf;
+    "hypr/hyprpaper.conf".source = ./hyprpaper.conf;
     "hypr/settings/monitor.conf".source = ./settings/monitor.conf;
     "hypr/settings/background.conf".source = ./settings/background.conf;
     "hypr/settings/status_bar.conf".source = ./settings/status_bar.conf;
@@ -13,4 +14,5 @@
     "hypr/settings/animations.conf".source = ./settings/animations.conf;
     "hypr/themes/macchiato.conf".source = ./themes/macchiato.conf;
   };
+  imports = [ ./utilities ];
 }
