@@ -7,6 +7,7 @@
       noto-fonts-cjk-sans
       noto-fonts-emoji
       hackgen-nf-font
+      font-awesome
     ];
     fontDir.enable = true;
     fontconfig = {
