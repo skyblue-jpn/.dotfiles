@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./waybar
+    ./wofi
+  ];
+
   programs.hyprlock = {
     enable = true;
   };
