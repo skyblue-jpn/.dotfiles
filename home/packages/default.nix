@@ -24,6 +24,7 @@
     pingu
     pipes-rs
     pix
+    playerctl
     polkit
     poppler
     pwvucontrol_git
