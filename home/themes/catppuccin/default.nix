@@ -34,6 +34,7 @@
     ];
     hyprland.accent = "mauve";
     hyprland.flavor = "macchiato";
+    hyprlock.enable = false;
     hyprlock.accent = "mauve";
     hyprlock.flavor = "macchiato";
     kvantum.enable = false;
