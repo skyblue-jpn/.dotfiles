@@ -2,6 +2,6 @@
 
 {
   xdg.configFile = {
-    "tofi/config".source = ./config;
+    #  "tofi/config".source = ./config;
   };
 }
