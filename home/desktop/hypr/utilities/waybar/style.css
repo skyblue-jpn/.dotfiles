@@ -146,6 +146,13 @@ window#waybar {
     font-size: 14px;
 }
 
+#custom-music {
+    border-radius: 10px;
+    color: @mauve;
+    margin-left: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 #clock {
     /* background-color:#a3be8c; */
     color: @sky;
