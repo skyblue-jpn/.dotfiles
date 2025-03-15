@@ -2,7 +2,6 @@
     "layer": "top",
     "position": "top",
     "modules-left": [
-        "custom/launcher",
         "hyprland/workspaces",
         "hyprland/window"
     ],
@@ -10,7 +9,7 @@
         "custom/music"
     ],
     "modules-right": [
-        "pulseaudio",
+        "wireplumber",
         "backlight",
         "battery",
         "clock",
@@ -60,8 +59,8 @@
     "clock": {
         "timezone": "Asia/Tokyo",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": " {:%d/%m/%Y}",
-        "format": " {:%H:%M}"
+        "format-alt": " {:%d/%m/%Y}",
+        "format": " {:%H:%M}"
     },
     "backlight": {
         "device": "intel_backlight",
@@ -83,36 +82,33 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}",
-        "format-charging": "",
-        "format-plugged": "",
+        "format": "{capacity}% {icon}",
+        "format-charging": "󰂄",
+        "format-plugged": "󰂄",
         "format-alt": "{icon}",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "󰂃",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
         ]
     },
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": "",
-        "format-icons": {
-            "default": [
-                "",
-                "",
-                " "
-            ]
-        },
-        "on-click": "pavucontrol"
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "on-click": "pwvucontrol",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
     },
     "custom/lock": {
         "tooltip": false,
@@ -122,6 +118,6 @@
     "custom/power": {
         "tooltip": false,
         "on-click": "wlogout",
-        "format": "襤"
+        "format": "⏻"
     }
 }

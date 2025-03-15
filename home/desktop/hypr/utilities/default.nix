@@ -18,6 +18,9 @@
   programs.waybar = {
     enable = true;
   };
+  programs.wlogout = {
+    enable = true;
+  };
   programs.wofi = {
     enable = true;
   };

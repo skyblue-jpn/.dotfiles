@@ -50,6 +50,9 @@
     waybar.enable = false;
     waybar.flavor = "macchiato";
     waybar.mode = "prependImport";
+    wlogout.accent = "mauve";
+    wlogout.flavor = "macchiato";
+    wlogout.iconStyle = "wleave";
     yazi.accent = "mauve";
     yazi.flavor = "macchiato";
     zathura.flavor = "macchiato";
