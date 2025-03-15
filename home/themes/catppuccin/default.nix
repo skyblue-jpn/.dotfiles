@@ -32,13 +32,21 @@
       "rimless"
       "black"
     ];
+    hyprland.accent = "mauve";
+    hyprland.flavor = "macchiato";
+    hyprlock.accent = "mauve";
+    hyprlock.flavor = "macchiato";
     kvantum.enable = false;
     kvantum.apply = false;
     kvantum.accent = "mauve";
     kvantum.flavor = "macchiato";
     nvim.flavor = "macchiato";
+    plymouth.flavor = "macchiato";
+    sddm.flavor = "macchiato";
     starship.enable = false;
     starship.flavor = "macchiato";
+    waybar.flavor = "macchiato";
+    waybar.mode = "prependImport";
     yazi.accent = "mauve";
     yazi.flavor = "macchiato";
     zathura.flavor = "macchiato";
