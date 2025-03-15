@@ -37,11 +37,11 @@
 
 #window {
     border-radius: 1rem;
-    margin: 5px;
+    margin: 5px 0;
     background-color: @surface0;
     color: @teal;
+    padding: 0.5rem 1rem;
     margin-left: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
 }
 
 #custom-music,
