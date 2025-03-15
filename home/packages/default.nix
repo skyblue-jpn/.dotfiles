@@ -35,6 +35,8 @@
     stix-two
     ventoy-full
     warpinator
+    wl-clipboard-rs
+    wl-clipboard-x11
     xviewer
     zoom-us
     xfce.catfish
