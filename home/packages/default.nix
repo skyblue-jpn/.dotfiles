@@ -26,6 +26,7 @@
     pix
     polkit
     poppler
+    pwvucontrol_git
     qalculate-gtk
     rclone
     sl
