@@ -5,6 +5,6 @@
     "waybar/config".source = ./config;
   };
   home.packages = [
-    nerd-fonts-fantasque-sans-mono
+    nerd-fonts.fantasque-sans-mono
   ];
 }
