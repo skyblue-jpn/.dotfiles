@@ -6,6 +6,7 @@
     baobab
     bitwarden
     bottles
+    brightnessctl
     bulky
     cbonsai
     celluloid

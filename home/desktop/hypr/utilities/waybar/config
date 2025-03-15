@@ -6,9 +6,7 @@
     "modules-left": [
         "custom/launcher",
         "hyprland/workspaces",
-        "custom/swap",
         "tray",
-        "custom/cava-internal",
         "mpd#2",
         "mpd#3",
         "mpd#4",
@@ -19,7 +17,7 @@
     ],
     "modules-right": [
         "backlight",
-        "pulseaudio",
+        "wireplumber",
         "hyprland/language",
         "temperature",
         "memory",
@@ -32,16 +30,16 @@
         "sort-by-number": true,
         "active-only": false,
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "6": "",
-            "7": "",
-            "8": "",
-            "9": "",
-            "10": "",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
             "urgent": "",
             "focused": "",
             "default": ""
@@ -88,17 +86,6 @@
         "format-stopped": "",
         "on-click": "mpc -q pause && mpc -q next && mpc -q start"
     },
-    "custom/swap": {
-        "on-click": "~/.config/hypr/waybar/scripts/change-theme.sh",
-        "tooltip": true,
-        "tooltip-format": "Swap between waybar configs",
-        "format": "Themes  "
-    },
-    "custom/mpd": {
-        "format": " {title} - {artist}",
-        "interval": 5,
-        "exec": "mpc current --format='\"title\":\"%title%\",\"artist\":\"%artist%\"'"
-    },
     "cava#left": {
         "autosens": 1,
         "bar_delimiter": 0,
@@ -124,52 +111,6 @@
         "stereo": true,
         "waves": false
     },
-    "custom/cava-internal": {
-        "exec": "sh ~/.config/hypr/waybar/scripts/Cava.sh",
-        "format": "{}",
-        "on-click": "blueberry",
-        "tooltip": false,
-        "layer": "below",
-        "output": "all"
-    },
-    "cava": {
-        "autosens": 1,
-        "bar_delimiter": 0,
-        "bars": 18,
-        "format-icons": [
-            "<span foreground='#cba6f7'>▁</span>",
-            "<span foreground='#cba6f7'>▂</span>",
-            "<span foreground='#cba6f7'>▃</span>",
-            "<span foreground='#cba6f7'>▄</span>",
-            "<span foreground='#89b4fa'>▅</span>",
-            "<span foreground='#89b4fa'>▆</span>",
-            "<span foreground='#89b4fa'>▇</span>",
-            "<span foreground='#89b4fa'>█</span>"
-        ],
-        "framerate": 60,
-        "higher_cutoff_freq": 10000,
-        "input_delay": 2,
-        "lower_cutoff_freq": 50,
-        "method": "pipewire",
-        "monstercat": false,
-        "reverse": false,
-        "source": "auto",
-        "stereo": true,
-        "waves": false
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/window": {
-        "format": "~ {app_id}"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
     "tray": {
         "icon-size": 14,
         "spacing": 5
@@ -191,16 +132,16 @@
             }
         },
         "format": "  {:%a %d %b  %I:%M %p}",
-        "format-alt": "  {:%d/%m/%Y  %H:%M:%S}",
+        "format-alt": "  {:%Y/%m/%d  %H:%M:%S}",
         "interval": 1
     },
     "cpu": {
-        "format": "﬙ {usage: >3}%",
-        "on-click": "alacritty -e htop"
+        "format": "󰘚 {usage: >3}%",
+        "on-click": "ghostty -e btm"
     },
     "memory": {
         "format": "󰍛 {: >3}%",
-        "on-click": "alacritty -e btop"
+        "on-click": "ghostty -e btm"
     },
     "temperature": {
         "thermal-zone": 2,
@@ -239,9 +180,9 @@
         "format-wifi": "  {essid}",
         "format-ethernet": "  Wired",
         "format-disconnected": "⚠  Disconnected",
-        "on-click": "alacritty -e nmtui"
+        "on-click": "ghostty -e nmtui"
     },
-    "pulseaudio": {
+    "wireplumber": {
         "scroll-step": 1,
         "format": "{icon} {volume: >3}%",
         "format-bluetooth": "{icon} {volume: >3}%",
@@ -258,37 +199,21 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol",
-        "on-scroll-up": "~/.config/hypr/scripts/volume --inc",
-        "on-scroll-down": "~/.config/hypr/scripts/volume --dec"
-    },
-    "custom/pacman": {
-        "format": " {}",
-        "interval": 7200,
-        "exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'",
-        "exec-if": "exit 0",
-        "on-click": "alacritty -e sudo pacman -Syu",
-        "signal": 8
+        "on-click": "pwvucontrol",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
     },
     "custom/power": {
         "format": "󰐥",
-        "on-click": "~/.config/hypr/scripts/rofi_powermenu",
+        "on-click": "wlogout",
         "tooltip": false
-    },
-    "custom/keyboard-layout": {
-        "exec": "~/.config/hypr/waybar/scripts/getInputLayout.sh",
-        "interval": 1,
-        "format": "󰌌  {}",
-        "signal": 1,
-        "tooltip": false,
-        "on-click": "~/.config/waybar/scripts/keyhint.sh"
     },
     "hyprland/language": {
         "format": "  {}"
     },
     "custom/launcher": {
         "format": " ",
-        "on-click": "~/.config/hypr/scripts/rofi_launcher",
+        "on-click": "wofi --normal-window --show drun --allow-images",
         "tooltip": false
     }
 }
