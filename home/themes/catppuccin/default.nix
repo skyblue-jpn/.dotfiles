@@ -45,6 +45,7 @@
     # sddm.flavor = "macchiato";
     starship.enable = false;
     starship.flavor = "macchiato";
+    tofi.flavor = "macchiato";
     waybar.flavor = "macchiato";
     waybar.mode = "prependImport";
     yazi.accent = "mauve";

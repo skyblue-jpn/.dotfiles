@@ -3,7 +3,7 @@
 {
   imports = [
     ./waybar
-    ./wofi
+    ./tofi
   ];
 
   programs.hyprlock = {
@@ -18,7 +18,7 @@
   programs.waybar = {
     enable = true;
   };
-  programs.wofi = {
+  programs.tofi = {
     enable = true;
   };
   home.packages = with pkgs; [
