@@ -42,8 +42,7 @@
     },
     "hyprland/window": {
         "format": "{}",
-        "icon": true,
-        "icon-size": 20
+        "icon": false
     },
     "tray": {
         "icon-size": 21,
@@ -59,7 +58,7 @@
         "max-length": 50
     },
     "clock": {
-        "timezone": "Asia/Dubai",
+        "timezone": "Asia/Tokyo",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": " {:%d/%m/%Y}",
         "format": " {:%H:%M}"
@@ -124,10 +123,5 @@
         "tooltip": false,
         "on-click": "wlogout",
         "format": "襤"
-    },
-    "custom/launcher": {
-        "format": "    ",
-        "on-click": "wofi --normal-window --show drun --allow-images",
-        "tooltip": false
     }
 }
