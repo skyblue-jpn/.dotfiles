@@ -41,7 +41,7 @@
     kvantum.accent = "mauve";
     kvantum.flavor = "macchiato";
     nvim.flavor = "macchiato";
-    plymouth.flavor = "macchiato";
+    # plymouth.flavor = "macchiato";
     sddm.flavor = "macchiato";
     starship.enable = false;
     starship.flavor = "macchiato";
