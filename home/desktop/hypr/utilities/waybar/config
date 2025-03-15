@@ -27,8 +27,8 @@
     ],
     "hyprland/workspaces": {
         "format": "{icon}",
+        "all-outputs": true,
         "sort-by-number": true,
-        "active-only": false,
         "format-icons": {
             "1": "1",
             "2": "2",
