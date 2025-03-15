@@ -47,6 +47,7 @@
     starship.enable = false;
     starship.flavor = "macchiato";
     tofi.flavor = "macchiato";
+    waybar.enable = false;
     waybar.flavor = "macchiato";
     waybar.mode = "prependImport";
     yazi.accent = "mauve";
