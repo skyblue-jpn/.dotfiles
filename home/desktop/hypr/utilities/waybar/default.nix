@@ -4,7 +4,7 @@
   xdg.configFile = {
     "waybar/config".source = ./config;
   };
-  home.packages = [
+  home.packages = with pkgs; [
     nerd-fonts.fantasque-sans-mono
   ];
 }
