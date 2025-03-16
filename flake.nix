@@ -18,6 +18,7 @@
     yazi.url = "github:sxyazi/yazi";
     mise-flake.url = "github:jdx/mise";
     hyprland.url = "github:hyprwm/Hyprland";
+    nix-alien.url = "github:thiagokokada/nix-alien";
   };
 
   outputs = inputs: {
