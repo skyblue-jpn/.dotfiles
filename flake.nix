@@ -38,6 +38,7 @@
 
     homeConfigurations = {
       myHome = inputs.home-manager.lib.homeManagerConfiguration {
+        system = "x86_64-linux";
         pkgs = import inputs.nixpkgs {
           system = "x86_64-linux";
           config.allowUnfree = true;
