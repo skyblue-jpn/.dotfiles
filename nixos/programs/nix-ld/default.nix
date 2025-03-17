@@ -32,9 +32,5 @@ let
   ];
 in
 {
-  programs.nix-ld = {
-    enable = true;
-    libraries = devPackages;
-    package = devPackages;
-  };
+  programs.nix-ld.dev.enable = true;
 }
