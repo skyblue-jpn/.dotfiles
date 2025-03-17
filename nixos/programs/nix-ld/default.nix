@@ -36,7 +36,4 @@ in
 
   # Install additional global dev packages
   programs.nix-ld.dev.packages = devPackages;
-
-  # Prepend the bin directories of the dev packages to the PATH so that their executables can be found
-  programs.nix-ld.dev.extraPaths = lib.mkForce (map (pkg: "${pkg.outPath}/bin") devPackages);
 }
