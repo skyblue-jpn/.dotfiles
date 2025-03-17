@@ -15,10 +15,10 @@ let
     gcc
     gdbm
     git
+    gnumake
     icu
     libffi
     libgcc
-    make
     ncurses
     nodejs
     nss
