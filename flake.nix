@@ -18,6 +18,10 @@
     yazi.url = "github:sxyazi/yazi";
     mise-flake.url = "github:jdx/mise";
     hyprland.url = "github:hyprwm/Hyprland";
+    nix-ld = {
+      url = "github:Mic92/nix-ld";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-alien.url = "github:thiagokokada/nix-alien";
   };
 
@@ -32,6 +36,7 @@
           ./nixos/configuration.nix
           inputs.chaotic.nixosModules.default
           inputs.catppuccin.nixosModules.catppuccin
+          inputs.nix-ld.nixosModules.nix-ld
         ];
       };
     };
