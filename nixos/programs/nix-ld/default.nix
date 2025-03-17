@@ -35,6 +35,6 @@ in
   programs.nix-ld = {
     enable = true;
     libraries = devPackages;
-    packages = devPackages;
+    package = devPackages;
   };
 }
