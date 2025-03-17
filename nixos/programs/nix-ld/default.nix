@@ -32,8 +32,9 @@ let
   ];
 in
 {
-  programs.nix-ld.dev.enable = true;
-
-  # Install additional global dev packages
-  programs.nix-ld.dev.packages = devPackages;
+  programs.nix-ld = {
+    enable = true;
+    libraries = devPackages;
+    packages = devPackages;
+  };
 }
