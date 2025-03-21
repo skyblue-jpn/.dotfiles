@@ -25,35 +25,48 @@
     nix-alien.url = "github:thiagokokada/nix-alien";
   };
 
-  outputs = inputs: {
-    formatter.x86_64-linux = inputs.nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
-
-    nixosConfigurations = {
-      myNixOS = inputs.nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./nixos/configuration.nix
-          inputs.chaotic.nixosModules.default
-          inputs.catppuccin.nixosModules.catppuccin
-          inputs.nix-ld.nixosModules.nix-ld
-        ];
-      };
-    };
-
-    homeConfigurations = {
-      myHome = inputs.home-manager.lib.homeManagerConfiguration {
+  outputs =
+    inputs:
+    inputs.flake-utils.lib.eachDefaultSystem (
+      system:
+      let
         pkgs = import inputs.nixpkgs {
-          system = "x86_64-linux";
-          config.allowUnfree = true;
+          inherit system;
+          config = {
+            allowUnfree = true;
+          };
         };
-        extraSpecialArgs = { inherit inputs; };
-        modules = [
-          ./home/home.nix
-          inputs.chaotic.homeManagerModules.default
-          inputs.catppuccin.homeManagerModules.catppuccin
-        ];
-      };
-    };
-  };
+      in
+      {
+        formatter = pkgs.nixfmt-rfc-style;
+
+        legacyPackages = {
+          inherit (pkgs) home-manager;
+
+          nixosConfigurations = {
+            myNixOS = inputs.nixpkgs.lib.nixosSystem {
+              specialArgs = { inherit inputs; };
+              modules = [
+                ./nixos/configuration.nix
+                inputs.chaotic.nixosModules.default
+                inputs.catppuccin.nixosModules.catppuccin
+                inputs.nix-ld.nixosModules.nix-ld
+              ];
+            };
+          };
+
+          homeConfigurations = {
+            myHome = inputs.home-manager.lib.homeManagerConfiguration {
+              pkgs = pkgs;
+              extraSpecialArgs = { inherit inputs; };
+              modules = [
+                ./home/home.nix
+                inputs.chaotic.homeManagerModules.default
+                inputs.catppuccin.homeManagerModules.catppuccin
+              ];
+            };
+          };
+        };
+      }
+    );
 }
