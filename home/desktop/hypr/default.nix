@@ -5,6 +5,7 @@
     "hypr/hyprland.conf".source = ./hyprland.conf;
     "hypr/hyprlock.conf".source = ./hyprlock.conf;
     "hypr/hypridle.conf".source = ./hypridle.conf;
+    "hypr/hyprpaper.conf".source = ./hyprpaper.conf;
     "hypr/settings/monitor.conf".source = ./settings/monitor.conf;
     "hypr/settings/background.conf".source = ./settings/background.conf;
     "hypr/settings/status_bar.conf".source = ./settings/status_bar.conf;

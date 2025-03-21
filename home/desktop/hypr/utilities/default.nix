@@ -12,6 +12,9 @@
   services.hypridle = {
     enable = true;
   };
+  services.hyprpaper = {
+    enable = true;
+  };
   services.cliphist = {
     enable = true;
   };
@@ -25,7 +28,6 @@
     enable = true;
   };
   home.packages = with pkgs; [
-    swww
     grimblast
   ];
 }
