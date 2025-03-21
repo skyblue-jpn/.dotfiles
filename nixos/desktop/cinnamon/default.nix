@@ -20,6 +20,5 @@
     xed-editor
     gnome-calculator
     gnome-calendar
-    gnome-screenshot
   ];
 }
