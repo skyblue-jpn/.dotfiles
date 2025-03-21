@@ -6,4 +6,5 @@
     package = pkgs.kdePackages.sddm;
     wayland.enable = true;
   };
+  services.displayManager.defaultSession = hyprland;
 }

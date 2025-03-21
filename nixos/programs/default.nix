@@ -5,7 +5,7 @@
     ./cups
     ./pipewire
     ./libinput
-    ./nix-ld
+    #./nix-ld
     ./tools
     ./steam
   ];
