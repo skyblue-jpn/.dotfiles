@@ -22,6 +22,7 @@
     ./navi
     ./neovim
     ./noisetorch
+    ./pandoc
     ./peaclock
     ./ripgrep
     ./starship
