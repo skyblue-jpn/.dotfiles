@@ -20,6 +20,7 @@
   };
 
   home.file = {
-    "mise-builder/shell.nix".source = ./mise-builder/shell.nix;
+    "mise-builder/flake.nix".source = ./mise-builder/flake.nix;
+    "mise-builder/mise.toml".source = ./mise-builder/mise.toml;
   };
 }
