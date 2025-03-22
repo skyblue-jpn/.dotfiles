@@ -2,17 +2,17 @@
 
 {
   home.packages = with pkgs; [
-    r
+    R
     radianWrapper
     (rWrapper.override {
       packages = with pkgs.rPackages; [
         broom
-        data.table
         dplyr
         ggplot2
         httpgd
         janitor
         knitr
+        languageserver
         lubridate
         plotly
         purrr
