@@ -1,0 +1,65 @@
+# ~/.radian_profile
+
+# Import necessary modules
+from prompt_toolkit.formatted_text import HTML
+import os
+import rpy2.robjects as robjects
+from prompt_toolkit.key_binding import KeyBindings
+from radian.keybindings import load_defaults
+from prompt_toolkit.enums import EditingMode
+
+# --------------------------------------------------
+# Set editing mode to Vi
+# --------------------------------------------------
+session.editing_mode = EditingMode.VI
+
+# --------------------------------------------------
+# Customize the prompt
+# --------------------------------------------------
+
+def get_prompt():
+    """Custom prompt for improved visibility"""
+    cwd = os.getcwd()
+    r_version = robjects.r('R.version.string')[0]
+    return HTML(
+        f'<style fg="ansigreen">{cwd}</style> '  # Display current directory in green
+        f'<style fg="ansiblue">({r_version})</style><style fg="ansiblue">> </style>' # Display R version in blue
+        f'<style fg="ansiblue">></style> ' # Main prompt symbol
+    )
+
+session.prompt = get_prompt
+
+# --------------------------------------------------
+# Add keybinding (clear screen - also works in Vi mode)
+# --------------------------------------------------
+
+bindings = KeyBindings()
+load_defaults(bindings)
+
+@bindings.add('c-l')
+def _(event):
+    """Ctrl+L to clear the screen"""
+    event.cli.output.erase_screen()
+
+session.key_bindings = bindings
+
+# --------------------------------------------------
+# Syntax highlighting (actively incorporate)
+# --------------------------------------------------
+# Try themes with many colors
+from pygments.styles import get_style_by_name
+
+try:
+    session.style = get_style_by_name('material') # Change to your preferred theme
+except ImportError:
+    print("Pygments theme 'material' not found.")
+    session.style = get_style_by_name('default')
+
+# --------------------------------------------------
+# Other settings
+# --------------------------------------------------
+
+robjects.r('options(stringsAsFactors=FALSE)')
+session.completer.case_sensitive = False
+session.history.max_entries = 10000
+session.history.auto_save = True
