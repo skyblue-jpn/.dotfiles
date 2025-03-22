@@ -26,6 +26,7 @@
     ./peaclock
     ./ripgrep
     ./starship
+    ./texlive
     ./thefuck
     ./topgrade
     ./vscode
