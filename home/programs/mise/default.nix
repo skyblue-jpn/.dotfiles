@@ -22,5 +22,6 @@
   home.file = {
     "mise-builder/flake.nix".source = ./mise-builder/flake.nix;
     "mise-builder/mise.toml".source = ./mise-builder/mise.toml;
+    "mise-builder/README.md".source = ./mise-builder/README.md;
   };
 }

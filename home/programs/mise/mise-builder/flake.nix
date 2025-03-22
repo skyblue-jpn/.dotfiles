@@ -1,5 +1,5 @@
 {
-  description = "Create a shell to build packages for mise-en-place";
+  description = "Mise-Builder";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
