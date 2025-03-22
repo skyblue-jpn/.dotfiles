@@ -23,6 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-alien.url = "github:thiagokokada/nix-alien";
+    fix-python.url = "github:GuillaumeDesforges/fix-python";
   };
 
   outputs =
