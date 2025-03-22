@@ -3,6 +3,6 @@
 {
   programs.texlive = {
     enable = true;
-    packageSet = pkgs.texliveFull
+    packageSet = pkgs.texliveFull;
   };
 }
