@@ -1,5 +1,0 @@
-[tools]
-    python = "latest"
-    r      = "latest"
-    usage  = "latest"
-    uv     = "latest"
