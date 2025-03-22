@@ -20,6 +20,7 @@
           gnumake
           icu
           libffi
+          libgcc
           libjpeg
           libpng
           libtiff

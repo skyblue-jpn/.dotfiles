@@ -30,6 +30,7 @@
     poppler
     pwvucontrol_git
     qalculate-gtk
+    radianWrapper
     rclone
     sl
     stix-two
