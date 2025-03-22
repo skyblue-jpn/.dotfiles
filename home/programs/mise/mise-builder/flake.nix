@@ -17,6 +17,7 @@
           freetype
           fuse3
           gdbm
+          gfortran
           gnumake
           icu
           libffi
