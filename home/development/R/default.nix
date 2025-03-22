@@ -10,6 +10,7 @@ let
     knitr
     languageserver
     lubridate
+    pandoc
     plotly
     purrr
     readxl

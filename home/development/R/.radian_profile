@@ -7,9 +7,6 @@
 # Prompt for the main R console (Lavender-like).
 options(radian.prompt = "\033[38;5;183mR> \033[0m")
 
-# Prompt continuation (Peach-like).
-options(radian.prompt_continuation = "\033[38;5;223m+ ")
-
 # Prompt for shell mode (Teal-like).
 options(radian.shell_prompt = "\033[38;5;114m#!>\033[0m ")
 
