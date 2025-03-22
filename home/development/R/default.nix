@@ -1,29 +1,34 @@
 { pkgs, ... }:
 
+let
+  rPackagesToInstall = with pkgs.rPackages; [
+    broom
+    dplyr
+    ggplot2
+    httpgd
+    janitor
+    knitr
+    languageserver
+    lubridate
+    plotly
+    purrr
+    readxl
+    rmarkdown
+    shiny
+    stringr
+    tidyr
+    tidyverse
+    writexl
+  ];
+in
+
 {
   home.packages = with pkgs; [
-    R
-    radianWrapper
     (rWrapper.override {
-      packages = with pkgs.rPackages; [
-        broom
-        dplyr
-        ggplot2
-        httpgd
-        janitor
-        knitr
-        languageserver
-        lubridate
-        plotly
-        purrr
-        readxl
-        rmarkdown
-        shiny
-        stringr
-        tidyr
-        tidyverse
-        writexl
-      ];
+      packages = rPackagesToInstall;
+    })
+    (radianWrapper.override {
+      packages = rPackagesToInstall;
     })
   ];
 
