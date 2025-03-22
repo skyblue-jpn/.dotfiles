@@ -1,4 +1,6 @@
 {
+  description = "Create a shell to build packages for mise-en-place";
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -29,13 +31,19 @@
           libxslt
           ncurses
           nss
+          openblas
           openssl
+          pcre2
+          perl
           pkg-config
           python3
           readline
           sqlite
           stdenv
           tclPackages.tk
+          xorg.libICE
+          xorg.libX11
+          xorg.libXt
           xz
           zlib
         ];
