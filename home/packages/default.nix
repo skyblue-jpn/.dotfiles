@@ -12,6 +12,7 @@
     celluloid
     efibootmgr
     ffmpeg
+    font-manager
     gimp
     gparted
     heroic

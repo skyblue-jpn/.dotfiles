@@ -1,17 +1,7 @@
 {
     "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": [
-            "󰄰",
-            "󰪞",
-            "󰪟",
-            "󰪠",
-            "󰪡",
-            "󰪢",
-            "󰪣",
-            "󰪤",
-            "󰪥"
-        ],
+        "format-icons": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
         "on-scroll-down": "brightnessctl -c backlight set 5%-",
         "on-scroll-up": "brightnessctl -c backlight set +5%",
         "tooltip-format": "Backlight (Scroll): {percent:}%"
@@ -20,13 +10,7 @@
         "format": "{icon} {capacity}%",
         "format-charging": "{icon} {capacity}% ",
         "format-full": "{icon} {capacity}% ",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
+        "format-icons": ["", "", "", "", ""],
         "format-plugged": "{icon} {capacity}% ",
         "states": {
             "critical": 10,
@@ -98,9 +82,7 @@
         },
         "tooltip-format": "        󰍽: btm\n   Memory: {total} GiB\n   In use: {used} GiB ({percentage}%)\nAvailable: {avail} GiB\n     Swap: {swapTotal} GiB\n   In use: {swapUsed} GiB ({swapPercentage}%)\nAvailable: {swapAvail} GiB"
     },
-    "modules-center": [
-        "clock"
-    ],
+    "modules-center": ["clock"],
     "modules-left": [
         "custom/launcher",
         "hyprland/workspaces",
@@ -142,11 +124,7 @@
     "wireplumber": {
         "format": "{icon} {volume}%",
         "format-icons": {
-            "default": [
-                "",
-                "",
-                ""
-            ]
+            "default": ["", "", ""]
         },
         "format-muted": " Muted",
         "on-click": "pwvucontrol",
