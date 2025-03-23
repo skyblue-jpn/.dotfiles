@@ -1,8 +1,8 @@
 @import "themes/macchiato.css";
 
 /* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
+ * Global Styles
+ * -------------------------------------------------------------------------- */
 
 /* Reset all styles */
 * {
@@ -14,10 +14,18 @@
     padding: 0px 0px;
 }
 
+/* -----------------------------------------------------------------------------
+ * Waybar Window
+ * -------------------------------------------------------------------------- */
+
 window#waybar {
     background-color: rgba(0, 0, 0, 0);
     border: 0px solid rgba(0, 0, 0, 0);
 }
+
+/* -----------------------------------------------------------------------------
+ * Workspaces Module (#workspaces)
+ * -------------------------------------------------------------------------- */
 
 #workspaces {
     background-color: rgba(36, 39, 58, 0.6);
@@ -59,10 +67,18 @@ window#waybar {
     color: @mauve;
 }
 
+/* -----------------------------------------------------------------------------
+ * Mode Indicator (#mode)
+ * -------------------------------------------------------------------------- */
+
 #mode {
     color: #ebcb8b;
     margin-bottom: 3px;
 }
+
+/* -----------------------------------------------------------------------------
+ * Common Module Styles (applied to multiple modules)
+ * -------------------------------------------------------------------------- */
 
 #clock,
 #battery,
@@ -85,16 +101,25 @@ window#waybar {
 }
 
 /* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
+ * Individual Module Styles
+ * -------------------------------------------------------------------------- */
 
-/* Left modules */
+/* Left Modules */
 #custom-launcher {
+    align-items: center;
     background-color: @mauve;
     border-radius: 10px;
     color: @base;
+    display: flex;
+    justify-content: center;
     margin-left: 8px;
+    min-width: 30px;
     padding: 5px 10px;
+}
+
+#custom-launcher > * {
+    margin: 0;
+    padding: 0;
 }
 
 #tray {
@@ -111,14 +136,14 @@ window#waybar {
     padding: 6px 9px;
 }
 
-/* Center modules */
+/* Center Modules */
 #clock {
     border-radius: 10px;
     color: @sky;
     margin: 8px 10px;
 }
 
-/* Right modules */
+/* Right Modules */
 #backlight {
     border-radius: 10px 0px 0px 10px;
     color: @yellow;
@@ -126,6 +151,10 @@ window#waybar {
 
 #wireplumber {
     color: @flamingo;
+}
+
+#wireplumber.muted {
+    color: #3b4252;
 }
 
 #language {
@@ -189,18 +218,20 @@ window#waybar {
     padding: 5px 10px;
 }
 
-#wireplumber.muted {
-    color: #3b4252;
-}
-
+/* Other Styles */
 #window {
     color: #eceff4;
     margin-left: 10px;
     margin-right: 10px;
 }
 
+/* -----------------------------------------------------------------------------
+ * Animations
+ * -------------------------------------------------------------------------- */
+
 @keyframes blink {
     to {
         color: @red;
     }
 }
+```

@@ -1,25 +1,29 @@
 {
     "layer": "top",
     "position": "top",
+    "height": 30,
+    "margin": "0 0 0 0",
     "modules-left": [
+        "custom/launcher",
         "hyprland/workspaces",
-        "hyprland/window"
-    ],
-    "modules-center": [
+        "tray",
         "custom/music"
     ],
+    "modules-center": [
+        "clock"
+    ],
     "modules-right": [
-        "wireplumber",
         "backlight",
+        "wireplumber",
+        "hyprland/language",
+        "temperature",
+        "memory",
         "battery",
-        "clock",
-        "tray",
-        "custom/lock",
+        "network",
         "custom/power"
     ],
     "hyprland/workspaces": {
         "format": "{icon}",
-        "on-click": "activate",
         "all-outputs": true,
         "sort-by-number": true,
         "format-icons": {
@@ -33,19 +37,13 @@
             "8": "8",
             "9": "9",
             "10": "10",
+            "urgent": "",
             "focused": "",
-            "default": ""
+            "default": ""
         },
+        "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
-    },
-    "hyprland/window": {
-        "format": "{}",
-        "icon": false
-    },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
     },
     "custom/music": {
         "format": "󰝚 {}",
@@ -56,68 +54,109 @@
         "on-click": "playerctl play-pause",
         "max-length": 50
     },
+    "tray": {
+        "icon-size": 14,
+        "spacing": 5
+    },
     "clock": {
-        "timezone": "Asia/Tokyo",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": " {:%d/%m/%Y}",
-        "format": " {:%H:%M}"
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "format": "  {:%a %d %b  %I:%M %p}",
+        "format-alt": "  {:%Y/%m/%d  %H:%M:%S}",
+        "interval": 1
+    },
+    "cpu": {
+        "format": "󰘚 {usage: >3}%",
+        "on-click": "ghostty -e btm"
+    },
+    "memory": {
+        "format": "󰍛 {: >3}%",
+        "on-click": "ghostty -e btm"
+    },
+    "temperature": {
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C ",
+        "format": "  {temperatureC}°C"
     },
     "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon}",
+        "device": "acpi_video1",
+        "format": "{icon} {percent: >3}%",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+            "",
+            ""
+        ],
+        "on-scroll-down": "brightnessctl -c backlight set 5%-",
+        "on-scroll-up": "brightnessctl -c backlight set +5%"
     },
     "battery": {
         "states": {
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "󰂄",
-        "format-plugged": "󰂄",
-        "format-alt": "{icon}",
+        "format": "{icon} {capacity: >3}%",
         "format-icons": [
-            "󰂃",
-            "󰁺",
-            "󰁻",
-            "󰁼",
-            "󰁽",
-            "󰁾",
-            "󰁿",
-            "󰂀",
-            "󰂁",
-            "󰂂",
-            "󰁹"
+            "",
+            "",
+            "",
+            "",
+            ""
         ]
+    },
+    "network": {
+        "format": "⚠  Disabled",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "  Wired",
+        "format-disconnected": "⚠  Disconnected",
+        "on-click": "ghostty -e nmtui"
     },
     "wireplumber": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
+        "scroll-step": 1,
+        "format": "{icon} {volume: >3}%",
+        "format-bluetooth": "{icon} {volume: >3}%",
+        "format-muted": " muted",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
         "on-click": "pwvucontrol",
-        "format-icons": [
-            "",
-            "",
-            ""
-        ]
-    },
-    "custom/lock": {
-        "tooltip": false,
-        "on-click": "hyprlock",
-        "format": ""
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
     },
     "custom/power": {
-        "tooltip": false,
+        "format": "󰐥",
         "on-click": "wlogout",
-        "format": "⏻"
+        "tooltip": false
+    },
+    "hyprland/language": {
+        "format": "  {}"
+    },
+    "custom/launcher": {
+        "format": " ",
+        "on-click": "wofi --normal-window --show drun --allow-images",
+        "tooltip": false
     }
 }
