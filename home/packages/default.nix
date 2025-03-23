@@ -31,6 +31,7 @@
     pwvucontrol_git
     qalculate-gtk
     rclone
+    s-tui
     sl
     stix-two
     ventoy-full
