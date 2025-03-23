@@ -1,96 +1,73 @@
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
-
-/* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
-
 @import "themes/macchiato.css";
 
 /* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
+ * Base styles
+ * -------------------------------------------------------------------------- */
 
 /* Reset all styles */
-
 * {
-    color: @lavender;
     border: 0px;
-    padding: 0px 0px;
+    color: @lavender;
     font-family: UbuntuMono;
     font-size: 18px;
     font-weight: bold;
+    padding: 0px 0px;
 }
 
 window#waybar {
-    border: 0px solid rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
+    border: 0px solid rgba(0, 0, 0, 0);
 }
 
-#workspaces button {
-    color: @base;
-    border-radius: 50%;
-    margin: 0px 0px;
-    padding: 4px 6px 2px 0px;
-    margin: 0px 8px 0px 8px;
-}
-
-#workspaces button:hover {
-    color: @mauve;
-    /* border-radius: 20px; */
-    box-shadow: none;
-    /* Remove predefined box-shadow */
-    text-shadow: none;
-    /* Remove predefined text-shadow */
-    border: 0px;
-    background: none;
-}
-
-#workspaces button:hover * {
-    color: @mauve;
+#workspaces {
+    background-color: rgba(36, 39, 58, 0.6);
+    border-radius: 10px;
+    border-style: solid;
+    margin: 8px 8px 8px 8px;
+    opacity: 1;
 }
 
 #workspaces * {
     color: whitesmoke;
 }
 
-#workspaces {
-    border-style: solid;
-    /* background-color: @base; */
-    background-color: rgba(36, 39, 58, 0.6);
-    opacity: 1;
-    border-radius: 10px;
-    margin: 8px 8px 8px 8px;
+#workspaces button {
+    border-radius: 50%;
+    color: @base;
+    margin: 0px 8px 0px 8px;
+    padding: 4px 6px 2px 0px;
 }
 
 #workspaces button.active {
-    color: @mauve;
     border-radius: 20px;
-    /* background-color: @flamingo; */
+    color: @mauve;
 }
 
 #workspaces button.active * {
     color: @mauve;
 }
 
+#workspaces button:hover {
+    background: none;
+    border: 0px;
+    box-shadow: none;
+    color: @mauve;
+    text-shadow: none;
+}
+
+#workspaces button:hover * {
+    color: @mauve;
+}
+
 #mode {
     color: #ebcb8b;
+    margin-bottom: 3px;
 }
 
 #clock,
-#custom-swap,
-#custom-cava-internal,
 #battery,
-#cpu,
 #memory,
-#idle_inhibitor,
 #temperature,
-#custom-keyboard-layout,
 #language,
 #backlight,
 #network,
@@ -98,205 +75,132 @@ window#waybar {
 #mode,
 #tray,
 #custom-power,
-#custom-pacman,
 #custom-launcher,
-#mpd,
 #custom-music {
-    padding: 6px 9px;
-    border-style: solid;
-    /* background-color: shade(@base, 1); */
     background-color: rgba(36, 39, 58, 0.6);
-    opacity: 1;
+    border-style: solid;
     margin: 8px 0px;
+    opacity: 1;
+    padding: 6px 9px;
 }
 
 /* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
+ * Module styles
+ * -------------------------------------------------------------------------- */
 
-#mpd {
+/* Left modules */
+#custom-launcher {
+    background-color: @mauve;
     border-radius: 10px;
-    color: @mauve;
-    margin-left: 5px;
-    background-color: rgba(0, 0, 0, 0);
+    color: @base;
+    margin-left: 8px;
+    padding: 5px 10px;
 }
 
-#mpd.2 {
-    border-radius: 10px 0px 0px 10px;
-    margin: 8px 0px 8px 6px;
-    padding: 4px 12px 4px 10px;
-}
-
-#mpd.3 {
-    border-radius: 0px 0px 0px 0px;
-    margin: 8px 0px 8px 0px;
-    padding: 4px;
-}
-
-#mpd.4 {
-    border-radius: 0px 10px 10px 0px;
-    margin: 8px 0px 8px 0px;
-    padding: 4px 10px 4px 14px;
-}
-
-#mpd.2,
-#mpd.3,
-#mpd.4 {
-    /* background-color: @base; */
-    background-color: rgba(36, 39, 58, 0.6);
-    font-size: 14px;
+#tray {
+    border-radius: 10px;
+    margin: 8px 10px;
+    margin-left: 8px;
 }
 
 #custom-music {
+    background-color: rgba(36, 39, 58, 0.6);
     border-radius: 10px;
     color: @mauve;
-    margin-left: 5px;
-    background-color: rgba(0, 0, 0, 0);
+    margin: 8px 8px;
+    padding: 6px 9px;
 }
 
+/* Center modules */
 #clock {
-    /* background-color:#a3be8c; */
-    color: @sky;
     border-radius: 10px;
+    color: @sky;
     margin: 8px 10px;
 }
 
+/* Right modules */
 #backlight {
-    color: @yellow;
-    /* border-bottom: 2px solid @yellow; */
     border-radius: 10px 0px 0px 10px;
+    color: @yellow;
 }
 
-#battery {
-    color: #d8dee9;
-    /* border-bottom: 2px solid #d8dee9; */
+#wireplumber {
+    color: @flamingo;
+}
+
+#language {
     border-radius: 0px 10px 10px 0px;
+    color: @peach;
     margin-right: 10px;
 }
 
-#battery.charging {
-    color: #81a1c1;
-    /* border-bottom: 2px solid #81a1c1; */
+#temperature {
+    border-radius: 10px 0px 0px 10px;
+    color: @teal;
 }
 
-@keyframes blink {
-    to {
-        color: @red;
-        /* border-bottom: 2px solid @red; */
-    }
-}
-
-#battery.critical:not(.charging) {
-    color: #bf616a;
-    /* border-bottom: 2px solid #bf616a; */
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#cpu {
-    color: @sky;
-    /* border-bottom: 2px solid @sky; */
-}
-
-#cpu #cpu-icon {
-    color: @sky;
+#temperature.critical {
+    color: @red;
 }
 
 #memory {
     color: @sky;
 }
 
-#network.disabled {
+#battery {
+    border-radius: 0px 10px 10px 0px;
+    color: #d8dee9;
+    margin-right: 10px;
+}
+
+#battery.charging {
+    color: #81a1c1;
+}
+
+#battery.critical:not(.charging) {
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-name: blink;
+    animation-timing-function: linear;
     color: #bf616a;
-    /* border-bottom: 2px solid #bf616a; */
 }
 
 #network {
-    color: @green;
-    /* border-bottom: 2px solid @green; */
     border-radius: 10px;
+    color: @green;
     margin-right: 5px;
+}
+
+#network.disabled {
+    color: #bf616a;
 }
 
 #network.disconnected {
     color: #bf616a;
-    /* border-bottom: 2px solid #bf616a; */
-}
-
-#wireplumber {
-    color: @flamingo;
-    /* border-radius: 0 10px 10px 0; */
-    /* margin-right: 10px; */
-    /* border-bottom: 2px solid @flamingo; */
-}
-
-#wireplumber.muted {
-    color: #3b4252;
-    /* border-bottom: 2px solid #3b4252; */
-}
-
-#temperature {
-    color: @teal;
-    /* border-bottom: 2px solid @teal; */
-    border-radius: 10px 0px 0px 10px;
-}
-
-#temperature.critical {
-    color: @red;
-    /* border-bottom: 2px solid @red; */
-}
-
-#idle_inhibitor {
-    background-color: #ebcb8b;
-    color: @base;
-}
-
-#tray {
-    /* background-color: @base; */
-    margin: 8px 10px;
-    border-radius: 10px;
-}
-
-#custom-launcher {
-    background-color: @mauve;
-    /* background-image: url("/home/lightcrimson/.config/icons/svg/arch.svg");
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: contain;  */
-    color: @base;
-    border-radius: 10px;
-    padding: 5px 10px;
-    margin-left: 15px;
 }
 
 #custom-power {
-    color: @base;
     background-color: @red;
     border-radius: 10px;
+    color: @base;
     margin-left: 5px;
     margin-right: 15px;
     padding: 5px 10px;
 }
 
+#wireplumber.muted {
+    color: #3b4252;
+}
+
 #window {
-    border-style: hidden;
-    margin-left: 10px;
-    /* margin-top:1px;
-     padding: 8px 1rem; */
-    margin-right: 10px;
     color: #eceff4;
-}
-
-#mode {
-    margin-bottom: 3px;
-}
-
-#language {
-    color: @peach;
-    /* border-bottom: 2px solid @peach; */
-    border-radius: 0px 10px 10px 0px;
+    margin-left: 10px;
     margin-right: 10px;
+}
+
+@keyframes blink {
+    to {
+        color: @red;
+    }
 }

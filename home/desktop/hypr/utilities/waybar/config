@@ -7,10 +7,6 @@
         "custom/launcher",
         "hyprland/workspaces",
         "tray",
-        "mpd#2",
-        "mpd#3",
-        "mpd#4",
-        "mpd",
         "custom/music"
     ],
     "modules-center": [
@@ -48,44 +44,6 @@
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
-    },
-    "mpd": {
-        "tooltip": true,
-        "tooltip-format": "{artist} - {album} - {title} - Total Time : {totalTime:%M:%S}",
-        "format": " {elapsedTime:%M:%S}",
-        "format-disconnected": "⚠  Disconnected",
-        "format-stopped": " Not Playing",
-        "on-click": "mpc toggle",
-        "state-icons": {
-            "playing": "",
-            "paused": ""
-        }
-    },
-    "mpd#2": {
-        "format": "",
-        "format-disconnected": "",
-        "format-paused": "",
-        "format-stopped": "",
-        "on-click": "mpc -q pause && mpc -q prev && mpc -q start"
-    },
-    "mpd#3": {
-        "interval": 1,
-        "format": "{stateIcon}",
-        "format-disconnected": "",
-        "format-paused": "{stateIcon}",
-        "format-stopped": "",
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "on-click": "mpc toggle"
-    },
-    "mpd#4": {
-        "format": "",
-        "format-disconnected": "",
-        "format-paused": "",
-        "format-stopped": "",
-        "on-click": "mpc -q pause && mpc -q next && mpc -q start"
     },
     "custom/music": {
         "format": "󰝚 {}",
