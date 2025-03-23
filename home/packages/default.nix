@@ -37,7 +37,7 @@
     stix-two
     ventoy-full
     vlc
-    vmware-workstation
+    virtualbox
     warpinator
     wl-clipboard-rs
     wl-clipboard-x11
