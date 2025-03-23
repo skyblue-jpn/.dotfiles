@@ -8,5 +8,6 @@
     ./nix-ld
     ./tools
     ./steam
+    ./virtualbox
   ];
 }
