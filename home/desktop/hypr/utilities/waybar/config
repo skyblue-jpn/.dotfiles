@@ -54,17 +54,8 @@
         "on-click": "wofi --normal-window --show drun --allow-images",
         "tooltip": false
     },
-    "custom/music": {
-        "escape": true,
-        "exec": "playerctl metadata --format='{{ title }}'",
-        "format": "󰝚 {}",
-        "interval": 5,
-        "max-length": 80,
-        "on-click": "playerctl play-pause",
-        "tooltip-format": "󰍽: play/pause"
-    },
     "custom/power": {
-        "format": "󰐥",
+        "format": "⏻",
         "on-click": "wlogout",
         "tooltip": false
     },
@@ -75,8 +66,7 @@
     },
     "hyprland/window": {
         "format": "{}",
-        "icon": false,
-        "icon-size": 20
+        "icon": false
     },
     "hyprland/workspaces": {
         "all-outputs": true,
@@ -112,9 +102,7 @@
         },
         "tooltip-format": "      󰍽: btm\n   Memory: {total} GiB\n   In use: {used} GiB ({percentage}%)\nAvailable: {avail} GiB\n     Swap: {swapTotal} GiB\n   In use: {swapUsed} GiB ({swapPercentage}%)\nAvailable: {swapAvail} GiB"
     },
-    "modules-center": [
-        "custom/music"
-    ],
+    "modules-center": [],
     "modules-left": [
         "custom/launcher",
         "hyprland/workspaces",
