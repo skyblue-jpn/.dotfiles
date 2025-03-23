@@ -84,7 +84,7 @@ window#waybar {
 #battery,
 #memory,
 #temperature,
-#language,
+#custom-updates,
 #backlight,
 #network,
 #wireplumber,
@@ -106,12 +106,12 @@ window#waybar {
 
 /* Left Modules */
 #custom-launcher {
-    align-items: center;
+    /*align-items: center;*/
     background-color: @mauve;
     border-radius: 10px;
     color: @base;
-    display: flex;
-    justify-content: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
     margin-left: 8px;
     min-width: 30px;
     padding: 5px 10px;
@@ -157,7 +157,7 @@ window#waybar {
     color: #3b4252;
 }
 
-#language {
+#custom-updates {
     border-radius: 0px 10px 10px 0px;
     color: @peach;
     margin-right: 10px;
@@ -234,4 +234,3 @@ window#waybar {
         color: @red;
     }
 }
-```
