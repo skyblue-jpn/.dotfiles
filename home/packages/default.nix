@@ -15,6 +15,7 @@
     gimp
     gparted
     heroic
+    hypnotix
     imagemagick
     inkscape
     libreoffice-fresh
