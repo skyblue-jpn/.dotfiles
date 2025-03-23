@@ -1,31 +1,72 @@
 {
-    "layer": "top",
-    "position": "top",
-    "height": 30,
-    "margin": "0 0 0 0",
-    "modules-left": [
-        "custom/launcher",
-        "hyprland/workspaces",
-        "tray",
-        "custom/music"
-    ],
-    "modules-center": [
-        "clock"
-    ],
-    "modules-right": [
-        "backlight",
-        "wireplumber",
-        "hyprland/language",
-        "temperature",
-        "memory",
-        "battery",
-        "network",
-        "custom/power"
-    ],
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "󰄰",
+            "󰪞",
+            "󰪟",
+            "󰪠",
+            "󰪡",
+            "󰪢",
+            "󰪣",
+            "󰪤",
+            "󰪥"
+        ],
+        "on-scroll-down": "brightnessctl -c backlight set 5%-",
+        "on-scroll-up": "brightnessctl -c backlight set +5%",
+        "tooltip-format": "Backlight (Scroll): {percent:}%"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": "{icon} {capacity}% ",
+        "format-full": "{icon} {capacity}% ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "format-plugged": "{icon} {capacity}% ",
+        "states": {
+            "critical": 10,
+            "warning": 20
+        },
+        "tooltip-format": "{timeTo}"
+    },
+    "clock": {
+        "format": " {:%a %d %b  %I:%M %p}",
+        "format-alt": " {:%Y/%m/%d  %H:%M:%S}",
+        "interval": 1,
+        "tooltip-format": "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "custom/launcher": {
+        "format": "",
+        "on-click": "wofi --normal-window --show drun --allow-images",
+        "tooltip": false
+    },
+    "custom/music": {
+        "escape": true,
+        "exec": "playerctl metadata --format='{{ title }}'",
+        "format": "󰝚 {}",
+        "interval": 5,
+        "max-length": 80,
+        "on-click": "playerctl play-pause",
+        "tooltip-format": "󰍽: play/pause"
+    },
+    "custom/power": {
+        "format": "󰐥",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+    "custom/updates": {
+        "format": "󱍷 Update",
+        "on-click": "ghostty -e topgrade",
+        "tooltip-format": "󰍽: topgrade"
+    },
     "hyprland/workspaces": {
-        "format": "{icon}",
         "all-outputs": true,
-        "sort-by-number": true,
+        "format": "{icon}",
         "format-icons": {
             "1": "1",
             "2": "2",
@@ -37,126 +78,82 @@
             "8": "8",
             "9": "9",
             "10": "10",
-            "urgent": "",
-            "focused": "",
-            "default": ""
+            "default": "",
+            "focused": ""
         },
         "on-click": "activate",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1"
+        "sort-by-number": true
     },
-    "custom/music": {
-        "format": "󰝚 {}",
-        "escape": true,
+    "layer": "top",
+    "margin": "0 0 0 0",
+    "memory": {
+        "format": "󰍛 {}%",
         "interval": 5,
-        "tooltip": false,
-        "exec": "playerctl metadata --format='{{ title }}'",
-        "on-click": "playerctl play-pause",
-        "max-length": 50
+        "on-click": "ghostty -e btm",
+        "states": {
+            "critical": 90,
+            "warning": 70
+        },
+        "tooltip-format": "        󰍽: btm\n   Memory: {total} GiB\n   In use: {used} GiB ({percentage}%)\nAvailable: {avail} GiB\n     Swap: {swapTotal} GiB\n   In use: {swapUsed} GiB ({swapPercentage}%)\nAvailable: {swapAvail} GiB"
+    },
+    "modules-center": [
+        "clock"
+    ],
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces",
+        "tray",
+        "custom/music"
+    ],
+    "modules-right": [
+        "backlight",
+        "wireplumber",
+        "custom/updates",
+        "temperature",
+        "memory",
+        "battery",
+        "network",
+        "custom/power"
+    ],
+    "network": {
+        "family": "ipv4",
+        "format-disabled": " Disabled",
+        "format-disconnected": " Disconnected",
+        "format-ethernet": " Wired",
+        "format-wifi": "  {essid}",
+        "on-click": "nm-connection-editor",
+        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}"
+    },
+    "position": "top",
+    "temperature": {
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C",
+        "format-critical": " {temperatureC}°C",
+        "on-click": "ghostty -e s-tui",
+        "tooltip-format": "  󰍽: s-tui\n {temperatureC}° Celsius\n{temperatureF}° Fahrenheit\n{temperatureK}° Kelvin"
     },
     "tray": {
-        "icon-size": 14,
+        "icon-size": 20,
         "spacing": 5
     },
-    "clock": {
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode": "month",
-            "mode-mon-col": 3,
-            "weeks-pos": "right",
-            "on-scroll": 1,
-            "on-click-right": "mode",
-            "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "days": "<span color='#ecc6d9'><b>{}</b></span>",
-                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-            }
-        },
-        "format": "  {:%a %d %b  %I:%M %p}",
-        "format-alt": "  {:%Y/%m/%d  %H:%M:%S}",
-        "interval": 1
-    },
-    "cpu": {
-        "format": "󰘚 {usage: >3}%",
-        "on-click": "ghostty -e btm"
-    },
-    "memory": {
-        "format": "󰍛 {: >3}%",
-        "on-click": "ghostty -e btm"
-    },
-    "temperature": {
-        "thermal-zone": 2,
-        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-        "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C ",
-        "format": "  {temperatureC}°C"
-    },
-    "backlight": {
-        "device": "acpi_video1",
-        "format": "{icon} {percent: >3}%",
-        "format-icons": [
-            "",
-            ""
-        ],
-        "on-scroll-down": "brightnessctl -c backlight set 5%-",
-        "on-scroll-up": "brightnessctl -c backlight set +5%"
-    },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity: >3}%",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-    "network": {
-        "format": "⚠  Disabled",
-        "format-wifi": "  {essid}",
-        "format-ethernet": "  Wired",
-        "format-disconnected": "⚠  Disconnected",
-        "on-click": "ghostty -e nmtui"
-    },
     "wireplumber": {
-        "scroll-step": 1,
-        "format": "{icon} {volume: >3}%",
-        "format-bluetooth": "{icon} {volume: >3}%",
-        "format-muted": " muted",
+        "format": "{icon} {volume}%",
         "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": [
+                "",
                 "",
                 ""
             ]
         },
+        "format-muted": " Muted",
         "on-click": "pwvucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
         "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
-        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-    },
-    "custom/power": {
-        "format": "󰐥",
-        "on-click": "wlogout",
-        "tooltip": false
-    },
-    "hyprland/language": {
-        "format": "  {}"
-    },
-    "custom/launcher": {
-        "format": " ",
-        "on-click": "wofi --normal-window --show drun --allow-images",
-        "tooltip": false
+        "scroll-step": 1,
+        "tooltip-format": "  L󰍽: pawucontrol\n  R󰍽: Toggle mute\nVolume (Scroll): {volume:}%"
     }
 }

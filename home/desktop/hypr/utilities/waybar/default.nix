@@ -8,6 +8,7 @@
   };
   home.packages = with pkgs; [
     # nerd-fonts.fantasque-sans-mono
-    nerd-fonts.ubuntu-mono
+    # nerd-fonts.ubuntu-mono
+    nerd-fonts.jetbrains-mono
   ];
 }

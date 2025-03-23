@@ -40,8 +40,17 @@
         "interval": 1,
         "tooltip-format": "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>"
     },
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 5,
+        "on-click": "ghostty -e btm",
+        "states": {
+            "critical": 90,
+            "warning": 70
+        }
+    },
     "custom/launcher": {
-        "format": "",
+        "format": "<span size='x-large'></span>",
         "on-click": "wofi --normal-window --show drun --allow-images",
         "tooltip": false
     },
@@ -63,6 +72,11 @@
         "format": "󱍷 Update",
         "on-click": "ghostty -e topgrade",
         "tooltip-format": "󰍽: topgrade"
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "icon": false,
+        "icon-size": 20
     },
     "hyprland/workspaces": {
         "all-outputs": true,
@@ -89,32 +103,34 @@
     "layer": "top",
     "margin": "0 0 0 0",
     "memory": {
-        "format": "󰍛 {}%",
+        "format": " {}%",
         "interval": 5,
         "on-click": "ghostty -e btm",
         "states": {
             "critical": 90,
             "warning": 70
         },
-        "tooltip-format": "        󰍽: btm\n   Memory: {total} GiB\n   In use: {used} GiB ({percentage}%)\nAvailable: {avail} GiB\n     Swap: {swapTotal} GiB\n   In use: {swapUsed} GiB ({swapPercentage}%)\nAvailable: {swapAvail} GiB"
+        "tooltip-format": "      󰍽: btm\n   Memory: {total} GiB\n   In use: {used} GiB ({percentage}%)\nAvailable: {avail} GiB\n     Swap: {swapTotal} GiB\n   In use: {swapUsed} GiB ({swapPercentage}%)\nAvailable: {swapAvail} GiB"
     },
     "modules-center": [
-        "clock"
+        "custom/music"
     ],
     "modules-left": [
         "custom/launcher",
         "hyprland/workspaces",
-        "tray",
-        "custom/music"
+        "hyprland/window"
     ],
     "modules-right": [
-        "backlight",
-        "wireplumber",
         "custom/updates",
+        "backlight",
         "temperature",
+        "cpu",
         "memory",
         "battery",
+        "wireplumber",
         "network",
+        "tray",
+        "clock",
         "custom/power"
     ],
     "network": {
