@@ -34,6 +34,7 @@
     sl
     stix-two
     ventoy-full
+    vlc
     warpinator
     wl-clipboard-rs
     wl-clipboard-x11

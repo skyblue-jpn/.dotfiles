@@ -29,6 +29,7 @@
     ./texlive
     ./thefuck
     ./topgrade
+    ./vlc
     ./vscode
     ./xonsh
     ./yazi
