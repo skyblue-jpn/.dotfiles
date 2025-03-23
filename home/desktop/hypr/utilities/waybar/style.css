@@ -10,41 +10,20 @@
  * Keyframes
  * -------------------------------------------------------------------------- */
 
-/*
-Polar Night
-nord0  #2e3440
-nord1  #3b4252
-nord2  #434c5e
-nord3  #4c566a
-Snow Storm
-nord4  #d8dee9
-nord5  #e5e9f0
-nord6  #eceff4
-Frost
-nord7  #8fbcbb
-nord8  #88c0d0
-nord9  #81a1c1
-nord10 #5e81ac
-Aurora
-nord11 #bf616a
-nord12 #d08770
-nord13 #ebcb8b
-nord14 #a3be8c
-nord15 #b48ead
-*/
+@import "themes/macchiato.css";
 
 /* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
+  * Base styles
+  * -------------------------------------------------------------------------- */
 
 /* Reset all styles */
 
 * {
-    color: #eceff4;
+    color: @text;
     border: 0;
     border-radius: 0;
     padding: 0 0;
-    font-family: JetBrainsMonoNerdFont;
+    font-family: "Cantarell", "Noto Sans CJK JP", "Symbols Nerd Font Mono";
     font-size: 15px;
     margin-right: 5px;
     margin-left: 5px;
@@ -52,30 +31,39 @@ nord15 #b48ead
 }
 
 window#waybar {
-    background: rgba (0, 0, 0, 0.65);
-    border-radius: 20px 20px 20px 20px;
+    background: rgba(30, 32, 48, 0.65); /* Mantle */
+}
+
+tooltip {
+    background: rgba(35, 38, 52, 0.8); /* Crust */
+    border-radius: 10px;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: rgba(202, 158, 230, 0.8); /* Mauve */
+}
+
+tooltip label {
+    color: @text;
 }
 
 #workspaces button {
     padding: 2px 0px;
     border-bottom: 2px;
-    color: #eceff4;
-    border-color: #d8dee9;
+    color: @text;
+    border-color: @subtext1;
     border-style: solid;
     margin-top: 2px;
 }
 
 #workspaces button.active {
-    border-color: #81a1c1;
+    border-color: @blue;
 }
 
 #clock,
 #battery,
 #cpu,
 #memory,
-#idle_inhibitor,
 #temperature,
-#custom-keyboard-layout,
 #backlight,
 #network,
 #wireplumber,
@@ -83,44 +71,42 @@ window#waybar {
 #window,
 #custom-launcher,
 #custom-power,
-#custom-updates,
-#custom-network_traffic,
-#custom-weather {
+#custom-updates {
     padding: 0 3px;
     border-bottom: 2px;
     border-style: solid;
 }
 
 /* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
+  * Module styles
+  * -------------------------------------------------------------------------- */
 
 #clock {
-    color: #a3be8c;
+    color: @green;
 }
 
 #backlight {
-    color: #ebcb8b;
+    color: @yellow;
 }
 
 #battery {
-    color: #d8dee9;
+    color: @subtext0;
 }
 
 #battery.charging {
-    color: #81a1c1;
+    color: @blue;
 }
 
 @keyframes blink {
     to {
-        color: #4c566a;
-        background-color: #eceff4;
+        color: @surface0;
+        background-color: @text;
     }
 }
 
 #battery.critical:not(.charging) {
-    background: #bf616a;
-    color: #eceff4;
+    background: @red;
+    color: @text;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -129,58 +115,59 @@ window#waybar {
 }
 
 #cpu {
-    color: #a3be8c;
+    color: @green;
 }
 
 #memory {
-    color: #d3869b;
+    color: @maroon;
 }
 
 #network.disabled {
-    color: #bf616a;
+    color: @red;
 }
 
 #network {
-    color: #a3be8c;
+    color: @green;
 }
 
 #network.disconnected {
-    color: #bf616a;
+    color: @red;
 }
 
 #wireplumber {
-    color: #b48ead;
+    color: @pink;
 }
 
 #wireplumber.muted {
-    color: #e20548;
+    color: @red;
 }
 
 #temperature {
-    color: #8fbcbb;
+    color: @sapphire;
 }
 
 #temperature.critical {
-    color: #bf616a;
-}
-
-#idle_inhibitor {
-    color: #ebcb8b;
+    color: @red;
 }
 
 #tray {
+    color: @rosewater;
+}
+
+#custom-updates {
+    color: @lavender;
 }
 
 #custom-launcher {
-    font-size: 20px;
-    background-image: url("/home/USER/.config/waybar/launcher.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    font-size: 25px;
     border-style: hidden;
+    margin-top: 2px;
+    margin-right: 10px;
 }
 
 #custom-power {
+    color: @flamingo;
+    font-size: 23px;
     border-style: hidden;
     margin-top: 2px;
 }
@@ -188,10 +175,4 @@ window#waybar {
 #window {
     border-style: hidden;
     margin-top: 1px;
-}
-#custom-keyboard-layout {
-    color: #d08770;
-}
-#custom-network_traffic {
-    color: #d08770;
 }

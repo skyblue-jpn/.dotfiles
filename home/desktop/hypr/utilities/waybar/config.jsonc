@@ -1,7 +1,7 @@
 {
     "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
+        "format-icons": ["󰄰 ", "󰪞 ", "󰪟 ", "󰪠 ", "󰪡 ", "󰪢 ", "󰪣 ", "󰪤 ", "󰪥 "],
         "on-scroll-down": "brightnessctl -c backlight set 5%-",
         "on-scroll-up": "brightnessctl -c backlight set +5%",
         "tooltip-format": "Backlight (Scroll): {percent:}%"
@@ -10,7 +10,7 @@
         "format": "{icon} {capacity}%",
         "format-charging": "{icon} {capacity}% ",
         "format-full": "{icon} {capacity}% ",
-        "format-icons": ["", "", "", "", ""],
+        "format-icons": [" ", " ", " ", " ", " "],
         "format-plugged": "{icon} {capacity}% ",
         "states": {
             "critical": 10,
@@ -19,13 +19,31 @@
         "tooltip-format": "{timeTo}"
     },
     "clock": {
-        "format": " {:%a %d %b  %I:%M %p}",
-        "format-alt": " {:%Y/%m/%d  %H:%M:%S}",
+        "format": " {:%a %d %b   %I:%M %p}",
+        "format-alt": " {:%Y/%m/%d   %H:%M:%S}",
         "interval": 1,
-        "tooltip-format": "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>"
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "months",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#f4b8e4'><b>{}</b></span>",
+                "days": "<span color='#c6d0f5'><b>{}</b></span>",
+                "weeks": "<span color='#85c1dc'><b>W{}</b></span>",
+                "weekdays": "<span color='#e5c890'><b>{}</b></span>",
+                "today": "<span color='#ca9ee6'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": "  {usage}%",
         "interval": 5,
         "on-click": "ghostty -e btm",
         "states": {
@@ -34,7 +52,7 @@
         }
     },
     "custom/launcher": {
-        "format": "<span size='x-large'></span>",
+        "format": "",
         "on-click": "wofi --normal-window --show drun --allow-images",
         "tooltip": false
     },
@@ -44,7 +62,7 @@
         "tooltip": false
     },
     "custom/updates": {
-        "format": "󱍷 Update",
+        "format": "󱍷  Update",
         "on-click": "ghostty -e topgrade",
         "tooltip-format": "󰍽: topgrade"
     },
@@ -77,14 +95,14 @@
     "layer": "top",
     "margin": "0 0 0 0",
     "memory": {
-        "format": " {}%",
+        "format": "  {}%",
         "interval": 5,
         "on-click": "ghostty -e btm",
         "states": {
             "critical": 90,
             "warning": 70
         },
-        "tooltip-format": "      󰍽: btm\n   Memory: {total} GiB\n   In use: {used} GiB ({percentage}%)\nAvailable: {avail} GiB\n     Swap: {swapTotal} GiB\n   In use: {swapUsed} GiB ({swapPercentage}%)\nAvailable: {swapAvail} GiB"
+        "tooltip-format": "󰍽: btm\nMemory: {total} GiB\nIn use: {used} GiB ({percentage}%)\nAvailable: {avail} GiB\nSwap: {swapTotal} GiB\nIn use: {swapUsed} GiB ({swapPercentage}%)\nAvailable: {swapAvail} GiB"
     },
     "modules-center": [],
     "modules-left": [
@@ -107,12 +125,12 @@
     ],
     "network": {
         "family": "ipv4",
-        "format-disabled": " Disabled",
-        "format-disconnected": " Disconnected",
-        "format-ethernet": " Wired",
-        "format-wifi": "  {essid}",
+        "format-disabled": "  Disabled",
+        "format-disconnected": "  Disconnected",
+        "format-ethernet": "  Wired",
+        "format-wifi": "   {essid}",
         "on-click": "nm-connection-editor",
-        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+        "tooltip-format-ethernet": "  {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
         "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}"
     },
     "position": "top",
@@ -121,7 +139,7 @@
         "format": " {temperatureC}°C",
         "format-critical": " {temperatureC}°C",
         "on-click": "ghostty -e s-tui",
-        "tooltip-format": "  󰍽: s-tui\n {temperatureC}° Celsius\n{temperatureF}° Fahrenheit\n{temperatureK}° Kelvin"
+        "tooltip-format": "󰍽: s-tui\n {temperatureC}° Celsius\n{temperatureF}° Fahrenheit\n{temperatureK}° Kelvin"
     },
     "tray": {
         "icon-size": 20,
@@ -130,14 +148,14 @@
     "wireplumber": {
         "format": "{icon} {volume}%",
         "format-icons": {
-            "default": ["", "", ""]
+            "default": [" ", " ", " "]
         },
-        "format-muted": " Muted",
+        "format-muted": "  Muted",
         "on-click": "pwvucontrol",
         "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
         "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
         "scroll-step": 1,
-        "tooltip-format": "  L󰍽: pawucontrol\n  R󰍽: Toggle mute\nVolume (Scroll): {volume:}%"
+        "tooltip-format": "L󰍽: pawucontrol\nR󰍽: Toggle mute\nVolume (Scroll): {volume:}%"
     }
 }
