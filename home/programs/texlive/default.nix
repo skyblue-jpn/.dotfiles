@@ -1,8 +1,23 @@
 { config, pkgs, ... }:
-
+let
+  tex = (
+    pkgs.texlive.combine {
+      inherit (pkgs.texlive)
+        scheme-basic
+        dvisvgm
+        dvipng # for preview and export as html
+        wrapfig
+        amsmath
+        ulem
+        hyperref
+        capt-of
+        ;
+    }
+  );
+in
 {
-  programs.texlive = {
-    enable = true;
-    packageSet = pkgs.texliveFull;
-  };
+  # home-manager
+  home.packages = with pkgs; [
+    tex
+  ];
 }
