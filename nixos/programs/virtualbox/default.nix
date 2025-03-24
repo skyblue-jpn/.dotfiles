@@ -6,7 +6,7 @@
     host.addNetworkInterface = false;
     host.enableExtensionPack = true;
     host.enableKvm = true;
-    guest.enable = true;
+    guest.enable = false;
     guest.dragAndDrop = true;
     guest.clipboard = true;
   };
