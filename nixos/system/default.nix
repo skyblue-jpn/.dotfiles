@@ -1,6 +1,9 @@
 { pkgs, lib, ... }:
 
 {
+  imports = [
+    ./networking
+  ];
   # Environment packages
   environment.systemPackages = with pkgs; [
     floorp
@@ -23,23 +26,6 @@
 
   # Allow unfree software
   nixpkgs.config.allowUnfree = true;
-
-  # Networking configuration
-  networking = {
-    # Set the hostname
-    hostName = "aquamarine";
-    # Enable NetworkManager
-    networkmanager.enable = true;
-    # Enable nftables
-    nftables.enable = true;
-
-    networkmanager.wifi = {
-      backend = "wpa_supplicant"; # iwd backend doesn't work correctly (may failed to start wireless connection)
-    };
-    wireless.iwd = {
-      enable = true;
-    };
-  };
 
   # Security related settings
   security.rtkit.enable = true;

@@ -3,7 +3,7 @@
 {
   imports = [
     ./gaming
-    ./pipewire
+    ./sound
     ./steam
   ];
   programs = {
@@ -32,6 +32,27 @@
     };
     nix-ld.dev = {
       enable = true;
+      libraries = with pkgs; [
+        SDL2
+        curl
+        freetype
+        gdk-pixbuf
+        glib
+        glibc
+        icu
+        libglvnd
+        libnotify
+        libsecret
+        libunwind
+        libuuid
+        openssl
+        stdenv.cc.cc
+        util-linux
+        vulkan-loader
+        xorg.libX11
+        zlib
+      ];
+
     };
   };
 }
