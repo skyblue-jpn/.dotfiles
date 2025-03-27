@@ -46,6 +46,12 @@
       };
     };
   };
+  hardware = {
+    opentabletdriver = {
+      enable = true;
+      daemon.enable = true;
+    };
+  };
 
   # System version
   system.stateVersion = "25.05";
