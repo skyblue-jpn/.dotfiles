@@ -15,7 +15,6 @@
     font-manager
     gimp
     gparted
-    heroic
     imagemagick
     inkscape
     libreoffice-fresh

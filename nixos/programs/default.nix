@@ -4,7 +4,6 @@
   imports = [
     ./gaming
     ./sound
-    ./steam
   ];
   programs = {
     # shell
