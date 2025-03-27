@@ -5,7 +5,6 @@
     ./bottom
     ./cava
     ./dconf
-    ./difftastic
     ./dunst
     ./eza
     ./fastfetch

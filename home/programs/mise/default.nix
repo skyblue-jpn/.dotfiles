@@ -1,8 +1,9 @@
-{ ... }:
+{ inputs, pkgs, ... }:
 
 {
   programs.mise = {
     enable = true;
+    package = inputs.mise-flake.packages.${pkgs.system}.mise;
   };
 
   xdg.configFile = {
