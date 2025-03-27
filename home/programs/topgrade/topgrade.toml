@@ -14,9 +14,9 @@
     # Sudo command to be used
     sudo_command = "sudo"
 
-    # Disable specific steps - same options as the command line flag
-    disable = [ "uv" ]
+    disable = [ "home_manager", "nix_env", "uv" ]
 
+    # Disable specific steps - same options as the command line flag
     # Ignore failures for these steps
     # ignore_failures = ["powershell"]
 
@@ -187,9 +187,9 @@
 
     nix_arguments = "--flake /home/celeste/.dotfiles/#myNixOS --install-bootloader"
 
-    nix_env_arguments = ""
+    # nix_env_arguments = ""
 
-    home_manager_arguments = [ "--flake", "/home/celeste/.dotfiles/#myHome" ]
+    # home_manager_arguments = [  ]
 
 
 # Extra Home Manager arguments

@@ -4,7 +4,8 @@ My NixOS dotfiles
 
 ## references
 
--   directory structure: https://github.com/HeinzDev/Hyprland-dotfiles
+-   Garuda Linux (some system config and hyprland dots)
+-   Alter Linux (dconf for cinnamon)
 
 ## Installation
 
@@ -21,7 +22,6 @@ The `install.sh` script automates the setup and maintenance of your NixOS config
 
 -   **update_flake**: Updates the flake.
 -   **rebuild_nixos**: Rebuilds and switches to the new NixOS configuration, installing the bootloader.
--   **switch_home_manager**: Switches to the new Home Manager configuration.
 -   **garbage_collect**: Performs garbage collection on the Nix store.
 -   **delete_lock_files**: Deletes lock files.
 
@@ -29,6 +29,5 @@ By default, if no arguments are provided, the script will update the flake, rebu
 
 -   `u` or `update`: Run `update_flake`.
 -   `r` or `rebuild`: Run `rebuild_nixos`.
--   `s` or `switch`: Run `switch_home_manager`.
 -   `g` or `gc`: Run `garbage_collect`.
 -   `d` or `delete-locks`: Run `delete_lock_files`.

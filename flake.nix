@@ -1,73 +1,148 @@
 {
-  description = "My flake";
+  description = "Description for the project";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
-    catppuccin.url = "github:catppuccin/nix";
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
+    # core
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+    };
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+    };
+    nixpkgs = {
+      url = "github:NixOS/nixpkgs/nixos-unstable";
+    };
+    chaotic = {
+      url = "https://flakehub.com/f/chaotic-cx/nyx/*.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    yazi.url = "github:sxyazi/yazi";
-    mise-flake.url = "github:jdx/mise";
-    hyprland.url = "github:hyprwm/Hyprland";
+    systems = {
+      url = "github:nix-systems/default";
+    };
+    # flake-parts module
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hercules-ci-effects = {
+      url = "github:hercules-ci/hercules-ci-effects";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+    };
+    # development
     nix-ld = {
       url = "github:Mic92/nix-ld";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-alien.url = "github:thiagokokada/nix-alien";
-    fix-python.url = "github:GuillaumeDesforges/fix-python";
+    fix-python = {
+      url = "github:GuillaumeDesforges/fix-python";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
+    # desktop
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+    };
+    # themes
+    catppuccin = {
+      url = "github:catppuccin/nix";
+    };
+    # other packages
+    yazi = {
+      url = "github:sxyazi/yazi";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
+    mise-flake = {
+      url = "github:jdx/mise";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
   };
 
   outputs =
-    inputs:
-    inputs.flake-utils.lib.eachDefaultSystem (
-      system:
-      let
-        pkgs = import inputs.nixpkgs {
-          inherit system;
-          config = {
-            allowUnfree = true;
+    inputs@{
+      self,
+      flake-parts,
+      nixpkgs,
+      chaotic,
+      home-manager,
+      systems,
+      treefmt-nix,
+      nix-ld,
+      fix-python,
+      catppuccin,
+      yazi,
+      mise-flake,
+      ...
+    }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        # To import a flake module
+        # 1. Add foo to inputs
+        # 2. Add foo as a parameter to the outputs function
+        # 3. Add here: foo.flakeModule
+        inputs.treefmt-nix.flakeModule
+      ];
+      systems = import systems;
+      perSystem =
+        {
+          config,
+          self',
+          inputs',
+          pkgs,
+          system,
+          ...
+        }:
+        {
+          # Per-system attributes can be defined here. The self' and inputs'
+          # module parameters provide easy access to attributes of the same
+          # system.
+
+          # Equivalent to  inputs'.nixpkgs.legacyPackages.hello;
+          packages.default = pkgs.hello;
+          treefmt.programs = {
+            nixfmt.enable = true;
+            prettier.enable = true;
+            prettier.settings.embeddedLanguageFormatting = "auto";
           };
         };
-      in
-      {
-        formatter = pkgs.nixfmt-rfc-style;
-
-        legacyPackages = {
-          inherit (pkgs) home-manager;
-
-          nixosConfigurations = {
-            myNixOS = inputs.nixpkgs.lib.nixosSystem {
-              specialArgs = { inherit inputs; };
-              modules = [
-                ./nixos/configuration.nix
-                inputs.chaotic.nixosModules.default
-                inputs.catppuccin.nixosModules.catppuccin
-                inputs.nix-ld.nixosModules.nix-ld
-              ];
-            };
-          };
-
-          homeConfigurations = {
-            myHome = inputs.home-manager.lib.homeManagerConfiguration {
-              pkgs = pkgs;
-              extraSpecialArgs = { inherit inputs; };
-              modules = [
-                ./home/home.nix
-                inputs.chaotic.homeManagerModules.default
-                inputs.catppuccin.homeManagerModules.catppuccin
-              ];
-            };
+      flake = {
+        # The usual flake attributes can be defined here, including system-
+        # agnostic ones like nixosModule and system-enumerating ones, although
+        # those are more easily expressed in perSystem.
+        nixosConfigurations = {
+          myNixOS = nixpkgs.lib.nixosSystem {
+            specialArgs = { inherit inputs; };
+            modules = [
+              ./nixos/configuration.nix
+              chaotic.nixosModules.default
+              home-manager.nixosModules.home-manager
+              catppuccin.nixosModules.catppuccin
+              nix-ld.nixosModules.nix-ld
+              {
+                home-manager = {
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+                  extraSpecialArgs = { inherit inputs; };
+                  users.celeste = {
+                    imports = [
+                      ./home/home.nix
+                      catppuccin.homeManagerModules.catppuccin
+                    ];
+                  };
+                };
+              }
+            ];
           };
         };
-      }
-    );
+      };
+    };
 }

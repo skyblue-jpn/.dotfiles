@@ -5,7 +5,7 @@
     ./bottom
     ./cava
     ./dconf
-    ./delta
+    ./difftastic
     ./dunst
     ./eza
     ./fastfetch
@@ -21,7 +21,6 @@
     ./mise
     ./navi
     ./neovim
-    ./noisetorch
     ./pandoc
     ./peaclock
     ./ripgrep
@@ -29,9 +28,7 @@
     ./texlive
     ./thefuck
     ./topgrade
-    ./vlc
     ./vscode
-    ./xonsh
     ./yazi
     ./zathura
     ./zoxide

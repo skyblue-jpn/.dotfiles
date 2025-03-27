@@ -2,12 +2,36 @@
 
 {
   imports = [
-    ./cups
+    ./gaming
     ./pipewire
-    ./libinput
-    ./nix-ld
-    ./tools
     ./steam
-    ./virtualbox
   ];
+  programs = {
+    # shell
+    fish = {
+      enable = true;
+    };
+    xonsh = {
+      enable = true;
+    };
+    # tools
+    dconf = {
+      enable = true;
+    };
+    gnome-disks = {
+      enable = true;
+    };
+    file-roller = {
+      enable = true;
+    };
+    kdeconnect = {
+      enable = true;
+    };
+    noisetorch = {
+      enable = true;
+    };
+    nix-ld.dev = {
+      enable = true;
+    };
+  };
 }

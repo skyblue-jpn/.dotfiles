@@ -19,44 +19,44 @@
 /* Reset all styles */
 
 * {
-    color: @text;
-    border: 0;
-    border-radius: 0;
-    padding: 0 0;
-    font-family: "Cantarell", "Noto Sans CJK JP", "Symbols Nerd Font Mono";
-    font-size: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding-bottom: 2px;
+  color: @text;
+  border: 0;
+  border-radius: 0;
+  padding: 0 0;
+  font-family: "Cantarell", "Noto Sans CJK JP", "Symbols Nerd Font Mono";
+  font-size: 15px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-bottom: 2px;
 }
 
 window#waybar {
-    background: rgba(30, 32, 48, 0.65); /* Mantle */
+  background: rgba(30, 32, 48, 0.65); /* Mantle */
 }
 
 tooltip {
-    background: rgba(35, 38, 52, 0.8); /* Crust */
-    border-radius: 10px;
-    border-width: 1.5px;
-    border-style: solid;
-    border-color: rgba(202, 158, 230, 0.8); /* Mauve */
+  background: rgba(35, 38, 52, 0.8); /* Crust */
+  border-radius: 10px;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: rgba(202, 158, 230, 0.8); /* Mauve */
 }
 
 tooltip label {
-    color: @text;
+  color: @text;
 }
 
 #workspaces button {
-    padding: 2px 0px;
-    border-bottom: 2px;
-    color: @text;
-    border-color: @subtext1;
-    border-style: solid;
-    margin-top: 2px;
+  padding: 2px 0px;
+  border-bottom: 2px;
+  color: @text;
+  border-color: @subtext1;
+  border-style: solid;
+  margin-top: 2px;
 }
 
 #workspaces button.active {
-    border-color: @blue;
+  border-color: @blue;
 }
 
 #clock,
@@ -72,9 +72,9 @@ tooltip label {
 #custom-launcher,
 #custom-power,
 #custom-updates {
-    padding: 0 3px;
-    border-bottom: 2px;
-    border-style: solid;
+  padding: 0 3px;
+  border-bottom: 2px;
+  border-style: solid;
 }
 
 /* -----------------------------------------------------------------------------
@@ -82,97 +82,97 @@ tooltip label {
   * -------------------------------------------------------------------------- */
 
 #clock {
-    color: @green;
+  color: @green;
 }
 
 #backlight {
-    color: @yellow;
+  color: @yellow;
 }
 
 #battery {
-    color: @subtext0;
+  color: @subtext0;
 }
 
 #battery.charging {
-    color: @blue;
+  color: @blue;
 }
 
 @keyframes blink {
-    to {
-        color: @surface0;
-        background-color: @text;
-    }
+  to {
+    color: @surface0;
+    background-color: @text;
+  }
 }
 
 #battery.critical:not(.charging) {
-    background: @red;
-    color: @text;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  background: @red;
+  color: @text;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #cpu {
-    color: @green;
+  color: @green;
 }
 
 #memory {
-    color: @maroon;
+  color: @maroon;
 }
 
 #network.disabled {
-    color: @red;
+  color: @red;
 }
 
 #network {
-    color: @green;
+  color: @green;
 }
 
 #network.disconnected {
-    color: @red;
+  color: @red;
 }
 
 #wireplumber {
-    color: @pink;
+  color: @pink;
 }
 
 #wireplumber.muted {
-    color: @red;
+  color: @red;
 }
 
 #temperature {
-    color: @sapphire;
+  color: @sapphire;
 }
 
 #temperature.critical {
-    color: @red;
+  color: @red;
 }
 
 #tray {
-    color: @rosewater;
+  color: @rosewater;
 }
 
 #custom-updates {
-    color: @lavender;
+  color: @lavender;
 }
 
 #custom-launcher {
-    font-size: 25px;
-    border-style: hidden;
-    margin-top: 2px;
-    margin-right: 10px;
+  font-size: 25px;
+  border-style: hidden;
+  margin-top: 2px;
+  margin-right: 10px;
 }
 
 #custom-power {
-    color: @flamingo;
-    font-size: 23px;
-    border-style: hidden;
-    margin-top: 2px;
+  color: @flamingo;
+  font-size: 23px;
+  border-style: hidden;
+  margin-top: 2px;
 }
 
 #window {
-    border-style: hidden;
-    margin-top: 1px;
+  border-style: hidden;
+  margin-top: 1px;
 }

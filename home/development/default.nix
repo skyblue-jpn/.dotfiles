@@ -1,5 +1,4 @@
 {
-  lib,
   pkgs,
   inputs,
   ...
@@ -7,7 +6,6 @@
 
 {
   imports = [
-    ./nix-alien
     ./R
   ];
   home.packages = with pkgs; [

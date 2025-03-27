@@ -18,12 +18,6 @@ rebuild_nixos() {
     sudo nixos-rebuild switch --flake .#myNixOS --install-bootloader
 }
 
-# Function to switch to the new Home Manager configuration
-switch_home_manager() {
-    echo "Running: switch_home_manager"
-    nix run nixpkgs#home-manager -- switch --flake .#myHome
-}
-
 # Function to perform garbage collection on the Nix store
 garbage_collect() {
     echo "Running: garbage_collect"
@@ -40,7 +34,6 @@ delete_lock_files() {
 default_behavior() {
     update_flake
     rebuild_nixos
-    switch_home_manager
     garbage_collect
 }
 
@@ -55,9 +48,6 @@ else
             ;;
         r | rebuild)
             rebuild_nixos
-            ;;
-        s | switch)
-            switch_home_manager
             ;;
         g | gc)
             garbage_collect

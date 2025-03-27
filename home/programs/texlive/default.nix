@@ -1,4 +1,5 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
+
 let
   tex = (
     pkgs.texlive.combine {
@@ -9,7 +10,6 @@ let
   );
 in
 {
-  # home-manager
   home.packages = with pkgs; [
     tex
   ];

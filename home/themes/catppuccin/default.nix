@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, catppuccin, ... }:
 
 {
   catppuccin = {
@@ -12,7 +12,6 @@
     cursors.enable = true;
     cursors.accent = "mauve";
     cursors.flavor = "macchiato";
-    delta.flavor = "macchiato";
     dunst.flavor = "macchiato";
     fcitx5.apply = true;
     fcitx5.accent = "mauve";
@@ -42,8 +41,6 @@
     kvantum.accent = "mauve";
     kvantum.flavor = "macchiato";
     nvim.flavor = "macchiato";
-    # plymouth.flavor = "macchiato";
-    # sddm.flavor = "macchiato";
     starship.enable = false;
     starship.flavor = "macchiato";
     tofi.flavor = "macchiato";
