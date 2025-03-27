@@ -3,7 +3,7 @@
 {
   programs.mise = {
     enable = true;
-    package = inputs.mise-flake.packages.${pkgs.system}.mise;
+    # package = inputs.mise-flake.packages.${pkgs.system}.mise;
   };
 
   xdg.configFile = {
