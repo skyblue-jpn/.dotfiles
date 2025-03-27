@@ -5,7 +5,6 @@
     audacious
     baobab
     bitwarden
-    bottles-unwrapped
     brightnessctl
     bulky
     cbonsai
