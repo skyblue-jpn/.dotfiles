@@ -13,7 +13,6 @@
     vimAlias = true;
     vimdiffAlias = true;
 
-    # the following config is imported from: https://github.com/LazyVim/LazyVim/discussions/1972
     extraPackages = with pkgs; [
       # LazyVim
       lua-language-server
@@ -137,7 +136,13 @@
             -- import/override with your plugins
             { import = "plugins" },
             -- treesitter handled by xdg.configFile."nvim/parser", put this line at the end of spec to clear ensure_installed
-            { "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = {} } },
+            {
+              "nvim-treesitter/nvim-treesitter",
+              opts = {
+                ensure_installed = {},
+                parser_install_dir = vim.fn.stdpath('data') .. '/nvim-treesitter/parser',
+              },
+            },
           },
         })
       '';
