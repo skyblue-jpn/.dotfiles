@@ -65,6 +65,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak/?ref=latest";
+    };
   };
 
   outputs =
@@ -81,6 +84,7 @@
       catppuccin,
       yazi,
       mise-flake,
+      nix-flatpak,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -127,6 +131,7 @@
               home-manager.nixosModules.home-manager
               catppuccin.nixosModules.catppuccin
               nix-ld.nixosModules.nix-ld
+              nix-flatpak.nixosModules.nix-flatpak
               {
                 home-manager = {
                   useGlobalPkgs = true;
