@@ -3,6 +3,6 @@
 {
   programs.yazi = {
     enable = true;
-    package = inputs.yazi.packages.${pkgs.system}.default;
+    # package = inputs.yazi.packages.${pkgs.system}.default;
   };
 }
