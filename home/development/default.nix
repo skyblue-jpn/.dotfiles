@@ -10,7 +10,7 @@
   ];
   home.packages = with pkgs; [
     dotnet-sdk_9
-    gcc
+    clan
     inputs.fix-python.packages.${pkgs.system}.default
   ];
 }
