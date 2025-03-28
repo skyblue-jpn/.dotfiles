@@ -141,6 +141,7 @@
                     imports = [
                       ./home/home.nix
                       catppuccin.homeManagerModules.catppuccin
+                      nix-flatpak.homeManagerModules.nix-flatpak
                     ];
                   };
                 };

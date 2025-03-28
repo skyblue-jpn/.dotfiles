@@ -41,4 +41,8 @@
     "gtk-4.0/gtk-dark.css".source =
       "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
+  home.file = {
+    ".themes".source =
+      "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
+  };
 }

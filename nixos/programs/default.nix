@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./flatpak
     ./gaming
     ./sound
   ];
