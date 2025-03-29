@@ -26,12 +26,12 @@ in
   services.flatpak = {
     packages = [
       "com.usebottles.bottles"
+      "com.github.tchx84.Flatseal"
     ];
     update.onActivation = true;
     update.auto = {
       enable = true;
       onCalendar = "weekly";
     };
-    #   defaultOverrides."*" = { };
   };
 }
