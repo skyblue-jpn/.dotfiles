@@ -140,7 +140,7 @@
                   users.celeste = {
                     imports = [
                       ./home/home.nix
-                      catppuccin.homeManagerModules.catppuccin
+                      catppuccin.homeModules.catppuccin
                       nix-flatpak.homeManagerModules.nix-flatpak
                     ];
                   };
