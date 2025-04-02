@@ -3,6 +3,7 @@
 {
   imports = [
     ./gaming
+    ./online-accounts
     ./sound
   ];
   programs = {

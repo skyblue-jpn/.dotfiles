@@ -3,6 +3,5 @@
     ./cinnamon
     ./hypr
     ./sddm
-    ./gvfs
   ];
 }
