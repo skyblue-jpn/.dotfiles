@@ -26,7 +26,7 @@
   ];
 
   environment.sessionVariables = {
-    SDL_VIDEODRIVER = wayland "osu!";
+    SDL_VIDEODRIVER = "wayland" "osu!";
   };
 
   # Enable gamemode
