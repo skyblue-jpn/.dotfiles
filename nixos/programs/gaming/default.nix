@@ -25,10 +25,6 @@
     osu-lazer-bin
   ];
 
-  environment.sessionVariables = {
-    SDL_VIDEODRIVER = "wayland" "osu!";
-  };
-
   # Enable gamemode
   programs.gamemode.enable = true;
 

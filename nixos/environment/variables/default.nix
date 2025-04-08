@@ -7,5 +7,6 @@
     QT_IM_MODULE = "fcitx";
     INPUT_METHOD = "fcitx";
     NIX_USER_CONF_FILES = "~/.config/nix/nix.conf:~/.config/nix/local.conf"; # define nix conf: DO NOT MANAGE BY PUBLIC REPO
+    SDL_VIDEODRIVER = "wayland";
   };
 }
