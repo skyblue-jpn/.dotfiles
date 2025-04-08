@@ -41,7 +41,7 @@
     wl-clipboard-rs
     wl-clipboard-x11
     xviewer
-    zoom-us
+    # zoom-us
     xfce.catfish
   ];
 }
