@@ -9,9 +9,9 @@
     flake-utils = {
       url = "github:numtide/flake-utils";
     };
-    # nixpkgs = {
-    #   url = "github:NixOS/nixpkgs/nixos-unstable";
-    # };
+    nixpkgs = {
+      url = "github:NixOS/nixpkgs/nixos-unstable";
+    };
     chaotic = {
       url = "https://flakehub.com/f/chaotic-cx/nyx/*.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";

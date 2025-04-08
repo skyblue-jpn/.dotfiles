@@ -24,7 +24,6 @@
     nixfmt-rfc-style
     p7zip
     peaclock
-    pingu
     pipes-rs
     pix
     playerctl
