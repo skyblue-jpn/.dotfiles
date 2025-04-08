@@ -24,6 +24,9 @@
         General.AddressRandomizationRange = "full";
       };
     };
+    wireless = {
+      enable = false;
+    };
     # Enable nftables
     nftables.enable = true;
   };
