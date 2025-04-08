@@ -33,7 +33,15 @@
   # Various services configuration
   services = {
     # Enable libinput (driver for mouse and keyboard)
-    libinput.enable = true;
+    libinput = {
+      enable = true;
+      touchpad = {
+        tapping = false;
+        scrollMethod = "twofinger";
+        naturalScrolling = false;
+        disableWhileTyping = true;
+      };
+    };
     # Enable printing service
     printing.enable = true;
     # X server configuration (basic for GUI environment)
