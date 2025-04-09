@@ -37,6 +37,6 @@
     };
 
     # Use the Linux_cachyos kernel
-    boot.kernelPackages = (pkgs.linuxPackages_cachyos-rc);
+    boot.kernelPackages = pkgs.linuxPackages_cachyos-rc;
   };
 }

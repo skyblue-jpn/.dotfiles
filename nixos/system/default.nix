@@ -2,7 +2,9 @@
 
 {
   imports = [
+    ./filesystems
     ./networking
+    ./performance
   ];
   # Environment packages
   environment.systemPackages = with pkgs; [
