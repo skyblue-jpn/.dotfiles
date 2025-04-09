@@ -68,6 +68,10 @@
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -85,6 +89,7 @@
       yazi,
       mise-flake,
       nix-flatpak,
+      nixvim,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -132,6 +137,7 @@
               catppuccin.nixosModules.catppuccin
               nix-ld.nixosModules.nix-ld
               nix-flatpak.nixosModules.nix-flatpak
+              nixvim.nixosModules.nixvim
               {
                 home-manager = {
                   useGlobalPkgs = true;
@@ -142,6 +148,7 @@
                       ./home/home.nix
                       catppuccin.homeModules.catppuccin
                       nix-flatpak.homeManagerModules.nix-flatpak
+                      nixvim.homeManagerModules.nixvim
                     ];
                   };
                 };
