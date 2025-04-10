@@ -40,29 +40,23 @@
       };
     };
     plugins = {
-      lazy.enable = true;
       bufferline.enable = true;
       colorful-menu.enable = true;
-      lualine.enable = true;
-      noice.enable = true;
-      mini = {
-        enable = true;
-        modules.icons = { };
-        mockDevIcons = true;
-      };
-      nui.enable = true;
-      snacks.enable = true;
-      ts-comments.enable = true;
-      lazydev.enable = true;
-      grug-far.enable = true;
-      flash.enable = true;
-      which-key.enable = true;
-      gitsigns.enable = true;
-      trouble.enable = true;
-      todo-comments.enable = true;
       conform-nvim.enable = true;
+      flash.enable = true;
+      gitsigns.enable = true;
+      grug-far.enable = true;
+      lazy.enable = true;
+      lazydev.enable = true;
       lsp.enable = true;
       lsp-format.enable = true;
+      lualine.enable = true;
+      mini = {
+        enable = true;
+        mockDevIcons = true;
+        modules.icons = { };
+      };
+      noice.enable = true;
       none-ls = {
         enable = true;
         sources.completion = {
@@ -79,6 +73,12 @@
           prettierd.enable = true;
         };
       };
+      notify.enable = true;
+      nui.enable = true;
+      persistence.enable = true;
+      snacks.enable = true;
+      telescope.enable = true;
+      todo-comments.enable = true;
       treesitter = {
         enable = true;
         grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
@@ -96,9 +96,10 @@
           yaml
         ];
       };
-      persistence.enable = true;
+      trouble.enable = true;
+      ts-comments.enable = true;
+      which-key.enable = true;
       yazi.enable = true;
-      telescope.enable = true;
     };
   };
 }
