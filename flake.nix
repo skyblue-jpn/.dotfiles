@@ -80,13 +80,6 @@
       inputs.flake-parts.follows = "flake-parts";
       inputs.nuschtosSearch.follows = "nuschtosSearch";
     };
-    nixvim-conf = {
-      url = "github:dc-tec/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.nixvim.follows = "nixvim";
-      inputs.pre-commit-hooks.follows = "pre-commit-hooks";
-    };
   };
 
   outputs =
@@ -133,9 +126,35 @@
           # Equivalent to  inputs'.nixpkgs.legacyPackages.hello;
           packages.default = pkgs.hello;
           treefmt.programs = {
-            nixfmt.enable = true;
-            prettier.enable = true;
-            prettier.settings.embeddedLanguageFormatting = "auto";
+            nixfmt = {
+              enable = true;
+              excludes = [ ];
+              includes = [ "*.nix" ];
+            };
+            biome = {
+              enable = true;
+              excludes = [ ];
+              includes = [
+                "*.js"
+                "*.json"
+                "*.jsonc"
+              ];
+            };
+            prettier = {
+              enable = true;
+              excludes = [ ];
+              includes = [
+                "*.css"
+                "*.html"
+                "*.md"
+                "*.mdx"
+              ];
+            };
+            taplo = {
+              enable = true;
+              excludes = [ ];
+              includes = [ "*.toml" ];
+            };
           };
         };
       flake = {

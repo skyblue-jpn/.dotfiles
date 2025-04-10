@@ -1,7 +1,7 @@
 [tools]
-    usage = "latest"
-    uv    = "latest"
+usage = "latest"
+uv = "latest"
 
 [settings]
-    experimental = true
-    pipx_uvx     = true
+experimental = true
+pipx_uvx = true

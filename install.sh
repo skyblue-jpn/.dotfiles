@@ -27,7 +27,7 @@ garbage_collect() {
 # Function to delete lock files
 delete_lock_files() {
     echo "Running: delete_lock_files"
-    find /home/celeste/.dotfiles -name "*.lock" -type f -delete
+    find $HOME/.dotfiles -name "*.lock" -type f -delete
 }
 
 # Default behavior if no argument is provided

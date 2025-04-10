@@ -21,7 +21,6 @@
     inkscape
     libreoffice-fresh
     nemo-with-extensions
-    nixfmt-rfc-style
     p7zip
     peaclock
     pipes-rs
