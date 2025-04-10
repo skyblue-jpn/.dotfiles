@@ -2,31 +2,25 @@
   description = "Description for the project";
 
   inputs = {
-    # core
-    flake-parts = {
-      url = "github:hercules-ci/flake-parts";
-    };
-    flake-utils = {
-      url = "github:numtide/flake-utils";
-    };
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-unstable";
     };
-    chaotic = {
-      url = "https://flakehub.com/f/chaotic-cx/nyx/*.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
+    systems = {
+      url = "github:nix-systems/default";
+    };
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+      inputs.systems.follows = "systems";
+    };
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    systems = {
-      url = "github:nix-systems/default";
-    };
-    # flake-parts module
-    treefmt-nix = {
-      url = "github:numtide/treefmt-nix";
+    pre-commit-hooks = {
+      url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hercules-ci-effects = {
@@ -34,7 +28,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "flake-parts";
     };
-    # development
+    nuschtosSearch = {
+      url = "github:NuschtOS/search";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    chaotic = {
+      url = "https://flakehub.com/f/chaotic-cx/nyx/*.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
     nix-ld = {
       url = "github:Mic92/nix-ld";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,17 +51,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
-    # desktop
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.systems.follows = "systems";
+      inputs.pre-commit-hooks.follows = "pre-commit-hooks";
     };
-    # themes
     catppuccin = {
       url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    # other packages
     yazi = {
       url = "github:sxyazi/yazi";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -71,6 +77,15 @@
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.nuschtosSearch.follows = "nuschtosSearch";
+    };
+    nixvim-conf = {
+      url = "github:dc-tec/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.nixvim.follows = "nixvim";
+      inputs.pre-commit-hooks.follows = "pre-commit-hooks";
     };
   };
 
