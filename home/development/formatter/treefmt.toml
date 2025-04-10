@@ -58,7 +58,6 @@ includes = [
   "*.d.ts",
   "*.js",
   "*.json",
-  "*.json5",
   "*.jsonc",
   "*.jsx",
   "*.mjs",
@@ -66,7 +65,7 @@ includes = [
   "*.ts",
   "*.tsx",
 ]
-options = ["--no-errors-on-unmatched", "--write", "format"]
+options = ["format", "--write", "--no-errors-on-unmatched"]
 
 [formatter.clang-format]
 command = "clang-format"
