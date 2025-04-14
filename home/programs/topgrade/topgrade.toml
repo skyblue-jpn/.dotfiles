@@ -185,7 +185,7 @@ cleanup = true
 # (default: false)
 # bootc = false
 
-nix_arguments = ["--flake", "/home/celeste/.dotfiles/#myNixOS"]
+nix_arguments = "--flake /home/celeste/.dotfiles/#myNixOS"
 
 # nix_env_arguments = ""
 
