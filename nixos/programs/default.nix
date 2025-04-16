@@ -21,6 +21,9 @@
     gnome-disks = {
       enable = true;
     };
+    evolution = {
+      enable = true;
+    };
     file-roller = {
       enable = true;
     };
