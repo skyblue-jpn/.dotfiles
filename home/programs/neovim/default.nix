@@ -73,7 +73,10 @@
           prettierd.enable = true;
         };
       };
-      notify.enable = true;
+      notify = {
+        enable = true;
+        settings.background_colour = "#000000";
+      };
       nui.enable = true;
       persistence.enable = true;
       snacks.enable = true;
