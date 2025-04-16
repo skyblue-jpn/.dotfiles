@@ -1,9 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    # ./flatpak
-  ];
   home.packages = with pkgs; [
     audacious
     baobab
