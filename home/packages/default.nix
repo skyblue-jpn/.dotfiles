@@ -2,7 +2,7 @@
 
 {
   imports = [
-   # ./flatpak
+    # ./flatpak
   ];
   home.packages = with pkgs; [
     audacious

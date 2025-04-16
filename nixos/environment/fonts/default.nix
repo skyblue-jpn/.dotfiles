@@ -28,4 +28,12 @@
       };
     };
   };
+
+  console = {
+    font = "ter-powerline-v24n";
+    packages = [
+      pkgs.terminus_font
+      pkgs.powerline-fonts
+    ];
+  };
 }
