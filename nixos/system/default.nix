@@ -80,7 +80,7 @@
   # Virtualization related settings
   virtualisation.virtualbox = {
     # Enable VirtualBox host features
-    host.enable = true;
+    host.enable = false;
     # Do not add host network interface
     host.addNetworkInterface = false;
     # Enable Extension Pack

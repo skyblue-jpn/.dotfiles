@@ -9,7 +9,17 @@
       rulesProvider = pkgs.ananicy-rules-cachyos_git;
     };
 
-    systemd.oomd.enable = false;
+    # Fedora enables these options by default. See the 10-oomd-* files here:
+    # https://src.fedoraproject.org/rpms/systemd/tree/acb90c49c42276b06375a66c73673ac3510255
+    systemd.oomd = {
+      enable = lib.mkForce true;
+      enableRootSlice = gDefault true;
+      enableUserSlices = gDefault true;
+      enableSystemSlice = gDefault true;
+      extraConfig = {
+        "DefaultMemoryPressureDurationSec" = "20s";
+      };
+    };
 
     # BPF-based auto-tuning of Linux system parameters
     services.bpftune.enable = true;
