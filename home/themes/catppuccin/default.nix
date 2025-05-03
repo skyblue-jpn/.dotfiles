@@ -6,6 +6,7 @@
     accent = "mauve";
     flavor = "macchiato";
     bat.flavor = "macchiato";
+    bottom.enable = false;
     bottom.flavor = "macchiato";
     cava.flavor = "macchiato";
     cava.transparent = true;
