@@ -57,5 +57,8 @@
       ];
 
     };
+    uwsm = {
+      enable = true;
+    };
   };
 }
