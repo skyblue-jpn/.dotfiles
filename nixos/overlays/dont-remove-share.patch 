@@ -1,5 +1,0 @@
---- a/Makefile.in
-+++ b/Makefile.in
-@@
--       rm -r $(datadir)
-+       rm -rf $(datadir)
