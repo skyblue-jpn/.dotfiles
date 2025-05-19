@@ -11,7 +11,6 @@
     # Make use of the systemd initrd
     initrd = {
       systemd.enable = true;
-      systemd.strip = true;
       verbose = false;
     };
     # Make it quiet by default

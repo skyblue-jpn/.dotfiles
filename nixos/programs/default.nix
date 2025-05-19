@@ -55,7 +55,6 @@
         xorg.libX11
         zlib
       ];
-
     };
     uwsm = {
       enable = true;

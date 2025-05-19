@@ -1,7 +1,11 @@
 [tools]
+python = "latest"
 usage = "latest"
 uv = "latest"
 
 [settings]
 experimental = true
+node.compile = false
 pipx_uvx = true
+python.compile = false
+python.uv_venv_auto = true

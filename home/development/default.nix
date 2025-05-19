@@ -13,6 +13,7 @@
     dotnet-sdk_9
     clang
     clang-tools
+    nodejs
     inputs.fix-python.packages.${pkgs.system}.default
   ];
 }

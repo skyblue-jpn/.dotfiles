@@ -32,7 +32,7 @@
     s-tui
     sl
     stix-two
-    ventoy-full
+    # ventoy-full-gtk
     vlc
     warpinator
     wl-clipboard-rs
