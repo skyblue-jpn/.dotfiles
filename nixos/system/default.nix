@@ -97,4 +97,9 @@
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
+  nix.optimise.automatic = true;
+  nix.settings.auto-optimise-store = true;
+
+  nixpkgs.config.allowBroken = true;
 }
