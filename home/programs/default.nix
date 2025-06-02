@@ -21,11 +21,11 @@
     ./navi
     ./neovim
     ./pandoc
+    ./pay-respects
     ./peaclock
     ./ripgrep
     ./starship
     ./texlive
-    ./thefuck
     ./topgrade
     ./vscode
     ./yazi

@@ -7,7 +7,7 @@
 {
   imports = [
     ./formatter
-    ./R
+    # ./R
   ];
   home.packages = with pkgs; [
     dotnet-sdk_9
