@@ -51,6 +51,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -74,6 +78,7 @@
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
       inputs.flake-parts.follows = "flake-parts";
       inputs.nuschtosSearch.follows = "nuschtosSearch";
     };
@@ -90,6 +95,7 @@
       treefmt-nix,
       nix-ld,
       fix-python,
+      nix-index-database,
       catppuccin,
       yazi,
       mise-flake,
@@ -176,6 +182,7 @@
                   users.celeste = {
                     imports = [
                       ./home/home.nix
+                      nix-index-database.hmModules.nix-index
                       catppuccin.homeModules.catppuccin
                       nixvim.homeManagerModules.nixvim
                     ];
