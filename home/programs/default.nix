@@ -20,6 +20,7 @@
     ./mise
     ./navi
     ./neovim
+    ./nix-index
     ./pandoc
     ./pay-respects
     ./peaclock
