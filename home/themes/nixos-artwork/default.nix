@@ -8,7 +8,7 @@ let
       owner = "NixOS";
       repo = "nixos-artwork";
       rev = "master";
-      sha256 = "sha256-9PCkx6Rn9v4/k7obMI9jl+4L8sVesEJFT8EC/I0OMZw=";
+      sha256 = "sha256-eoxlcu07yi0XTLQCZkEequEduR/WyAjWI9y/y+jUI=";
     };
 
     buildInputs = [
