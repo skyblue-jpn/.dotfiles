@@ -13,7 +13,7 @@
     efibootmgr
     ffmpeg
     font-manager
-    gimp
+    gimp3
     gparted
     imagemagick
     inkscape
