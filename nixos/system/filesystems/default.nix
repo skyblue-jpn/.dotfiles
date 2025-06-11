@@ -30,6 +30,7 @@
       "nodev"
       "nofail"
       "x-gvfs-show"
+      "exec"
     ];
   };
 
@@ -42,6 +43,7 @@
       "nodev"
       "nofail"
       "x-gvfs-show"
+      "exec"
     ];
   };
 }
