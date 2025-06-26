@@ -11,6 +11,8 @@
     packages = with pkgs; [
     ];
     shell = pkgs.fish;
+    linger = true;
+    autoSubUidGidRange = true;
   };
 
   nix.settings = {

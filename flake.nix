@@ -82,6 +82,9 @@
       inputs.flake-parts.follows = "flake-parts";
       inputs.nuschtosSearch.follows = "nuschtosSearch";
     };
+    quadlet-nix = {
+      url = "github:SEIAROTg/quadlet-nix";
+    };
   };
 
   outputs =
@@ -173,6 +176,7 @@
               catppuccin.nixosModules.catppuccin
               nix-ld.nixosModules.nix-ld
               nixvim.nixosModules.nixvim
+              quadlet-nix.nixosModules.quadlet
               {
                 home-manager = {
                   useGlobalPkgs = true;

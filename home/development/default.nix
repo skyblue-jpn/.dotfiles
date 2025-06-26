@@ -7,6 +7,7 @@
 {
   imports = [
     ./formatter
+    ./podman
     # ./R
   ];
   home.packages = with pkgs; [
