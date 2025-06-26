@@ -103,6 +103,7 @@
       yazi,
       mise-flake,
       nixvim,
+      quadlet-nix,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
