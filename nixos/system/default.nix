@@ -5,6 +5,7 @@
     ./filesystems
     ./networking
     ./performance
+    ./virtualisation
   ];
   # Environment packages
   environment.systemPackages = with pkgs; [
@@ -76,24 +77,6 @@
 
   # User related settings
   users.extraGroups.vboxusers.members = [ "celeste" ];
-
-  # Virtualization related settings
-  virtualisation.virtualbox = {
-    # Enable VirtualBox host features
-    host.enable = false;
-    # Do not add host network interface
-    host.addNetworkInterface = false;
-    # Enable Extension Pack
-    host.enableExtensionPack = true;
-    # Enable KVM support
-    host.enableKvm = true;
-    # Disable VirtualBox guest features
-    guest.enable = false;
-    # Enable drag and drop with guest OS
-    guest.dragAndDrop = true;
-    # Enable clipboard sharing with guest OS
-    guest.clipboard = true;
-  };
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
