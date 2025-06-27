@@ -65,6 +65,9 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+    };
     yazi = {
       url = "github:sxyazi/yazi";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -100,6 +103,7 @@
       fix-python,
       nix-index-database,
       catppuccin,
+      ghostty,
       yazi,
       mise-flake,
       nixvim,

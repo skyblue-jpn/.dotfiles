@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -14,6 +19,7 @@
     neovim
     nixfmt-rfc-style
     vscode
+    inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   # Nix configuration
