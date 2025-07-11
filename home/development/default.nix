@@ -8,7 +8,7 @@
   imports = [
     ./formatter
     ./podman
-    # ./R
+    ./R
   ];
   home.packages = with pkgs; [
     dotnet-sdk_9

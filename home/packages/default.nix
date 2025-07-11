@@ -17,7 +17,6 @@
     gparted
     imagemagick
     inkscape
-    libreoffice-fresh
     nemo-with-extensions
     p7zip
     peaclock
@@ -32,11 +31,12 @@
     s-tui
     sl
     stix-two
-    # ventoy-full-gtk
+    ventoy-full-gtk
     vlc
     warpinator
     wl-clipboard-rs
     wl-clipboard-x11
+    wpsoffice
     xviewer
     zoom-us
     xfce.catfish
