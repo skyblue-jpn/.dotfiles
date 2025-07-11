@@ -44,7 +44,7 @@
     starship.enable = false;
     starship.flavor = "macchiato";
     tofi.flavor = "macchiato";
-    vscode.enable = false;
+    vscode.profiles.default.enable = false;
     waybar.enable = false;
     waybar.flavor = "macchiato";
     waybar.mode = "prependImport";

@@ -30,6 +30,8 @@
         "nix-command"
         "flakes"
       ];
+      download-buffer-size = 524288000;
+      auto-optimise-store = true;
     };
   };
 
@@ -88,7 +90,6 @@
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   nix.optimise.automatic = true;
-  nix.settings.auto-optimise-store = true;
 
   nixpkgs.config.allowBroken = true;
 }
