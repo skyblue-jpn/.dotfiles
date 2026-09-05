@@ -1,0 +1,22 @@
+{
+  "misc": {
+    "menusHaveIcons": true,
+    "shortcutsForContextMenus": true,
+    "singleClickActivate": false
+  },
+  "theme": {
+    "colorScheme": "/home/celeste/.local/share/color-schemes/DankMatugen.colors",
+    "font": {
+      "family": "Noto Sans CJK JP",
+      "size": 11,
+      "weight": -1
+    },
+    "fontFixed": {
+      "family": "HackGen",
+      "size": 11,
+      "weight": -1
+    },
+    "iconTheme": "Colloid-Purple-Catppuccin-Dark",
+    "style": "Darkly"
+  }
+}

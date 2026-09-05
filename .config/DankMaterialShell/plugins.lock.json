@@ -1,0 +1,14 @@
+{
+  "lockfileVersion": 1,
+  "plugins": {
+    "catWidget": {
+      "repo": "https://github.com/xi-ve/cat-dms",
+      "commit": "eb7b5138b672be3c06445dd80de6bc30c3076030"
+    },
+    "dankKDEConnect": {
+      "repo": "https://github.com/AvengeMedia/dms-plugins",
+      "path": "DankKDEConnect",
+      "commit": "2a0f6c57207545433f26b2af32b7d4e72b4c09e2"
+    }
+  }
+}

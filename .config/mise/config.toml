@@ -1,0 +1,289 @@
+#:tombi schema.strict = false
+
+[settings]
+color_theme = "catppuccin"
+dotfiles.root = "~/.dotfiles"
+experimental = true
+jobs = 10
+plugin_autoupdate_last_check_duration = "12h"
+python.uv_venv_auto = "create|source"
+system_packages.managers = ["pacman"]
+system_packages.sudo = true
+
+[tools]
+"aqua:iffse/pay-respects" = "latest"
+bat = "latest"
+bat-extras = "latest"
+biome = "latest"
+bottom = "latest"
+cargo-binstall = "latest"
+"cargo:dua-cli" = "latest"
+"cargo:pez" = "latest"
+"cargo:tex-fmt" = "latest"
+eza = "latest"
+ffmpeg = "latest"
+fzf = "latest"
+ghq = "latest"
+github-cli = "latest"
+"github:A2-ai/rv" = "latest"
+imagemagick = "latest"
+java = "latest"
+jq = "latest"
+navi = "latest"
+node = "latest"
+"pipx:radian" = "latest"
+ripgrep = "latest"
+rust = "latest"
+shellcheck = "latest"
+shfmt = "latest"
+starship = "latest"
+stylua = "latest"
+tombi = "latest"
+topgrade = "latest"
+ty = "latest"
+usage = "latest"
+uv = "latest"
+yazi = "latest"
+zoxide = "latest"
+
+[bootstrap.packages]
+"pacman:7zip" = "latest"
+"pacman:adw-gtk-theme" = "latest"
+"pacman:biber" = "latest"
+"pacman:bitwarden" = "latest"
+"pacman:blender" = "latest"
+"pacman:bottles" = "latest"
+"pacman:bpftune-git" = "latest"
+"pacman:cachyos-gaming-applications" = "latest"
+"pacman:cachyos-gaming-meta" = "latest"
+"pacman:cava" = "latest"
+"pacman:chromium" = "latest"
+"pacman:clang" = "latest"
+"pacman:cmake" = "latest"
+"pacman:cups-pk-helper" = "latest"
+"pacman:fastfetch" = "latest"
+"pacman:fcitx5" = "latest"
+"pacman:fcitx5-configtool" = "latest"
+"pacman:fcitx5-gtk" = "latest"
+"pacman:fcitx5-lua" = "latest"
+"pacman:fcitx5-mozc-ut" = "latest"
+"pacman:fcitx5-qt" = "latest"
+"pacman:fish" = "latest"
+"pacman:frameworkintegration" = "latest"
+"pacman:gcc-fortran" = "latest"
+"pacman:ghostty" = "latest"
+"pacman:gimp" = "latest"
+"pacman:gnome-disk-utility" = "latest"
+"pacman:gvfs" = "latest"
+"pacman:inkscape" = "latest"
+"pacman:inter-font" = "latest"
+"pacman:kdeconnect" = "latest"
+"pacman:kimageformats" = "latest"
+"pacman:libreoffice-fresh" = "latest"
+"pacman:libreoffice-fresh-ja" = "latest"
+"pacman:linux-cachyos-rc" = "latest"
+"pacman:neovim" = "latest"
+"pacman:ntfs-3g" = "latest"
+"pacman:nwg-look" = "latest"
+"pacman:otf-stix" = "latest"
+"pacman:paru" = "latest"
+"pacman:pavucontrol" = "latest"
+"pacman:poppler" = "latest"
+"pacman:proton-cachyos-native" = "latest"
+"pacman:proton-cachyos-slr" = "latest"
+"pacman:qalculate-gtk" = "latest"
+"pacman:r" = "latest"
+"pacman:rate-mirrors" = "latest"
+"pacman:sl" = "latest"
+"pacman:tabby-bin" = "latest"
+"pacman:thunar" = "latest"
+"pacman:thunar-archive-plugin" = "latest"
+"pacman:ttf-fira-code" = "latest"
+"pacman:unityhub" = "latest"
+"pacman:vivaldi" = "latest"
+"pacman:vlc" = "latest"
+"pacman:waydroid" = "latest"
+"pacman:waydroid-helper" = "latest"
+"pacman:xarchiver" = "latest"
+"pacman:xed" = "latest"
+"pacman:xorg-xhost" = "latest"
+"pacman:xreader" = "latest"
+"pacman:xviewer" = "latest"
+"pacman:zathura-pdf-mupdf" = "latest"
+"pacman:zed" = "latest"
+"pacman:zoom" = "latest"
+
+[bootstrap.repos]
+"~/src/Colloid-icon-theme" = { url = "https://github.com/vinceliuice/Colloid-icon-theme.git" }
+
+[bootstrap.linux.firewall]
+backend = "auto"
+state = "enabled"
+
+[[bootstrap.linux.firewall.rules]]
+name = "kde-connect-tcp"
+port = "1714-1764"
+protocol = "tcp"
+action = "allow"
+
+[[bootstrap.linux.firewall.rules]]
+name = "kde-connect-udp"
+port = "1714-1764"
+protocol = "udp"
+action = "allow"
+
+[bootstrap.hooks.pre-packages]
+run = [
+  "sudo pacman -S --noconfirm --needed rate-mirrors paru",
+  "chmod +x ~/.dotfiles/scripts/add-chaotic-aur.sh && ~/.dotfiles/scripts/add-chaotic-aur.sh",
+  # "rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist",
+  # "rate-mirrors cachyos | sudo tee /etc/pacman.d/cachyos-mirrorlist",
+  "sudo cachyos-rate-mirrors && rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist && paru -Syyu --noconfirm",
+  "yes | paru -S --needed sudo-rs coreutils-uutils",
+  "sudo -v && curl -fsSL https://install.danklinux.com | sh -s -- -c niri -t ghostty --include-deps dms-greeter,danksearch,dankcalendar -y",
+  "yes | paru -S --needed extra/dms-shell",
+  "sudo timedatectl set-local-rtc 1",
+]
+
+[bootstrap.hooks.post-packages]
+run = [
+  "paru -S --noconfirm --needed - < ~/.dotfiles/aur_pkglist.txt",
+  "sudo waydroid init",
+]
+
+[bootstrap.hooks.post-tools]
+run = [
+  "~/src/Colloid-icon-theme/install.sh -s catppuccin -t purple",
+  "cd ~/src/Colloid-icon-theme/cursors && ./install.sh",
+  "paru -S --noconfirm --needed plymouth-theme-catppuccin-macchiato-git && sudo plymouth-set-default-theme -R catppuccin-macchiato",
+  "mise exec cargo:pez -- pez install",
+  "mise exec bat -- bat cache --build",
+  "chmod +x ~/.dotfiles/scripts/mount-filesystem.sh && ~/.dotfiles/scripts/mount-filesystem.sh",
+  "sudo systemctl start bpftune && sudo systemctl enable bpftune",
+]
+
+[bootstrap.hooks.final]
+run = [
+  "mise bootstrap: Completed!",
+]
+
+[bootstrap.mise_shell_activate]
+bash_profile = "shims"
+bashrc = "activate"
+
+[bootstrap.user]
+login_shell = "/usr/bin/fish"
+
+[dotfiles]
+"~/.Rprofile" = {}
+"~/.bashrc/batman" = { block = 'eval "$(batman --export-env)"' }
+"~/.bashrc/fzf" = { block = '''
+  eval "$(fzf --bash)"
+  export FZF_DEFAULT_OPTS=" \
+  --color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \
+  --color=fg:#CAD3F5,header:#ED8796,info:#C6A0F6,pointer:#F4DBD6 \
+  --color=marker:#B7BDF8,fg+:#CAD3F5,prompt:#C6A0F6,hl+:#ED8796 \
+  --color=selected-bg:#494D64 \
+  --color=border:#6E738D,label:#CAD3F5"
+  ''' }
+"~/.bashrc/pay-respects" = { block = 'eval "$(pay-respects bash)"' }
+"~/.bashrc/starship" = { block = 'eval "$(starship init bash)"' }
+"~/.bashrc/zoxide" = { block = 'eval "$(zoxide init bash)"' }
+"~/.config/DankMaterialShell" = {}
+"~/.config/bat" = {}
+"~/.config/bottom" = {}
+"~/.config/cava" = {}
+"~/.config/dankcal" = {}
+"~/.config/danksearch" = {}
+"~/.config/dgop" = {}
+"~/.config/environment.d" = {}
+"~/.config/eza" = {}
+"~/.config/fcitx5/conf/classicui.conf" = {}
+"~/.config/fish/completions" = {}
+"~/.config/fish/config.fish/batman" = { block = "batman --export-env | source" }
+"~/.config/fish/config.fish/catppuccin" = { block = "fish_config theme choose catppuccin-macchiato --color-theme=dark" }
+"~/.config/fish/config.fish/fzf" = { block = '''
+  fzf --fish | source
+  set -Ux FZF_DEFAULT_OPTS "\
+  --color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \
+  --color=fg:#CAD3F5,header:#ED8796,info:#C6A0F6,pointer:#F4DBD6 \
+  --color=marker:#B7BDF8,fg+:#CAD3F5,prompt:#C6A0F6,hl+:#ED8796 \
+  --color=selected-bg:#494D64 \
+  --color=border:#6E738D,label:#CAD3F5"
+  ''' }
+"~/.config/fish/config.fish/mise" = { block = '''
+  if status is-interactive
+    mise activate fish | source
+  else
+    mise activate fish --shims | source
+  end
+  ''' }
+"~/.config/fish/config.fish/pay-respects" = { block = "pay-respects fish | source" }
+"~/.config/fish/config.fish/pez" = { block = "pez activate fish | source" }
+"~/.config/fish/config.fish/starship" = { block = "starship init fish | source" }
+"~/.config/fish/config.fish/zoxide" = { block = "zoxide init fish | source" }
+"~/.config/fish/functions/repo.fish" = {}
+"~/.config/fish/functions/y.fish" = {}
+"~/.config/fish/pez.toml" = {}
+"~/.config/fontconfig/fonts.conf" = {}
+"~/.config/ghostty" = {}
+"~/.config/gtk-3.0" = {}
+"~/.config/gtk-4.0" = {}
+"~/.config/heroic/config.json" = {}
+"~/.config/heroic/themes" = {}
+"~/.config/kdeglobals" = {}
+"~/.config/mise" = {}
+"~/.config/niri" = {}
+"~/.config/nvim" = {}
+"~/.config/nwg-look" = {}
+"~/.config/qtengine" = {}
+"~/.config/radian" = {}
+"~/.config/starship.toml" = {}
+"~/.config/tabby/config.yaml" = {}
+"~/.config/topgrade.toml" = {}
+"~/.config/xsettingsd" = {}
+"~/.config/yazi" = {}
+"~/.config/zed" = {}
+"~/.gtkrc-2.0" = {}
+"~/.icons" = {}
+
+[shell_alias]
+cd = "z"
+ci = "zi"
+vi = "nvim"
+vim = "nvim"
+ls = "eza --icons=auto"
+la = "eza --icons=auto -lbhHigUmuSa"
+lx = "eza --icons=auto -lbhHigUmuSa@"
+l = "eza --icons=auto --git-ignore"
+ll = "eza --icons=auto --all --header --long"
+llm = "eza --icons=auto --all --header --long --sort=modified"
+lt = "eza --icons=auto --all --tree --level=2"
+tree = "eza --icons=auto --all --tree"
+cat = "bat"
+fzf = "fzf --preview 'bat --color=always {}' --preview-window '~3'"
+r = "radian"
+mirror-update = "sudo cachyos-rate-mirrors && rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist"
+
+[env]
+EDITOR = "nvim"
+FZF_ALT_C_COMMAND = "fd --type d"
+FZF_CTRL_T_COMMAND = "fd --type f"
+FZF_DEFAULT_COMMAND = "fd --type f"
+GTK_THEME = "adw-gtk3"
+MANPAGER = "bat -plman"
+PROTON_ENABLE_HDR = 1
+PROTON_ENABLE_WAYLAND = 1
+PROTON_NO_WM_DECORATION = 1
+PROTON_USE_NTSYNC = 1
+QT_IM_MODULE = "fcitx"
+QT_QPA_PLATFORM = "wayland"
+QT_QPA_PLATFORMTHEME = "qtengine"
+QT_QPA_PLATFORMTHEME_QT6 = "qtengine"
+QT_PLUGIN_PATH = "/usr/lib/qt5/plugins/"
+TERMINAL = "ghostty"
+VISUAL = "nvim"
+XCURSOR_SIZE = "24"
+XCURSOR_THEME = "Colloid-dark Cursors"
+XDG_SESSION_TYPE = "wayland"
+XMODIFIERS = "@im=fcitx"

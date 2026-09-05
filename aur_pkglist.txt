@@ -1,0 +1,9 @@
+catppuccin-fcitx5-git
+darkly
+fastfetch-theme-manager
+osu-lazer-bin
+qtengine
+texlive
+texlive-lang
+tparted-bin
+ttf-hackgen

@@ -1,0 +1,16 @@
+{
+  "dankKDEConnect": {
+    "enabled": true,
+    "selectedDeviceId": "1e5932b5a3404c849b52cfaba1ca7dc6",
+    "scanSubdirectories": false,
+    "enableChargingAnimation": true
+  },
+  "dankLauncherKeys": {
+    "enabled": true,
+    "noTrigger": false
+  },
+  "catWidget": {
+    "enabled": true,
+    "showCpuPercent": false
+  }
+}
