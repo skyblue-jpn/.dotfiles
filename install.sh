@@ -11,7 +11,7 @@ EOF
 }
 
 setup_home() {
-  sudo pacman -Syyu
+  sudo pacman -Syyu --noconfirm
   sudo pacman -S --noconfirm --needed extra/mise fish
 }
 
