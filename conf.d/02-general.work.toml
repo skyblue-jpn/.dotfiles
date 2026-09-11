@@ -1,0 +1,3 @@
+[settings]
+color_theme = "auto"
+system_packages.managers = ["apt"]

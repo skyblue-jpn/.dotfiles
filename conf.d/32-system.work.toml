@@ -1,0 +1,6 @@
+[shell_alias]
+miseboot = "mise -E work bootstrap"
+
+[env]
+BROWSER = "/mnt/c/Windows/System32/rundll32.exe url.dll,FileProtocolHandler"
+EDITOR = "vim"

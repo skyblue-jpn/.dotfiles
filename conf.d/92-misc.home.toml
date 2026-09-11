@@ -1,0 +1,5 @@
+[bootstrap.hooks.pre-packages]
+run = ["sudo apt update && sudo apt full-upgrade -y"]
+
+[bootstrap.hooks.post-tools]
+run = ["sudo apt autoremove -y"]

@@ -1,0 +1,24 @@
+[dotfiles]
+"~/.bashrc/batman" = { block = 'eval "$(batman --export-env)"' }
+"~/.bashrc/fzf" = { block = 'eval "$(fzf --bash)"' }
+"~/.bashrc/pay-respects" = { block = 'eval "$(pay-respects bash)"' }
+"~/.bashrc/starship" = { block = 'eval "$(starship init bash)"' }
+"~/.bashrc/zoxide" = { block = 'eval "$(zoxide init bash)"' }
+"~/.config/fish/config.fish/mise" = { block = '''
+  if status is-interactive
+    mise activate fish | source
+  else
+    mise activate fish --shims | source
+  end
+  ''' }
+"~/.config/fish/completions" = { source = "../common/.config/fish/completions" }
+"~/.config/fish/config.fish/batman" = { block = "batman --export-env | source" }
+"~/.config/fish/config.fish/fzf" = { block = "fzf --fish | source" }
+"~/.config/fish/config.fish/pay-respects" = { block = "pay-respects fish | source" }
+"~/.config/fish/config.fish/pez" = { block = "pez activate fish | source" }
+"~/.config/fish/config.fish/starship" = { block = "starship init fish | source" }
+"~/.config/fish/config.fish/zoxide" = { block = "zoxide init fish | source" }
+"~/.config/fish/functions/repo.fish" = { source = "../common/.config/fish/functions/repo.fish" }
+"~/.config/fish/functions/y.fish" = { source = "../common/.config/fish/functions/y.fish" }
+"~/.config/fish/pez.toml" = { source = "../common/.config/fish/pez.toml" }
+"~/.config/topgrade.toml" = { source = "../common/.config/topgrade.toml" }

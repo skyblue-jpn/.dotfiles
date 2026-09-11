@@ -1,0 +1,7 @@
+[tools]
+"fastfetch" = "latest"
+
+[bootstrap.packages]
+"apt:build-essential" = "latest"
+"apt:fish" = "latest"
+"apt:vim" = "latest"
