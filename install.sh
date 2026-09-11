@@ -43,7 +43,7 @@ select env in home work; do
     ;;
   esac
 
-  mise -E "$env" bootstrap --adopt skyblue-jpn/.dotfiles --yes
+  mise -E "$env" bootstrap --adopt skyblue-jpn/.dotfiles --yes --force-dotfiles
 
   break
 done
