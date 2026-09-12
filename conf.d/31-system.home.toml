@@ -1,7 +1,6 @@
 [shell_alias]
 r = "radian"
 mirror-update = "sudo cachyos-rate-mirrors && rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist"
-miseboot = "mise -E home bootstrap"
 
 [env]
 EDITOR = "nvim"
