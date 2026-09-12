@@ -4,7 +4,7 @@
 [bootstrap.hooks.pre-packages]
 run = [
   "sudo pacman -S --noconfirm --needed rate-mirrors paru",
-  # "chmod +x ~/.config/mise/home/scripts/add-chaotic-aur.sh && ~/.config/mise/home/scripts/add-chaotic-aur.sh",
+  "chmod +x ~/.config/mise/home/scripts/add-chaotic-aur.sh && ~/.config/mise/home/scripts/add-chaotic-aur.sh",
   # "rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist",
   # "rate-mirrors cachyos | sudo tee /etc/pacman.d/cachyos-mirrorlist",
   "sudo cachyos-rate-mirrors && rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist && paru -Syyu --noconfirm",
