@@ -117,44 +117,6 @@
   "matugenTemplateGhostty": false,
   "matugenTemplateZed": false,
   "notificationShowTimeoutBar": true,
-  "dankIslandBarId": "default",
-  "dankIslandUseOverlayLayer": true,
-  "dankIslandTransparency": 0.5,
-  "dankIslandHomeCompactTight": true,
-  "dankIslandHomeLayout": [
-    {
-      "id": "media",
-      "enabled": true
-    },
-    {
-      "id": "clock",
-      "enabled": true
-    },
-    {
-      "id": "weather",
-      "enabled": true
-    },
-    {
-      "id": "status",
-      "enabled": true
-    },
-    {
-      "id": "volume",
-      "enabled": false
-    },
-    {
-      "id": "brightness",
-      "enabled": false
-    },
-    {
-      "id": "notifications",
-      "enabled": true
-    }
-  ],
-  "dankIslandBatteryStyle": "ring",
-  "dankIslandSatellitePosition": "island",
-  "dankIslandSatelliteBackground": true,
-  "dankIslandSatelliteTransparency": 0.5,
   "updaterCheckOnStart": true,
   "barConfigs": [
     {
@@ -250,7 +212,7 @@
       "islandCompactThickness": 36,
       "islandOuterGap": 12,
       "islandPalette": "dim",
-      "islandTransparency": 0.7,
+      "islandTransparency": 0.5,
       "islandHomeCompactTight": true,
       "islandHomeLayout": [
         {
@@ -332,5 +294,5 @@
   "clipboardUseOverlayLayer": true,
   "barInsetPaddingShared": 4,
   "barInsetPaddingSyncAll": true,
-  "configVersion": 17
+  "configVersion": 18
 }

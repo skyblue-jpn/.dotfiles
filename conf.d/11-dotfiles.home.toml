@@ -18,11 +18,7 @@
 "~/.config/cava" = { source = "../home/.config/cava" }
 "~/.config/environment.d" = { source = "../home/.config/environment.d" }
 "~/.config/fcitx5/conf/classicui.conf" = { source = "../home/.config/fcitx5/conf/classicui.conf" }
-"~/.config/fish/config.fish/catppuccin" = { block = '''
-  if status is-interactive
-    "fish_config theme choose catppuccin-macchiato --color-theme=dark"
-  end
-  ''' }
+"~/.config/fish/config.fish/catppuccin" = { block = "fish_config theme choose catppuccin-macchiato --color-theme=dark" }
 "~/.config/fish/config.fish/fzf" = { block = '''
   set -Ux FZF_DEFAULT_OPTS "\
   --color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \

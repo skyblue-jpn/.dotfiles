@@ -8,11 +8,13 @@
     "coreHoursEnd": 17,
     "coreHoursStart": 9,
     "customThemeFile": "",
+    "defaultCalendarId": "",
     "defaultEventDurationMinutes": 30,
     "defaultReminderMinutes": 10,
     "dismissedAccountNotices": [
     ],
     "firstDayOfWeek": -1,
+    "language": "",
     "lastView": "day",
     "monthEventTitleLines": 1,
     "monthShowAllEvents": false,
@@ -29,6 +31,7 @@
     "syncIntervalMinutes": 30,
     "themeMode": "auto",
     "timeFormat": "auto",
+    "timeLocale": "",
     "use24HourClock": true,
     "weekEventTitleLines": 1
 }

@@ -53,10 +53,6 @@
    --color=spinner:#ff007c \
   "
   ''' }
-"~/.config/fish/config.fish/tokyonight" = { block = '''
-  if status is-interactive
-    fish_config theme choose "tokyonight_night"
-  end
-  ''' }
+"~/.config/fish/config.fish/tokyonight" = { block = "fish_config theme choose tokyonight_night" }
 "~/.config/fish/themes" = { source = "../work/.config/fish/themes" }
 "~/.config/yazi" = { source = "../work/.config/yazi" }
