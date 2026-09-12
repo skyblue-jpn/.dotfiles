@@ -24,9 +24,6 @@
     },
     "parser": { "cssModules": true, "tailwindDirectives": true }
   },
-  "files": {
-    "ignoreUnknown": false,
-  },
   "formatter": {
     "attributePosition": "auto",
     "bracketSameLine": false,
