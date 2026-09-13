@@ -11,6 +11,7 @@ run = [
   "yes | paru -S --needed sudo-rs coreutils-uutils",
   "sudo -v && curl -fsSL https://install.danklinux.com | sh -s -- -c niri -t ghostty --include-deps dms-greeter,danksearch,dankcalendar -y",
   "yes | paru -S --needed extra/dms-shell",
+  "dms plugins restore",
   "sudo timedatectl set-local-rtc 1",
 ]
 
@@ -18,6 +19,9 @@ run = [
 run = [
   "sudo waydroid init",
 ]
+
+[bootstrap.hooks.post-dotfiles]
+run = ["nwg-look -a"]
 
 [bootstrap.hooks.post-tools]
 run = [

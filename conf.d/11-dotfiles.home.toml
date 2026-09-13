@@ -1,8 +1,5 @@
 [dotfiles]
 "~/.Rprofile" = { source = "../home/.Rprofile" }
-"~/.config/bat" = { source = "../home/.config/bat" }
-"~/.config/bottom" = { source = "../home/.config/bottom" }
-"~/.config/eza" = { source = "../home/.config/eza" }
 "~/.bashrc/fzf" = { block = '''
   export FZF_DEFAULT_OPTS=" \
   --color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \
@@ -11,7 +8,12 @@
   --color=selected-bg:#494D64 \
   --color=border:#6E738D,label:#CAD3F5"
   ''' }
-"~/.config/DankMaterialShell" = { source = "../home/.config/DankMaterialShell" }
+"~/.config/bat" = { source = "../home/.config/bat" }
+"~/.config/bottom" = { source = "../home/.config/bottom" }
+"~/.config/eza" = { source = "../home/.config/eza" }
+"~/.config/DankMaterialShell/plugins.lock.json" = { source = "../home/.config/DankMaterialShell/plugins.lock.json" }
+"~/.config/DankMaterialShell/settings.json" = { source = "../home/.config/DankMaterialShell/settings.json" }
+"~/.config/DankMaterialShell/themes" = { source = "../home/.config/DankMaterialShell/themes" }
 "~/.config/dankcal" = { source = "../home/.config/dankcal" }
 "~/.config/danksearch" = { source = "../home/.config/danksearch" }
 "~/.config/dgop" = { source = "../home/.config/dgop" }
@@ -46,3 +48,4 @@
 "~/.config/zed" = { source = "../home/.config/zed" }
 "~/.gtkrc-2.0" = { source = "../home/.gtkrc-2.0" }
 "~/.icons" = { source = "../home/.icons" }
+"~/.local/share/color-schemes" = { source = "../home/.local/share/color-schemes" }
