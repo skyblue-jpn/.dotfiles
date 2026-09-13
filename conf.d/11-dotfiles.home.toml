@@ -8,6 +8,7 @@
   --color=selected-bg:#494D64 \
   --color=border:#6E738D,label:#CAD3F5"
   ''' }
+"~/.config/autostart" = { source = "../home/.config/autostart" }
 "~/.config/bat" = { source = "../home/.config/bat" }
 "~/.config/bottom" = { source = "../home/.config/bottom" }
 "~/.config/eza" = { source = "../home/.config/eza" }
@@ -36,6 +37,7 @@
 "~/.config/heroic/config.json" = { source = "../home/.config/heroic/config.json" }
 "~/.config/heroic/themes" = { source = "../home/.config/heroic/themes" }
 "~/.config/kdeglobals" = { source = "../home/.config/kdeglobals" }
+"~/.config/mimeapps.list" = { source = "../home/.config/mimeapps.list" }
 "~/.config/niri" = { source = "../home/.config/niri" }
 "~/.config/nvim" = { source = "../home/.config/nvim" }
 "~/.config/nwg-look" = { source = "../home/.config/nwg-look" }
