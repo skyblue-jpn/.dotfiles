@@ -49,3 +49,4 @@
 "~/.gtkrc-2.0" = { source = "../home/.gtkrc-2.0" }
 "~/.icons" = { source = "../home/.icons" }
 "~/.local/share/color-schemes" = { source = "../home/.local/share/color-schemes" }
+"~/.local/share/nwg-look" = { source = "../home/.local/share/nwg-look" }
