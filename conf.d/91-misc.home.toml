@@ -11,7 +11,7 @@ run = [
   "yes | paru -S --needed sudo-rs coreutils-uutils",
   "sudo -v && curl -fsSL https://install.danklinux.com | sh -s -- -c niri -t ghostty --include-deps dms-greeter,danksearch,dankcalendar -y",
   "yes | paru -S --needed extra/dms-shell",
-  "dms plugins restore && dms plugins update",
+  "dms plugins restore && dms plugins update --all",
   "sudo timedatectl set-local-rtc 1",
 ]
 
