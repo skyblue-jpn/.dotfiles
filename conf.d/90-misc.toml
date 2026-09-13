@@ -6,5 +6,5 @@ run = [
 
 [bootstrap.hooks.final]
 run = [
-  "mise bootstrap: Completed!",
+  echo "mise bootstrap: Completed!",
 ]
