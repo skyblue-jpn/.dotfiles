@@ -287,21 +287,21 @@ show_distribution_summary = true
 
 [windows]
 # Manually select Windows updates
-# accept_all_updates = false
+accept_all_updates = true
 
 # Controls whether to automatically reboot the computer when updates are
 # installed that request it. (default: "no", allowed values: "yes", "no", "ask")
-# updates_auto_reboot = "yes"
+updates_auto_reboot = "no"
 
-# open_remotes_in_new_terminal = true
+open_remotes_in_new_terminal = false
 
 # wsl_update_pre_release = true
 
-# wsl_update_use_web_download = true
+wsl_update_use_web_download = true
 
 # The default for winget_silent_install is true,
 # this example turns off silent install.
-# winget_silent_install = false
+winget_silent_install = true
 
 # Causes Topgrade to rename itself during the run to allow package managers
 # to upgrade it. Use this only if you installed Topgrade by using a package
@@ -316,7 +316,7 @@ show_distribution_summary = true
 # If any problems occur, please try running Topgrade without this option first
 # before reporting an issue.
 # (default: false)
-# winget_use_sudo = true
+winget_use_sudo = true
 
 [chezmoi]
 # Exclude encrypted files from update
@@ -375,7 +375,7 @@ show_distribution_summary = true
 
 [firmware]
 # Offer to update firmware; if false just check for and display available updates
-# upgrade = true
+upgrade = true
 
 [flutter]
 # If this is set to true, the `--force` flag is added to `flutter upgrade`.
