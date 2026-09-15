@@ -12,8 +12,7 @@ EOF
 
 setup_home() {
   sudo pacman -Syyu --noconfirm
-  # sudo pacman -S --noconfirm --needed extra/mise fish
-  paru -S --noconfirm --needed mise-bin fish
+  sudo pacman -S --noconfirm --needed extra/mise fish
 }
 
 setup_work() {
