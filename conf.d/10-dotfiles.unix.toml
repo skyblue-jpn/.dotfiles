@@ -21,3 +21,4 @@
 "~/.config/fish/functions/repo.fish" = { source = "../common-unix/.config/fish/functions/repo.fish" }
 "~/.config/fish/functions/y.fish" = { source = "../common-unix/.config/fish/functions/y.fish" }
 "~/.config/fish/pez.toml" = { source = "../common-unix/.config/fish/pez.toml" }
+"~/.config/topgrade.toml" = { source = "../common/.config/topgrade.toml" }

@@ -1,2 +1,3 @@
 [dotfiles]
-'~/Documents\PowerShell\Microsoft.PowerShell_profile.ps1/mise' = { block = "(&mise activate pwsh) | Out-String | Invoke-Expression" }
+"~/AppData/topgrade.toml" = { source = "../common/.config/topgrade.toml" }
+"~/Document/PowerShell/Microsoft.PowerShell_profile.ps1/mise" = { block = "(&mise activate pwsh) | Out-String | Invoke-Expression" }
