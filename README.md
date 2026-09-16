@@ -16,12 +16,6 @@
 
 ## Install
 
-### All platforms (recommended entrypoint)
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/skyblue-jpn/.dotfiles/main/install)"
-```
-
-### Windows (direct PowerShell)
-```powershell
-powershell -ExecutionPolicy Bypass -Command "iwr https://raw.githubusercontent.com/skyblue-jpn/.dotfiles/main/scripts/install-windows.ps1 -UseBasicParsing | iex"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/skyblue-jpn/.dotfiles/main/install.sh)"
 ```
