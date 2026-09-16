@@ -1,0 +1,3 @@
+[settings]
+color_theme = "catppuccin"
+system_packages.managers = ["winget"]

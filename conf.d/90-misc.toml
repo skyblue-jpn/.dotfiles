@@ -5,6 +5,4 @@ run = [
 ]
 
 [bootstrap.hooks.final]
-run = [
-  'echo "mise bootstrap: Completed!"',
-]
+run = ['echo "mise bootstrap: Completed!"']

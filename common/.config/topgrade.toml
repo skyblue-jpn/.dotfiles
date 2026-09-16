@@ -316,7 +316,7 @@ winget_silent_install = true
 # If any problems occur, please try running Topgrade without this option first
 # before reporting an issue.
 # (default: false)
-winget_use_sudo = true
+winget_use_sudo = false
 
 [chezmoi]
 # Exclude encrypted files from update

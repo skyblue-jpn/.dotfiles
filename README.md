@@ -7,6 +7,11 @@
 - Distro: Cachy OS
 - Color scheme: Catppuccin Macchiato
 
+### Home-Windows
+
+- Distro: Windows 11 Home
+- Color scheme: Catppuccin Macchiato
+
 ### Work-WSL
 
 - Distro: WSL2 (Ubuntu)

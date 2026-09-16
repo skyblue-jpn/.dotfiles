@@ -15,15 +15,10 @@ run = [
 ]
 
 [bootstrap.hooks.post-packages]
-run = [
-  "sudo waydroid init",
-]
+run = ["sudo waydroid init"]
 
 [bootstrap.hooks.post-dotfiles]
-run = [
-  "nwg-look -a",
-  "dms plugins restore && dms plugins update --all",
-]
+run = ["nwg-look -a", "dms plugins restore && dms plugins update --all"]
 
 [bootstrap.hooks.post-tools]
 run = [

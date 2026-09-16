@@ -1,6 +1,3 @@
-[bootstrap.user]
-login_shell = "/usr/bin/fish"
-
 [shell_alias]
 cd = "z"
 ci = "zi"

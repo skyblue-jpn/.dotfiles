@@ -1,0 +1,6 @@
+[bootstrap.mise_shell_activate]
+bash_profile = "shims"
+bashrc = "activate"
+
+[settings]
+system_packages.sudo = true
