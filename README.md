@@ -2,7 +2,7 @@
 
 ## Config Environments
 
-### Home
+### Home-Linux
 
 - Distro: Cachy OS
 - Color scheme: Catppuccin Macchiato

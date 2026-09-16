@@ -7,10 +7,11 @@ write_miserc() {
   sudo tee /etc/mise/miserc.toml >/dev/null <<EOF
 env = ["$env"]
 env_conf_d = true
+auto_env = true
 EOF
 }
 
-setup_home() {
+setup_home-linux() {
   sudo pacman -Syyu --noconfirm
   sudo pacman -S --noconfirm --needed extra/mise fish
 }
@@ -26,7 +27,7 @@ echo "Select Your Config Environment:"
 
 PS3="> "
 
-select env in home work; do
+select env in home-linux work; do
   if [ -z "$env" ]; then
     echo "Invalid selection. Exiting."
     exit 1
@@ -35,8 +36,8 @@ select env in home work; do
   write_miserc
 
   case "$env" in
-  home)
-    setup_home
+  home-linux)
+    setup_home-linux
     ;;
   work)
     setup_work

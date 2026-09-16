@@ -1,8 +1,0 @@
-[[plugins]]
-repo = "decors/fish-ghq"
-
-[[plugins]]
-repo = "jorgebucaran/autopair.fish"
-
-[[plugins]]
-repo = "meaningful-ooo/sponge"
