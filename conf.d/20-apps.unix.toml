@@ -1,3 +1,4 @@
 [tools]
 bat-extras = "latest"
 "cargo:dua-cli" = "latest"
+imagemagick = "latest"
