@@ -10,7 +10,7 @@
 "winget:Bitwarden.Bitwarden" = "latest"
 "winget:Eugeny.Tabby" = "latest"
 "winget:Neosku.AviUtl2-Catalog" = "latest"
-"winget:OpenTabletDriver.OpenTabletDrive" = "latest"
+"winget:OpenTabletDriver.OpenTabletDriver" = "latest"
 "winget:Vivaldi.Vivaldi" = "latest"
 "winget:ZedIndustries.Zed" = "latest"
 "winget:Microsoft.WSL" = "latest"
