@@ -12,17 +12,8 @@ EOF
 write_miserc_windows() {
 powershell.exe -NoProfile -NonInteractive -Command - <<'POWERSHELL'
    $content = @"
-env = ["$env"]
-env_conf_d = true
-auto_env = true
 "@
-   $systemDir = Join-Path $env:ProgramData "mise"
-   New-Item -ItemType Directory -Force -Path $systemDir | Out-Null
-   Set-Content -Path (Join-Path $systemDir "miserc.toml") -Value $content -Encoding utf8
-
-   $userDir = Join-Path $env:USERPROFILE ".config\mise"
-   New-Item -ItemType Directory -Force -Path $userDir | Out-Null
-   Set-Content -Path (Join-Path $userDir "miserc.toml") -Value $content -Encoding utf8
+   setx MISE_ENV "home-windows"
 POWERSHELL
 }
 
