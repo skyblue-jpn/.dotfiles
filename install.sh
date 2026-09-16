@@ -6,8 +6,6 @@ sudo mkdir -p /etc/mise
 
 sudo tee /etc/mise/miserc.toml >/dev/null <<EOF
 env = ["$env"]
-env_conf_d = true
-auto_env = true
 EOF
 }
 
