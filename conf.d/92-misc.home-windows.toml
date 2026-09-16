@@ -1,4 +1,4 @@
 [bootstrap.hooks.pre-packages]
 run = [
-  'Start-Process pwsh -verb runas "sudo config --enable normal"',
+  '''pwsh -NoProfile -Command "Start-Process pwsh -Verb RunAs -ArgumentList '-NoProfile','-Command','sudo config --enable normal'"''',
 ]
