@@ -16,7 +16,7 @@ setup_home-linux() {
   sudo pacman -S --noconfirm --needed extra/mise fish
 }
 
-setup_work() {
+setup_work-wsl() {
   sudo add-apt-repository -y ppa:fish-shell/release-4
   sudo add-apt-repository -y ppa:jdxcode/mise
   sudo apt update
@@ -27,7 +27,7 @@ echo "Select Your Config Environment:"
 
 PS3="> "
 
-select env in home-linux work; do
+select env in home-linux work-wsl; do
   if [ -z "$env" ]; then
     echo "Invalid selection. Exiting."
     exit 1
@@ -39,8 +39,8 @@ select env in home-linux work; do
   home-linux)
     setup_home-linux
     ;;
-  work)
-    setup_work
+  work-wsl)
+    setup_work-wsl
     ;;
   esac
 

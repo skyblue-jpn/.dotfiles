@@ -1,7 +1,7 @@
 [dotfiles]
-"~/.config/bat" = { source = "../work/.config/bat" }
-"~/.config/bottom" = { source = "../work/.config/bottom" }
-"~/.config/eza" = { source = "../work/.config/eza" }
+"~/.config/bat" = { source = "../work-wsl/.config/bat" }
+"~/.config/bottom" = { source = "../work-wsl/.config/bottom" }
+"~/.config/eza" = { source = "../work-wsl/.config/eza" }
 "~/.bashrc/fzf" = { block = '''
   export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
     --highlight-line \
@@ -27,7 +27,7 @@
     --color=spinner:#ff007c \
   "
   ''' }
-"~/.config/starship.toml" = { source = "../work/.config/starship.toml" }
+"~/.config/starship.toml" = { source = "../work-wsl/.config/starship.toml" }
 "~/.config/fish/config.fish/fzf" = { block = '''
   set -Ux FZF_DEFAULT_OPTS "\
    --highlight-line \
@@ -54,5 +54,5 @@
   "
   ''' }
 "~/.config/fish/config.fish/tokyonight" = { block = "fish_config theme choose tokyonight_night" }
-"~/.config/fish/themes" = { source = "../work/.config/fish/themes" }
-"~/.config/yazi" = { source = "../work/.config/yazi" }
+"~/.config/fish/themes" = { source = "../work-wsl/.config/fish/themes" }
+"~/.config/yazi" = { source = "../work-wsl/.config/yazi" }

@@ -7,7 +7,7 @@
 - Distro: Cachy OS
 - Color scheme: Catppuccin Macchiato
 
-### Work
+### Work-WSL
 
 - Distro: WSL2 (Ubuntu)
 - Color scheme: Tokyo Night Night
