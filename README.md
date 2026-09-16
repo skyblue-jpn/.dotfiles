@@ -3,22 +3,25 @@
 ## Config Environments
 
 ### Home-Linux
-
 - Distro: Cachy OS
 - Color scheme: Catppuccin Macchiato
 
 ### Home-Windows
-
 - Distro: Windows 11 Home
 - Color scheme: Catppuccin Macchiato
 
 ### Work-WSL
-
 - Distro: WSL2 (Ubuntu)
 - Color scheme: Tokyo Night Night
 
 ## Install
 
+### All platforms (recommended entrypoint)
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/skyblue-jpn/.dotfiles/main/install)"
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/skyblue-jpn/.dotfiles/main/install.sh)"
+
+### Windows (direct PowerShell)
+```powershell
+powershell -ExecutionPolicy Bypass -Command "iwr https://raw.githubusercontent.com/skyblue-jpn/.dotfiles/main/scripts/install-windows.ps1 -UseBasicParsing | iex"
 ```
