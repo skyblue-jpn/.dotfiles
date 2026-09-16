@@ -1,11 +1,9 @@
 [tools]
 "aqua:iffse/pay-respects" = "latest"
 bat = "latest"
-bat-extras = "latest"
 biome = "latest"
 bottom = "latest"
 cargo-binstall = "latest"
-"cargo:dua-cli" = "latest"
 "cargo:pez" = "latest"
 eza = "latest"
 ffmpeg = "latest"
