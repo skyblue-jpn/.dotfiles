@@ -1,2 +1,16 @@
+[tools]
+"fastfetch" = "latest"
+
 [bootstrap.packages]
 "winget:Microsoft.Coreutils" = "latest"
+"winget:DMM.GamePlayer" = "latest"
+"winget:Git.Git" = "latest"
+"winget:LIGHTNINGUK.ImgBurn" = "latest"
+"winget:Valve.Steam" = "latest"
+"winget:Bitwarden.Bitwarden" = "latest"
+"winget:Eugeny.Tabby" = "latest"
+"winget:Neosku.AviUtl2-Catalog" = "latest"
+"winget:OpenTabletDriver.OpenTabletDrive" = "latest"
+"winget:Vivaldi.Vivaldi" = "latest"
+"winget:ZedIndustries.Zed" = "latest"
+"winget:Microsoft.WSL" = "latest"

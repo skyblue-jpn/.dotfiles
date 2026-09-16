@@ -1,0 +1,4 @@
+[bootstrap.hooks.pre-packages]
+run = [
+  'Start-Process pwsh -verb runas "sudo config --enable normal"',
+]
