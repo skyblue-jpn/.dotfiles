@@ -1,0 +1,2 @@
+[dotfiles]
+'~/Documents\PowerShell\Microsoft.PowerShell_profile.ps1' = { block = "(&mise activate pwsh) | Out-String | Invoke-Expression" }

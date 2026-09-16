@@ -1,0 +1,4 @@
+[bootstrap.hooks.pre-dotfiles]
+run = [
+  "if (-not (Test-Path $PROFILE)) { New-Item -ItemType Directory -Force (Split-Path -Parent $PROFILE) | Out-Null; New-Item -ItemType File -Path $PROFILE | Out-Null}",
+]
