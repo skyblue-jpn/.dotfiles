@@ -1,0 +1,4 @@
+[bootstrap.hooks.post-tools]
+run = [
+  "mise exec cargo:pez -- pez install --force",
+]
