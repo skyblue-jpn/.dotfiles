@@ -26,12 +26,39 @@ auto_env = true
   Set-Content -Path (Join-Path $userDir "miserc.toml") -Value $content -Encoding utf8
 }
 
+function Resolve-MiseExe {
+  $cmd = Get-Command mise -ErrorAction SilentlyContinue
+  if ($cmd) { return $cmd.Source }
+
+  $machine = [Environment]::GetEnvironmentVariable("Path", "Machine")
+  $user    = [Environment]::GetEnvironmentVariable("Path", "User")
+  $env:Path = "$machine;$user"
+
+  $cmd = Get-Command mise -ErrorAction SilentlyContinue
+  if ($cmd) { return $cmd.Source }
+
+  $candidates = @(
+    (Join-Path $env:LOCALAPPDATA "Microsoft\WinGet\Links\mise.exe"),
+    (Join-Path $env:LOCALAPPDATA "Programs\mise\bin\mise.exe")
+  )
+  foreach ($p in $candidates) {
+    if (Test-Path $p) { return $p }
+  }
+
+  return $null
+}
+
 Require-Command winget "Install 'App Installer' from Microsoft Store."
-winget upgrade --all --accept-source-agreements --accept-package-agreements
+
 winget install jdx.mise --accept-source-agreements --accept-package-agreements
 
 Write-Miserc $envName
-Require-Command mise "Open a new shell once after install, then retry."
-mise -E $envName bootstrap --adopt $repo --yes --force-dotfiles
+
+$miseExe = Resolve-MiseExe
+if (-not $miseExe) {
+  throw "mise was installed but not available in current session. Open a new PowerShell and run: mise -E $envName bootstrap --adopt $repo --yes --force-dotfiles"
+}
+
+& $miseExe -E $envName bootstrap --adopt $repo --yes --force-dotfiles
 
 Write-Host "Done."
