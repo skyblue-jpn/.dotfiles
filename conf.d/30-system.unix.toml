@@ -1,2 +1,5 @@
 [bootstrap.user]
 login_shell = "/usr/bin/fish"
+
+[env]
+MANPAGER = "bat -plman"
