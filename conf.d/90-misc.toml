@@ -1,2 +1,7 @@
+[bootstrap.hooks.post-tools]
+run = [
+  "mise exec bat -- bat cache --build",
+]
+
 [bootstrap.hooks.final]
 run = ['echo "mise bootstrap: Completed!"']
