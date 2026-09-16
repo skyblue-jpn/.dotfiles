@@ -1,0 +1,35 @@
+[bootstrap.repos]
+"~/src/Colloid-icon-theme" = { url = "https://github.com/vinceliuice/Colloid-icon-theme.git" }
+
+[bootstrap.hooks.pre-packages]
+run = [
+  "sudo pacman -S --noconfirm --needed rate-mirrors paru",
+  "chmod +x ~/.config/mise/home-linux/scripts/add-chaotic-aur.sh && ~/.config/mise/home-linux/scripts/add-chaotic-aur.sh",
+  # "rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist",
+  # "rate-mirrors cachyos | sudo tee /etc/pacman.d/cachyos-mirrorlist",
+  "sudo cachyos-rate-mirrors && rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist && paru -Syyu --noconfirm",
+  "yes | paru -S --needed sudo-rs coreutils-uutils",
+  "sudo -v && curl -fsSL https://install.danklinux.com | sh -s -- -c niri -t ghostty --include-deps dms-greeter,danksearch,dankcalendar -y",
+  "yes | paru -S --needed extra/dms-shell",
+  "sudo timedatectl set-local-rtc 1",
+]
+
+[bootstrap.hooks.post-packages]
+run = [
+  "sudo waydroid init",
+]
+
+[bootstrap.hooks.post-dotfiles]
+run = [
+  "nwg-look -a",
+  "dms plugins restore && dms plugins update --all",
+]
+
+[bootstrap.hooks.post-tools]
+run = [
+  "~/src/Colloid-icon-theme/install.sh -s catppuccin -t purple",
+  "cd ~/src/Colloid-icon-theme/cursors && ./install.sh",
+  "paru -S --noconfirm --needed plymouth-theme-catppuccin-macchiato-git && sudo plymouth-set-default-theme -R catppuccin-macchiato",
+  "chmod +x ~/.config/mise/home-linux/scripts/mount-filesystem.sh && ~/.config/mise/home-linux/scripts/mount-filesystem.sh",
+  "sudo systemctl start bpftune && sudo systemctl enable bpftune",
+]

@@ -1,0 +1,54 @@
+[dotfiles]
+"~/.Rprofile" = { source = "../home-linux/.Rprofile" }
+"~/.bashrc/fzf" = { block = '''
+  export FZF_DEFAULT_OPTS=" \
+  --color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \
+  --color=fg:#CAD3F5,header:#ED8796,info:#C6A0F6,pointer:#F4DBD6 \
+  --color=marker:#B7BDF8,fg+:#CAD3F5,prompt:#C6A0F6,hl+:#ED8796 \
+  --color=selected-bg:#494D64 \
+  --color=border:#6E738D,label:#CAD3F5"
+  ''' }
+"~/.config/autostart" = { source = "../home-linux/.config/autostart" }
+"~/.config/bat" = { source = "../home-linux/.config/bat" }
+"~/.config/bottom" = { source = "../home-linux/.config/bottom" }
+"~/.config/eza" = { source = "../home-linux/.config/eza" }
+"~/.config/DankMaterialShell/plugins.lock.json" = { source = "../home-linux/.config/DankMaterialShell/plugins.lock.json" }
+"~/.config/DankMaterialShell/settings.json" = { source = "../home-linux/.config/DankMaterialShell/settings.json" }
+"~/.config/DankMaterialShell/themes" = { source = "../home-linux/.config/DankMaterialShell/themes" }
+"~/.config/dankcal" = { source = "../home-linux/.config/dankcal" }
+"~/.config/danksearch" = { source = "../home-linux/.config/danksearch" }
+"~/.config/dgop" = { source = "../home-linux/.config/dgop" }
+"~/.config/cava" = { source = "../home-linux/.config/cava" }
+"~/.config/environment.d" = { source = "../home-linux/.config/environment.d" }
+"~/.config/fcitx5/conf/classicui.conf" = { source = "../home-linux/.config/fcitx5/conf/classicui.conf" }
+"~/.config/fish/config.fish/catppuccin" = { block = "fish_config theme choose catppuccin-macchiato --color-theme=dark" }
+"~/.config/fish/config.fish/fzf" = { block = '''
+  set -Ux FZF_DEFAULT_OPTS "\
+  --color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \
+  --color=fg:#CAD3F5,header:#ED8796,info:#C6A0F6,pointer:#F4DBD6 \
+  --color=marker:#B7BDF8,fg+:#CAD3F5,prompt:#C6A0F6,hl+:#ED8796 \
+  --color=selected-bg:#494D64 \
+  --color=border:#6E738D,label:#CAD3F5"
+  ''' }
+"~/.config/fontconfig/fonts.conf" = { source = "../home-linux/.config/fontconfig/fonts.conf" }
+"~/.config/ghostty" = { source = "../home-linux/.config/ghostty" }
+"~/.config/gtk-3.0" = { source = "../home-linux/.config/gtk-3.0" }
+"~/.config/gtk-4.0" = { source = "../home-linux/.config/gtk-4.0" }
+"~/.config/heroic/config.json" = { source = "../home-linux/.config/heroic/config.json" }
+"~/.config/heroic/themes" = { source = "../home-linux/.config/heroic/themes" }
+"~/.config/kdeglobals" = { source = "../home-linux/.config/kdeglobals" }
+"~/.config/mimeapps.list" = { source = "../home-linux/.config/mimeapps.list" }
+"~/.config/niri" = { source = "../home-linux/.config/niri" }
+"~/.config/nvim" = { source = "../home-linux/.config/nvim" }
+"~/.config/nwg-look" = { source = "../home-linux/.config/nwg-look" }
+"~/.config/qtengine" = { source = "../home-linux/.config/qtengine" }
+"~/.config/radian" = { source = "../home-linux/.config/radian" }
+"~/.config/starship.toml" = { source = "../home-linux/.config/starship.toml" }
+"~/.config/tabby/config.yaml" = { source = "../home-linux/.config/tabby/config.yaml" }
+"~/.config/xsettingsd" = { source = "../home-linux/.config/xsettingsd" }
+"~/.config/yazi" = { source = "../home-linux/.config/yazi" }
+"~/.config/zed" = { source = "../home-linux/.config/zed" }
+"~/.gtkrc-2.0" = { source = "../home-linux/.gtkrc-2.0" }
+"~/.icons" = { source = "../home-linux/.icons" }
+"~/.local/share/color-schemes" = { source = "../home-linux/.local/share/color-schemes" }
+"~/.local/share/nwg-look" = { source = "../home-linux/.local/share/nwg-look" }
