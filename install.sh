@@ -35,7 +35,7 @@ setup_home-linux() {
 
 setup_home-windows() {
   winget upgrade --all
-  winget install jdx.mise
+  winget install Git.Git jdx.mise
 }
 
 setup_work-wsl() {
