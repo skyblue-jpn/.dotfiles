@@ -32,6 +32,7 @@
 "pacman:gimp" = "latest"
 "pacman:gnome-disk-utility" = "latest"
 "pacman:gvfs" = "latest"
+"pacman:icu" = "latest"
 "pacman:inkscape" = "latest"
 "pacman:inter-font" = "latest"
 "pacman:kdeconnect" = "latest"

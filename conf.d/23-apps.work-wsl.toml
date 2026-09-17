@@ -4,4 +4,5 @@
 [bootstrap.packages]
 "apt:build-essential" = "latest"
 "apt:fish" = "latest"
+"apt:libicu-dev" = "latest"
 "apt:vim" = "latest"
