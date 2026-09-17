@@ -3,14 +3,18 @@
 ## Config Environments
 
 ### Home-Linux
+
 - Distro: Cachy OS
 - Color scheme: Catppuccin Macchiato
 
 ### Home-Windows
+
 - Distro: Windows 11 Home
 - Color scheme: Catppuccin Macchiato
+- Requirements: PowerShell 7
 
 ### Work-WSL
+
 - Distro: WSL2 (Ubuntu)
 - Color scheme: Tokyo Night Night
 

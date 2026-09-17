@@ -1,3 +1,22 @@
 [dotfiles]
+# sync completions and functions
+"~/Documents/PowerShell/sync.ps1" = { source = "../home-windows/Documents/PowerShell/sync.ps1" }
+"~/Documents/PowerShell/Completions" = { source = "../home-windows/Documents/PowerShell/Completions" }
+"~/Documents/PowerShell/Functions" = { source = "../home-windows/Documents/PowerShell/Functions" }
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/sync" = { block = '. "$HOME\Documents\PowerShell\sync.ps1"' }
+
+# insert blocks in $PROFILE
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/mise" = { block = "(&mise activate pwsh) | Out-String | Invoke-Expression" }
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/pay-respects" = { block = "pay-respects pwsh --alias f" }
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/starship" = { block = "Invoke-Expression (&starship init powershell)" }
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/zoxide" = { block = "Invoke-Expression (& { (zoxide init powershell | Out-String) })" }
+
+# import from other envs
 "~/AppData/Roaming/topgrade.toml" = { source = "../common/.config/topgrade.toml" }
-"~/Document/PowerShell/Microsoft.PowerShell_profile.ps1/mise" = { block = "(&mise activate pwsh) | Out-String | Invoke-Expression" }
+"~/.config/starship.toml" = { source = "../home-linux/.config/starship.toml" }
+"~/AppData/Roaming/bat/config" = { source = "../home-linux/.config/bat" }
+"~/AppData/Roaming/bottom" = { source = "../home-linux/.config/bottom" }
+"~/AppData/Roaming/eza" = { source = "../home-linux/.config/eza" }
+"~/AppData/Roaming/tabby/config.yaml" = { source = "../home-linux/.config/tabby/config.yaml" }
+"~/AppData/Roaming/yazi" = { source = "../home-linux/.config/yazi" }
+"~/AppData/Roaming/Zed" = { source = "../home-linux/.config/zed" }

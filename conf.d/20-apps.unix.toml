@@ -2,4 +2,3 @@
 bat-extras = "latest"
 "cargo:dua-cli" = "latest"
 "cargo:pez" = "latest"
-imagemagick = "latest"
