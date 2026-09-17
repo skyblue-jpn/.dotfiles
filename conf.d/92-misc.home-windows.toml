@@ -2,3 +2,8 @@
 run = [
   '''pwsh -NoProfile -Command "Start-Process pwsh -Verb RunAs -ArgumentList '-NoProfile','-Command','sudo config --enable normal'"''',
 ]
+
+[bootstrap.hooks.post-packages]
+run = [
+  "Install-Module PSWindowsUpdate",
+]
