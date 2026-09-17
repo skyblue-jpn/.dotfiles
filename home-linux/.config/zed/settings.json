@@ -37,6 +37,7 @@
     "markdown-oxide": true,
     "markdownlint": true,
     "nix": true,
+    "powershell": true,
     "r": true,
     "rainbow-csv": true,
     "tombi": true,
