@@ -5,6 +5,7 @@
     "model_parameters": [],
     "sidebar_side": "right"
   },
+  "agent_buffer_font_family": "HackGen Console NF",
   "agent_servers": {
     "github-copilot-cli": {
       "default_config_options": {

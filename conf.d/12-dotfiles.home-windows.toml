@@ -7,7 +7,7 @@
 
 # insert blocks in $PROFILE
 "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/mise" = { block = "(&mise activate pwsh) | Out-String | Invoke-Expression" }
-"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/pay-respects" = { block = "pay-respects pwsh --alias f" }
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/pay-respects" = { block = "pay-respects pwsh" }
 "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/starship" = { block = "Invoke-Expression (&starship init powershell)" }
 "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/zoxide" = { block = "Invoke-Expression (& { (zoxide init powershell | Out-String) })" }
 
