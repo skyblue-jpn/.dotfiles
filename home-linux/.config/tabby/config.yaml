@@ -198,9 +198,6 @@ terminal:
   cursor: beam
   cursorBlink: true
   hideTabIndex: false
-  showTabProfileIcon: true
-  hideCloseButton: false
-  hideTabOptionsButton: false
   rightClick: menu
   pasteOnMiddleClick: false
   copyOnSelect: false
@@ -301,7 +298,7 @@ terminal:
   showBuiltinProfiles: true
   showRecentProfiles: 3
   paneResizeStep: 0.1
-  focusFollowsMouse: false
+  focusFollowsMouse: true
   identification: null
 ssh:
   warnOnClose: false
@@ -336,7 +333,6 @@ appearance:
   css: '/* * { color: blue !important; } */'
   vibrancyType: blur
   lastTabClosesWindow: false
-  vibrancy: true
 profiles: []
 groups: []
 profileDefaults:
@@ -347,7 +343,7 @@ enableWelcomeTab: false
 electronFlags:
   - - force_discrete_gpu
     - '0'
-enableAutomaticUpdates: true
+enableAutomaticUpdates: false
 hideTray: false
 version: 8
 vault: null
@@ -358,7 +354,6 @@ providerBlacklist: []
 profileBlacklist: []
 hacks:
   disableGPU: false
-  disableVibrancyWhileDragging: false
   enableFluentBackground: false
   globalHotkey: null
 language: null
