@@ -15,10 +15,16 @@ run = [
 ]
 
 [bootstrap.hooks.post-packages]
-run = ["sudo waydroid init"]
+run = [
+  "sudo waydroid init || true",
+]
 
 [bootstrap.hooks.post-dotfiles]
-run = ["nwg-look -a", "dms plugins restore && dms plugins update --all"]
+run = [
+  "nwg-look -a || true",
+  "dms plugins restore || true",
+  "dms plugins update --all || true",
+]
 
 [bootstrap.hooks.post-tools]
 run = [
@@ -26,5 +32,5 @@ run = [
   "cd ~/src/Colloid-icon-theme/cursors && ./install.sh",
   "paru -S --noconfirm --needed plymouth-theme-catppuccin-macchiato-git && sudo plymouth-set-default-theme -R catppuccin-macchiato",
   "chmod +x ~/.config/mise/home-linux/scripts/mount-filesystem.sh && ~/.config/mise/home-linux/scripts/mount-filesystem.sh",
-  "sudo systemctl start bpftune && sudo systemctl enable bpftune",
+  "sudo systemctl enable --now bpftune || true",
 ]

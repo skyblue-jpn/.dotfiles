@@ -10,11 +10,7 @@ EOF
 }
 
 write_miserc_windows() {
-  powershell.exe -NoProfile -NonInteractive -Command - <<'POWERSHELL'
-   $content = @"
-"@
-   setx MISE_ENV "home-windows"
-POWERSHELL
+  setx MISE_ENV "home-windows"
 }
 
 setup_home-linux() {
