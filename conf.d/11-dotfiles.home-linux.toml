@@ -46,7 +46,7 @@
 "~/.config/starship.toml" = { source = "../home-linux/.config/starship.toml" }
 "~/.config/tabby/config.yaml" = { source = "../home-linux/.config/tabby/config.yaml" }
 "~/.config/xsettingsd" = { source = "../home-linux/.config/xsettingsd" }
-"~/.config/yazi" = { source = "../home-linux/.config/yazi" }
+"~/.config/yazi/themes.toml" = { source = "../home-linux/.config/yazi/themes.toml" }
 "~/.config/zed" = { source = "../home-linux/.config/zed" }
 "~/.gtkrc-2.0" = { source = "../home-linux/.gtkrc-2.0" }
 "~/.icons" = { source = "../home-linux/.icons" }

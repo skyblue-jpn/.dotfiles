@@ -17,5 +17,5 @@
 "~/AppData/Roaming/bottom" = { source = "../home-linux/.config/bottom" }
 "~/AppData/Roaming/eza" = { source = "../home-linux/.config/eza" }
 "~/AppData/Roaming/tabby/config.yaml" = { source = "../home-linux/.config/tabby/config.yaml" }
-"~/AppData/Roaming/yazi" = { source = "../home-linux/.config/yazi" }
+"~/AppData/Roaming/yazi/themes.toml" = { source = "../home-linux/.config/yazi/themes.toml" }
 "~/AppData/Roaming/Zed" = { source = "../home-linux/.config/zed" }
