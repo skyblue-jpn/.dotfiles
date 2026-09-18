@@ -1,8 +1,8 @@
 [dotfiles]
 # sync completions and functions
 "~/Documents/PowerShell/sync.ps1" = { source = "../common/.config/powershell/sync.ps1" }
-"~/Documents/PowerShell/Completions" = { source = "../common/.config/powershell/completions" }
-"~/Documents/PowerShell/Functions" = { source = "../common/.config/powershell/functions" }
+"~/Documents/PowerShell/completions" = { source = "../common/.config/powershell/completions" }
+"~/Documents/PowerShell/functions" = { source = "../common/.config/powershell/functions" }
 "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/sync" = { block = '. "$HOME\Documents\PowerShell\sync.ps1"' }
 
 # insert blocks in $PROFILE
