@@ -1,0 +1,254 @@
+{
+  "Apps": [
+    "Microsoft.3DBuilder",
+    "Microsoft.Microsoft3DViewer",
+    "ACGMediaPlayer",
+    "ActiproSoftwareLLC",
+    "AdobeSystemsIncorporated.AdobePhotoshopExpress",
+    "Microsoft.WindowsAlarms",
+    "Amazon.com.Amazon",
+    "Asphalt8Airborne",
+    "AutodeskSketchBook",
+    "Microsoft.BingFinance",
+    "Microsoft.BingFoodAndDrink",
+    "Microsoft.BingHealthAndFitness",
+    "Microsoft.BingNews",
+    "Microsoft.BingSports",
+    "Microsoft.BingTranslator",
+    "Microsoft.BingTravel",
+    "Microsoft.BingWeather",
+    "king.com.BubbleWitch3Saga",
+    "CaesarsSlotsFreeCasino",
+    "king.com.CandyCrushSaga",
+    "king.com.CandyCrushSodaSaga",
+    "Clipchamp.Clipchamp",
+    "COOKINGFEVER",
+    "Microsoft.Windows.AIHub",
+    "Microsoft.549981C3F5F10",
+    "CyberLinkMediaSuiteEssentials",
+    "DellInc.DellDigitalDelivery",
+    "DellInc.DellMobileConnect",
+    "DellInc.DellSupportAssistforPCs",
+    "Microsoft.Windows.DevHome",
+    "DisneyMagicKingdoms",
+    "Disney.37853FC22B2CE",
+    "DrawboardPDF",
+    "Duolingo-LearnLanguagesforFree",
+    "EclipseManager",
+    "FACEBOOK.FACEBOOK",
+    "MicrosoftCorporationII.MicrosoftFamily",
+    "FarmVille2CountryEscape",
+    "Microsoft.WindowsFeedbackHub",
+    "Flipboard",
+    "Microsoft.Getstarted",
+    "HiddenCity",
+    "AD2F1837.HPAIExperienceCenter",
+    "AD2F1837.HPConnectedMusic",
+    "AD2F1837.HPConnectedPhotopoweredbySnapfish",
+    "AD2F1837.HPDesktopSupportUtilities",
+    "AD2F1837.HPEasyClean",
+    "AD2F1837.HPFileViewer",
+    "AD2F1837.HPJumpStarts",
+    "AD2F1837.HPPCHardwareDiagnosticsWindows",
+    "AD2F1837.HPPowerManager",
+    "AD2F1837.HPPrinterControl",
+    "AD2F1837.HPPrivacySettings",
+    "AD2F1837.HPQuickDrop",
+    "AD2F1837.HPQuickTouch",
+    "AD2F1837.HPRegistration",
+    "AD2F1837.HPSupportAssistant",
+    "AD2F1837.HPSureShieldAI",
+    "AD2F1837.HPSystemInformation",
+    "AD2F1837.HPWelcome",
+    "AD2F1837.HPWorkWell",
+    "HULULLC.HULUPLUS",
+    "iHeartRadio",
+    "Facebook.Instagram",
+    "E046963F.LenovoCompanion",
+    "LenovoCompanyLimited.LenovoVantageService",
+    "LGElectronics.LGMonitorApp",
+    "LinkedInforWindows",
+    "Sidia.LiveWallpaper",
+    "MarchofEmpires",
+    "Microsoft.Messaging",
+    "XP9CXNGPPJ97XX",
+    "Microsoft.MicrosoftJournal",
+    "Microsoft.News",
+    "Microsoft.PCManager",
+    "MSTeams",
+    "MicrosoftTeams",
+    "Microsoft.Todos",
+    "Microsoft.MixedReality.Portal",
+    "Microsoft.ZuneVideo",
+    "AD2F1837.myHP",
+    "4DF9E0F8.Netflix",
+    "Microsoft.NetworkSpeedTest",
+    "NYTCrossword",
+    "Microsoft.MicrosoftOfficeHub",
+    "OneCalendar",
+    "Microsoft.OneConnect",
+    "Microsoft.Office.OneNote",
+    "PandoraMediaInc",
+    "PhototasticCollage",
+    "PicsArt-PhotoStudio",
+    "PolarrPhotoEditorAcademicEdition",
+    "Microsoft.PowerAutomateDesktop",
+    "Microsoft.MicrosoftPowerBIForWindows",
+    "AmazonVideo.PrimeVideo",
+    "Microsoft.Print3D",
+    "MicrosoftCorporationII.QuickAssist",
+    "flaregamesGmbH.RoyalRevolt",
+    "Microsoft.SkypeApp",
+    "SlingTV",
+    "Microsoft.MicrosoftSolitaireCollection",
+    "Microsoft.WindowsSoundRecorder",
+    "SpotifyAB.SpotifyMusic",
+    "Microsoft.MicrosoftStickyNotes",
+    "Microsoft.Office.Sway",
+    "BytedancePte.Ltd.TikTok",
+    "TuneInRadio",
+    "Microsoft.WindowsMaps",
+    "WinZipUniversal",
+    "Microsoft.XboxApp",
+    "Microsoft.XboxGameOverlay",
+    "Microsoft.GamingApp",
+    "Microsoft.XboxGamingOverlay"
+  ],
+  "Deployment": [
+    {
+      "Name": "UserSelectionIndex",
+      "Value": 0
+    },
+    {
+      "Name": "AppRemovalScopeIndex",
+      "Value": 0
+    },
+    {
+      "Name": "CreateRestorePoint",
+      "Value": true
+    },
+    {
+      "Name": "SkipRegistryBackup",
+      "Value": false
+    },
+    {
+      "Name": "RestartExplorer",
+      "Value": true
+    }
+  ],
+  "Tweaks": [
+    {
+      "Name": "DisableStartRecommended",
+      "Value": true
+    },
+    {
+      "Name": "CombineTaskbarAlways",
+      "Value": true
+    },
+    {
+      "Name": "ShowKnownFileExt",
+      "Value": true
+    },
+    {
+      "Name": "ClearStart",
+      "Value": true
+    },
+    {
+      "Name": "CombineMMTaskbarAlways",
+      "Value": true
+    },
+    {
+      "Name": "DisableDesktopSpotlight",
+      "Value": true
+    },
+    {
+      "Name": "DisableFindMyDevice",
+      "Value": true
+    },
+    {
+      "Name": "DisableLockscreenTips",
+      "Value": true
+    },
+    {
+      "Name": "PreventUpdateAutoReboot",
+      "Value": true
+    },
+    {
+      "Name": "MMTaskbarModeAll",
+      "Value": true
+    },
+    {
+      "Name": "AddFoldersToThisPC",
+      "Value": true
+    },
+    {
+      "Name": "ShowSearchBoxTb",
+      "Value": true
+    },
+    {
+      "Name": "HideDupliDrive",
+      "Value": true
+    },
+    {
+      "Name": "EnableDarkMode",
+      "Value": true
+    },
+    {
+      "Name": "DisableAISvcAutoStart",
+      "Value": true
+    },
+    {
+      "Name": "DisableGameBarIntegration",
+      "Value": true
+    },
+    {
+      "Name": "RevertContextMenu",
+      "Value": true
+    },
+    {
+      "Name": "EnableLastActiveClick",
+      "Value": true
+    },
+    {
+      "Name": "EnableEndTask",
+      "Value": true
+    },
+    {
+      "Name": "DisableEdgeAds",
+      "Value": true
+    },
+    {
+      "Name": "DisableBitlockerAutoEncryption",
+      "Value": true
+    },
+    {
+      "Name": "DisableTelemetry",
+      "Value": true
+    },
+    {
+      "Name": "DisableSuggestions",
+      "Value": true
+    },
+    {
+      "Name": "DisableSettings365Ads",
+      "Value": true
+    },
+    {
+      "Name": "ShowHiddenFolders",
+      "Value": true
+    },
+    {
+      "Name": "EnableWindowsSubsystemForLinux",
+      "Value": true
+    },
+    {
+      "Name": "ExplorerToThisPC",
+      "Value": true
+    },
+    {
+      "Name": "DisableFastStartup",
+      "Value": true
+    }
+  ],
+  "Version": "1.0"
+}
