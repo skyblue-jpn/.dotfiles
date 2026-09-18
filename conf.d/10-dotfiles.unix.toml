@@ -22,8 +22,8 @@
 "~/.config/fish/functions/y.fish" = { source = "../common-unix/.config/fish/functions/y.fish" }
 "~/.config/fish/pez.toml" = { source = "../common-unix/.config/fish/pez.toml" }
 "~/.config/powershell/sync.ps1" = { source = "../common/.config/powershell/sync.ps1" }
-"~/.config/powershell/Completions" = { source = "../common/.config/powershell/completions" }
-"~/.config/powershell/Functions" = { source = "../common/.config/powershell/functions" }
+"~/.config/powershell/completions" = { source = "../common/.config/powershell/completions" }
+"~/.config/powershell/functions" = { source = "../common/.config/powershell/functions" }
 "~/.config/powershell/Microsoft.PowerShell_profile.ps1/sync" = { block = '. "~/.config/powershell/sync.ps1"' }
 "~/.config/powershell/Microsoft.PowerShell_profile.ps1/mise" = { block = "(&mise activate pwsh) | Out-String | Invoke-Expression" }
 "~/.config/powershell/Microsoft.PowerShell_profile.ps1/starship" = { block = "Invoke-Expression (&starship init powershell)" }
