@@ -24,7 +24,7 @@ function __pr_base {
                 $env:_PR_ALIAS = (Get-Alias | Out-String)
                 $env:_PR_SHELL = "pwsh"
 
-                & 'C:\Users\celeste\AppData\Local\mise\installs\aqua-iffse-pay-respects\0.8.8\pay-respects.exe'
+                & 'pay-respects'
 
         } finally {
                 $env_PR_PREFIX = $null;
