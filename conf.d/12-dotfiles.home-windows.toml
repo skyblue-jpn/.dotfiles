@@ -16,7 +16,7 @@
 # import from other envs
 "~/AppData/Roaming/topgrade.toml" = { source = "../common/.config/topgrade.toml" }
 "~/.config/starship.toml" = { source = "../home-linux/.config/starship.toml" }
-"~/AppData/Roaming/bat/config" = { source = "../home-linux/.config/bat" }
+"~/AppData/Roaming/bat" = { source = "../home-linux/.config/bat" }
 "~/AppData/Roaming/bottom" = { source = "../home-linux/.config/bottom" }
 "~/AppData/Roaming/eza" = { source = "../home-linux/.config/eza" }
 "~/AppData/Roaming/tabby/config.yaml" = { source = "../home-linux/.config/tabby/config.yaml" }
