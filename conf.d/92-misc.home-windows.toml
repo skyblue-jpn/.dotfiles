@@ -1,6 +1,7 @@
 [bootstrap.hooks.pre-packages]
 run = [
   '''pwsh -NoProfile -Command "Start-Process pwsh -Verb RunAs -ArgumentList '-NoProfile','-Command','sudo config --enable normal'"''',
+  '''powershell -NoProfile -Command '& ([scriptblock]::Create((irm "https://debloat.raphi.re/"))) -CLI -Config "$HOME\.config\Win11Debloat\Win11Debloat-Config.json"'''',
 ]
 
 [bootstrap.hooks.post-packages]
