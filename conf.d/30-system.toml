@@ -1,17 +1,3 @@
-[shell_alias]
-cd = "z"
-ci = "zi"
-ls = "eza --icons=auto"
-la = "eza --icons=auto -lbhHigUmuSa"
-lx = "eza --icons=auto -lbhHigUmuSa@"
-l = "eza --icons=auto --git-ignore"
-ll = "eza --icons=auto --all --header --long"
-llm = "eza --icons=auto --all --header --long --sort=modified"
-lt = "eza --icons=auto --all --tree --level=2"
-tree = "eza --icons=auto --all --tree"
-cat = "bat"
-fzf = "fzf --preview 'bat --color=always {}' --preview-window '~3'"
-
 [env]
 FZF_ALT_C_COMMAND = "fd --type d"
 FZF_CTRL_T_COMMAND = "fd --type f"
