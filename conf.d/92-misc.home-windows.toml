@@ -6,5 +6,5 @@ run = [
 
 [bootstrap.hooks.post-packages]
 run = [
-  "pwsh -NoProfile -Command Install-Module PSWindowsUpdate",
+  '''pwsh -NoProfile -Command "Install-Module -Name PSWindowsUpdate -Force -Confirm:$false"''',
 ]
