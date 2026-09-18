@@ -8,3 +8,8 @@ run = [
 run = [
   '''pwsh -NoProfile -Command "Install-Module -Name PSWindowsUpdate -Force -Confirm:$false"''',
 ]
+
+[bootstrap.hooks.post-tools]
+run = [
+  "mise exec topgrade -- topgrade --only system winget microsoft_store powershell",
+]
