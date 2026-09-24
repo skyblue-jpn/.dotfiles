@@ -25,10 +25,18 @@ setup_home-windows() {
 }
 
 setup_work-wsl() {
-  sudo add-apt-repository -y ppa:fish-shell/release-4
-  sudo add-apt-repository -y ppa:jdxcode/mise
   sudo apt update
-  sudo apt install -y mise fish
+  sudo apt install -y software-properties-common
+
+  for repo in \
+    ppa:fish-shell/release-4 \
+    ppa:jdxcode/mise \
+    ppa:apt-fast/stable; do
+    sudo add-apt-repository -y "$repo"
+  done
+
+  sudo apt update
+  sudo apt install -y mise fish apt-fast
 }
 
 echo "Select Your Config Environment:"
