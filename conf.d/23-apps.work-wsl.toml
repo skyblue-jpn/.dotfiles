@@ -2,7 +2,7 @@
 "fastfetch" = "latest"
 
 [bootstrap.packages]
-"apt:add-apt-repository" = "latest"
+"apt:apt-fast" = "latest"
 "apt:build-essential" = "latest"
 "apt:fish" = "latest"
 "apt:libicu-dev" = "latest"
