@@ -17,6 +17,7 @@ run = [
 [bootstrap.hooks.post-packages]
 run = [
   "sudo waydroid init || true",
+  "sudo fc-cache -r -v",
 ]
 
 [bootstrap.hooks.post-dotfiles]

@@ -30,6 +30,7 @@ audio/ogg=vlc.desktop
 audio/wav=vlc.desktop
 audio/webm=vlc.desktop
 audio/x-flac=vlc.desktop
+x-scheme-handler/tabby=tabby.desktop
 
 [Added Associations]
 application/xhtml+xml=vivaldi-stable.desktop;
