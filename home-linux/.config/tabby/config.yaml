@@ -184,6 +184,10 @@ hotkeys:
     - Ctrl-Shift-E
   command-selector:
     - Ctrl-Shift-P
+  insert-new-line:
+    - Alt-Shift-Enter
+  next-mru-tab: []
+  previous-mru-tab: []
 terminal:
   frontend: xterm-webgl
   fallbackFont: Symbols Nerd Font Mono

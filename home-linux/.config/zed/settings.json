@@ -415,6 +415,7 @@
       }
     },
     "dock": "bottom",
+    "font_fallbacks": ["Symbols Nerd Font Mono"],
     "font_family": "HackGen Console",
     "font_size": 14,
     "font_weight": 400,
