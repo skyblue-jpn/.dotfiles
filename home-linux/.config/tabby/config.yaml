@@ -186,12 +186,12 @@ hotkeys:
     - Ctrl-Shift-P
 terminal:
   frontend: xterm-webgl
+  fallbackFont: Symbols Nerd Font Mono
   fontSize: 14
   fontWeight: 400
   fontWeightBold: 700
-  fallbackFont: null
   linePadding: 0
-  bell: 'off'
+  bell: "off"
   bracketedPaste: true
   background: theme
   ligatures: true
@@ -207,74 +207,74 @@ terminal:
   wordSeparator: ' ()[]{}''"'
   colorScheme:
     name: Catppuccin Macchiato
-    foreground: '#cad3f5'
-    background: '#24273a'
+    foreground: "#cad3f5"
+    background: "#24273a"
     selection: null
-    cursor: '#f4dbd6'
+    cursor: "#f4dbd6"
     cursorAccent: null
     colors:
-      - '#494d64'
-      - '#ed8796'
-      - '#a6da95'
-      - '#eed49f'
-      - '#8aadf4'
-      - '#f5bde6'
-      - '#8bd5ca'
-      - '#b8c0e0'
-      - '#5b6078'
-      - '#ed8796'
-      - '#a6da95'
-      - '#eed49f'
-      - '#8aadf4'
-      - '#f5bde6'
-      - '#8bd5ca'
-      - '#a5adcb'
+      - "#494d64"
+      - "#ed8796"
+      - "#a6da95"
+      - "#eed49f"
+      - "#8aadf4"
+      - "#f5bde6"
+      - "#8bd5ca"
+      - "#b8c0e0"
+      - "#5b6078"
+      - "#ed8796"
+      - "#a6da95"
+      - "#eed49f"
+      - "#8aadf4"
+      - "#f5bde6"
+      - "#8bd5ca"
+      - "#a5adcb"
   lightColorScheme:
     name: Tabby Default Light
-    foreground: '#4d4d4c'
-    background: '#ffffff'
-    cursor: '#4d4d4c'
+    foreground: "#4d4d4c"
+    background: "#ffffff"
+    cursor: "#4d4d4c"
     colors:
-      - '#000000'
-      - '#c82829'
-      - '#718c00'
-      - '#eab700'
-      - '#4271ae'
-      - '#8959a8'
-      - '#3e999f'
-      - '#ffffff'
-      - '#000000'
-      - '#c82829'
-      - '#718c00'
-      - '#eab700'
-      - '#4271ae'
-      - '#8959a8'
-      - '#3e999f'
-      - '#ffffff'
+      - "#000000"
+      - "#c82829"
+      - "#718c00"
+      - "#eab700"
+      - "#4271ae"
+      - "#8959a8"
+      - "#3e999f"
+      - "#ffffff"
+      - "#000000"
+      - "#c82829"
+      - "#718c00"
+      - "#eab700"
+      - "#4271ae"
+      - "#8959a8"
+      - "#3e999f"
+      - "#ffffff"
   customColorSchemes:
     - name: Catppuccin Macchiato
-      foreground: '#cad3f5'
-      background: '#24273a'
+      foreground: "#cad3f5"
+      background: "#24273a"
       selection: null
-      cursor: '#f4dbd6'
+      cursor: "#f4dbd6"
       cursorAccent: null
       colors:
-        - '#494d64'
-        - '#ed8796'
-        - '#a6da95'
-        - '#eed49f'
-        - '#8aadf4'
-        - '#f5bde6'
-        - '#8bd5ca'
-        - '#b8c0e0'
-        - '#5b6078'
-        - '#ed8796'
-        - '#a6da95'
-        - '#eed49f'
-        - '#8aadf4'
-        - '#f5bde6'
-        - '#8bd5ca'
-        - '#a5adcb'
+        - "#494d64"
+        - "#ed8796"
+        - "#a6da95"
+        - "#eed49f"
+        - "#8aadf4"
+        - "#f5bde6"
+        - "#8bd5ca"
+        - "#b8c0e0"
+        - "#5b6078"
+        - "#ed8796"
+        - "#a6da95"
+        - "#eed49f"
+        - "#8aadf4"
+        - "#f5bde6"
+        - "#8bd5ca"
+        - "#a5adcb"
   warnOnMultilinePaste: true
   searchRegexAlwaysEnabled: false
   searchOptions:
@@ -288,7 +288,7 @@ terminal:
   minimumContrastRatio: 4
   replaceNewlinesWithSpacesOnPaste: false
   trimWhitespaceOnPaste: true
-  font: HackGen Console NF
+  font: HackGen Console
   autoOpen: true
   useConPTY: true
   environment: {}
@@ -320,7 +320,7 @@ clickableLinks:
 accessibility:
   animations: true
 appearance:
-  dock: 'off'
+  dock: "off"
   dockScreen: current
   dockFill: 0.5
   dockSpace: 1
@@ -330,7 +330,7 @@ appearance:
   tabsInFullscreen: false
   cycleTabs: true
   theme: Follow the color scheme
-  css: '/* * { color: blue !important; } */'
+  css: "/* * { color: blue !important; } */"
   vibrancyType: blur
   lastTabClosesWindow: false
 profiles: []
@@ -342,7 +342,7 @@ recoverTabs: true
 enableWelcomeTab: false
 electronFlags:
   - - force_discrete_gpu
-    - '0'
+    - "0"
 enableAutomaticUpdates: false
 hideTray: false
 version: 8
