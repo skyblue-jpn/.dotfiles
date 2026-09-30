@@ -1,12 +1,12 @@
 [tools]
 "aqua:iffse/pay-respects" = "latest"
 "conda:imagemagick" = "latest"
+"github:llvm/llvm-project" = "latest"
 7zip = "latest"
 bat = "latest"
 biome = "latest"
 bottom = "latest"
 cargo-binstall = "latest"
-clang = "latest"
 clang-format = "latest"
 eza = "latest"
 fd = "latest"
