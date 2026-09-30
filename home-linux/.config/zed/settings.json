@@ -111,6 +111,14 @@
   },
   "inline_code_actions": true,
   "languages": {
+    "C": {
+      "formatter": "language_server",
+      "tab_size": 4
+    },
+    "C++": {
+      "formatter": "language_server",
+      "tab_size": 4
+    },
     "CSS": {
       "code_actions_on_format": {
         "source.fixAll.biome": true
