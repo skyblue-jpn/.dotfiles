@@ -6,25 +6,15 @@
     "context": "Workspace"
   },
   {
-    "bindings": {},
-    "context": "Editor && vim_mode == insert"
+    "bindings": {
+      "ctrl-alt-t": "editor::ToggleFocus"
+    },
+    "context": "Terminal"
   },
   {
     "bindings": {
-      "shift-space": "editor::ShowCompletions"
+      "ctrl-alt-t": "terminal_panel::ToggleFocus"
     },
     "context": "Editor"
-  },
-  {
-    "bindings": {
-      "shift-space": "git::StageAll"
-    },
-    "context": "GitPanel"
-  },
-  {
-    "bindings": {
-      "shift-space": "git::StageAll"
-    },
-    "context": "GitDiff > Editor"
   }
 ]
