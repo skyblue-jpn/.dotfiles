@@ -12,6 +12,7 @@ PROTON_USE_NTSYNC = 1
 QT_IM_MODULE = "fcitx"
 QT_QPA_PLATFORM = "wayland"
 QT_QPA_PLATFORMTHEME = "qtengine"
+QT_QPA_PLATFORMTHEME_QT5 = "qtengine"
 QT_QPA_PLATFORMTHEME_QT6 = "qtengine"
 QT_PLUGIN_PATH = "/usr/lib/qt5/plugins/"
 TERMINAL = "ghostty"
