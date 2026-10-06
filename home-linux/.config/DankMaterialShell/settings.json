@@ -11,6 +11,12 @@
     }
   },
   "popupTransparency": 0.7,
+  "mouseNaturalScroll": true,
+  "touchpadTapAndDrag": false,
+  "touchpadTapToClick": false,
+  "keyboardLayouts": "us,jp",
+  "keyboardOptions": "grp:win_space_toggle",
+  "keyboardTrackLayout": "global",
   "calendarBackend": "dankcal",
   "showSeconds": true,
   "barElevationEnabled": false,

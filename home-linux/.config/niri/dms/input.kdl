@@ -6,12 +6,20 @@
 input {
     mouse {
         accel-speed 0.0
+        natural-scroll
     }
     touchpad {
-        tap
         accel-speed 0.0
         natural-scroll
         dwt
+        drag false
+    }
+    keyboard {
+        xkb {
+            layout "us,jp"
+            options "grp:win_space_toggle"
+        }
+        track-layout "global"
     }
 }
 

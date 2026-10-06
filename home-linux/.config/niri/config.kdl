@@ -36,8 +36,8 @@ input {
             // from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
 
-            layout "us,jp"
-            options "grp:win_space_toggle"
+            // layout "us,jp"
+            // options "grp:win_space_toggle"
         }
 
         // Enable numlock on startup, omitting this setting disables it.
