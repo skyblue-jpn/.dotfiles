@@ -22,6 +22,7 @@
   "barElevationEnabled": false,
   "blurEnabled": true,
   "foregroundLayerTransparency": 0.5,
+  "systemTrayIconTintMode": "primary",
   "controlCenterWidgets": [
     {
       "id": "volumeSlider",
@@ -123,6 +124,7 @@
   "matugenTemplateGhostty": false,
   "matugenTemplateZed": false,
   "notificationShowTimeoutBar": true,
+  "osdAlwaysShowValue": true,
   "updaterCheckOnStart": true,
   "barConfigs": [
     {
@@ -297,6 +299,8 @@
       "trigger": "?"
     }
   },
+  "clipboardClickToPaste": true,
+  "clipboardEnterToPaste": true,
   "clipboardUseOverlayLayer": true,
   "barInsetPaddingShared": 4,
   "barInsetPaddingSyncAll": true,

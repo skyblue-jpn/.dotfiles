@@ -21,6 +21,5 @@ input {
         }
         track-layout "global"
     }
-    warp-mouse-to-focus
-    focus-follows-mouse max-scroll-amount="0%"
 }
+
