@@ -5,13 +5,6 @@
 config-notification {
     disable-failed
 }
-// Outputs from existing configuration
-/-output "eDP-2" {
-    mode "2560x1600@239.998993"
-    position x=2560 y=0
-    variable-refresh-rate
-}
-
 
 gestures {
     hot-corners {
@@ -35,38 +28,10 @@ input {
             // If this section is empty, niri will fetch xkb settings
             // from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
-
-            // layout "us,jp"
-            // options "grp:win_space_toggle"
         }
 
         // Enable numlock on startup, omitting this setting disables it.
         numlock
-    }
-
-    // Next sections include libinput settings.
-    // Omitting settings disables them, or leaves them at their default values.
-    // All commented-out settings here are examples, not defaults.
-    touchpad {
-        // off
-        // tap
-        // dwt
-        // dwtp
-        // drag false
-        // drag-lock
-        natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "two-finger"
-        // disabled-on-external-mouse
-    }
-
-    mouse {
-        // off
-        // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "no-scroll"
     }
 
     trackpoint {
@@ -81,19 +46,24 @@ input {
     }
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
-    warp-mouse-to-focus
+    // warp-mouse-to-focus
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    focus-follows-mouse max-scroll-amount="0%"
+    // focus-follows-mouse max-scroll-amount="0%"
 }
+
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-
+/-output "eDP-2" {
+    mode "2560x1600@239.998993"
+    position x=2560 y=0
+    variable-refresh-rate
+}
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
@@ -277,5 +247,5 @@ include optional=true "dms/alttab.kdl"
 include optional=true "dms/binds.kdl"
 include optional=true "dms/outputs.kdl"
 include optional=true "dms/cursor.kdl"
-include "dms/windowrules.kdl"
-include "dms/input.kdl"
+include optional=true "dms/windowrules.kdl"
+include optional=true "dms/input.kdl"
