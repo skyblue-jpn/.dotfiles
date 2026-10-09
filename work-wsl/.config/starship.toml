@@ -164,7 +164,7 @@ format = "[[ $symbol( $version) ](fg:#769ff0 bg:#212736)]($style)"
 symbol = ""
 style = "bg:#212736"
 format = "[[ $symbol( $version(-$name)) ](fg:#769ff0 bg:#212736)]($style)"
-commands = [ [ 'clang', '--version' ], [ 'gcc', '--version' ],  [ 'cc', '--version' ]]
+commands = [["clang", "--version"], ["gcc", "--version"], ["cc", "--version"]]
 
 [cmake]
 symbol = ""
@@ -181,7 +181,7 @@ disabled = false
 symbol = ""
 style = "bg:#212736"
 format = "[[ $symbol( $version(-$name)) ](fg:#769ff0 bg:#212736)]($style)"
-commands = [ [ 'clang++', '--version' ],  [ 'g++', '--version' ], [ 'c++', '--version' ] ]
+commands = [["clang++", "--version"], ["g++", "--version"], ["c++", "--version"]]
 
 [daml]
 symbol = ""
