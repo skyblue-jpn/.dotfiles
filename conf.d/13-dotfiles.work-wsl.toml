@@ -55,4 +55,4 @@
   ''' }
 "~/.config/fish/config.fish/tokyonight" = { block = "fish_config theme choose tokyonight_night" }
 "~/.config/fish/themes" = { source = "../work-wsl/.config/fish/themes" }
-"~/.config/yazi" = { source = "../work-wsl/.config/yazi" }
+"~/.config/yazi/theme.toml" = { source = "../work-wsl/.config/yazi/theme.toml" }
