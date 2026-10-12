@@ -6,7 +6,6 @@
 input {
     mouse {
         accel-speed 0.0
-        natural-scroll
     }
     touchpad {
         accel-speed 0.0
