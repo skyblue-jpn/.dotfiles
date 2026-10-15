@@ -1,6 +1,7 @@
 [bootstrap.hooks.post-tools]
 run = [
   "mise exec bat -- bat cache --build",
+  "mise exec yazi -- ya pkg install",
 ]
 
 [bootstrap.hooks.final]
