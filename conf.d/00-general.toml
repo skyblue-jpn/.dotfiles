@@ -1,6 +1,8 @@
 [settings]
+cargo.binstall_native = true
 dotfiles.root = "~/.config/mise"
 experimental = true
+install_layout = "identity"
 jobs = 10
 minimum_release_age = "12h"
 python.uv_venv_auto = "create|source"
