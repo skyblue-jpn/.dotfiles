@@ -3,17 +3,8 @@
     "dock": "right",
     "favorite_models": [],
     "model_parameters": [],
-    "sidebar_side": "right"
-  },
-  "agent_buffer_font_family": "HackGen Console",
-  "agent_servers": {
-    "github-copilot-cli": {
-      "default_config_options": {
-        "allow_all": "on",
-        "mode": "https://agentclientprotocol.com/protocol/session-modes#autopilot",
-        "reasoning_effort": "high"
-      },
-      "type": "registry"
+    "threads_sidebar": {
+      "position": "right"
     }
   },
   "agent_ui_font_size": null,
@@ -37,6 +28,7 @@
     "lua": true,
     "markdown-oxide": true,
     "markdownlint": true,
+    "neocmake": true,
     "nix": true,
     "powershell": true,
     "r": true,
@@ -404,6 +396,7 @@
   "snippet_sort_order": "inline",
   "soft_wrap": "editor_width",
   "status_bar": {
+    "active_encoding_button": "enabled",
     "active_language_button": true,
     "cursor_position_button": true
   },
