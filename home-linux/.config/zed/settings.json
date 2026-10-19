@@ -14,9 +14,9 @@
   "auto_install_extensions": {
     "air": true,
     "biome": true,
-    "catppuccin": true,
-    "catppuccin-icons": true,
+    "desktop": true,
     "fish": true,
+    "ghostty": true,
     "git-firefly": true,
     "graphql": true,
     "html": true,
