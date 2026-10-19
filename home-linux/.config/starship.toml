@@ -13,9 +13,9 @@ $git_status\
 [](fg:yellow bg:green)\
 $bun\
 $c\
+$cpp\
 $cmake\
 $cobol\
-$cpp\
 $daml\
 $dart\
 $deno\
