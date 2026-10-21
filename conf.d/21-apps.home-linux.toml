@@ -1,7 +1,7 @@
 [tools]
 "cargo:tex-fmt" = "latest"
 "github:A2-ai/rv" = "latest"
-"pipx:radian" = "latest"
+"pypi:radian" = "latest"
 
 [bootstrap.packages]
 "pacman:7zip" = "latest"
