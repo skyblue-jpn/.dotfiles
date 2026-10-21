@@ -15,6 +15,7 @@
     "air": true,
     "biome": true,
     "comment": true,
+    "comment-block-snippets": true,
     "desktop": true,
     "fish": true,
     "ghostty": true,
