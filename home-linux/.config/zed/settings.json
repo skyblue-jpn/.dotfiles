@@ -14,6 +14,7 @@
   "auto_install_extensions": {
     "air": true,
     "biome": true,
+    "comment": true,
     "desktop": true,
     "fish": true,
     "ghostty": true,
