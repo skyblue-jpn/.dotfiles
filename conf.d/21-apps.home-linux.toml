@@ -58,6 +58,7 @@
 "pacman:texlive-lang" = "latest"
 "pacman:thunar" = "latest"
 "pacman:thunar-archive-plugin" = "latest"
+"pacman:tk" = "latest"
 "pacman:ttf-nerd-fonts-symbols" = "latest"
 "pacman:ttf-nerd-fonts-symbols-common" = "latest"
 "pacman:ttf-nerd-fonts-symbols-mono" = "latest"

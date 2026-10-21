@@ -6,4 +6,5 @@
 "apt:build-essential" = "latest"
 "apt:fish" = "latest"
 "apt:libicu-dev" = "latest"
+"apt:tk" = "latest"
 "apt:vim" = "latest"
