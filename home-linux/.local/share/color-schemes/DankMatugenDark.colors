@@ -2,8 +2,8 @@
 contrast=4
 
 [General]
-ColorScheme=DankMatugen
-Name=Dank Shell (matugen)
+ColorScheme=DankMatugenDark
+Name=Dank Shell (matugen) Dark
 
 [ColorEffects:Disabled]
 Color=165,173,203
