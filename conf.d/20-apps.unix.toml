@@ -1,6 +1,5 @@
 [tools]
 "cargo:dua-cli" = "latest"
 "cargo:pez" = "latest"
-"pypi:bpython" = "latest"
 bat-extras = "latest"
 powershell-core = "latest"
