@@ -2,3 +2,10 @@
 run = [
   "mise exec cargo:pez -- pez install --force",
 ]
+
+[bootstrap.hooks.post-packages]
+run = [
+  "miktexsetup finish",
+  "initexmf --set-config-value [MPM]AutoInstall=1",
+  "miktex packages update",
+]

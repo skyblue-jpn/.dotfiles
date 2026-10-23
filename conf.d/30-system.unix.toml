@@ -2,6 +2,7 @@
 login_shell = "/usr/bin/fish"
 
 [env]
+_.path = ["~/bin"]
 MANPAGER = "bat -plman"
 
 [shell_alias]
@@ -17,3 +18,5 @@ lt = "eza --icons=auto --all --tree --level=2"
 tree = "eza --icons=auto --all --tree"
 cat = "bat"
 fzf = "fzf --preview 'bat --color=always {}' --preview-window '~3'"
+
+pandocpdf = "pandoc -V documentclass=ltjarticle --pdf-engine=lualatex -t pdf"

@@ -1,5 +1,9 @@
 [bootstrap.hooks.pre-packages]
-run = ["sudo apt update && sudo apt full-upgrade -y"]
+run = [
+  "curl -fsSL https://miktex.org/download/key | sudo gpg --dearmor -o /usr/share/keyrings/miktex.gpg",
+  'echo "deb [signed-by=/usr/share/keyrings/miktex.gpg] https://miktex.org/download/ubuntu resolute universe" | sudo tee /etc/apt/sources.list.d/miktex.list',
+  "sudo apt update && sudo apt full-upgrade -y",
+]
 
 [bootstrap.hooks.post-tools]
 run = ["sudo apt autoremove -y"]

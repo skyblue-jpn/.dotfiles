@@ -1,5 +1,4 @@
 [tools]
-"cargo:tex-fmt" = "latest"
 "github:A2-ai/rv" = "latest"
 "pypi:radian" = "latest"
 
@@ -54,8 +53,6 @@
 "pacman:rate-mirrors" = "latest"
 "pacman:sl" = "latest"
 "pacman:tabby-bin" = "latest"
-"pacman:texlive" = "latest"
-"pacman:texlive-lang" = "latest"
 "pacman:thunar" = "latest"
 "pacman:thunar-archive-plugin" = "latest"
 "pacman:tk" = "latest"
@@ -78,6 +75,7 @@
 "aur:catppuccin-fcitx5-git" = "latest"
 "aur:darkly" = "latest"
 "aur:fastfetch-theme-manager" = "latest"
+"aur:miktex" = "latest"
 "aur:osu-lazer-bin" = "latest"
 "aur:qtengine" = "latest"
 "aur:tparted-bin" = "latest"
