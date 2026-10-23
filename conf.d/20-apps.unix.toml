@@ -2,7 +2,6 @@
 "cargo:dua-cli" = "latest"
 "cargo:pez" = "latest"
 "cargo:tex-fmt" = "latest"
-"github:minoki/cluttex" = "latest"
 bat-extras = "latest"
 pandoc = "latest"
 powershell-core = "latest"
