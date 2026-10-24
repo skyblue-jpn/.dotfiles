@@ -6,5 +6,6 @@ run = [
 [bootstrap.hooks.post-packages]
 run = [
   "miktexsetup finish",
+  "initexmf --set-config-value [MPM]AutoInstall=1",
   "miktex packages update",
 ]

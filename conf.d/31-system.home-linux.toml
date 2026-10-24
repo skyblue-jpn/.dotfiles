@@ -3,6 +3,7 @@ r = "radian"
 mirror-update = "sudo cachyos-rate-mirrors && rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist"
 
 [env]
+_.path = ["/opt/miktex/bin"]
 EDITOR = "nvim"
 GTK_THEME = "adw-gtk3"
 PROTON_ENABLE_HDR = 1
