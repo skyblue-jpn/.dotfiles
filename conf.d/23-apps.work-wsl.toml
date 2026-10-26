@@ -9,3 +9,4 @@
 "apt:miktex" = "latest"
 "apt:tk" = "latest"
 "apt:vim" = "latest"
+"apt:zathura" = "latest"
