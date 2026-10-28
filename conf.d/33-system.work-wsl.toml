@@ -1,7 +1,5 @@
 [shell_alias]
 apt = "apt-fast"
-ssh = "ssh.exe"
-ssh-add = "ssh-add.exe"
 
 [env]
 BROWSER = "/mnt/c/Windows/System32/rundll32.exe url.dll,FileProtocolHandler"
