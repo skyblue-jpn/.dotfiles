@@ -35,6 +35,7 @@
     "powershell": true,
     "r": true,
     "rainbow-csv": true,
+    "ssh-config": true,
     "tombi": true,
     "toml": true,
     "xml": true,

@@ -31,6 +31,7 @@ setup_work-wsl() {
   for repo in \
     ppa:fish-shell/release-4 \
     ppa:jdxcode/mise \
+    ppa:git-core/ppa \
     ppa:apt-fast/stable; do
     sudo add-apt-repository -y "$repo"
   done
