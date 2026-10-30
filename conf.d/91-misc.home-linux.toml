@@ -10,7 +10,6 @@ run = [
   "sudo cachyos-rate-mirrors && rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist && paru -Syyu --noconfirm",
   "yes | paru -S --needed sudo-rs coreutils-uutils",
   "sudo -v && curl -fsSL https://install.duxlabs.dev | sh -s -- -c niri -t ghostty -y --git --all-features --include-deps dms-greeter,danksearch,dankcalendar -y",
-  "yes | paru -S --needed extra/dms-shell",
   "sudo timedatectl set-local-rtc 1",
 ]
 
