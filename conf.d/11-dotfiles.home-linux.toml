@@ -12,11 +12,14 @@
 "~/.config/bat" = { source = "../home-linux/.config/bat" }
 "~/.config/bottom" = { source = "../home-linux/.config/bottom" }
 "~/.config/eza" = { source = "../home-linux/.config/eza" }
-"~/.config/DankMaterialShell/plugins.lock.json" = { source = "../home-linux/.config/DankMaterialShell/plugins.lock.json" }
-"~/.config/DankMaterialShell/settings.json" = { source = "../home-linux/.config/DankMaterialShell/settings.json" }
-"~/.config/DankMaterialShell/themes" = { source = "../home-linux/.config/DankMaterialShell/themes" }
+"~/.config/dms/clsettings.json" = { source = "../home-linux/.config/dms/clsettings.json" }
+"~/.config/dms/plugin_settings.json" = { source = "../home-linux/.config/dms/plugin_settings.json" }
+"~/.config/dms/plugins.lock.json" = { source = "../home-linux/.config/dms/plugins.lock.json" }
+"~/.config/dms/settings.json" = { source = "../home-linux/.config/dms/settings.json" }
+"~/.config/dms/themes" = { source = "../home-linux/.config/dms/themes" }
 "~/.config/dankcal" = { source = "../home-linux/.config/dankcal" }
 "~/.config/danksearch" = { source = "../home-linux/.config/danksearch" }
+"~/.config/dfiles" = { source = "../home-linux/.config/dfiles" }
 "~/.config/dgop" = { source = "../home-linux/.config/dgop" }
 "~/.config/cava" = { source = "../home-linux/.config/cava" }
 "~/.config/environment.d" = { source = "../home-linux/.config/environment.d" }

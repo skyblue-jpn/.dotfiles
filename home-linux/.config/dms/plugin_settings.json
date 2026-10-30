@@ -1,0 +1,15 @@
+{
+  "catWidget": {
+    "enabled": true,
+    "showCpuPercent": false
+  },
+  "dankKDEConnect": {
+    "enableChargingAnimation": true,
+    "enableClipboardAction": true,
+    "enabled": true,
+    "scanSubdirectories": true,
+    "selectedDeviceId": "4e7b597968ec4211a06f01bd7435df1e",
+    "showDevicePlaceholder": true,
+    "showOngoingMedia": true
+  }
+}

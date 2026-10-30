@@ -609,5 +609,9 @@
       }
     }
   ],
-  "lockScreenShowPowerActions": true
+  "lockScreenShowPowerActions": true,
+  "clipboardRememberTypeFilter": false,
+  "updaterNotify": true,
+  "updaterPauseOnBattery": false,
+  "lockPamExternallyManaged": false
 }
