@@ -160,7 +160,168 @@
       "widgetOutlineEnabled": false,
       "widgetPadding": 6,
       "widgetStyle": "pills",
-      "widgetTransparency": 0.7
+      "widgetTransparency": 0.7,
+      "islandRouteControlCenter": "follow",
+      "islandFloating": false,
+      "islandPlacement": "edge",
+      "islandRouteDash": "island",
+      "islandRouteMedia": "island",
+      "islandRouteWeather": "island",
+      "islandRouteWallpaper": "island",
+      "islandInteractionMode": "click"
+    },
+    {
+      "attachToScreenEdge": false,
+      "autoHide": false,
+      "autoHideDelay": 250,
+      "batteryColorMode": "theme",
+      "borderColor": "surfaceText",
+      "borderEnabled": false,
+      "borderOpacity": 1,
+      "borderThickness": 1,
+      "bottomGap": 0,
+      "centerWidgets": [
+        {
+          "enabled": true,
+          "id": "music",
+          "mediaSize": 1
+        },
+        "clock",
+        "weather"
+      ],
+      "enabled": false,
+      "followInterfaceStyle": false,
+      "fontScale": 1,
+      "gothCornerRadiusOverride": false,
+      "gothCornerRadiusValue": 12,
+      "gothCornersEnabled": false,
+      "hoverPopouts": true,
+      "id": "dot1793419125613",
+      "innerPadding": -2,
+      "island": false,
+      "islandAlongOffset": 0,
+      "islandBatteryStyle": "ring",
+      "islandCompactThickness": 36,
+      "islandHighContrast": false,
+      "islandHomeClockDisplay": "both",
+      "islandHomeCompactTight": true,
+      "islandHomeLayout": [
+        {
+          "enabled": true,
+          "id": "media"
+        },
+        {
+          "enabled": true,
+          "id": "clock"
+        },
+        {
+          "enabled": true,
+          "id": "weather"
+        },
+        {
+          "enabled": true,
+          "id": "status"
+        },
+        {
+          "enabled": false,
+          "id": "volume"
+        },
+        {
+          "enabled": false,
+          "id": "brightness"
+        },
+        {
+          "enabled": true,
+          "id": "notifications"
+        }
+      ],
+      "islandHomeStatusContent": "battery",
+      "islandMediaAutoSwitch": false,
+      "islandNotch": false,
+      "islandOuterGap": 4,
+      "islandPalette": "dim",
+      "islandReserveThickness": 35,
+      "islandRouteClipboard": "follow",
+      "islandRouteLauncher": "follow",
+      "islandRouteNotificationCenter": "follow",
+      "islandRoutePowerMenu": "follow",
+      "islandSatelliteBackground": true,
+      "islandSatellitePosition": "island",
+      "islandSatellitesEnabled": true,
+      "islandSatelliteTransparency": 0.5,
+      "islandUseOverlayLayer": true,
+      "leftWidgets": [
+        {
+          "enabled": true,
+          "id": "launcherButton",
+          "launcherLogoColorOverride": "surface",
+          "launcherLogoMode": "os"
+        },
+        {
+          "enabled": true,
+          "id": "workspaceSwitcher",
+          "showWorkspaceIndex": true
+        },
+        {
+          "enabled": true,
+          "focusedWindowCompactMode": true,
+          "focusedWindowSize": 0,
+          "id": "focusedWindow"
+        }
+      ],
+      "maximizeWidgetIcons": false,
+      "maximizeWidgetText": false,
+      "name": "Dot",
+      "noBackground": false,
+      "openOnOverview": false,
+      "popupGapsAuto": true,
+      "popupGapsManual": 4,
+      "position": 0,
+      "rightWidgets": [
+        {
+          "enabled": true,
+          "id": "dankKDEConnect"
+        },
+        {
+          "enabled": true,
+          "id": "systemTray",
+          "trayAutoOverflow": true,
+          "trayMaxVisibleItems": 0,
+          "trayUseInlineExpansion": false
+        },
+        {
+          "enabled": true,
+          "id": "keyboard_layout_name",
+          "keyboardLayoutNameCompactMode": true,
+          "keyboardLayoutNameShowIcon": true
+        },
+        {
+          "enabled": true,
+          "id": "catWidget"
+        },
+        "cpuUsage",
+        {
+          "enabled": true,
+          "id": "memUsage",
+          "showInGb": false,
+          "showSwap": false
+        }
+      ],
+      "screenPreferences": [
+        "all"
+      ],
+      "shadowIntensity": 0,
+      "showOnLastDisplay": true,
+      "spacing": 3,
+      "squareCorners": false,
+      "transparency": 0.5,
+      "visible": true,
+      "widgetFollowInterfaceStyle": false,
+      "widgetOutlineEnabled": false,
+      "widgetPadding": 6,
+      "widgetStyle": "pills",
+      "widgetTransparency": 0.7,
+      "dot": true
     }
   ],
   "barElevationEnabled": false,
@@ -615,5 +776,32 @@
   "updaterNotify": true,
   "updaterPauseOnBattery": false,
   "useAutoLocation": true,
-  "useSystemSoundTheme": true
+  "useSystemSoundTheme": true,
+  "dashCards": [
+    {
+      "id": "clock",
+      "w": 2,
+      "h": 1
+    },
+    {
+      "id": "weather",
+      "w": 1,
+      "h": 1
+    },
+    {
+      "id": "notifications",
+      "w": 3,
+      "h": 5
+    },
+    {
+      "id": "calendar",
+      "w": 3,
+      "h": 3
+    },
+    {
+      "id": "media",
+      "w": 3,
+      "h": 1
+    }
+  ]
 }
