@@ -17,6 +17,7 @@
 "pacman:clang" = "latest"
 "pacman:cmake" = "latest"
 "pacman:cups-pk-helper" = "latest"
+"pacman:dux-gop" = "latest"
 "pacman:fastfetch" = "latest"
 "pacman:fcitx5" = "latest"
 "pacman:fcitx5-configtool" = "latest"
