@@ -56,3 +56,4 @@
 "~/.icons" = { source = "../home-linux/.icons" }
 "~/.local/share/color-schemes" = { source = "../home-linux/.local/share/color-schemes" }
 "~/.local/share/nwg-look" = { source = "../home-linux/.local/share/nwg-look" }
+"~/.local/share/themes" = { source = "../home-linux/.local/share/themes" }

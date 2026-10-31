@@ -147,7 +147,9 @@
           "showSwap": false
         }
       ],
-      "screenPreferences": ["all"],
+      "screenPreferences": [
+        "all"
+      ],
       "shadowIntensity": 0,
       "showOnLastDisplay": true,
       "spacing": 3,
@@ -322,58 +324,62 @@
     "theme": "Colloid-dark-cursors"
   },
   "customThemeFile": "/home/celeste/.config/dms/themes/catppuccin/theme.json",
-  "dmsWindowsFloatingSeeded": ["niri"],
+  "dmsWindowsFloatingSeeded": [
+    "niri"
+  ],
   "dockConfigs": [
     {
+      "id": "dock",
+      "name": "Dock",
+      "enabled": false,
+      "screenPreferences": [
+        "all"
+      ],
+      "showOnLastDisplay": true,
+      "position": 1,
+      "mode": "compact",
+      "taskbarAlign": "center",
+      "widgetExpansion": "popout",
+      "iconSize": 40,
+      "spacing": 4,
+      "itemSpacing": 4,
+      "margin": 0,
+      "bottomGap": 0,
+      "transparency": 1,
+      "followInterfaceStyle": false,
       "autoHide": false,
-      "borderColor": "surfaceText",
+      "smartAutoHide": false,
+      "useOverlayLayer": false,
+      "editOnRightClick": false,
+      "showOnFullscreen": false,
+      "openOnOverview": false,
+      "groupByApp": false,
+      "separatePinnedAndRunningApps": false,
+      "restoreSpecialWorkspaceOnClick": false,
+      "isolateDisplays": false,
+      "indicatorStyle": "circle",
       "borderEnabled": false,
+      "borderColor": "surfaceText",
       "borderOpacity": 1,
       "borderThickness": 1,
-      "bottomGap": 0,
-      "editOnRightClick": false,
-      "enabled": false,
-      "followInterfaceStyle": false,
-      "groupByApp": false,
-      "iconSize": 40,
-      "id": "dock",
-      "indicatorStyle": "circle",
-      "isolateDisplays": false,
-      "itemSpacing": 4,
       "launcherEnabled": false,
-      "launcherLogoBrightness": 0.5,
-      "launcherLogoColorOverride": "",
-      "launcherLogoContrast": 1,
-      "launcherLogoCustomPath": "",
       "launcherLogoMode": "apps",
+      "launcherLogoCustomPath": "",
+      "launcherLogoColorOverride": "",
       "launcherLogoSizeOffset": 0,
-      "magnification": false,
-      "magnificationExpand": false,
-      "magnificationProfile": "parabolic",
-      "magnificationScale": 130,
-      "margin": 0,
+      "launcherLogoBrightness": 0.5,
+      "launcherLogoContrast": 1,
       "maxVisibleApps": 0,
       "maxVisibleRunningApps": 0,
-      "mode": "compact",
-      "name": "Dock",
-      "openOnOverview": false,
-      "order": [],
-      "position": 1,
-      "restoreSpecialWorkspaceOnClick": false,
-      "screenPreferences": ["all"],
-      "separatePinnedAndRunningApps": false,
-      "showOnFullscreen": false,
-      "showOnLastDisplay": true,
       "showOverflowBadge": true,
       "showTrash": false,
-      "smartAutoHide": false,
-      "spacing": 4,
-      "taskbarAlign": "center",
-      "transparency": 1,
-      "trashCustomCommand": "",
       "trashFileManager": "default",
-      "useOverlayLayer": false,
-      "widgetExpansion": "popout",
+      "trashCustomCommand": "",
+      "magnification": false,
+      "magnificationScale": 130,
+      "magnificationProfile": "parabolic",
+      "magnificationExpand": false,
+      "order": [],
       "widgets": [
         {
           "enabled": true,
@@ -401,7 +407,9 @@
         "autoPosition": true,
         "colorMode": "default",
         "customColor": "#ffffff",
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "showAnalogNumbers": false,
         "showAnalogSeconds": true,
         "showDate": false,
@@ -420,7 +428,9 @@
       "config": {
         "colorMode": "default",
         "customColor": "#ffffff",
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "format": "short",
         "syncPositionAcrossScreens": true
       },
@@ -430,7 +440,9 @@
     },
     {
       "config": {
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "passwordVisibility": "always",
         "profileVisibility": "always",
         "style": "expressive",
@@ -443,7 +455,9 @@
     {
       "config": {
         "background": false,
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "showMediaPlayer": true,
         "showWeather": true,
         "syncPositionAcrossScreens": true
@@ -454,7 +468,9 @@
     },
     {
       "config": {
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "shape": "round",
         "syncPositionAcrossScreens": true
       },
@@ -464,7 +480,9 @@
     },
     {
       "config": {
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "syncPositionAcrossScreens": true
       },
       "enabled": true,
@@ -487,7 +505,9 @@
         "autoPosition": true,
         "colorMode": "default",
         "customColor": "#ffffff",
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "showAnalogNumbers": false,
         "showAnalogSeconds": true,
         "showDate": false,
@@ -506,7 +526,9 @@
       "config": {
         "colorMode": "default",
         "customColor": "#ffffff",
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "format": "short",
         "syncPositionAcrossScreens": true
       },
@@ -516,7 +538,9 @@
     },
     {
       "config": {
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "passwordVisibility": "always",
         "profileVisibility": "always",
         "style": "expressive",
@@ -528,7 +552,9 @@
     },
     {
       "config": {
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "mode": 2,
         "syncPositionAcrossScreens": true
       },
@@ -539,7 +565,9 @@
     {
       "config": {
         "background": false,
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "showMediaPlayer": true,
         "showWeather": true,
         "syncPositionAcrossScreens": true
@@ -550,7 +578,9 @@
     },
     {
       "config": {
-        "displayPreferences": ["all"],
+        "displayPreferences": [
+          "all"
+        ],
         "shape": "round",
         "syncPositionAcrossScreens": true
       },
@@ -584,5 +614,6 @@
   "updaterCheckOnStart": true,
   "updaterNotify": true,
   "updaterPauseOnBattery": false,
-  "useAutoLocation": true
+  "useAutoLocation": true,
+  "useSystemSoundTheme": true
 }
