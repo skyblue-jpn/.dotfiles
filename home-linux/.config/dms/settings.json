@@ -565,7 +565,7 @@
   "greeterWidgetInstances": [
     {
       "config": {
-        "autoPosition": true,
+        "autoPosition": false,
         "colorMode": "default",
         "customColor": "#ffffff",
         "displayPreferences": [
@@ -574,8 +574,8 @@
         "showAnalogNumbers": false,
         "showAnalogSeconds": true,
         "showDate": false,
-        "showDigitalSeconds": false,
-        "style": "expressive",
+        "showDigitalSeconds": true,
+        "style": "stacked",
         "syncPositionAcrossScreens": true,
         "transparency": 0,
         "twoTone": true,
@@ -632,7 +632,7 @@
         "displayPreferences": [
           "all"
         ],
-        "shape": "round",
+        "shape": "cookie9",
         "syncPositionAcrossScreens": true
       },
       "enabled": true,
@@ -663,7 +663,7 @@
   "lockScreenWidgetInstances": [
     {
       "config": {
-        "autoPosition": true,
+        "autoPosition": false,
         "colorMode": "default",
         "customColor": "#ffffff",
         "displayPreferences": [
@@ -672,8 +672,8 @@
         "showAnalogNumbers": false,
         "showAnalogSeconds": true,
         "showDate": false,
-        "showDigitalSeconds": false,
-        "style": "expressive",
+        "showDigitalSeconds": true,
+        "style": "stacked",
         "syncPositionAcrossScreens": true,
         "transparency": 0,
         "twoTone": true,
@@ -742,7 +742,7 @@
         "displayPreferences": [
           "all"
         ],
-        "shape": "round",
+        "shape": "cookie9",
         "syncPositionAcrossScreens": true
       },
       "enabled": true,
@@ -803,5 +803,9 @@
       "w": 3,
       "h": 1
     }
-  ]
+  ],
+  "greeterPamExternallyManaged": false,
+  "greeterFollowLockScreen": true,
+  "niriLayoutBorderSize": -1,
+  "audioShowStreamDevices": false
 }
