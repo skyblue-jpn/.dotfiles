@@ -681,6 +681,12 @@
           "enabled": false
         },
         {
+          "id": "keyboard_layout_name",
+          "enabled": true,
+          "keyboardLayoutNameCompactMode": true,
+          "keyboardLayoutNameShowIcon": true
+        },
+        {
           "id": "battery",
           "enabled": true,
           "batteryStyle": "duo"
