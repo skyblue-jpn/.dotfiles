@@ -28,6 +28,7 @@
     "comment": true,
     "comment-block-snippets": true,
     "desktop": true,
+    "emmet": true,
     "fish": true,
     "ghostty": true,
     "git-firefly": true,
