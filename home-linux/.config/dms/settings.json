@@ -825,5 +825,6 @@
   "mouseNaturalScroll": false,
   "touchpadNaturalScroll": true,
   "notepadUseCompositorGap": false,
-  "notepadShowLineNumbers": true
+  "notepadShowLineNumbers": true,
+  "blurLayerOutlineOpacity": 0
 }
