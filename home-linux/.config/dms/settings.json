@@ -819,5 +819,8 @@
     }
   ],
   "dankLauncherV2Size": "compact",
-  "dashTabPosition": "auto"
+  "dashTabPosition": "auto",
+  "focusFollowsMouse": 1,
+  "mouseNaturalScroll": false,
+  "touchpadNaturalScroll": true
 }
