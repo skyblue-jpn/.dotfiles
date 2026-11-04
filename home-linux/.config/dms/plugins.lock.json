@@ -8,7 +8,16 @@
     "dankKDEConnect": {
       "repo": "https://github.com/AvengeMedia/dms-plugins",
       "path": "DankKDEConnect",
-      "commit": "be0b733a4036e0d1e5b3a1f11933569e61719be3"
+      "commit": "e81548f776058f19fd3f12acdcdec1b136f811ec"
+    },
+    "dankNotepadModule": {
+      "repo": "https://github.com/duxlabs-dev/dux-plugins",
+      "path": "DankNotepadModule",
+      "commit": "e81548f776058f19fd3f12acdcdec1b136f811ec"
+    },
+    "mise": {
+      "repo": "https://github.com/Villoh/dms-mise",
+      "commit": "fe84d4bc10cb9f645d9a437d4dbbd0f47416ffa5"
     }
   }
 }

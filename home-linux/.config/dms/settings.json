@@ -78,7 +78,8 @@
       "enabled": true,
       "h": 1,
       "id": "brightnessSlider",
-      "w": 4
+      "w": 4,
+      "deviceName": "backlight:amdgpu_bl1"
     },
     {
       "enabled": true,
@@ -822,5 +823,7 @@
   "dashTabPosition": "auto",
   "focusFollowsMouse": 1,
   "mouseNaturalScroll": false,
-  "touchpadNaturalScroll": true
+  "touchpadNaturalScroll": true,
+  "notepadUseCompositorGap": false,
+  "notepadShowLineNumbers": true
 }
