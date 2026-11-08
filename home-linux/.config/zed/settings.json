@@ -121,6 +121,19 @@
     "BibTeX": {
       "formatter": {
         "external": {
+          "arguments": [
+            "--curly",
+            "--numeric",
+            "--months",
+            "--space=2",
+            "--align=14",
+            "--sort-fields",
+            "--no-sort",
+            "--no-escape",
+            "--no-encode-urls",
+            "--no-wrap",
+            "--trailing-commas"
+          ],
           "command": "bibtex-tidy"
         }
       },
