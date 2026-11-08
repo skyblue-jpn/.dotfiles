@@ -24,5 +24,8 @@
   },
   "dankNotepadModule": {
     "enabled": true
+  },
+  "fcitx5Indicator": {
+    "enabled": true
   }
 }

@@ -665,7 +665,6 @@
         "weather"
       ],
       "rightWidgets": [
-        "systemTray",
         {
           "id": "dankKDEConnect",
           "enabled": true
@@ -688,11 +687,23 @@
           "keyboardLayoutNameShowIcon": true
         },
         {
+          "id": "fcitx5Indicator",
+          "enabled": true
+        },
+        {
           "id": "battery",
           "enabled": true,
           "batteryStyle": "duo"
         },
-        "controlCenterButton"
+        "controlCenterButton",
+        {
+          "id": "systemTray",
+          "enabled": true,
+          "trayUseInlineExpansion": false,
+          "trayPopupSingleLine": true,
+          "trayAutoOverflow": true,
+          "trayMaxVisibleItems": 2
+        }
       ],
       "spacing": 4,
       "innerPadding": -4,
@@ -826,5 +837,8 @@
   "touchpadNaturalScroll": true,
   "notepadUseCompositorGap": false,
   "notepadShowLineNumbers": true,
-  "blurLayerOutlineOpacity": 0
+  "blurLayerOutlineOpacity": 0,
+  "osdKeyboardLayoutEnabled": true,
+  "osdPosition": 5,
+  "osdWorkspaceEnabled": true
 }

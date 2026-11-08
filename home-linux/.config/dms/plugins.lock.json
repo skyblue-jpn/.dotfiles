@@ -14,6 +14,10 @@
       "repo": "https://github.com/duxlabs-dev/dux-plugins",
       "path": "DankNotepadModule",
       "commit": "e81548f776058f19fd3f12acdcdec1b136f811ec"
+    },
+    "fcitx5Indicator": {
+      "repo": "https://github.com/Nixie24/dux-plugin-fcitx5-indicator",
+      "commit": "0adcb53fc75c422e9cdc9281540d51f3e9e986b8"
     }
   }
 }
