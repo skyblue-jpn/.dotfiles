@@ -118,6 +118,14 @@
   },
   "inline_code_actions": true,
   "languages": {
+    "BibTeX": {
+      "formatter": {
+        "external": {
+          "command": "bibtex-tidy"
+        }
+      },
+      "tab_size": 2
+    },
     "C": {
       "formatter": "language_server",
       "tab_size": 4

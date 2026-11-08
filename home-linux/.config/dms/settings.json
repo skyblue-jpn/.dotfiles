@@ -840,5 +840,31 @@
   "blurLayerOutlineOpacity": 0,
   "osdKeyboardLayoutEnabled": true,
   "osdPosition": 5,
-  "osdWorkspaceEnabled": true
+  "osdWorkspaceEnabled": true,
+  "mediaLyricsProviders": [
+    {
+      "id": "betterlyrics",
+      "enabled": true
+    },
+    {
+      "id": "unison",
+      "enabled": true
+    },
+    {
+      "id": "lyricsplus",
+      "enabled": true
+    },
+    {
+      "id": "kugou",
+      "enabled": true
+    },
+    {
+      "id": "lrclib",
+      "enabled": true
+    },
+    {
+      "id": "youtubemusic",
+      "enabled": true
+    }
+  ]
 }

@@ -3,5 +3,6 @@
 "cargo:pez" = "latest"
 "cargo:tex-fmt" = "latest"
 bat-extras = "latest"
+bibtex-tidy = "latest"
 pandoc = "latest"
 powershell-core = "latest"
