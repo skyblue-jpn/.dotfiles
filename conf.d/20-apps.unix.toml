@@ -2,6 +2,7 @@
 "cargo:dua-cli" = "latest"
 "cargo:pez" = "latest"
 "cargo:tex-fmt" = "latest"
+"npm:live-server" = "latest"
 bat-extras = "latest"
 bibtex-tidy = "latest"
 pandoc = "latest"
