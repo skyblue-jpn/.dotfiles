@@ -190,12 +190,7 @@
       "tab_size": 2
     },
     "LaTeX": {
-      "formatter": {
-        "external": {
-          "arguments": ["--stdin"],
-          "command": "tex-fmt"
-        }
-      },
+      "formatter": "language_server",
       "tab_size": 2
     },
     "Lua": {
@@ -338,7 +333,13 @@
         "texlab": {
           "build": {
             "onSave": false
-          }
+          },
+          "chktex": {
+            "additionalArgs": [],
+            "onEdit": true,
+            "onOpenAndSave": true
+          },
+          "latexFormatter": "tex-fmt"
         }
       }
     },
