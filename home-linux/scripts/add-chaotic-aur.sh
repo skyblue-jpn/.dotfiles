@@ -7,7 +7,11 @@ echo "==> Starting Chaotic-AUR installation script..."
 
 # 1. Receive and locally sign the Chaotic-AUR master key
 echo "==> 1. Importing Chaotic-AUR signing key..."
-sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+if sudo pacman-key --list-keys 3056513887B78AEB >/dev/null 2>&1; then
+  echo "==> Chaotic-AUR signing key is already installed."
+else
+  sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+fi
 sudo pacman-key --lsign-key 3056513887B78AEB
 
 # 2. Install chaotic-keyring and chaotic-mirrorlist packages
@@ -27,6 +31,6 @@ fi
 
 # 4. Synchronize package databases
 echo "==> 4. Synchronizing package databases..."
-sudo pacman -Syyu --noconfirm
+sudo pacman -Syy --noconfirm
 
 echo "==> All done! Chaotic-AUR has been successfully added."

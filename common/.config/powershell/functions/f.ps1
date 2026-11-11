@@ -60,7 +60,7 @@ Set-PSReadLineKeyHandler -Chord Ctrl+x,Ctrl+x -ScriptBlock { __pr_inline }
 # It's not very useful as we can't retrieve arguments,
 # function __pr_invoke {
 #       try {
-#               &'C:\Users\celeste\AppData\Local\mise\installs\aqua-iffse-pay-respects\0.8.8\pay-respects.exe' | Invoke-Expression;
+#               & 'pay-respects' | Invoke-Expression;
 #       } finally {
 #               $env:_PR_MODE = $env:null;
 #               $env:_PR_LAST_COMMAND = $env:null;

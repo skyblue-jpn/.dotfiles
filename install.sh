@@ -1,6 +1,17 @@
 #!/bin/bash
 set -euo pipefail
 
+readonly REPOSITORY="skyblue-jpn/.dotfiles"
+
+die() {
+  printf 'Error: %s\n' "$*" >&2
+  exit 1
+}
+
+require_command() {
+  command -v "$1" >/dev/null 2>&1 || die "Required command not found: $1"
+}
+
 write_miserc_unix() {
   sudo mkdir -p /etc/mise
 
@@ -9,24 +20,18 @@ env = ["$env"]
 EOF
 }
 
-write_miserc_windows() {
-  setx MISE_ENV "home-windows"
-}
-
 setup_home-linux() {
-  sudo pacman -Syyu --noconfirm
-  sudo pacman -S --noconfirm --needed extra/mise fish
-}
-
-setup_home-windows() {
-  winget upgrade --all
-  winget install Git.Git jdx.mise
-  mise self-update
+  require_command sudo
+  require_command pacman
+  sudo pacman -Syu --noconfirm
+  sudo pacman -S --noconfirm --needed curl extra/mise fish git
 }
 
 setup_work-wsl() {
+  require_command sudo
+  require_command apt
   sudo apt update
-  sudo apt install -y software-properties-common
+  sudo apt install -y curl git software-properties-common
 
   for repo in \
     ppa:fish-shell/release-4 \
@@ -40,13 +45,24 @@ setup_work-wsl() {
   sudo apt install -y mise fish apt-fast
 }
 
-echo "Select Your Config Environment:"
+run_bootstrap() {
+  local environment="$1"
+
+  require_command mise
+  sudo -v
+  mise -E "$environment" bootstrap \
+    --adopt "$REPOSITORY" \
+    --yes \
+    --force-dotfiles
+}
+
+echo "Select your config environment:"
 
 PS3="> "
 
 select env in home-linux home-windows work-wsl; do
   if [ -z "$env" ]; then
-    echo "Invalid selection. Exiting."
+    echo "Invalid selection. Exiting." >&2
     exit 1
   fi
 
@@ -54,18 +70,17 @@ select env in home-linux home-windows work-wsl; do
   home-linux)
     write_miserc_unix
     setup_home-linux
+    run_bootstrap "$env"
     ;;
   home-windows)
-    write_miserc_windows
-    setup_home-windows
+    die "Run install.ps1 from PowerShell for the Windows environment."
     ;;
   work-wsl)
     write_miserc_unix
     setup_work-wsl
+    run_bootstrap "$env"
     ;;
   esac
-
-  mise -E "$env" bootstrap --adopt skyblue-jpn/.dotfiles --yes --force-dotfiles
 
   break
 done

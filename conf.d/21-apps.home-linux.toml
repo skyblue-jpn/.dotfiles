@@ -44,6 +44,7 @@
 "pacman:libreoffice-fresh-ja" = "latest"
 "pacman:linux-cachyos-rc" = "latest"
 "pacman:neovim" = "latest"
+"pacman:nftables" = "latest"
 "pacman:ntfs-3g" = "latest"
 "pacman:nwg-look" = "latest"
 "pacman:otf-stix" = "latest"

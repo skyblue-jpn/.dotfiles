@@ -167,7 +167,7 @@
     "size": 24,
     "theme": "Colloid-dark-cursors"
   },
-  "customThemeFile": "/home/celeste/.config/dms/themes/catppuccin/theme.json",
+  "customThemeFile": "~/.config/dms/themes/catppuccin/theme.json",
   "dashCards": [
     {
       "h": 1,

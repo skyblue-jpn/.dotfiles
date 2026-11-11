@@ -4,33 +4,32 @@
 [bootstrap.hooks.pre-packages]
 run = [
   "sudo pacman -S --noconfirm --needed rate-mirrors paru",
-  "chmod +x ~/.config/mise/home-linux/scripts/add-chaotic-aur.sh && ~/.config/mise/home-linux/scripts/add-chaotic-aur.sh",
+  "chmod +x ${HOME}/.config/mise/home-linux/scripts/add-chaotic-aur.sh && ${HOME}/.config/mise/home-linux/scripts/add-chaotic-aur.sh",
   # "rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist",
   # "rate-mirrors cachyos | sudo tee /etc/pacman.d/cachyos-mirrorlist",
   "sudo cachyos-rate-mirrors && rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist && paru -Syyu --noconfirm",
-  "yes | paru -S --needed sudo-rs coreutils-uutils",
+  "paru -S --needed --noconfirm --useask sudo-rs coreutils-uutils",
   "sudo -v && curl -fsSL https://install.duxlabs.dev | sh -s -- -c niri -t ghostty -y --all-features",
-  "sudo timedatectl set-local-rtc 1",
+  "if [ \"$(sudo timedatectl show -p RTCInLocalTZ --value)\" != yes ]; then sudo timedatectl set-local-rtc 1; fi",
 ]
 
 [bootstrap.hooks.post-packages]
 run = [
-  "sudo waydroid init || true",
+  "if ! sudo test -d /var/lib/waydroid; then sudo waydroid init || echo 'Warning: Waydroid initialization was skipped.' >&2; fi",
   "sudo fc-cache -r -v",
 ]
 
 [bootstrap.hooks.post-dotfiles]
 run = [
-  "nwg-look -a || true",
-  "dms plugins restore || true",
-  "dms plugins update --all || true",
+  "nwg-look -a || echo 'Warning: nwg-look could not apply the theme.' >&2",
+  "dms plugins restore || echo 'Warning: DMS plugin restore failed.' >&2",
+  "dms matugen qtengine || echo 'Warning: DMS could not synchronize the QtEngine theme.' >&2",
 ]
 
 [bootstrap.hooks.post-tools]
 run = [
-  "~/src/Colloid-icon-theme/install.sh -s catppuccin -t purple",
-  "cd ~/src/Colloid-icon-theme/cursors && ./install.sh",
+  "${HOME}/src/Colloid-icon-theme/install.sh -s catppuccin -t purple",
+  "cd ${HOME}/src/Colloid-icon-theme/cursors && ./install.sh",
   "paru -S --noconfirm --needed plymouth-theme-catppuccin-macchiato-git && sudo plymouth-set-default-theme -R catppuccin-macchiato",
-  "chmod +x ~/.config/mise/home-linux/scripts/mount-filesystem.sh && ~/.config/mise/home-linux/scripts/mount-filesystem.sh",
-  "sudo systemctl enable --now bpftune || true",
+  "sudo systemctl enable --now bpftune || echo 'Warning: bpftune service could not be enabled.' >&2",
 ]
