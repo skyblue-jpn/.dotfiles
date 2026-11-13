@@ -40,6 +40,7 @@
 "~/.config/niri" = { source = "../home-linux/.config/niri" }
 "~/.config/nvim" = { source = "../home-linux/.config/nvim" }
 "~/.config/nwg-look" = { source = "../home-linux/.config/nwg-look" }
+"~/.config/paru" = { source = "../home-linux/.config/paru" }
 "~/.config/radian" = { source = "../home-linux/.config/radian" }
 "~/.config/starship.toml" = { source = "../home-linux/.config/starship.toml" }
 "~/.config/tabby/config.yaml" = { source = "../home-linux/.config/tabby/config.yaml" }
