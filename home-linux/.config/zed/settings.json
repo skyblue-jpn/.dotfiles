@@ -173,6 +173,7 @@
         "source.fixAll.biome": true
       },
       "formatter": { "language_server": { "name": "biome" } },
+      "language_servers": ["biome", "!eslint"],
       "tab_size": 2
     },
     "JSON": {
@@ -257,6 +258,7 @@
         "source.fixAll.biome": true
       },
       "formatter": { "language_server": { "name": "biome" } },
+      "language_servers": ["biome", "!eslint"],
       "tab_size": 2
     },
     "YAML": {
