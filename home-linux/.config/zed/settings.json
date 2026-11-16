@@ -8,6 +8,9 @@
     }
   },
   "agent_servers": {
+    "antigravity-acp": {
+      "type": "registry"
+    },
     "github-copilot-cli": {
       "default_config_options": {
         "allow_all": "on",
