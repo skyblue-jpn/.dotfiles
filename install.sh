@@ -33,16 +33,15 @@ setup_work-wsl() {
   sudo apt update
   sudo apt install -y curl git software-properties-common
 
-  for repo in \
-    ppa:fish-shell/release-4 \
-    ppa:jdxcode/mise \
-    ppa:git-core/ppa \
-    ppa:apt-fast/stable; do
-    sudo add-apt-repository -y "$repo"
-  done
+  if ! command -v mise >/dev/null 2>&1; then
+    sudo add-apt-repository -y ppa:jdxcode/mise
+    sudo apt update
+    sudo apt install -y mise
+  fi
 
-  sudo apt update
-  sudo apt install -y mise fish apt-fast
+  # Remove repository files created by add-apt-repository or legacy scripts so they do not conflict
+  # with the deb822 sources managed by mise in [bootstrap.apt.sources].
+  sudo rm -f /etc/apt/sources.list.d/jdxcode-ubuntu-*.sources
 }
 
 run_bootstrap() {

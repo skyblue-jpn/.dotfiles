@@ -4,13 +4,6 @@
 "~/.bashrc/pay-respects" = { block = 'eval "$(pay-respects bash)"' }
 "~/.bashrc/starship" = { block = 'eval "$(starship init bash)"' }
 "~/.bashrc/zoxide" = { block = 'eval "$(zoxide init bash)"' }
-"~/.config/fish/config.fish/mise" = { block = '''
-  if status is-interactive
-    mise activate fish | source
-  else
-    mise activate fish --shims | source
-  end
-  ''' }
 "~/.config/fish/completions" = { source = "../common-unix/.config/fish/completions" }
 "~/.config/fish/config.fish/batman" = { block = "batman --export-env | source" }
 "~/.config/fish/config.fish/fzf" = { block = "fzf --fish | source" }
