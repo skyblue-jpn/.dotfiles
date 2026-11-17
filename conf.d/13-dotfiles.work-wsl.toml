@@ -2,6 +2,7 @@
 "~/.config/bat" = { source = "../work-wsl/.config/bat" }
 "~/.config/bottom" = { source = "../work-wsl/.config/bottom" }
 "~/.config/eza" = { source = "../work-wsl/.config/eza" }
+"~/.config/nvim" = { source = "../home-linux/.config/nvim" }
 "~/.bashrc/fzf" = { block = '''
   export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
     --highlight-line \

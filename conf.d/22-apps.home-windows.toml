@@ -11,6 +11,7 @@
 "winget:Microsoft.Coreutils" = "latest"
 "winget:Microsoft.WSL" = "latest"
 "winget:Neosku.AviUtl2-Catalog" = "latest"
+"winget:Neovim.Neovim" = "latest"
 "winget:OpenTabletDriver.OpenTabletDriver" = "latest"
 "winget:Valve.Steam" = "latest"
 "winget:Vivaldi.Vivaldi" = "latest"

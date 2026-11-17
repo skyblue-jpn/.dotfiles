@@ -20,3 +20,4 @@ mise = { ppa = "jdxcode/mise" }
 [tools]
 "cargo:forgejo-cli" = "latest"
 "fastfetch" = "latest"
+"neovim" = "latest"

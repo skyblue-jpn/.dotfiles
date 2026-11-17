@@ -1,5 +1,8 @@
 [bootstrap.hooks.post-tools]
-run = ["mise exec cargo:pez -- pez install --force"]
+run = [
+  "mise exec cargo:pez -- pez install --force",
+  'if command -v nvim >/dev/null 2>&1; then nvim --headless "+Lazy! sync" +qa; fi',
+]
 
 [bootstrap.hooks.post-packages]
 run = [

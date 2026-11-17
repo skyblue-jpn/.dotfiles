@@ -4,5 +4,10 @@
 /home-linux/.config/dms/plugins/catWidget/
 /home-linux/.config/dms/plugins/fcitx5Indicator/
 
+# Neovim local runtime state and lockfiles (stored in XDG state dir)
+**/nvim/lazy-lock.json
+**/nvim/lazyvim.json
+**/nvim/.neoconf.json
+
 # Agent skills
 /skills/

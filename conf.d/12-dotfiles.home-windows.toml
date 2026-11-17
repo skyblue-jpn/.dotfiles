@@ -14,6 +14,7 @@
 "~/.config/Win11Debloat/Win11Debloat-Config.json" = { source = "../home-windows/.config/Win11Debloat/Win11Debloat-Config.json" }
 
 # import from other envs
+"~/AppData/Local/nvim" = { source = "../home-linux/.config/nvim" }
 "~/AppData/Roaming/topgrade.toml" = { source = "../common/.config/topgrade.toml" }
 "~/.config/starship.toml" = { source = "../home-linux/.config/starship.toml" }
 "~/AppData/Roaming/bat" = { source = "../home-linux/.config/bat" }
