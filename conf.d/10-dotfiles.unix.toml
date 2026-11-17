@@ -1,10 +1,18 @@
 [dotfiles]
+"~/.bashrc/activate" = { block = 'eval "$(mise activate bash)"' }
 "~/.bashrc/batman" = { block = 'eval "$(batman --export-env)"' }
 "~/.bashrc/fzf" = { block = 'eval "$(fzf --bash)"' }
 "~/.bashrc/pay-respects" = { block = 'eval "$(pay-respects bash)"' }
 "~/.bashrc/starship" = { block = 'eval "$(starship init bash)"' }
 "~/.bashrc/zoxide" = { block = 'eval "$(zoxide init bash)"' }
 "~/.config/fish/completions" = { source = "../common-unix/.config/fish/completions" }
+"~/.config/fish/config.fish/activate" = { block = '''
+  if status is-interactive
+    mise activate fish | source
+  else
+    mise activate fish --shims | source
+  end
+  ''' }
 "~/.config/fish/config.fish/batman" = { block = "batman --export-env | source" }
 "~/.config/fish/config.fish/fzf" = { block = "fzf --fish | source" }
 "~/.config/fish/config.fish/pay-respects" = { block = "pay-respects fish | source" }
