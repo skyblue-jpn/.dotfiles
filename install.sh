@@ -39,7 +39,7 @@ setup_work-wsl() {
     sudo apt install -y mise
   fi
 
-  # Remove repository files created by add-apt-repository or legacy scripts so they do not conflict
+  # Remove repository files created by add-apt-repository so they do not conflict
   # with the deb822 sources managed by mise in [bootstrap.apt.sources].
   sudo rm -f /etc/apt/sources.list.d/jdxcode-ubuntu-*.sources
 }
