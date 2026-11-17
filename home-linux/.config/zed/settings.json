@@ -1,6 +1,6 @@
 {
   "agent": {
-    "dock": "right",
+    "dock": "left",
     "favorite_models": [],
     "model_parameters": [],
     "threads_sidebar": {
@@ -451,12 +451,7 @@
     "button": true,
     "cursor_shape": "bar",
     "default_height": 320,
-    "detect_venv": {
-      "on": {
-        "activate_script": "default",
-        "directories": [".env", "env", ".venv", "venv"]
-      }
-    },
+    "detect_venv": "off",
     "dock": "bottom",
     "font_fallbacks": ["Symbols Nerd Font Mono"],
     "font_family": "HackGen Console",
