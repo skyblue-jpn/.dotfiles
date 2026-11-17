@@ -9,6 +9,9 @@
   },
   "agent_servers": {
     "antigravity-acp": {
+      "default_config_options": {
+        "mode": "yolo"
+      },
       "type": "registry"
     },
     "github-copilot-cli": {
