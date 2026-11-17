@@ -22,6 +22,18 @@
 
 ## Installation
 
+Python is left to the system by default so `uv`-managed tools use the
+platform's Python and its available build dependencies. Projects that need a
+mise-managed Python can opt in from their `mise.toml`:
+
+```toml
+[settings]
+disable_tools = []
+
+[tools]
+python = "3.13"
+```
+
 ### Linux or WSL
 
 Run the Bash installer from a terminal:

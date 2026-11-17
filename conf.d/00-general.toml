@@ -1,5 +1,6 @@
 [settings]
 cargo.binstall_native = true
+disable_tools = ["python"]
 dotfiles.root = "~/.config/mise"
 experimental = true
 install_layout = "identity"
