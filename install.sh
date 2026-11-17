@@ -41,7 +41,7 @@ setup_work-wsl() {
 
   # Remove repository files created by add-apt-repository so they do not conflict
   # with the deb822 sources managed by mise in [bootstrap.apt.sources].
-  sudo rm -f /etc/apt/sources.list.d/jdxcode-ubuntu-*.sources
+  sudo rm -f /etc/apt/sources.list.d/jdxcode-ubuntu-mise.sources
 }
 
 run_bootstrap() {
