@@ -88,7 +88,7 @@ complete -c copilot -n "__fish_copilot_needs_command" -l connect -d 'Connect dir
 complete -c copilot -n "__fish_copilot_needs_command" -s w -l worktree -d 'Create or reuse an isolated git worktree and start the session inside it (name is optional; the location follows the worktreePathTemplate setting)' -r
 complete -c copilot -n "__fish_copilot_needs_command" -s C -d 'Change working directory before doing anything else' -r
 complete -c copilot -n "__fish_copilot_needs_command" -l log-dir -d 'Set log file directory (default: ~/.copilot/logs/)' -r
-complete -c copilot -n "__fish_copilot_needs_command" -l extension-sdk-path -d 'Override the bundled @github/copilot-sdk injected into extension subprocesses with a local `copilot-sdk/` folder. Invalid paths fall back to the bundled SDK.' -r
+complete -c copilot -n "__fish_copilot_needs_command" -l extension-sdk-path -d 'Override the bundled @microsoft/copilot-sdk injected into extension subprocesses with a local `copilot-sdk/` folder. Invalid paths fall back to the bundled SDK.' -r
 complete -c copilot -n "__fish_copilot_needs_command" -l config-dir -d 'Set the configuration directory (default: ~/.copilot). Deprecated: use COPILOT_HOME env var instead.' -r
 complete -c copilot -n "__fish_copilot_needs_command" -l log-level -d 'Set the log level' -r -f -a "none\t''
 error\t''
