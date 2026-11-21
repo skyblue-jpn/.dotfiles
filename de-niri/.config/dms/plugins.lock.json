@@ -8,12 +8,12 @@
     "dankKDEConnect": {
       "repo": "https://github.com/AvengeMedia/dms-plugins",
       "path": "DankKDEConnect",
-      "commit": "7a964dad725964550734e43dbbcf88c72829d847"
+      "commit": "2a1d1e802d4d3730484b0040a3cee6dd836ba2b4"
     },
     "dankNotepadModule": {
       "repo": "https://github.com/duxlabs-dev/dux-plugins",
       "path": "DankNotepadModule",
-      "commit": "7a964dad725964550734e43dbbcf88c72829d847"
+      "commit": "2a1d1e802d4d3730484b0040a3cee6dd836ba2b4"
     },
     "fcitx5Indicator": {
       "repo": "https://github.com/Nixie24/dux-plugin-fcitx5-indicator",

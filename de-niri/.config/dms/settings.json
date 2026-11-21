@@ -39,7 +39,7 @@
   "clipboardEnterToPaste": true,
   "clipboardRememberTypeFilter": false,
   "clipboardUseOverlayLayer": true,
-  "configVersion": 42,
+  "configVersion": 46,
   "controlCenterWidgets": [
     {
       "enabled": true,
@@ -346,10 +346,12 @@
       "smartAutoHide": false,
       "useOverlayLayer": false,
       "editOnRightClick": false,
+      "showEditWidgetsInContextMenu": true,
       "showOnFullscreen": false,
       "openOnOverview": false,
       "groupByApp": false,
       "separatePinnedAndRunningApps": false,
+      "showRunningApps": true,
       "restoreSpecialWorkspaceOnClick": false,
       "isolateDisplays": false,
       "indicatorStyle": "circle",
@@ -391,8 +393,7 @@
           "id": "dock_trash",
           "widgetId": "dockTrash"
         }
-      ],
-      "showEditWidgetsInContextMenu": true
+      ]
     }
   ],
   "fontFamily": "Noto Sans CJK JP",
@@ -650,7 +651,7 @@
         {
           "id": "focusedWindow",
           "enabled": true,
-          "focusedWindowCompactMode": true
+          "focusedWindowShowAppName": false
         },
         {
           "id": "music",
@@ -870,5 +871,6 @@
   ],
   "iconMonoApps": true,
   "iconGradient": false,
-  "iconShape": "squircle"
+  "iconShape": "squircle",
+  "motionDuration": 0
 }
