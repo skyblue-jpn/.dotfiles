@@ -30,7 +30,6 @@
   "auto_install_extensions": {
     "air": true,
     "biome": true,
-    "catppuccin-icons": true,
     "comment": true,
     "comment-block-snippets": true,
     "desktop": true,
@@ -55,6 +54,7 @@
     "r": true,
     "rainbow-csv": true,
     "ssh-config": true,
+    "symbols": true,
     "tombi": true,
     "toml": true,
     "xml": true,
@@ -112,7 +112,7 @@
   "hide_mouse": "on_typing_and_action",
   "hover_popover_delay": 300,
   "hover_popover_enabled": true,
-  "icon_theme": "Catppuccin Macchiato",
+  "icon_theme": "Symbols Icon Theme",
   "image_viewer": {
     "unit": "binary"
   },
@@ -469,7 +469,7 @@
     "shell": "system",
     "working_directory": "current_project_directory"
   },
-  "theme": "Nord Dark",
+  "theme": "Nord Darker",
   "toolbar": {
     "agent_review": true,
     "breadcrumbs": true,

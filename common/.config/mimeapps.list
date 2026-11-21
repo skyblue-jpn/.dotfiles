@@ -31,6 +31,7 @@ audio/wav=vlc.desktop
 audio/webm=vlc.desktop
 audio/x-flac=vlc.desktop
 x-scheme-handler/tabby=tabby.desktop
+x-scheme-handler/bitwarden=bitwarden.desktop
 
 [Added Associations]
 application/xhtml+xml=vivaldi-stable.desktop;
