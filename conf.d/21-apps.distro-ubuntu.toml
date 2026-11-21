@@ -1,0 +1,29 @@
+[bootstrap.apt.sources]
+apt-fast = { ppa = "apt-fast/stable" }
+fish = { ppa = "fish-shell/release-4" }
+git-core = { ppa = "git-core/ppa" }
+miktex = { uris = "https://miktex.org/download/ubuntu", components = "universe", key = "https://miktex.org/download/key", fingerprint = "D6BC 2435 65B2 087B C3F8 97C9 277A 7293 F59E 4889" }
+mise = { ppa = "jdxcode/mise" }
+
+[bootstrap.packages]
+"apt:7zip" = "latest"
+"apt:apt-fast" = "latest"
+"apt:build-essential" = "latest"
+"apt:clang" = "latest"
+"apt:clang-format" = "latest"
+"apt:clangd" = "latest"
+"apt:cmake" = "latest"
+"apt:ffmpeg" = "latest"
+"apt:fish" = "latest"
+"apt:git" = "latest"
+"apt:imagemagick" = "latest"
+"apt:libicu-dev" = "latest"
+"apt:miktex" = "latest"
+"apt:poppler-utils" = "latest"
+"apt:tk" = "latest"
+"apt:vim" = "latest"
+"apt:zathura" = "latest"
+
+[tools]
+"fastfetch" = "latest"
+"neovim" = "latest"

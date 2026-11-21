@@ -1,0 +1,15 @@
+[dotfiles]
+"~/.config/bat" = { source = "../themes/tokyonight/.config/bat" }
+"~/.config/bottom" = { source = "../themes/tokyonight/.config/bottom" }
+"~/.config/cava" = { source = "../themes/tokyonight/.config/cava" }
+"~/.config/eza" = { source = "../themes/tokyonight/.config/eza" }
+"~/.config/fcitx5/conf/classicui.conf" = { source = "../themes/tokyonight/.config/fcitx5/conf/classicui.conf" }
+"~/.config/fish/config.fish/theme" = { block = "status is-interactive; and fish_config theme choose tokyonight_night" }
+"~/.config/fish/themes" = { source = "../themes/tokyonight/.config/fish/themes" }
+"~/.config/ghostty" = { source = "../themes/tokyonight/.config/ghostty" }
+"~/.config/radian" = { source = "../themes/tokyonight/.config/radian" }
+"~/.config/starship.toml" = { source = "../themes/tokyonight/.config/starship.toml" }
+"~/.config/tabby/config.yaml" = { source = "../themes/tokyonight/.config/tabby/config.yaml" }
+"~/.config/yazi/package.toml" = { source = "../themes/tokyonight/.config/yazi/package.toml" }
+"~/.config/yazi/theme.toml" = { source = "../themes/tokyonight/.config/yazi/theme.toml" }
+"~/.config/zed/settings.json" = { source = "../themes/tokyonight/.config/zed/settings.json" }

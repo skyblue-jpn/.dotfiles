@@ -1,0 +1,2 @@
+[dotfiles]
+"~/.config/paru" = { source = "../common/.config/paru" }

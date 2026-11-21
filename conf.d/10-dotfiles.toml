@@ -1,1 +1,2 @@
 [dotfiles]
+"~/.Rprofile" = { source = "../common/.Rprofile" }

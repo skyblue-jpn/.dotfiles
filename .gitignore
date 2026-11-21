@@ -1,8 +1,6 @@
 # DMS plugin repositories are restored by the bootstrap hook and are not
 # dotfile source.
-/home-linux/.config/dms/plugins/.repos/
-/home-linux/.config/dms/plugins/catWidget/
-/home-linux/.config/dms/plugins/fcitx5Indicator/
+/de-niri/.config/dms/plugins/
 
 # Neovim local runtime state and lockfiles (stored in XDG state dir)
 **/nvim/lazy-lock.json

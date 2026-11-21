@@ -1,6 +1,2 @@
-[bootstrap.mise_shell_activate]
-bash = true
-fish = "auto"
-
 [settings]
 system_packages.sudo = true

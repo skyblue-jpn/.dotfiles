@@ -3,7 +3,8 @@ login_shell = "fish"
 
 [env]
 _.path = ["~/bin"]
-MANPAGER = "bat -plman"
+EDITOR = "nvim"
+VISUAL = "nvim"
 
 [shell_alias]
 cd = "z"

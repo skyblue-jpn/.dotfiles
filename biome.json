@@ -24,6 +24,9 @@
     },
     "parser": { "cssModules": true, "tailwindDirectives": true }
   },
+  "files": {
+    "includes": ["**", "!de-niri", "!themes/*/.config/heroic"]
+  },
   "formatter": {
     "attributePosition": "auto",
     "bracketSameLine": false,

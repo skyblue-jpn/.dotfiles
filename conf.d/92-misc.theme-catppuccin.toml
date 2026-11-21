@@ -1,0 +1,4 @@
+[bootstrap.hooks.post-dotfiles]
+run = [
+  "chmod +x ${HOME}/.config/mise/common/scripts/apply-catppuccin-boot-tty.sh && ${HOME}/.config/mise/common/scripts/apply-catppuccin-boot-tty.sh",
+]

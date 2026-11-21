@@ -1,0 +1,47 @@
+[shell_alias]
+mirror-update = "~/.config/mise/common/scripts/update-mirrors.sh --force"
+
+[env]
+_.path = ["/opt/miktex/bin"]
+
+[bootstrap.services.bpftune]
+state = "running"
+enabled = true
+
+[bootstrap.services.ip6tables]
+state = "stopped"
+enabled = false
+
+[bootstrap.services.iptables]
+state = "stopped"
+enabled = false
+
+[bootstrap.services.sshd]
+state = "running"
+enabled = true
+
+[bootstrap.services.ufw]
+state = "stopped"
+enabled = false
+
+[bootstrap.linux.firewall]
+backend = "nftables"
+state = "enabled"
+
+[[bootstrap.linux.firewall.rules]]
+name = "ssh"
+port = 22
+protocol = "tcp"
+action = "allow"
+
+[[bootstrap.linux.firewall.rules]]
+name = "kde-connect-tcp"
+port = "1714-1764"
+protocol = "tcp"
+action = "allow"
+
+[[bootstrap.linux.firewall.rules]]
+name = "kde-connect-udp"
+port = "1714-1764"
+protocol = "udp"
+action = "allow"

@@ -6,7 +6,5 @@ run = [
 
 [bootstrap.hooks.post-packages]
 run = [
-  "miktexsetup finish",
-  '"$(command -v initexmf || echo /opt/miktex/bin/initexmf)" --set-config-value "[MPM]AutoInstall=1"',
-  "miktex packages update",
+  'export PATH="/opt/miktex/bin:${PATH}" && miktexsetup finish && initexmf --set-config-value "[MPM]AutoInstall=1" && miktex packages update',
 ]

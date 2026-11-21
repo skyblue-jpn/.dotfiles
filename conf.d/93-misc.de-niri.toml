@@ -1,0 +1,20 @@
+[bootstrap.repos]
+"~/src/Colloid-icon-theme" = { url = "https://github.com/vinceliuice/Colloid-icon-theme.git" }
+
+[bootstrap.hooks.pre-packages]
+run = [
+  "if ! command -v dms >/dev/null 2>&1; then sudo -v && curl -fsSL https://install.duxlabs.dev | sh -s -- -c niri -t ghostty -y --all-features --git; fi",
+]
+
+[bootstrap.hooks.post-dotfiles]
+run = [
+  "nwg-look -a || echo 'Warning: nwg-look could not apply the theme.' >&2",
+  "dms plugins restore || echo 'Warning: DMS plugin restore failed.' >&2",
+  "dms matugen qtengine || echo 'Warning: DMS could not synchronize the QtEngine theme.' >&2",
+]
+
+[bootstrap.hooks.post-tools]
+run = [
+  "if [ ! -d \"${HOME}/.local/share/icons/Colloid-dark-cursors\" ]; then cd \"${HOME}/src/Colloid-icon-theme/cursors\" && ./install.sh; fi",
+  "if [ \"$(plymouth-set-default-theme 2>/dev/null)\" != catppuccin-macchiato ]; then sudo plymouth-set-default-theme -R catppuccin-macchiato; fi",
+]

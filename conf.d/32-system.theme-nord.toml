@@ -1,0 +1,3 @@
+[env]
+DOTFILES_THEME = "nord"
+FZF_DEFAULT_OPTS = "--color=bg+:#3B4252,bg:#2E3440,spinner:#81A1C1,hl:#88C0D0 --color=fg:#D8DEE9,header:#81A1C1,info:#EBCB8B,pointer:#81A1C1 --color=marker:#A3BE8C,fg+:#ECEFF4,prompt:#81A1C1,hl+:#8FBCBB --color=selected-bg:#434C5E --color=border:#4C566A,label:#D8DEE9"

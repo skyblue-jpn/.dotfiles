@@ -1,0 +1,21 @@
+[dotfiles]
+"~/.config/autostart" = { source = "../de-niri/.config/autostart" }
+"~/.config/dankcal" = { source = "../de-niri/.config/dankcal" }
+"~/.config/dfiles" = { source = "../de-niri/.config/dfiles" }
+"~/.config/dgop" = { source = "../de-niri/.config/dgop" }
+"~/.config/dms" = { source = "../de-niri/.config/dms" }
+"~/.config/dsearch" = { source = "../de-niri/.config/dsearch" }
+"~/.config/dux" = { source = "../de-niri/.config/dux" }
+"~/.config/environment.d" = { source = "../de-niri/.config/environment.d" }
+"~/.config/gtk-3.0" = { source = "../de-niri/.config/gtk-3.0" }
+"~/.config/gtk-4.0" = { source = "../de-niri/.config/gtk-4.0" }
+"~/.config/kdeglobals" = { source = "../de-niri/.config/kdeglobals" }
+"~/.config/niri" = { source = "../de-niri/.config/niri" }
+"~/.config/nwg-look" = { source = "../de-niri/.config/nwg-look" }
+"~/.config/xdg-desktop-portal/niri-portals.conf" = { source = "../de-niri/.config/xdg-desktop-portal/niri-portals.conf" }
+"~/.config/xsettingsd" = { source = "../de-niri/.config/xsettingsd" }
+"~/.gtkrc-2.0" = { source = "../de-niri/.gtkrc-2.0" }
+"~/.icons" = { source = "../de-niri/.icons" }
+"~/.local/share/color-schemes" = { source = "../de-niri/.local/share/color-schemes" }
+"~/.local/share/nwg-look" = { source = "../de-niri/.local/share/nwg-look" }
+"~/.local/share/themes" = { source = "../de-niri/.local/share/themes" }

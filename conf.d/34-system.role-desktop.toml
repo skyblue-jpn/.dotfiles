@@ -1,0 +1,9 @@
+[shell_alias]
+r = "radian"
+
+[env]
+QT_IM_MODULE = "fcitx"
+SSH_AUTH_SOCK = "${HOME}/.bitwarden-ssh-agent.sock"
+TERMINAL = "ghostty"
+XDG_SESSION_TYPE = "wayland"
+XMODIFIERS = "@im=fcitx"

@@ -1,0 +1,2 @@
+[bootstrap.packages]
+"aur:catppuccin-fcitx5-git" = "latest"

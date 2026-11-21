@@ -27,7 +27,8 @@
 sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-# disable = ["system", "emacs"]
+# (`uv` is managed by mise; running `uv self update` on a mise binary fails)
+disable = ["uv"]
 
 # Run these steps before all others
 # first = ["chezmoi"]
@@ -82,7 +83,8 @@ show_skipped = false
 # tmux_session_mode = "attach_if_not_in_session"
 
 # Cleanup temporary or old files (default: false)
-cleanup = true
+# Kept false so topgrade does not run `pacman -Scc --noconfirm` and wipe package caches
+cleanup = false
 
 # Send a notification for every step (default: false)
 # notify_each_step = false

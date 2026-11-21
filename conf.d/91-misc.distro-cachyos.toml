@@ -1,0 +1,21 @@
+[bootstrap.hooks.pre-packages]
+run = [
+  "sudo pacman -S --noconfirm --needed rate-mirrors paru",
+  "chmod +x ${HOME}/.config/mise/common/scripts/add-chaotic-aur.sh && ${HOME}/.config/mise/common/scripts/add-chaotic-aur.sh",
+  # Hold back `mise` upgrade during pre-packages so `/usr/bin/mise` is not unlinked
+  # while `mise bootstrap` is running (which would turn `/proc/self/exe` into
+  # `/usr/bin/mise (deleted)` and break elevated helpers in services/firewall/user).
+  "chmod +x ${HOME}/.config/mise/common/scripts/update-mirrors.sh && ${HOME}/.config/mise/common/scripts/update-mirrors.sh && paru -Syu --noconfirm --ignore mise",
+  "if ! pacman -Qq sudo-rs coreutils-uutils >/dev/null 2>&1; then paru -S --needed --noconfirm --useask cachyos/sudo-rs cachyos/coreutils-uutils; fi",
+  "if [ \"$(timedatectl show -p LocalRTC --value)\" != yes ]; then sudo timedatectl set-local-rtc 1; fi",
+]
+
+[bootstrap.hooks.post-packages]
+run = [
+  "fc-cache",
+]
+
+[bootstrap.hooks.post-tools]
+run = [
+  "sudo pacman -S --noconfirm --needed mise",
+]

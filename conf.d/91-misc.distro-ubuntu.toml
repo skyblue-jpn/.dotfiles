@@ -1,0 +1,5 @@
+[bootstrap.hooks.post-tools]
+run = [
+  "sudo apt install -y --only-upgrade mise",
+  "sudo apt autoremove -y",
+]

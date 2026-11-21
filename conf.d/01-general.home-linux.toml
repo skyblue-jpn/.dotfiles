@@ -1,3 +1,0 @@
-[settings]
-color_theme = "catppuccin"
-system_packages.managers = ["pacman", "aur"]

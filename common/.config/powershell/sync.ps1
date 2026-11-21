@@ -1,11 +1,13 @@
 $ProfileDir = Split-Path -Parent $PROFILE
+$CompletionsDir = Join-Path $ProfileDir "completions"
+$FunctionsDir = Join-Path $ProfileDir "functions"
 
 # Sync Completions
-if (Test-Path "$ProfileDir\completions") {
-    Get-ChildItem -Path "$ProfileDir\completions" -Filter "*.ps1" -Recurse | ForEach-Object { . $_.FullName }
+if (Test-Path -LiteralPath $CompletionsDir) {
+    Get-ChildItem -LiteralPath $CompletionsDir -Filter "*.ps1" -Recurse | ForEach-Object { . $_.FullName }
 }
 
 # Sync Functions
-if (Test-Path "$ProfileDir\functions") {
-    Get-ChildItem -Path "$ProfileDir\functions" -Filter "*.ps1" -Recurse | ForEach-Object { . $_.FullName }
+if (Test-Path -LiteralPath $FunctionsDir) {
+    Get-ChildItem -LiteralPath $FunctionsDir -Filter "*.ps1" -Recurse | ForEach-Object { . $_.FullName }
 }

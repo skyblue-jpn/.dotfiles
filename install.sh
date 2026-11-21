@@ -13,21 +13,25 @@ require_command() {
 }
 
 write_miserc_unix() {
-  sudo mkdir -p /etc/mise
+  local environment="$1"
 
+  sudo mkdir -p /etc/mise
   sudo tee /etc/mise/miserc.toml >/dev/null <<EOF
-env = ["$env"]
+env = ["$environment"]
 EOF
 }
 
-setup_home-linux() {
+setup_distro_cachyos() {
   require_command sudo
   require_command pacman
+  if command -v cachyos-rate-mirrors >/dev/null 2>&1; then
+    sudo cachyos-rate-mirrors
+  fi
   sudo pacman -Syu --noconfirm
-  sudo pacman -S --noconfirm --needed curl extra/mise fish git
+  sudo pacman -S --noconfirm --needed curl mise fish git
 }
 
-setup_work-wsl() {
+setup_distro_ubuntu() {
   require_command sudo
   require_command apt
   sudo apt update
@@ -59,24 +63,24 @@ echo "Select your config environment:"
 
 PS3="> "
 
-select env in home-linux home-windows work-wsl; do
+select env in home-main-linux home-sub-linux home-windows work-wsl; do
   if [ -z "$env" ]; then
     echo "Invalid selection. Exiting." >&2
     exit 1
   fi
 
   case "$env" in
-  home-linux)
-    write_miserc_unix
-    setup_home-linux
+  home-main-linux | home-sub-linux)
+    write_miserc_unix "$env"
+    setup_distro_cachyos
     run_bootstrap "$env"
     ;;
   home-windows)
     die "Run install.ps1 from PowerShell for the Windows environment."
     ;;
   work-wsl)
-    write_miserc_unix
-    setup_work-wsl
+    write_miserc_unix "$env"
+    setup_distro_ubuntu
     run_bootstrap "$env"
     ;;
   esac

@@ -1,0 +1,4 @@
+[bootstrap.hooks.post-packages]
+run = [
+  "if [ ! -f /var/lib/waydroid/waydroid.cfg ]; then sudo waydroid init || echo 'Warning: Waydroid initialization was skipped.' >&2; fi",
+]

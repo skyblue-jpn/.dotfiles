@@ -1,0 +1,2 @@
+[dotfiles]
+"~/.config/heroic/config.json" = { source = "../common/.config/heroic/config.json" }

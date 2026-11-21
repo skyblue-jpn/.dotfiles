@@ -1,0 +1,15 @@
+[dotfiles]
+"~/.config/bat" = { source = "../themes/catppuccin/.config/bat" }
+"~/.config/bottom" = { source = "../themes/catppuccin/.config/bottom" }
+"~/.config/cava" = { source = "../themes/catppuccin/.config/cava" }
+"~/.config/eza" = { source = "../themes/catppuccin/.config/eza" }
+"~/.config/fcitx5/conf/classicui.conf" = { source = "../themes/catppuccin/.config/fcitx5/conf/classicui.conf" }
+"~/.config/fish/config.fish/theme" = { block = "status is-interactive; and fish_config theme choose catppuccin-macchiato --color-theme=dark" }
+"~/.config/ghostty" = { source = "../themes/catppuccin/.config/ghostty" }
+"~/.config/heroic/themes" = { source = "../themes/catppuccin/.config/heroic/themes" }
+"~/.config/radian" = { source = "../themes/catppuccin/.config/radian" }
+"~/.config/starship.toml" = { source = "../themes/catppuccin/.config/starship.toml" }
+"~/.config/tabby/config.yaml" = { source = "../themes/catppuccin/.config/tabby/config.yaml" }
+"~/.config/yazi/package.toml" = { source = "../themes/catppuccin/.config/yazi/package.toml" }
+"~/.config/yazi/theme.toml" = { source = "../themes/catppuccin/.config/yazi/theme.toml" }
+"~/.config/zed/settings.json" = { source = "../themes/catppuccin/.config/zed/settings.json" }

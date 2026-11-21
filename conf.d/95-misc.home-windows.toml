@@ -1,0 +1,19 @@
+[bootstrap.hooks.pre-packages]
+run = [
+  '''pwsh -NoProfile -Command "if ((sudo config 2>$null) -notmatch 'normal') { Start-Process pwsh -Verb RunAs -Wait -ArgumentList '-NoProfile','-Command','sudo config --enable normal' }"''',
+]
+
+[bootstrap.hooks.post-packages]
+run = [
+  '''pwsh -NoProfile -Command "if (-not (Get-Module -ListAvailable -Name PSWindowsUpdate)) { Install-Module -Name PSWindowsUpdate -Force -Confirm:$false -Scope CurrentUser }"''',
+]
+
+[bootstrap.hooks.post-dotfiles]
+run = [
+  '''powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Import-Module Microsoft.PowerShell.Archive; & ([scriptblock]::Create((Invoke-RestMethod 'https://debloat.raphi.re/'))) -CLI -Config (Join-Path $HOME '.config\Win11Debloat\Win11Debloat-Config.json')"''',
+]
+
+[bootstrap.hooks.post-tools]
+run = [
+  "mise exec topgrade -- topgrade --only system microsoft_store powershell",
+]

@@ -1,0 +1,28 @@
+[dotfiles]
+# insert blocks in $PROFILE (activate mise first before sourcing sync and prompt tools)
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/activate" = { block = "(&mise activate pwsh) | Out-String | Invoke-Expression" }
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/sync" = { block = '. "$HOME\Documents\PowerShell\sync.ps1"' }
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/starship" = { block = "Invoke-Expression (&starship init powershell)" }
+"~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1/zoxide" = { block = "Invoke-Expression (& { (zoxide init powershell | Out-String) })" }
+
+# sync completions and functions
+"~/Documents/PowerShell/sync.ps1" = { source = "../common/.config/powershell/sync.ps1" }
+"~/Documents/PowerShell/completions" = { source = "../common/.config/powershell/completions" }
+"~/Documents/PowerShell/functions" = { source = "../common/.config/powershell/functions" }
+
+# standalone configs
+"~/.config/Win11Debloat/Win11Debloat-Config.json" = { source = "../home-windows/.config/Win11Debloat/Win11Debloat-Config.json" }
+
+# import from common & theme modules
+"~/.config/starship.toml" = { source = "../themes/catppuccin/.config/starship.toml" }
+"~/AppData/Local/nvim" = { source = "../common/.config/nvim" }
+"~/AppData/Roaming/topgrade.toml" = { source = "../common/.config/topgrade.toml" }
+"~/AppData/Roaming/bat" = { source = "../themes/catppuccin/.config/bat" }
+"~/AppData/Roaming/bottom" = { source = "../themes/catppuccin/.config/bottom" }
+"~/AppData/Roaming/eza" = { source = "../themes/catppuccin/.config/eza" }
+"~/AppData/Roaming/tabby/config.yaml" = { source = "../themes/catppuccin/.config/tabby/config.yaml" }
+"~/AppData/Roaming/yazi/config/package.toml" = { source = "../themes/catppuccin/.config/yazi/package.toml" }
+"~/AppData/Roaming/yazi/config/theme.toml" = { source = "../themes/catppuccin/.config/yazi/theme.toml" }
+"~/AppData/Roaming/Zed/keymap.json" = { source = "../common/.config/zed/keymap.json" }
+"~/AppData/Roaming/Zed/tasks.json" = { source = "../common/.config/zed/tasks.json" }
+"~/AppData/Roaming/Zed/settings.json" = { source = "../themes/catppuccin/.config/zed/settings.json" }

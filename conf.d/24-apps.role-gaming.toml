@@ -1,0 +1,11 @@
+[bootstrap.packages]
+"pacman:blender" = "latest"
+"pacman:bottles" = "latest"
+"pacman:cachyos-gaming-applications" = "latest"
+"pacman:cachyos-gaming-meta" = "latest"
+"pacman:proton-cachyos-native" = "latest"
+"pacman:proton-cachyos-slr" = "latest"
+"pacman:unityhub" = "latest"
+"pacman:waydroid" = "latest"
+"pacman:waydroid-helper" = "latest"
+"aur:osu-lazer-bin" = "latest"

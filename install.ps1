@@ -17,9 +17,16 @@ function Assert-Command([string]$Name) {
 }
 
 function Install-WingetPackage([string]$Id) {
+    winget list --id $Id --exact --source winget --accept-source-agreements | Out-Null
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "$Id is already installed."
+        return
+    }
+
     winget install --id $Id --exact --source winget `
         --accept-source-agreements --accept-package-agreements
-    if ($LASTEXITCODE -ne 0) {
+    # -1978335189 (0x8A15002B) = APPINSTALLER_CLI_ERROR_UPDATE_NOT_APPLICABLE
+    if ($LASTEXITCODE -ne 0 -and $LASTEXITCODE -ne -1978335189) {
         throw "winget failed to install $Id (exit code $LASTEXITCODE)"
     }
 }

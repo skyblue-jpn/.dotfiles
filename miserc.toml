@@ -1,2 +1,14 @@
 env_conf_d = true
 auto_env = true
+
+[env_sets]
+# Main environments (Purpose + OS)
+# Layering: distro-* -> theme-* -> de-* -> role-* -> machine
+home-main-linux = ["distro-cachyos", "theme-catppuccin", "de-niri", "role-desktop", "role-gaming", "home-main-linux"]
+home-sub-linux = ["distro-cachyos", "theme-nord", "role-desktop", "home-sub-linux"]
+home-windows = ["home-windows"]
+work-wsl = ["distro-ubuntu", "theme-tokyonight", "role-wsl", "work-wsl"]
+
+# Backward-compatible aliases
+home-linux = ["distro-cachyos", "theme-catppuccin", "de-niri", "role-desktop", "role-gaming", "home-main-linux"]
+sub-linux = ["distro-cachyos", "theme-nord", "role-desktop", "home-sub-linux"]

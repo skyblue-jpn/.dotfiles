@@ -1,0 +1,23 @@
+{
+  "lockfileVersion": 1,
+  "plugins": {
+    "catWidget": {
+      "repo": "https://github.com/xi-ve/cat-dms",
+      "commit": "eb7b5138b672be3c06445dd80de6bc30c3076030"
+    },
+    "dankKDEConnect": {
+      "repo": "https://github.com/AvengeMedia/dms-plugins",
+      "path": "DankKDEConnect",
+      "commit": "7a964dad725964550734e43dbbcf88c72829d847"
+    },
+    "dankNotepadModule": {
+      "repo": "https://github.com/duxlabs-dev/dux-plugins",
+      "path": "DankNotepadModule",
+      "commit": "7a964dad725964550734e43dbbcf88c72829d847"
+    },
+    "fcitx5Indicator": {
+      "repo": "https://github.com/Nixie24/dux-plugin-fcitx5-indicator",
+      "commit": "0adcb53fc75c422e9cdc9281540d51f3e9e986b8"
+    }
+  }
+}

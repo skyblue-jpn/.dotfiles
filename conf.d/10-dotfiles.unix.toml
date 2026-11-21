@@ -5,7 +5,7 @@
 "~/.bashrc/pay-respects" = { block = 'eval "$(pay-respects bash)"' }
 "~/.bashrc/starship" = { block = 'eval "$(starship init bash)"' }
 "~/.bashrc/zoxide" = { block = 'eval "$(zoxide init bash)"' }
-"~/.config/fish/completions" = { source = "../common-unix/.config/fish/completions" }
+"~/.config/fish/completions" = { source = "../common/.config/fish/completions" }
 "~/.config/fish/config.fish/activate" = { block = '''
   if status is-interactive
     mise activate fish | source
@@ -13,20 +13,21 @@
     mise activate fish --shims | source
   end
   ''' }
-"~/.config/fish/config.fish/batman" = { block = "batman --export-env | source" }
-"~/.config/fish/config.fish/fzf" = { block = "fzf --fish | source" }
-"~/.config/fish/config.fish/pay-respects" = { block = "pay-respects fish | source" }
-"~/.config/fish/config.fish/pez" = { block = "pez activate fish | source" }
-"~/.config/fish/config.fish/starship" = { block = "starship init fish | source" }
-"~/.config/fish/config.fish/zoxide" = { block = "zoxide init fish | source" }
-"~/.config/fish/functions/repo.fish" = { source = "../common-unix/.config/fish/functions/repo.fish" }
-"~/.config/fish/functions/y.fish" = { source = "../common-unix/.config/fish/functions/y.fish" }
-"~/.config/fish/pez.toml" = { source = "../common-unix/.config/fish/pez.toml" }
+"~/.config/fish/config.fish/batman" = { block = "status is-interactive; and batman --export-env | source" }
+"~/.config/fish/config.fish/fzf" = { block = "status is-interactive; and fzf --fish | source" }
+"~/.config/fish/config.fish/pay-respects" = { block = "status is-interactive; and pay-respects fish | source" }
+"~/.config/fish/config.fish/pez" = { block = "status is-interactive; and pez activate fish | source" }
+"~/.config/fish/config.fish/starship" = { block = "status is-interactive; and starship init fish | source" }
+"~/.config/fish/config.fish/zoxide" = { block = "status is-interactive; and zoxide init fish | source" }
+"~/.config/fish/functions/repo.fish" = { source = "../common/.config/fish/functions/repo.fish" }
+"~/.config/fish/functions/y.fish" = { source = "../common/.config/fish/functions/y.fish" }
+"~/.config/fish/pez.toml" = { source = "../common/.config/fish/pez.toml" }
+"~/.config/nvim" = { source = "../common/.config/nvim" }
 "~/.config/powershell/sync.ps1" = { source = "../common/.config/powershell/sync.ps1" }
 "~/.config/powershell/completions" = { source = "../common/.config/powershell/completions" }
 "~/.config/powershell/functions" = { source = "../common/.config/powershell/functions" }
+"~/.config/powershell/Microsoft.PowerShell_profile.ps1/activate" = { block = "(&mise activate pwsh) | Out-String | Invoke-Expression" }
 "~/.config/powershell/Microsoft.PowerShell_profile.ps1/sync" = { block = '. "~/.config/powershell/sync.ps1"' }
-"~/.config/powershell/Microsoft.PowerShell_profile.ps1/mise" = { block = "(&mise activate pwsh) | Out-String | Invoke-Expression" }
 "~/.config/powershell/Microsoft.PowerShell_profile.ps1/starship" = { block = "Invoke-Expression (&starship init powershell)" }
 "~/.config/powershell/Microsoft.PowerShell_profile.ps1/zoxide" = { block = "Invoke-Expression (& { (zoxide init powershell | Out-String) })" }
 "~/.config/topgrade.toml" = { source = "../common/.config/topgrade.toml" }

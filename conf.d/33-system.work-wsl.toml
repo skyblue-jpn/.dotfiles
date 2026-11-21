@@ -1,7 +1,0 @@
-[shell_alias]
-apt = "apt-fast"
-
-[env]
-BROWSER = "/mnt/c/Windows/System32/rundll32.exe url.dll,FileProtocolHandler"
-EDITOR = "nvim"
-VISUAL = "nvim"

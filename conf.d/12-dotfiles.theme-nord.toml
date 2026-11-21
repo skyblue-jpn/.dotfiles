@@ -1,0 +1,14 @@
+[dotfiles]
+"~/.config/bat" = { source = "../themes/nord/.config/bat" }
+"~/.config/bottom" = { source = "../themes/nord/.config/bottom" }
+"~/.config/cava" = { source = "../themes/nord/.config/cava" }
+"~/.config/eza" = { source = "../themes/nord/.config/eza" }
+"~/.config/fcitx5/conf/classicui.conf" = { source = "../themes/nord/.config/fcitx5/conf/classicui.conf" }
+"~/.config/fish/config.fish/theme" = { block = "status is-interactive; and fish_config theme choose nord" }
+"~/.config/ghostty" = { source = "../themes/nord/.config/ghostty" }
+"~/.config/radian" = { source = "../themes/nord/.config/radian" }
+"~/.config/starship.toml" = { source = "../themes/nord/.config/starship.toml" }
+"~/.config/tabby/config.yaml" = { source = "../themes/nord/.config/tabby/config.yaml" }
+"~/.config/yazi/package.toml" = { source = "../themes/nord/.config/yazi/package.toml" }
+"~/.config/yazi/theme.toml" = { source = "../themes/nord/.config/yazi/theme.toml" }
+"~/.config/zed/settings.json" = { source = "../themes/nord/.config/zed/settings.json" }

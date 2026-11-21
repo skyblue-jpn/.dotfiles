@@ -1,0 +1,6 @@
+[dotfiles]
+"~/.config/fontconfig/fonts.conf" = { source = "../common/.config/fontconfig/fonts.conf" }
+"~/.config/mimeapps.list" = { source = "../common/.config/mimeapps.list" }
+"~/.config/vivaldi/NativeMessagingHosts/com.8bit.bitwarden.json" = { source = "../common/.config/vivaldi/NativeMessagingHosts/com.8bit.bitwarden.json" }
+"~/.config/zed/keymap.json" = { source = "../common/.config/zed/keymap.json" }
+"~/.config/zed/tasks.json" = { source = "../common/.config/zed/tasks.json" }

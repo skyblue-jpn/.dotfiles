@@ -1,2 +1,0 @@
-[bootstrap.hooks.post-tools]
-run = ["sudo apt autoremove -y"]
