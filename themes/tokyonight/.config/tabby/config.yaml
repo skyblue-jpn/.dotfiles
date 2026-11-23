@@ -210,29 +210,27 @@ terminal:
   altIsMeta: false
   wordSeparator: ' ()[]{}''"'
   colorScheme:
-    name: Tokyo Night
-    foreground: "#c0caf5"
-    background: "#1a1b26"
-    selection: null
-    cursor: "#c0caf5"
-    cursorAccent: null
+    name: TokyoNight
+    foreground: '#c0caf5'
+    background: '#1a1b26'
+    cursor: '#c0caf5'
     colors:
-      - "#15161e"
-      - "#f7768e"
-      - "#9ece6a"
-      - "#e0af68"
-      - "#7aa2f7"
-      - "#bb9af7"
-      - "#7dcfff"
-      - "#a9b1d6"
-      - "#414868"
-      - "#f7768e"
-      - "#9ece6a"
-      - "#e0af68"
-      - "#7aa2f7"
-      - "#bb9af7"
-      - "#7dcfff"
-      - "#c0caf5"
+      - '#15161e'
+      - '#f7768e'
+      - '#9ece6a'
+      - '#e0af68'
+      - '#7aa2f7'
+      - '#bb9af7'
+      - '#7dcfff'
+      - '#a9b1d6'
+      - '#414868'
+      - '#f7768e'
+      - '#9ece6a'
+      - '#e0af68'
+      - '#7aa2f7'
+      - '#bb9af7'
+      - '#7dcfff'
+      - '#c0caf5'
   lightColorScheme:
     name: Tabby Default Light
     foreground: "#4d4d4c"
@@ -255,30 +253,6 @@ terminal:
       - "#8959a8"
       - "#3e999f"
       - "#ffffff"
-  customColorSchemes:
-    - name: Tokyo Night
-      foreground: "#c0caf5"
-      background: "#1a1b26"
-      selection: null
-      cursor: "#c0caf5"
-      cursorAccent: null
-      colors:
-        - "#15161e"
-        - "#f7768e"
-        - "#9ece6a"
-        - "#e0af68"
-        - "#7aa2f7"
-        - "#bb9af7"
-        - "#7dcfff"
-        - "#a9b1d6"
-        - "#414868"
-        - "#f7768e"
-        - "#9ece6a"
-        - "#e0af68"
-        - "#7aa2f7"
-        - "#bb9af7"
-        - "#7dcfff"
-        - "#c0caf5"
   warnOnMultilinePaste: true
   searchRegexAlwaysEnabled: false
   searchOptions:
