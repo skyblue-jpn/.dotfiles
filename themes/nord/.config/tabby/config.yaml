@@ -195,7 +195,7 @@ terminal:
   fontWeight: 400
   fontWeightBold: 700
   linePadding: 0
-  bell: "off"
+  bell: 'off'
   bracketedPaste: true
   background: theme
   ligatures: true
@@ -211,74 +211,48 @@ terminal:
   wordSeparator: ' ()[]{}''"'
   colorScheme:
     name: Nord
-    foreground: "#d8dee9"
-    background: "#2e3440"
-    selection: null
-    cursor: "#d8dee9"
-    cursorAccent: null
+    foreground: '#d8dee9'
+    background: '#2e3440'
+    cursor: '#d8dee9'
     colors:
-      - "#3b4252"
-      - "#bf616a"
-      - "#a3be8c"
-      - "#ebcb8b"
-      - "#81a1c1"
-      - "#b48ead"
-      - "#88c0d0"
-      - "#e5e9f0"
-      - "#4c566a"
-      - "#bf616a"
-      - "#a3be8c"
-      - "#ebcb8b"
-      - "#81a1c1"
-      - "#b48ead"
-      - "#8fbcbb"
-      - "#eceff4"
+      - '#3b4252'
+      - '#bf616a'
+      - '#a3be8c'
+      - '#ebcb8b'
+      - '#81a1c1'
+      - '#b48ead'
+      - '#88c0d0'
+      - '#e5e9f0'
+      - '#373e4d'
+      - '#94545d'
+      - '#809575'
+      - '#b29e75'
+      - '#68809a'
+      - '#8c738c'
+      - '#6d96a5'
+      - '#aeb3bb'
   lightColorScheme:
     name: Tabby Default Light
-    foreground: "#4d4d4c"
-    background: "#ffffff"
-    cursor: "#4d4d4c"
+    foreground: '#4d4d4c'
+    background: '#ffffff'
+    cursor: '#4d4d4c'
     colors:
-      - "#000000"
-      - "#c82829"
-      - "#718c00"
-      - "#eab700"
-      - "#4271ae"
-      - "#8959a8"
-      - "#3e999f"
-      - "#ffffff"
-      - "#000000"
-      - "#c82829"
-      - "#718c00"
-      - "#eab700"
-      - "#4271ae"
-      - "#8959a8"
-      - "#3e999f"
-      - "#ffffff"
-  customColorSchemes:
-    - name: Nord
-      foreground: "#d8dee9"
-      background: "#2e3440"
-      selection: null
-      cursor: "#d8dee9"
-      cursorAccent: null
-      colors:
-        - "#3b4252"
-        - "#bf616a"
-        - "#a3be8c"
-        - "#ebcb8b"
-        - "#81a1c1"
-        - "#b48ead"
-        - "#88c0d0"
-        - "#e5e9f0"
-        - "#4c566a"
-        - "#bf616a"
-        - "#a3be8c"
-        - "#ebcb8b"
-        - "#81a1c1"
-        - "#b48ead"
-        - "#8fbcbb"
-        - "#eceff4"
+      - '#000000'
+      - '#c82829'
+      - '#718c00'
+      - '#eab700'
+      - '#4271ae'
+      - '#8959a8'
+      - '#3e999f'
+      - '#ffffff'
+      - '#000000'
+      - '#c82829'
+      - '#718c00'
+      - '#eab700'
+      - '#4271ae'
+      - '#8959a8'
+      - '#3e999f'
+      - '#ffffff'
   warnOnMultilinePaste: true
   searchRegexAlwaysEnabled: false
   searchOptions:
@@ -324,7 +298,7 @@ clickableLinks:
 accessibility:
   animations: true
 appearance:
-  dock: "off"
+  dock: 'off'
   dockScreen: current
   dockFill: 0.5
   dockSpace: 1
@@ -334,7 +308,7 @@ appearance:
   tabsInFullscreen: false
   cycleTabs: true
   theme: Follow the color scheme
-  css: "/* * { color: blue !important; } */"
+  css: '/* * { color: blue !important; } */'
   vibrancyType: blur
   lastTabClosesWindow: false
 profiles: []
@@ -346,7 +320,7 @@ recoverTabs: true
 enableWelcomeTab: false
 electronFlags:
   - - force_discrete_gpu
-    - "0"
+    - '0'
 enableAutomaticUpdates: false
 hideTray: false
 version: 8
