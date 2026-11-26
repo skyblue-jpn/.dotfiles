@@ -872,5 +872,13 @@
   "iconGradient": false,
   "iconShape": "squircle",
   "motionDuration": 0,
-  "controlCenterColumns": 8
+  "controlCenterColumns": 8,
+  "compositorAnimationPreset": "material",
+  "compositorAnimationSlowdown": 0.5,
+  "configProfilePickerView": "carousel",
+  "iconTileTone": -1,
+  "niriOverviewLauncherStyle": "full",
+  "launcherEnterAction": "launch",
+  "displayProfileAutoSelect": true,
+  "displaySnapToEdge": true
 }
