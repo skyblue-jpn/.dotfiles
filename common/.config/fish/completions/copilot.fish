@@ -6,6 +6,8 @@ end
 function __fish_copilot_parser_tokens
     set -l tokens (commandline -opc)
     set -e tokens[1]
+    # `seq 0` counts down through 0, and fish rejects `$tokens[0]`.
+    set -q tokens[1]; or return
     for i in (seq (count $tokens))
         test "$tokens[$i]" = --; and break
         set -l next (math $i + 1)
@@ -47,22 +49,26 @@ claude-fable-5.2\t''
 claude-fable-5.1\t''
 claude-fable-5\t''
 claude-opus-5.5\t''
-claude-opus-5\t''
 claude-opus-4.8\t''
 claude-opus-4.8-fast\t''
 claude-sonnet-4.6\t''
 claude-haiku-5.5\t''
 claude-haiku-4.5\t''
+gpt-6.2-sol\t''
+gpt-6.2-astra\t''
 gpt-6.1-sol\t''
 gpt-6.1-terra\t''
 gpt-6-sol\t''
 gpt-6-luna\t''
 gpt-6-astra\t''
 gpt-5.6-sol\t''
-gpt-5.6-terra\t''
 gpt-5.6-luna\t''
 gpt-5.3-codex\t''
+mai-code-2\t''
+mai-code-2-flash\t''
 mai-code-1.1-flash\t''
+gemini-4-neon\t''
+gemini-4-hydrogen\t''
 gemini-4-carbon\t''
 gemini-4-argon\t''
 gemini-3.8-flash\t''
@@ -185,7 +191,7 @@ complete -c copilot -n "__fish_copilot_needs_command" -l host-ahp -d 'Experiment
 complete -c copilot -n "__fish_copilot_needs_command" -l host-ahp-disable-token -d 'Disable only the local connection token for --host-ahp. GitHub authentication and authorization are still required.'
 complete -c copilot -n "__fish_copilot_needs_command" -l host-allow-session-creation -d 'Allow remote clients to create new sessions on this host for this launch only (does not change your saved ahpEnvironment.allowCreatingNewSessions setting)'
 complete -c copilot -n "__fish_copilot_needs_command" -l sandbox -d 'Run this session\'s shell commands inside the OS-level sandbox for this run only (does not change your saved sandbox setting)'
-complete -c copilot -n "__fish_copilot_needs_command" -l assisted-approval -d 'Review tool permission requests with the assisted-approval safety judge instead of approving them outright. The judge is probabilistic and not a security boundary. Equivalent to the `assisted` mode of /permissions. Takes precedence over --allow-all-tools when the judge engages. Ignored, with a warning, when AUTO_APPROVAL is explicitly disabled or managed policy blocks it. (env: COPILOT_ASSISTED_APPROVAL)'
+complete -c copilot -n "__fish_copilot_needs_command" -l assisted-approval -d 'Review tool permission requests with the assisted-approval safety judge instead of approving them outright. The judge is probabilistic and not a security boundary. Equivalent to the `assisted` mode of /permissions. Takes precedence over --allow-all-tools when the judge engages. Ignored, with a warning, when managed policy blocks it. (env: COPILOT_ASSISTED_APPROVAL)'
 complete -c copilot -n "__fish_copilot_needs_command" -l embedded-host -d 'Run as an in-process FFI embedded host (Rust engine driven over the C ABI; no stdio/TCP transport)'
 complete -c copilot -n "__fish_copilot_needs_command" -l no-custom-instructions -d 'Disable loading of custom instructions from AGENTS.md and related files'
 complete -c copilot -n "__fish_copilot_needs_command" -l no-auto-update -d 'Disable downloading CLI updates automatically. Copilot then runs the version bundled in the executable you launched rather than a newer previously downloaded one'
@@ -217,7 +223,7 @@ complete -c copilot -n "__fish_copilot_needs_command" -f -a "sandbox" -d 'Manage
 complete -c copilot -n "__fish_copilot_needs_command" -f -a "taskbar-selftest" -d 'Diagnose the Windows taskbar-presence (Forerunner) pipeline'
 complete -c copilot -n "__fish_copilot_needs_command" -f -a "completion" -d 'Generate a shell completion script'
 complete -c copilot -n "__fish_copilot_using_subcommand app" -s h -l help -d 'Print help (see more with \'--help\')'
-complete -c copilot -n "__fish_copilot_using_subcommand login" -l host -d 'GitHub host URL (default: https://github.com)' -r
+complete -c copilot -n "__fish_copilot_using_subcommand login" -l host -d 'GitHub host URL (overrides COPILOT_GH_HOST and GH_HOST)' -r
 complete -c copilot -n "__fish_copilot_using_subcommand login" -l config-dir -d 'Set the configuration directory (deprecated: use COPILOT_HOME env var)' -r
 complete -c copilot -n "__fish_copilot_using_subcommand login" -l device-code -d 'Authenticate using the OAuth device code flow (default in remote environments, CI, and non-interactive Linux with no display)'
 complete -c copilot -n "__fish_copilot_using_subcommand login" -l web-flow -d 'Authenticate using the browser (web) flow (default on local desktops)'
@@ -364,7 +370,19 @@ complete -c copilot -n "__fish_copilot_using_subcommand sandbox; and __fish_seen
 complete -c copilot -n "__fish_copilot_using_subcommand taskbar-selftest" -l strict -d 'Exit non-zero unless tasks.json was actually written'
 complete -c copilot -n "__fish_copilot_using_subcommand taskbar-selftest" -s h -l help -d 'Print help (see more with \'--help\')'
 complete -c copilot -n "__fish_copilot_using_subcommand completion" -s h -l help -d 'Print help (see more with \'--help\')'
-complete -c copilot -l model -r -f -a 'auto fusion claude-sonnet-5.5 claude-sonnet-5 claude-fable-5.2 claude-fable-5.1 claude-fable-5 claude-opus-5.5 claude-opus-5 claude-opus-4.8 claude-opus-4.8-fast claude-sonnet-4.6 claude-haiku-5.5 claude-haiku-4.5 gpt-6.1-sol gpt-6.1-terra gpt-6-sol gpt-6-luna gpt-6-astra gpt-5.6-sol gpt-5.6-terra gpt-5.6-luna gpt-5.3-codex mai-code-1.1-flash gemini-4-carbon gemini-4-argon gemini-3.8-flash grok-4.7 grok-4.6 kimi-k3'
+function __fish_copilot_positional_at
+    set -l op $argv[1]
+    set -l slot $argv[2]
+    set -l depth $argv[3]
+    set -e argv[1..3]
+    set -l specs $argv
+    argparse -s (__fish_copilot_global_optspecs) -- (__fish_copilot_parser_tokens) 2>/dev/null
+    or return
+    argparse $specs -- $argv 2>/dev/null
+    or return 0
+    test (math (count $argv) - $depth) $op $slot
+end
+complete -c copilot -l model -r -f -a 'auto fusion claude-sonnet-5.5 claude-sonnet-5 claude-fable-5.2 claude-fable-5.1 claude-fable-5 claude-opus-5.5 claude-opus-4.8 claude-opus-4.8-fast claude-sonnet-4.6 claude-haiku-5.5 claude-haiku-4.5 gpt-6.2-sol gpt-6.2-astra gpt-6.1-sol gpt-6.1-terra gpt-6-sol gpt-6-luna gpt-6-astra gpt-5.6-sol gpt-5.6-luna gpt-5.3-codex mai-code-2 mai-code-2-flash mai-code-1.1-flash gemini-4-neon gemini-4-hydrogen gemini-4-carbon gemini-4-argon gemini-3.8-flash grok-4.7 grok-4.6 kimi-k3'
 complete -c copilot -l reasoning-effort -r -f -a 'none minimal low medium high xhigh max'
 complete -c copilot -l context -r -f -a 'default long_context'
 complete -c copilot -l log-level -r -f -a 'none error warning info debug all default'
@@ -373,11 +391,11 @@ complete -c copilot -l output-format -r -f -a 'text json'
 complete -c copilot -l mode -r -f -a 'interactive plan autopilot'
 complete -c copilot -l sync-session -r -f -a 'on off'
 complete -c copilot -l ahp-authenticate -r -f -a 'github'
-complete -c copilot -n "__fish_copilot_using_subcommand update" -f -a 'stable prerelease'
+complete -c copilot -n "__fish_copilot_using_subcommand update; and __fish_copilot_positional_at -eq 0 1 h/help" -f -a 'stable prerelease'
 complete -c copilot -l output -r -f -a 'json'
 complete -c copilot -l on-conflict -r -f -a 'skip error'
 complete -c copilot -l transport -r -f -a 'stdio http sse'
-complete -c copilot -n "__fish_copilot_using_subcommand completion" -f -a 'bash zsh fish'
+complete -c copilot -n "__fish_copilot_using_subcommand completion; and __fish_copilot_positional_at -eq 0 1 h/help" -f -a 'bash zsh fish'
 
 # Copyright (c) Microsoft Corporation. All rights reserved.
 function __copilot_config_context
@@ -458,11 +476,11 @@ function __copilot_config_candidates
     if test "$mode" = keys
         switch "$scope"
             case user
-                printf '%s\n' 'ahpEnvironment.acceptRemoteConnections' 'ahpEnvironment.allowCreatingNewSessions' 'ahpEnvironment.computeId' 'ahpEnvironment.name' 'ahpEnvironment.publishNewSessionsByDefault' 'ahpEnvironment.requireConnectionBinding' 'aiSecretDetection' 'allowedUrls' 'askUser' 'assistedApprovalInstructions' 'autoTier' 'autoUpdate' 'autoUpdatesChannel' 'banner' 'bannerStyle' 'bashEnv' 'beep' 'beepOnSchedule' 'commandHistoryMaxSize' 'compactPaste' 'companyAnnouncements' 'connectors' 'contextManagementTools' 'contextTier' 'continueOnAutoMode' 'copyOnCodeBlockClick' 'copyOnSelect' 'customAgents.defaultLocalOnly' 'defaultMode' 'defaultPermissionMode' 'deniedUrls' 'disableAllHooks' 'disabledHooks' 'disabledMcpServers' 'disabledSkills' 'dynamicRetrieval.mcp' 'dynamicRetrieval.skills' 'editorMode' 'effortLevel' 'enableAllGithubMcpTools' 'enabledMcpServers' 'experimental' 'extensions.disabledExtensions' 'extensions.mode' 'feature_flags.enabled' 'footer.showAgent' 'footer.showAiUsed' 'footer.showBranch' 'footer.showCiStatus' 'footer.showCodeChanges' 'footer.showContextWindow' 'footer.showCustom' 'footer.showDirectory' 'footer.showModelEffort' 'footer.showPullRequest' 'footer.showQuota' 'footer.showSandbox' 'footer.showSchedules' 'footer.showUsername' 'footer.showYolo' 'fusionTier' 'githubMcpInsiders' 'githubMcpTools' 'githubMcpToolsets' 'ide.autoConnect' 'ide.codeProduct' 'ide.openDiffOnEdit' 'ignoredSkillsLocations' 'imageGeneration' 'imageGenerationWatermark' 'includeCoAuthoredBy' 'inlineImageLiveWindow' 'inlineImages' 'keepAlive' 'memory' 'mergeStrategy' 'model' 'modelProviderId' 'mouse' 'notifications' 'pinnedPrompts' 'planContextTier' 'planEffortLevel' 'planModel' 'planModelProviderId' 'powershellFlags' 'proxyKerberosServicePrincipal' 'proxyUrl' 'remoteExport' 'renderHexColors' 'renderMarkdown' 'respectGitignore' 'sandbox.addCurrentWorkingDirectory' 'sandbox.allowBypass' 'sandbox.allowDevToolAccess' 'sandbox.auth.gh' 'sandbox.auth.git' 'sandbox.credentials.envVars.*.injectHosts' 'sandbox.enabled' 'sandbox.sandboxExtensions' 'sandbox.sandboxLspServers' 'sandbox.sandboxMcpServers' 'sandbox.userPolicy.filesystem.deniedPaths' 'sandbox.userPolicy.filesystem.enumeratePaths' 'sandbox.userPolicy.filesystem.readonlyPaths' 'sandbox.userPolicy.filesystem.readwritePaths' 'sandbox.userPolicy.network.allowedHosts' 'sandbox.userPolicy.network.allowLocalNetwork' 'sandbox.userPolicy.network.allowOutbound' 'sandbox.userPolicy.network.blockedHosts' 'sandbox.userPolicy.network.proxy.url' 'sandbox.userPolicy.network.proxy.username' 'screenReader' 'scrollbar' 'sessionManagementTools.close' 'sessionManagementTools.create' 'sessionManagementTools.enabled' 'sessionManagementTools.list' 'sessionManagementTools.message' 'sessionManagementTools.scope' 'showReasoning' 'showTimestamps' 'showToolDurations' 'sidebar.accentActiveSession' 'sidebar.coloredHints' 'sidebar.ctrlCClosesSession' 'sidebar.enabled' 'sidebar.exitClosesSession' 'sidebar.hoverFocus' 'sidebar.showCloseButton' 'sidebar.showHeaderButtons' 'sidebar.showResumableSessions' 'skillDirectories' 'statusLine.padding' 'statusLine.refreshInterval' 'statusLine.type' 'stayInAutopilot' 'stream' 'subagents.contextManagementTools' 'subagents.maxConcurrency' 'subagents.maxDepth' 'tabs.enabled' 'tabs.hide' 'tabs.sort' 'taskbarPresence' 'terminalNotifications' 'terminalProgress' 'theme' 'toolSearch' 'updateTerminalTitle' 'voice.selectedDevice.name' 'voice.selectedDevice.occurrence' 'workflows.logPhaseNames' 'workflows.maxConcurrentRuns' 'worktreeBaseRef' 'worktreePathTemplate'
+                printf '%s\n' 'ahpEnvironment.acceptRemoteConnections' 'ahpEnvironment.allowCreatingNewSessions' 'ahpEnvironment.computeId' 'ahpEnvironment.name' 'ahpEnvironment.publishNewSessionsByDefault' 'ahpEnvironment.requireConnectionBinding' 'aiSecretDetection' 'allowedUrls' 'askUser' 'assistedApprovalInstructions' 'autoTier' 'autoUpdate' 'autoUpdatesChannel' 'banner' 'bannerStyle' 'bashEnv' 'beep' 'beepOnSchedule' 'commandHistoryMaxSize' 'compactPaste' 'companyAnnouncements' 'connectors' 'contextManagementTools' 'contextTier' 'continueOnAutoMode' 'copyOnCodeBlockClick' 'copyOnSelect' 'customAgents.defaultLocalOnly' 'defaultMode' 'defaultPermissionMode' 'deniedUrls' 'disableAllHooks' 'disabledHooks' 'disabledMcpServers' 'disabledSkills' 'dynamicRetrieval.mcp' 'dynamicRetrieval.skills' 'editorMode' 'effortLevel' 'enableAllGithubMcpTools' 'enabledMcpServers' 'experimental' 'extensions.disabledExtensions' 'extensions.mode' 'feature_flags.enabled' 'footer.showAgent' 'footer.showAiUsed' 'footer.showBranch' 'footer.showCiStatus' 'footer.showCodeChanges' 'footer.showContextWindow' 'footer.showCustom' 'footer.showDirectory' 'footer.showModelEffort' 'footer.showPullRequest' 'footer.showQuota' 'footer.showSandbox' 'footer.showSchedules' 'footer.showUsername' 'footer.showYolo' 'fusionTier' 'githubMcpInsiders' 'githubMcpTools' 'githubMcpToolsets' 'ide.autoConnect' 'ide.codeProduct' 'ide.openDiffOnEdit' 'ignoredSkillsLocations' 'imageGeneration' 'imageGenerationWatermark' 'includeCoAuthoredBy' 'inlineImageLiveWindow' 'inlineImages' 'keepAlive' 'memory' 'mergeStrategy' 'model' 'modelProviderId' 'mouse' 'notifications' 'pinnedPrompts' 'planContextTier' 'planEffortLevel' 'planModel' 'planModelProviderId' 'powershellFlags' 'proxyKerberosServicePrincipal' 'proxyUrl' 'remoteExport' 'renderHexColors' 'renderMarkdown' 'respectGitignore' 'sandbox.addCurrentWorkingDirectory' 'sandbox.allowBypass' 'sandbox.allowDevToolAccess' 'sandbox.auth.gh' 'sandbox.auth.git' 'sandbox.credentials.envVars.*.injectHosts' 'sandbox.enabled' 'sandbox.sandboxExtensions' 'sandbox.sandboxLspServers' 'sandbox.sandboxMcpServers' 'sandbox.userPolicy.capabilities' 'sandbox.userPolicy.filesystem.deniedPaths' 'sandbox.userPolicy.filesystem.enumeratePaths' 'sandbox.userPolicy.filesystem.readonlyPaths' 'sandbox.userPolicy.filesystem.readwritePaths' 'sandbox.userPolicy.network.allowedHosts' 'sandbox.userPolicy.network.allowLocalNetwork' 'sandbox.userPolicy.network.allowOutbound' 'sandbox.userPolicy.network.blockedHosts' 'sandbox.userPolicy.network.proxy.url' 'sandbox.userPolicy.network.proxy.username' 'sandbox.userPolicy.seatbelt.extraMachLookups' 'screenReader' 'scrollbar' 'sessionManagementTools.close' 'sessionManagementTools.create' 'sessionManagementTools.enabled' 'sessionManagementTools.list' 'sessionManagementTools.message' 'sessionManagementTools.scope' 'showReasoning' 'showTimelineTimestamps' 'showTimestamps' 'showToolDurations' 'sidebar.accentActiveSession' 'sidebar.coloredHints' 'sidebar.ctrlCClosesSession' 'sidebar.enabled' 'sidebar.exitClosesSession' 'sidebar.hoverFocus' 'sidebar.showCloseButton' 'sidebar.showHeaderButtons' 'sidebar.showResumableSessions' 'skillDirectories' 'statusLine.padding' 'statusLine.refreshInterval' 'statusLine.type' 'stayInAutopilot' 'stream' 'subagents.contextManagementTools' 'subagents.maxConcurrency' 'subagents.maxDepth' 'tabs.enabled' 'tabs.hide' 'tabs.sort' 'taskbarPresence' 'terminalNotifications' 'terminalProgress' 'theme' 'toolSearch' 'updateTerminalTitle' 'voice.selectedDevice.name' 'voice.selectedDevice.occurrence' 'workflows.logPhaseNames' 'workflows.maxConcurrentRuns' 'worktreeBaseRef' 'worktreePathTemplate'
             case repo
                 printf '%s\n' 'autoTier' 'companyAnnouncements' 'contextTier' 'deniedUrls' 'disableAllHooks' 'disabledMcpServers' 'disabledSkills' 'effortLevel' 'includeCoAuthoredBy' 'mergeStrategy' 'model' 'modelProviderId' 'respectGitignore' 'skillDirectories'
             case read
-                printf '%s\n' 'ahpEnvironment.acceptRemoteConnections' 'ahpEnvironment.allowCreatingNewSessions' 'ahpEnvironment.computeId' 'ahpEnvironment.name' 'ahpEnvironment.publishNewSessionsByDefault' 'ahpEnvironment.requireConnectionBinding' 'aiSecretDetection' 'allowedUrls' 'askUser' 'assistedApprovalInstructions' 'autoTier' 'autoUpdate' 'autoUpdatesChannel' 'banner' 'bannerStyle' 'bashEnv' 'beep' 'beepOnSchedule' 'builtInAgents.rubberDuck' 'builtInAgents.rubberDuckAutoInvoke' 'commandHistoryMaxSize' 'compactPaste' 'companyAnnouncements' 'connectors' 'contextManagementTools' 'contextTier' 'continueOnAutoMode' 'copilotUrl' 'copyOnCodeBlockClick' 'copyOnSelect' 'customAgents.defaultLocalOnly' 'defaultMode' 'defaultPermissionMode' 'deniedUrls' 'disableAllHooks' 'disabledHooks' 'disabledMcpServers' 'disabledSkills' 'dynamicRetrieval.mcp' 'dynamicRetrieval.skills' 'editorMode' 'effortLevel' 'enableAllGithubMcpTools' 'enabledMcpServers' 'experimental' 'extensions.disabledExtensions' 'extensions.mode' 'feature_flags.enabled' 'footer.showAgent' 'footer.showAiUsed' 'footer.showBranch' 'footer.showCiStatus' 'footer.showCodeChanges' 'footer.showContextWindow' 'footer.showCustom' 'footer.showDirectory' 'footer.showModelEffort' 'footer.showPullRequest' 'footer.showQuota' 'footer.showSandbox' 'footer.showSchedules' 'footer.showUsername' 'footer.showYolo' 'fusionTier' 'githubMcpInsiders' 'githubMcpTools' 'githubMcpToolsets' 'ide.autoConnect' 'ide.codeProduct' 'ide.openDiffOnEdit' 'ignoredSkillsLocations' 'imageGeneration' 'imageGenerationWatermark' 'includeCoAuthoredBy' 'inlineImageLiveWindow' 'inlineImages' 'keepAlive' 'logLevel' 'memory' 'mergeStrategy' 'model' 'modelProviderId' 'mouse' 'notifications' 'permissions.disableBypassPermissionsMode' 'pinnedPrompts' 'planContextTier' 'planEffortLevel' 'planModel' 'planModelProviderId' 'powershellFlags' 'proxyKerberosServicePrincipal' 'proxyUrl' 'remoteExport' 'remoteSessions' 'renderHexColors' 'renderMarkdown' 'respectGitignore' 'sandbox.addCurrentWorkingDirectory' 'sandbox.allowBypass' 'sandbox.allowDevToolAccess' 'sandbox.auth.gh' 'sandbox.auth.git' 'sandbox.credentials.envVars.*.injectHosts' 'sandbox.enabled' 'sandbox.sandboxExtensions' 'sandbox.sandboxLspServers' 'sandbox.sandboxMcpServers' 'sandbox.userPolicy.experimental.seatbelt.keychainAccess' 'sandbox.userPolicy.filesystem.deniedPaths' 'sandbox.userPolicy.filesystem.enumeratePaths' 'sandbox.userPolicy.filesystem.readonlyPaths' 'sandbox.userPolicy.filesystem.readwritePaths' 'sandbox.userPolicy.network.allowedHosts' 'sandbox.userPolicy.network.allowLocalNetwork' 'sandbox.userPolicy.network.allowOutbound' 'sandbox.userPolicy.network.blockedHosts' 'sandbox.userPolicy.network.proxy.password' 'sandbox.userPolicy.network.proxy.url' 'sandbox.userPolicy.network.proxy.username' 'sandbox.userPolicy.seatbelt.keychainAccess' 'screenReader' 'scrollbar' 'sessionManagementTools.close' 'sessionManagementTools.create' 'sessionManagementTools.enabled' 'sessionManagementTools.list' 'sessionManagementTools.message' 'sessionManagementTools.scope' 'shellShortcut' 'showReasoning' 'showTimestamps' 'showTipsOnStartup' 'showToolDurations' 'sidebar.accentActiveSession' 'sidebar.coloredHints' 'sidebar.ctrlCClosesSession' 'sidebar.enabled' 'sidebar.exitClosesSession' 'sidebar.hoverFocus' 'sidebar.showCloseButton' 'sidebar.showHeaderButtons' 'sidebar.showResumableSessions' 'skillDirectories' 'statusLine.command' 'statusLine.padding' 'statusLine.refreshInterval' 'statusLine.type' 'stayInAutopilot' 'storeTokenPlaintext' 'stream' 'streamerMode' 'subagents.contextManagementTools' 'subagents.disabledSubagents' 'subagents.maxConcurrency' 'subagents.maxDepth' 'tabs.enabled' 'tabs.hide' 'tabs.sort' 'taskbarPresence' 'telemetry.capture.identity' 'telemetry.capture.policyDetail' 'telemetry.capture.prompts' 'telemetry.capture.responses' 'telemetry.capture.toolArguments' 'telemetry.capture.toolOutput' 'telemetry.captureContent' 'terminalNotifications' 'terminalProgress' 'theme' 'toolSearch' 'updateTerminalTitle' 'voice.enabled' 'voice.selectedDevice.name' 'voice.selectedDevice.occurrence' 'voice.selectedModel' 'workflows.defaultLimits.maxAiCredits' 'workflows.defaultLimits.maxConcurrentSubagents' 'workflows.defaultLimits.maxTotalSubagents' 'workflows.defaultLimits.timeoutSeconds' 'workflows.logPhaseNames' 'workflows.maxConcurrentRuns' 'worktreeBaseRef' 'worktreePathTemplate'
+                printf '%s\n' 'ahpEnvironment.acceptRemoteConnections' 'ahpEnvironment.allowCreatingNewSessions' 'ahpEnvironment.computeId' 'ahpEnvironment.name' 'ahpEnvironment.publishNewSessionsByDefault' 'ahpEnvironment.requireConnectionBinding' 'aiSecretDetection' 'allowedUrls' 'askUser' 'assistedApprovalInstructions' 'autoTier' 'autoUpdate' 'autoUpdatesChannel' 'banner' 'bannerStyle' 'bashEnv' 'beep' 'beepOnSchedule' 'builtInAgents.rubberDuck' 'builtInAgents.rubberDuckAutoInvoke' 'commandHistoryMaxSize' 'compactPaste' 'companyAnnouncements' 'connectors' 'contextManagementTools' 'contextTier' 'continueOnAutoMode' 'copilotUrl' 'copyOnCodeBlockClick' 'copyOnSelect' 'customAgents.defaultLocalOnly' 'defaultMode' 'defaultPermissionMode' 'deniedUrls' 'disableAllHooks' 'disabledHooks' 'disabledMcpServers' 'disabledSkills' 'dynamicRetrieval.mcp' 'dynamicRetrieval.skills' 'editorMode' 'effortLevel' 'enableAllGithubMcpTools' 'enabledMcpServers' 'experimental' 'extensions.disabledExtensions' 'extensions.mode' 'feature_flags.enabled' 'footer.showAgent' 'footer.showAiUsed' 'footer.showBranch' 'footer.showCiStatus' 'footer.showCodeChanges' 'footer.showContextWindow' 'footer.showCustom' 'footer.showDirectory' 'footer.showModelEffort' 'footer.showPullRequest' 'footer.showQuota' 'footer.showSandbox' 'footer.showSchedules' 'footer.showUsername' 'footer.showYolo' 'fusionTier' 'githubMcpInsiders' 'githubMcpTools' 'githubMcpToolsets' 'ide.autoConnect' 'ide.codeProduct' 'ide.openDiffOnEdit' 'ignoredSkillsLocations' 'imageGeneration' 'imageGenerationWatermark' 'includeCoAuthoredBy' 'inlineImageLiveWindow' 'inlineImages' 'keepAlive' 'logLevel' 'memory' 'mergeStrategy' 'model' 'modelProviderId' 'mouse' 'notifications' 'permissions.disableBypassPermissionsMode' 'pinnedPrompts' 'planContextTier' 'planEffortLevel' 'planModel' 'planModelProviderId' 'powershellFlags' 'proxyKerberosServicePrincipal' 'proxyUrl' 'remoteExport' 'remoteSessions' 'renderHexColors' 'renderMarkdown' 'respectGitignore' 'sandbox.addCurrentWorkingDirectory' 'sandbox.allowBypass' 'sandbox.allowDevToolAccess' 'sandbox.auth.gh' 'sandbox.auth.git' 'sandbox.credentials.envVars.*.injectHosts' 'sandbox.enabled' 'sandbox.sandboxExtensions' 'sandbox.sandboxLspServers' 'sandbox.sandboxMcpServers' 'sandbox.userPolicy.capabilities' 'sandbox.userPolicy.experimental.seatbelt.keychainAccess' 'sandbox.userPolicy.filesystem.deniedPaths' 'sandbox.userPolicy.filesystem.enumeratePaths' 'sandbox.userPolicy.filesystem.readonlyPaths' 'sandbox.userPolicy.filesystem.readwritePaths' 'sandbox.userPolicy.network.allowedHosts' 'sandbox.userPolicy.network.allowLocalNetwork' 'sandbox.userPolicy.network.allowOutbound' 'sandbox.userPolicy.network.blockedHosts' 'sandbox.userPolicy.network.proxy.password' 'sandbox.userPolicy.network.proxy.url' 'sandbox.userPolicy.network.proxy.username' 'sandbox.userPolicy.seatbelt.extraMachLookups' 'sandbox.userPolicy.seatbelt.keychainAccess' 'screenReader' 'scrollbar' 'sessionManagementTools.close' 'sessionManagementTools.create' 'sessionManagementTools.enabled' 'sessionManagementTools.list' 'sessionManagementTools.message' 'sessionManagementTools.scope' 'shellShortcut' 'showReasoning' 'showTimelineTimestamps' 'showTimestamps' 'showTipsOnStartup' 'showToolDurations' 'sidebar.accentActiveSession' 'sidebar.coloredHints' 'sidebar.ctrlCClosesSession' 'sidebar.enabled' 'sidebar.exitClosesSession' 'sidebar.hoverFocus' 'sidebar.showCloseButton' 'sidebar.showHeaderButtons' 'sidebar.showResumableSessions' 'skillDirectories' 'statusLine.command' 'statusLine.padding' 'statusLine.refreshInterval' 'statusLine.type' 'stayInAutopilot' 'storeTokenPlaintext' 'stream' 'streamerMode' 'subagents.contextManagementTools' 'subagents.disabledSubagents' 'subagents.maxConcurrency' 'subagents.maxDepth' 'tabs.enabled' 'tabs.hide' 'tabs.sort' 'taskbarPresence' 'telemetry.capture.identity' 'telemetry.capture.policyDetail' 'telemetry.capture.prompts' 'telemetry.capture.responses' 'telemetry.capture.toolArguments' 'telemetry.capture.toolOutput' 'telemetry.captureContent' 'terminalNotifications' 'terminalProgress' 'theme' 'toolSearch' 'updateTerminalTitle' 'voice.enabled' 'voice.selectedDevice.name' 'voice.selectedDevice.occurrence' 'voice.selectedModel' 'workflows.defaultLimits.maxAiCredits' 'workflows.defaultLimits.maxConcurrentSubagents' 'workflows.defaultLimits.maxTotalSubagents' 'workflows.defaultLimits.timeoutSeconds' 'workflows.logPhaseNames' 'workflows.maxConcurrentRuns' 'worktreeBaseRef' 'worktreePathTemplate'
         end
         return
     end
@@ -733,6 +751,7 @@ function __copilot_config_candidates
         case 'user:sandbox.sandboxMcpServers'
             test "$mode" != remove; or return
             printf '%s\n' 'true' 'false'
+        case 'user:sandbox.userPolicy.capabilities'
         case 'user:sandbox.userPolicy.filesystem.deniedPaths'
             __fish_complete_path (commandline -ct)
         case 'user:sandbox.userPolicy.filesystem.enumeratePaths'
@@ -753,6 +772,7 @@ function __copilot_config_candidates
             test "$mode" != remove; or return
         case 'user:sandbox.userPolicy.network.proxy.username'
             test "$mode" != remove; or return
+        case 'user:sandbox.userPolicy.seatbelt.extraMachLookups'
         case 'user:screenReader'
             test "$mode" != remove; or return
             printf '%s\n' 'true' 'false'
@@ -778,6 +798,9 @@ function __copilot_config_candidates
             test "$mode" != remove; or return
             printf '%s\n' 'all' 'in-process'
         case 'user:showReasoning'
+            test "$mode" != remove; or return
+            printf '%s\n' 'true' 'false'
+        case 'user:showTimelineTimestamps'
             test "$mode" != remove; or return
             printf '%s\n' 'true' 'false'
         case 'user:showTimestamps'
