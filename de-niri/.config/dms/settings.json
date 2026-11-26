@@ -39,7 +39,7 @@
   "clipboardEnterToPaste": true,
   "clipboardRememberTypeFilter": false,
   "clipboardUseOverlayLayer": true,
-  "configVersion": 46,
+  "configVersion": 47,
   "controlCenterWidgets": [
     {
       "enabled": true,
@@ -869,8 +869,8 @@
       "enabled": true
     }
   ],
-  "iconMonoApps": true,
   "iconGradient": false,
   "iconShape": "squircle",
-  "motionDuration": 0
+  "motionDuration": 0,
+  "controlCenterColumns": 8
 }
